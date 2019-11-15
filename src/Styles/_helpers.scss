@@ -1,0 +1,56 @@
+@import "variables";
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-25 {
+  padding: 25px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.color-yellow {
+  color: $yellow;
+}
+
+.white-opacity {
+  color: $white-opacity
+}
+
+.hr-white {
+  border-top: 1px solid $white-opacity;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+

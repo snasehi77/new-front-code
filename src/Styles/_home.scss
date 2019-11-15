@@ -1,0 +1,106 @@
+@import 'variables';
+
+//-----------------------------FRONT--------------------------------
+.content-front {
+  background: $beige-custom;
+  height: 100%;
+  width: 100%;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .subtitle {
+    color: $secondary;
+  }
+
+  .img-home {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .content-img-home{
+    height: 100vh;
+  }
+
+  @media (max-width: 600px) {
+    .content-img-home{
+      height: 50vh;
+    }
+  }
+
+  .your-case-logo {
+    position: absolute;
+    width: 204.47px;
+    height: 64px;
+    left: 16px;
+    top: 16px;
+  }
+
+}
+
+//-----------------------------CASES--------------------------------
+
+.content-cases {
+  background: $secondary;
+  height: auto;
+  padding-bottom: 80px;
+  position: relative;
+  color: white;
+  margin:auto;
+  width: 70%;
+
+  .item-route {
+    background: $secondary-light;
+    height: 96px;
+    border-radius: 4px;
+    transition: background .4s;
+
+    h6 {
+      transition: color .4s;
+    }
+  }
+
+  .item-route:hover {
+    background: #00805f;
+    text-decoration: none;
+    h6 {
+      color: white;
+    }
+  }
+
+}
+
+.content-cases:after {
+  content: '';
+  background: $secondary;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top .6s;
+}
+
+.scroll-top:after {
+  content: '';
+  top: -19px;
+}
+
+@media (max-width: 600px) {
+  .content-cases{
+    width: 100%;
+  }
+}
+
+
+//-----------------------------FOOTER--------------------------------
+
+footer{
+  height: auto;
+  background: $secondary;
+  color: white;
+  padding-bottom: 50px;
+}

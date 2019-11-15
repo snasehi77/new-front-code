@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/AccidentsInjuries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/ElderAbuse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/HealthMedicalIssues.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/LaborWorkPlaceIssues.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/SexualAbuse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/SexualHarassment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/FooterComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/FrontComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HomeComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/_app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/_home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Utilities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="yourcase-front" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1TcemqkBBCP9DKZWa3x42khe779" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/HomeComponent" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="" />
+      <created>1573763973804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573763973804</updated>
+      <workItem from="1573763977764" duration="28579000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
