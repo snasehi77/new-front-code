@@ -46,7 +46,7 @@
 .content-cases {
   background: $secondary;
   height: auto;
-  padding-bottom: 80px;
+  padding-bottom: 80px !important;
   position: relative;
   color: white;
   margin:auto;
@@ -73,28 +73,19 @@
 
 }
 
-.content-cases:after {
-  content: '';
-  background: $secondary;
-  height: 20px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: top .6s;
-}
-
-.scroll-top:after {
-  content: '';
-  top: -19px;
-}
-
 @media (max-width: 600px) {
   .content-cases{
     width: 100%;
   }
 }
 
+.content-steps{
+  .font-num{
+    font-size: 104px;
+    font-weight: bold;
+    color: $orange;
+  }
+}
 
 //-----------------------------FOOTER--------------------------------
 

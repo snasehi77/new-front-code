@@ -20,6 +20,9 @@
   padding: 30px;
 }
 
+.w-10 {
+  width: 10%;
+}
 .w-60 {
   width: 60%;
 }
@@ -40,6 +43,10 @@
   color: $yellow;
 }
 
+.gray-color{
+  color: #a9a9a9;
+}
+
 .white-opacity {
   color: $white-opacity
 }
@@ -50,6 +57,10 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.hr-primary{
+  border: 1px solid $secondary;
 }
 
 

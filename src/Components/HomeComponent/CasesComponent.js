@@ -39,7 +39,7 @@ const cases = [
 const CasesComponent = () => {
   return (
     <div className="container-fluid">
-      <div className={"content-cases p-10 mb-3 "}>
+      <div  className="content-cases p-10 mb-3">
 
         <div className="text-center mb-3 ">
           <h2 className="font-weight-bolder"> Have a case? We can help. </h2>

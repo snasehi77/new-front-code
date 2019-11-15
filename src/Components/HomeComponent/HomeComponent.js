@@ -2,6 +2,7 @@ import React from 'react';
 import FrontComponent from "./FrontComponent";
 import CasesComponent from "./CasesComponent";
 import FooterComponent from "./FooterComponent";
+import HowItWorks from "./HowItWorks";
 
 
 const HomeComponent = () => {
@@ -12,6 +13,8 @@ const HomeComponent = () => {
 
       <CasesComponent/>
 
+      <HowItWorks/>
+
       <FooterComponent/>
 
     </div>
@@ -19,4 +22,4 @@ const HomeComponent = () => {
 };
 
 
-export default  HomeComponent;
+export default HomeComponent;
