@@ -15,18 +15,18 @@
   }
 
   .img-home {
-    height: 100%;
+    height: 130%;
     position: absolute;
     bottom: 0;
     right: 0;
   }
 
-  .content-img-home{
+  .content-img-home {
     height: 100vh;
   }
 
   @media (max-width: 600px) {
-    .content-img-home{
+    .content-img-home {
       height: 50vh;
     }
   }
@@ -49,8 +49,8 @@
   padding-bottom: 80px !important;
   position: relative;
   color: white;
-  margin:auto;
-  width: 70%;
+  margin: auto;
+  transition: width .4s;
 
   .item-route {
     background: $secondary-light;
@@ -66,6 +66,7 @@
   .item-route:hover {
     background: #00805f;
     text-decoration: none;
+
     h6 {
       color: white;
     }
@@ -73,23 +74,86 @@
 
 }
 
+.content-cases:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 20px;
+  background: $secondary;
+  transition: top .4s;
+}
+
+.content-cases-transition:after {
+  content: "";
+  top: -19px;
+}
+
 @media (max-width: 600px) {
-  .content-cases{
+  .content-cases {
     width: 100%;
   }
 }
 
-.content-steps{
-  .font-num{
+
+//-----------------------------STEPS--------------------------------
+.content-steps {
+  .font-num {
     font-size: 104px;
     font-weight: bold;
     color: $orange;
   }
 }
 
+.blue-background {
+  background: $tertiary;
+  height: 70vh;
+  width: 60%;
+  position: relative;
+  margin: auto;
+}
+
+.img-steps {
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: -12%;
+  background: gray ;
+}
+
+
+@media (max-width: 900px) {
+  .img-steps{
+    top: -80%;
+    left: 25%;
+    height: auto;
+    width: 50%;
+  }
+
+  .text-blue{
+    width: 100% !important;
+  }
+  .blue-background {
+    width: 100% !important;
+    margin: 300px 0 0;
+    padding: 200px 0 0;
+  }
+
+  @media (max-width: 600px) {
+    .img-steps {
+      top: -20%;
+      left: 25%;
+      height: auto;
+      width: 50%;
+    }
+  }
+
+}
+
 //-----------------------------FOOTER--------------------------------
 
-footer{
+footer {
   height: auto;
   background: $secondary;
   color: white;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser} from '@fortawesome/free-solid-svg-icons'
-import imgHome from '../../Assets/Images/23e77c1b8724b25ec34af027ae419a26.png';
+import imgHome from '../../Assets/Images/woman.png';
 
 const FrontComponent = () => {
   return (

@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Images/23e77c1b8724b25ec34af027ae419a26.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Images/woman.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/HomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HomeComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/FrontComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/FrontComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/_helpers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_helpers.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_variables.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573763973804</updated>
-      <workItem from="1573763977764" duration="32568000" />
+      <workItem from="1573763977764" duration="34353000" />
+      <workItem from="1574106382619" duration="8178000" />
     </task>
     <servers />
   </component>
@@ -77,7 +79,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

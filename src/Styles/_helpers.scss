@@ -23,6 +23,7 @@
 .w-10 {
   width: 10%;
 }
+
 .w-60 {
   width: 60%;
 }
@@ -39,11 +40,40 @@
   width: 90%;
 }
 
+.vh-10 {
+  height: 10vh;
+}
+
+.vh-20 {
+  height: 20vh;
+}
+
+.vh-30 {
+  height: 30vh;
+}
+
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.vh-60 {
+  height: 60vh;
+}
+
+.vh-70 {
+  height: 70vh;
+}
+
+
 .color-yellow {
   color: $yellow;
 }
 
-.gray-color{
+.gray-color {
   color: #a9a9a9;
 }
 
@@ -59,7 +89,7 @@
   cursor: pointer;
 }
 
-.hr-primary{
+.hr-primary {
   border: 1px solid $secondary;
 }
 
