@@ -38,7 +38,6 @@ const HowItWorks = () => {
         </div>
         <span className="m-3"></span>
       </div>
-
       <div className="blue-background justify-content-end align-items-center d-flex">
         <img src={imgSteps} className="img-steps" alt=""/>
         <div className="w-60 p-3 text-blue">
@@ -48,6 +47,18 @@ const HowItWorks = () => {
             industry's standard dummy text.
           </p>
         </div>
+      </div>
+      <div style={{margin: '100px auto 100px auto'}} className="text-center w-60 ">
+        <hr className="hr-primary w-10 mt-5 mb-5"/>
+        <h3>About YourCase</h3>
+        <p>
+          YourCase was created by a team of legal professionals who believed that finding an attorney online was
+          unnecessarily confusing, impersonal
+          an stressful. YourCase provides people with a dignified and efficient way to find the lawyers they need, free.
+        </p>
+        <p>
+          you´re an attorney and you´d like to work with YourCase, get in touch.
+        </p>
       </div>
     </>
 

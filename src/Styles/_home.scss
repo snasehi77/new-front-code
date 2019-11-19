@@ -108,7 +108,7 @@
 
 .blue-background {
   background: $tertiary;
-  height: 70vh;
+  height: 80vh;
   width: 60%;
   position: relative;
   margin: auto;
@@ -118,37 +118,46 @@
   height: 90%;
   position: absolute;
   top: 5%;
-  left: -12%;
-  background: gray ;
+  left: -14%;
+  background: gray;
 }
 
 
-@media (max-width: 900px) {
-  .img-steps{
-    top: -80%;
-    left: 25%;
-    height: auto;
-    width: 50%;
+@media (max-width: 1100px) {
+  .text-blue {
+    width: 50% !important;
   }
-
-  .text-blue{
-    width: 100% !important;
-  }
-  .blue-background {
-    width: 100% !important;
-    margin: 300px 0 0;
-    padding: 200px 0 0;
-  }
-
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     .img-steps {
-      top: -20%;
+      top: -70%;
       left: 25%;
       height: auto;
       width: 50%;
     }
-  }
+    .text-blue {
+      width: 100% !important;
+    }
+    .blue-background {
+      width: 100% !important;
+      margin: 400px 0 0;
+      padding: 200px 0 0;
+    }
 
+    @media (max-width: 600px) {
+      .blue-background {
+        margin-top: 100px;
+        height: auto;
+        min-height: 50vh;
+      }
+      .img-steps {
+        top: -20%;
+        left: 25%;
+        height: auto;
+        width: 50%;
+      }
+    }
+
+  }
 }
 
 //-----------------------------FOOTER--------------------------------
