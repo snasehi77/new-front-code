@@ -38,14 +38,20 @@ const HowItWorks = () => {
         </div>
         <span className="m-3"></span>
       </div>
-      <div className="blue-background justify-content-end align-items-center d-flex">
-        <img src={imgSteps} className="img-steps" alt=""/>
-        <div className="w-60 p-3 text-blue">
-          <h1 style={{color: '#F5CCF5'}} className="fa-4x text-center ">❝</h1>
-          <p className="text-center white-opacity ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text.
-          </p>
+      <div className="blue-background row">
+        <div className="col-lg-4 col-sm-12 ">
+          <div className="img-steps">
+            <img src={imgSteps} alt=""/>
+          </div>
+        </div>
+        <div className="col-lg-8 col-sm-12 d-flex justify-content-center align-items-center">
+          <div>
+            <h1 style={{color: '#F5CCF5'}} className="fa-4x text-center ">❝</h1>
+            <p className="text-center white-opacity ">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text.
+            </p>
+          </div>
         </div>
       </div>
       <div style={{margin: '100px auto 100px auto'}} className="text-center w-60 ">
