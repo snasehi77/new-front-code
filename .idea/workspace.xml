@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/CasesComponent/ExecuteCase.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Network/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/CasesService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shared/MetadataInputComponent/MetadataInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shared/MetadataInputComponent/MetadataInputComponent.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/History.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/AccidentsInjuries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/ElderAbuse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/HealthMedicalIssues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/LaborWorkPlaceIssues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/SexualAbuse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/SexualHarassment.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/FrontComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/FrontComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/_helpers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_helpers.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utilities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,6 +54,12 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Utils" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Services" />
+      <recent name="$PROJECT_DIR$/src/Shared" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Components/HomeComponent" />
     </key>
@@ -67,6 +89,7 @@
       <workItem from="1573763977764" duration="34353000" />
       <workItem from="1574106382619" duration="12995000" />
       <workItem from="1574432181909" duration="4660000" />
+      <workItem from="1574787376754" duration="7221000" />
     </task>
     <servers />
   </component>

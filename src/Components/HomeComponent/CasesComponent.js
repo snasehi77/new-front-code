@@ -6,32 +6,32 @@ import {NavLink, withRouter} from "react-router-dom";
 const cases = [
   {
     id: 1,
-    routeUrl: '/accidents_and_injuries',
+    routeUrl: '/accidents_and_injuries/1',
     label: 'Accidents & Injuries'
   },
   {
     id: 2,
-    routeUrl: '/health_and_medical_issues',
+    routeUrl: '/health_and_medical_issues/2',
     label: 'Health & Medical Issues'
   },
   {
     id: 3,
-    routeUrl: '/labor_work_place_issues',
+    routeUrl: '/labor_work_place_issues/3',
     label: 'Labor & WorkPlace Issues'
   },
   {
     id: 4,
-    routeUrl: 'sexual_harassment',
+    routeUrl: 'sexual_harassment/4',
     label: 'Sexual Harassment'
   },
   {
     id: 5,
-    routeUrl: 'sexual_abuse',
+    routeUrl: 'sexual_abuse/5',
     label: 'Sexual Abuse'
   },
   {
     id: 6,
-    routeUrl: 'elder_abuse',
+    routeUrl: 'elder_abuse/6',
     label: 'Elder Abuse'
   }
 ];

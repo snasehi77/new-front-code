@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Routes from './Routes'
 import {
   HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import {setHeaderToken} from "./Network";
 
-const App: React.FC = () => {
+const App = () => {
+
   return (
     <Router>
       <Switch>
