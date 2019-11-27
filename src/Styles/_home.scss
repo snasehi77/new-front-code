@@ -37,7 +37,7 @@
     .content-img-home {
       height: 50vh;
     }
-    .your-case-logo{
+    .your-case-logo {
       left: 16px;
       top: 16px;
     }
@@ -168,4 +168,28 @@ footer {
   background: $secondary;
   color: white;
   padding-bottom: 50px;
+}
+
+
+//--------------------------execute case-----
+
+
+.footer-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid #d5d5d5;
+
+  .float-matters {
+    position: absolute;
+    right: 5%;
+    top: -18%;
+    background: white;
+    box-shadow: 1px 2px 3px gray;
+    padding: 15px;
+    border-radius: 40px;
+    color: $secondary-light;
+  }
 }

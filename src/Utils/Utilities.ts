@@ -15,6 +15,17 @@ export function getMonths() {
   ]
 }
 
+
+export function ToArray(map: any) {
+  let temp:any = [];
+  Object.keys(map).forEach(c => {
+    if (map[c]) {
+      temp.push(map[c]);
+    }
+  });
+  return temp;
+}
+
 export function toMap(list: Array<any>, key: string) {
   return list.reduce((acc, item) => {
     acc[item[key]] = item;

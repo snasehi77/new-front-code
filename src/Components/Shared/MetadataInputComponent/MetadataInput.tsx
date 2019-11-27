@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Input} from "reactstrap";
 import './MetadataInputComponent.scss';
-import {checkMail, formatPhoneNumber, formatSSN} from "../../Utils/Utilities";
+import {checkMail, ToArray, formatPhoneNumber, formatSSN} from "../../../Utils/Utilities";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {DateRangePicker, SingleDatePicker} from "react-dates";
@@ -24,14 +24,7 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 
 	useEffect(() => {
 		if (type === 'RADIO_BUTTON' && !singleValue) {
-			let tempA = "";
-			const array = Object.keys(multiSelect);
-			array.forEach((t) => {
-				if (multiSelect[t]) {
-					tempA += "," + t;
-				}
-			});
-			setValue(tempA.substr(1));
+			setValue(ToArray(multiSelect));
 		}
 	}, [multiSelect]);
 
@@ -43,9 +36,7 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 			if (choiceList && singleValue) {
 				setValue(choiceList.value.toString())
 			} else if (!singleValue && choiceList) {
-				let val = "";
-				choiceList.forEach((c: any) => val += "," + c.value);
-				setValue(val.substr(1));
+				setValue(choiceList.map((c:any) => listOptions[c.value]));
 			}
 		}
 	}, [date, choiceList]);
@@ -123,12 +114,11 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 			);
 
 		case 'BUTTON':
-			console.log(listOptions)
 			return (
 				<>
 					{listOptions.map((b: any, i: any) => {
 						return (
-							<button onClick={() => onChange(b.id)} key={i}
+							<button onClick={() => setValue(b)} key={i}
 											className="btn btn-info mb-2 form-control btn-choice-list">
 									<span className="btn-float-icon">
 										<FontAwesomeIcon icon={faChevronRight}/>
@@ -147,12 +137,12 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 						return <div key={i}>
 							<label htmlFor={id + b.id} className="form-control mb-2">
 								{singleValue ?
-									<input value={value || ''} onChange={() => setValue(b.id)} type="radio" id={ id + b.id}
+									<input required={!value} value={value || ''} onChange={() => setValue(b)} type="radio" id={id + b.id}
 												 name="unique" className="mr-2"/> :
-									<input type="checkbox" id={ id + b.id} required={!value || value === ""}
+									<input type="checkbox" id={id + b.id} required={!value || value === ""}
 												 value={multiSelect[b.id] || false}
 												 className="mr-2"
-												 onChange={() => setMultiSelect({...multiSelect, [b.id]: !multiSelect[b.id]})}/>}
+												 onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
 								<small> <b>{b.label}</b> </small>
 							</label>
 						</div>
@@ -169,8 +159,8 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 					name="choice"
 					value={choiceList}
 					isMulti={!singleValue}
-					options={listOptions.map((v: any) => {
-						return {label: v.label, value: v.id}
+					options={listOptions.map((v: any, i: number) => {
+						return {label: v.label, value: i}
 					})}
 					onChange={(e: any) => setChoiceList(e)}
 				/>
@@ -225,6 +215,6 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 		default:
 			return null
 	}
-};
+}
 
 export default MetadataInput;
