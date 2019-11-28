@@ -1,0 +1,30 @@
+@import '../../../Styles/variables';
+
+.btn-choice-list {
+  height: 70px;
+  position: relative;
+  text-align: left;
+}
+
+.btn-choice-list:hover{
+  background: $secondary-light;
+}
+
+.btn-float-icon {
+  height: 100%;
+  width: 20px;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.custom-DateInput_input {
+  .DateInput_input {
+    height: calc(1.5em + .75rem + 2px);
+  }
+}

@@ -1,8 +1,24 @@
 import React from 'react';
-import LoginForm from './components/Auth/Login/LoginForm';
+import Routes from './Routes'
+import {
+  HashRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 const App = () => {
-	return <LoginForm />;
+
+  return (
+    <Router>
+      <Switch>
+        {Routes.map(r => (
+          <Route exact key={r.id} path={r.path}>
+            {r.component}
+          </Route>)
+        )}
+      </Switch>
+    </Router>
+  )
 };
 
 export default App;

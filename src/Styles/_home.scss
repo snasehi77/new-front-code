@@ -1,0 +1,213 @@
+@import 'variables';
+
+//-----------------------------FRONT--------------------------------
+.content-front {
+  background: $beige-custom;
+  height: 100%;
+  width: 100%;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .subtitle {
+    color: $secondary;
+  }
+
+  .img-home {
+    height: 130%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .content-img-home {
+    height: 100vh;
+  }
+
+  .your-case-logo {
+    position: absolute;
+    width: 204.47px;
+    height: 64px;
+    left: 40px;
+    top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .content-img-home {
+      height: 50vh;
+    }
+    .your-case-logo {
+      left: 16px;
+      top: 16px;
+    }
+  }
+
+
+}
+
+//-----------------------------CASES--------------------------------
+
+.content-cases {
+  background: $secondary;
+  height: auto;
+  padding-bottom: 80px !important;
+  position: relative;
+  color: white;
+  margin: auto;
+  transition: width .4s;
+
+  .item-route {
+    background: $secondary-light;
+    height: 96px;
+    border-radius: 4px;
+    transition: background .4s;
+
+    h6 {
+      transition: color .4s;
+    }
+  }
+
+  .item-route:hover {
+    background: #00805f;
+    text-decoration: none;
+
+    h6 {
+      color: white;
+    }
+  }
+
+}
+
+.content-cases:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 20px;
+  background: $secondary;
+  transition: top .4s, height .4s;
+}
+
+.content-cases-transition:after {
+  content: "";
+  height: 40px;
+  top: -39px;
+  z-index: auto;
+}
+
+@media (max-width: 600px) {
+  .content-cases {
+    width: 100% !important;
+  }
+  .content-cases:after {
+    content: "";
+    height: 0;
+    background: transparent;
+    top: 0;
+  }
+  .container-fluid {
+    padding: 0;
+  }
+
+
+}
+
+
+//-----------------------------STEPS--------------------------------
+.content-steps {
+  .font-num {
+    font-size: 104px;
+    font-weight: bold;
+    color: $orange;
+  }
+}
+
+.blue-background {
+  background: $tertiary;
+  height: 80vh;
+  width: 50%;
+  position: relative;
+  margin: auto;
+}
+
+.img-steps {
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  background: transparent;
+
+  img {
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .img-steps {
+    width: 100%;
+    top: -80%;
+    text-align: center;
+
+    img {
+      height: 200%;
+    }
+  }
+  .blue-background {
+    margin-top: 50%;
+    width: 100%;
+  }
+}
+
+//-----------------------------FOOTER--------------------------------
+
+footer {
+  height: auto;
+  background: $secondary;
+  color: white;
+  padding-bottom: 50px;
+}
+
+
+//--------------------------execute case-----
+
+.content-forms {
+  width: 50%;
+}
+
+.footer-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid #d5d5d5;
+
+
+  .float-matters {
+    position: absolute;
+    right: 5%;
+    top: -18%;
+    background: white;
+    box-shadow: 1px 2px 3px gray;
+    padding: 15px;
+    border-radius: 40px;
+    color: $secondary-light;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .content-forms {
+    width: 90%;
+  }
+  .footer-controls {
+    .float-matters {
+      top: -20%;
+      padding: 5px;
+    }
+  }
+}
+
