@@ -9,7 +9,7 @@ import MetadataInput from "../Shared/MetadataInputComponent/MetadataInput";
 
 declare var document: any;
 
-const ExecutionFlow = ({match}: any) => {
+const ExecuteCase = ({match}: any) => {
   const [id, setId] = useState(0);
   const [data, setData] = useState<any>({});
   const [fields, setFields] = useState([]);
@@ -202,4 +202,4 @@ const ExecutionFlow = ({match}: any) => {
   );
 };
 
-export default withRouter(ExecutionFlow);
+export default withRouter(ExecuteCase);
