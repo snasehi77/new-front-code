@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CasesComponent/ExecuteCase.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CasesComponent/ExecuteCase.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/CasesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/CasesService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared/MetadataInputComponent/MetadataInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shared/MetadataInputComponent/MetadataInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared/MetadataInputComponent/MetadataInputComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shared/MetadataInputComponent/MetadataInputComponent.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Utilities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utilities.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +73,9 @@
       <workItem from="1574106382619" duration="12995000" />
       <workItem from="1574432181909" duration="4660000" />
       <workItem from="1574787376754" duration="9162000" />
-      <workItem from="1574873629546" duration="6502000" />
+      <workItem from="1574873629546" duration="7211000" />
+      <workItem from="1574891877464" duration="888000" />
+      <workItem from="1574948740469" duration="1500000" />
     </task>
     <servers />
   </component>

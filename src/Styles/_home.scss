@@ -173,6 +173,9 @@ footer {
 
 //--------------------------execute case-----
 
+.content-forms {
+  width: 50%;
+}
 
 .footer-controls {
   position: absolute;
@@ -181,6 +184,7 @@ footer {
   height: 100px;
   width: 100%;
   border-top: 1px solid #d5d5d5;
+
 
   .float-matters {
     position: absolute;
@@ -192,4 +196,18 @@ footer {
     border-radius: 40px;
     color: $secondary-light;
   }
+
 }
+
+@media (max-width: 600px) {
+  .content-forms {
+    width: 90%;
+  }
+  .footer-controls {
+    .float-matters {
+      top: -20%;
+      padding: 5px;
+    }
+  }
+}
+

@@ -3,7 +3,7 @@ import {withRouter} from "react-router-dom";
 import {executeFLowStep, getAllChoiceList, getExecute} from "../../Services";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faInfoCircle, faSpinner, faStepForward} from "@fortawesome/free-solid-svg-icons";
+import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {toMap} from "../../Utils/Utilities";
 import MetadataInput from "../Shared/MetadataInputComponent/MetadataInput";
 
@@ -38,7 +38,7 @@ const ExecutionFlow = ({match}: any) => {
     setData(res);
     setLoading(false);
     if (res.success) {
-      console.log(res);
+      // console.log(res);
       setQuestion({
         value: res.item.views[0] ? res.item.views[0] : [],
         index: 0
@@ -96,16 +96,12 @@ const ExecutionFlow = ({match}: any) => {
     );
   }
 
-  useEffect(() => {
-    console.log(info)
-  }, [info]);
+  // useEffect(() => {
+  //   console.log(info)
+  // }, [info]);
 
   return (
     <>
-      {/*{data.item && !isLoading && (*/}
-      {/*	<h2 className="text-center">{data.item.views[0].name}</h2>*/}
-      {/*)}*/}
-
       {!fields.length && !isLoading && (
         <div className="text-center p-5 m-5">
           <h1>no results</h1>
@@ -113,7 +109,7 @@ const ExecutionFlow = ({match}: any) => {
       )}
 
       {isLoading && (
-        <div className="text-center p-20">
+        <div className="text-center ptp-20">
           <div className="spinner-border text-primary" role="status">
             <span className="sr-only">Loading...</span>
           </div>
@@ -123,7 +119,7 @@ const ExecutionFlow = ({match}: any) => {
       {
         !isLoading && <form onSubmit={event => nextQuestion(event)}>
           {currentQuestion.value.fields && (
-            <div className="w-50 m-auto pt-5">
+            <div className="content-forms m-auto pt-5">
               {fields.map((v: any, i: any) => {
                 return (
                   <div key={i} className="form-group">
@@ -178,9 +174,7 @@ const ExecutionFlow = ({match}: any) => {
               })}
             </div>
           )}
-          <button style={{display: "none"}} id="nextStep">
-            _
-          </button>
+          <button style={{display: "none"}} id="nextStep"></button>
         </form>
       }
 
