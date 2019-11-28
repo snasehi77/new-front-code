@@ -127,10 +127,10 @@ const ExecutionFlow = ({match}: any) => {
                       v.format === "RADIO_BUTTON" ||
                       v.format === "SELECT") && (
                       <div className="text-center">
-                        <h1>
+                        <h1 className="font-weight-light">
                           <b>{v.label}</b>{" "}
                         </h1>
-                        <h4 className="gray-opacity">{v.prompt}</h4>
+                        <h4 className="font-weight-light gray-light">{v.prompt}</h4>
                       </div>
                     )}
 
