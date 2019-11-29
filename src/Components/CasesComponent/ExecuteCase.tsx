@@ -50,13 +50,13 @@ const ExecuteCase = ({match}: any) => {
   useEffect(() => {
     if (currentQuestion.value.fields) {
       let arrayFields = currentQuestion.value.fields;
-      arrayFields.push({
-        id: 999,
-        field_type: 'TOGGLE_BUTTON',
-        name: 'toggle_button1',
-        prompt: 'Select a year',
-        label: 'How many years ago it happened '
-      });
+      // arrayFields.push({
+      //   id: 999,
+      //   field_type: 'TOGGLE_BUTTON',
+      //   name: 'toggle_button1',
+      //   prompt: 'Select a year',
+      //   label: 'How many years ago it happened '
+      // });
       setFields(arrayFields);
     }
   }, [currentQuestion]);
@@ -92,6 +92,7 @@ const ExecuteCase = ({match}: any) => {
   }
 
   function setExecuteFlowStep(fieldsData: any) {
+    setLoading(true);
     executeFLowStep(fieldsData, data.item.flow_execution_id, data.item.id).then(
       res => {
         setInfo(null);
@@ -103,7 +104,7 @@ const ExecuteCase = ({match}: any) => {
   }
 
   return (
-    <div  className="container">
+    <div className="container">
       {/*{data.item && !isLoading && (*/}
       {/*	<h2 className="text-center">{data.item.views[0].name}</h2>*/}
       {/*)}*/}
@@ -115,15 +116,15 @@ const ExecuteCase = ({match}: any) => {
       )}
 
       {isLoading && (
-        <div className="text-center">
+        <div className="text-center ptp-20 mt-5">
           <div className="spinner-border text-primary" role="status">
             <span className="sr-only">Loading...</span>
           </div>
         </div>
       )}
-      <form onSubmit={event => nextQuestion(event)}>
+      {!isLoading && <form onSubmit={event => nextQuestion(event)}>
         {currentQuestion.value.fields && (
-          <div className="row justify-content-center p-0">
+          <div className="row justify-content-center pt-5">
             <div className="col-12 col-md-10 col-lg-8">
               {fields.map((v: any, i: any) => {
                 return (
@@ -133,10 +134,10 @@ const ExecuteCase = ({match}: any) => {
                       v.field_type === 'TOGGLE_BUTTON' ||
                       v.format === "SELECT") && (
                       <div className="text-center">
-                        <h1 className="font-weight-light">
+                        <h2 className="font-weight-light">
                           <b>{v.label}</b>{" "}
-                        </h1>
-                        <h4 className="gray-light font-weight-light">{v.prompt}</h4>
+                        </h2>
+                        <h5 className="gray-light font-weight-light mb-5">{v.prompt}</h5>
                       </div>
                     )}
 
@@ -183,29 +184,34 @@ const ExecuteCase = ({match}: any) => {
           </div>
         )}
         <button style={{display: "none"}} id="nextStep"></button>
-      </form>
-      <div style={{height: '200px'}}></div>
+      </form>}
+
       {!!fields.length &&
       !fields.filter((f: any) => f.format === "BUTTON").length && (
-        <div className="footer-controls d-flex justify-content-center align-items-center">
-          <div>
-            <button disabled={isLoading} className="btn btn-light btn-cyan p2 pl-5 pr-5 mr-3">
-              Back
-            </button>
-            <button disabled={isLoading}
-                    onClick={() => document.getElementById("nextStep").click()}
-                    className="btn btn-danger btn-cyan p2 pl-5 pr-5">
-              Next
-            </button>
-          </div>
+        <>
+          <div style={{height: '200px'}}></div>
 
-          <span className="float-matters">
+          <div className="footer-controls d-flex justify-content-center align-items-center">
+            <div>
+              <button disabled={isLoading} className="btn btn-light btn-cyan  pl-5 pr-5 mr-3">
+                Back
+              </button>
+              <button disabled={isLoading}
+                      onClick={() => document.getElementById("nextStep").click()}
+                      className="btn btn-danger btn-cyan p2 pl-5 pr-5">
+                Next
+              </button>
+            </div>
+
+            <span className="float-matters">
             <FontAwesomeIcon icon={faInfoCircle} className="mr-1"/>
             What this matters ?
           </span>
-        </div>
+          </div>
+        </>
       )}
     </div>
+
   );
 };
 
