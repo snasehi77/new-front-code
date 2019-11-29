@@ -173,18 +173,14 @@ footer {
 
 //--------------------------execute case-----
 
-.content-forms {
-  width: 50%;
-}
-
 .footer-controls {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 100px;
   width: 100%;
   border-top: 1px solid #d5d5d5;
-
+  background: white;
 
   .float-matters {
     position: absolute;
@@ -199,10 +195,7 @@ footer {
 
 }
 
-@media (max-width: 600px) {
-  .content-forms {
-    width: 90%;
-  }
+@media (max-width: 700px) {
   .footer-controls {
     .float-matters {
       top: -20%;

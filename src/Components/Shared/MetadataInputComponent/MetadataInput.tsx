@@ -3,12 +3,31 @@ import {Input} from "reactstrap";
 import './MetadataInputComponent.scss';
 import {checkMail, ToArray, formatPhoneNumber, formatSSN} from "../../../Utils/Utilities";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
+import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {DateRangePicker, SingleDatePicker} from "react-dates";
 import moment from "moment";
 import Select from "react-select";
 
+const pageSize = 16;
+const allYears = yearsToToggle();
+
+export function sliceObjects(r: Array<any>, p: number, c: number) {
+	return r.slice(c * p, (c + 1) * p);
+}
+
+export function yearsToToggle() {
+	const yearEnd = new Date().getFullYear();
+	const yearStart = yearEnd - 80;
+	let years = [], year = yearStart;
+	while (year < yearEnd) {
+		year++;
+		years.push(year);
+	}
+	return years.sort((a: number, b: number) => b - a);
+}
+
 const MetadataInput = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue}: any) => {
+
 
 	const [date, setDate] = useState<any>(null);
 	const [value, setValue] = useState<any>('');
@@ -17,6 +36,8 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 	const [inputFocused, setInputFocused] = useState(null);
 	const [choiceList, setChoiceList] = useState<any>(null);
 	const [dateRange, setDateRange] = useState({from: new Date(), to: new Date()});
+	const [years, setYears] = useState<any>([]);
+	const [page, setPage] = useState(0);
 
 	useEffect(() => {
 		onChange(value)
@@ -36,11 +57,15 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 			if (choiceList && singleValue) {
 				setValue(choiceList.value.toString())
 			} else if (!singleValue && choiceList) {
-				setValue(choiceList.map((c:any) => listOptions[c.value]));
+				setValue(choiceList.map((c: any) => listOptions[c.value]));
 			}
 		}
 	}, [date, choiceList]);
 
+
+	useEffect(() => {
+		setYears(sliceObjects(allYears, pageSize, page))
+	}, [page]);
 
 	function getWithFormat(type: string, value: string) {
 		switch (type) {
@@ -69,6 +94,7 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 				return '';
 		}
 	}
+
 
 	switch (type) {
 
@@ -212,9 +238,34 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
 							 onChange={e => setValue(e.target.value)}/>
 			);
 
+		case 'TOGGLE_BUTTON':
+			return (
+				<div className="row justify-content-center position-relative ">
+					{years.map((y: any) => {
+						return (
+							<div key={y} className="col-lg-3 col-md-4 col-5 mb-2 text-center">
+								<input value={value} onChange={() => setValue(y)} required={true} id={y.toString()} type="radio"
+											 name="toggle-button" className="display-opacity toggle-button"/>
+								<label htmlFor={y.toString()} className="btn btn-light toggle-label">{y}</label>
+							</div>
+						)
+					})}
+					<a className=" toggle-control c-back">
+						<FontAwesomeIcon onClick={() => setPage(page > 0 ? page - 1 : page)}
+														 className={(page <= 0 ? "opacity-control" : "") + " primary pointer-event"}
+														 icon={faChevronLeft}/>
+					</a>
+					<a aria-disabled={true} className="toggle-control c-next">
+						<FontAwesomeIcon onClick={() => setPage(page < (allYears.length / pageSize - 1) ? page + 1 : page)}
+														 className={(page >= (allYears.length / pageSize - 1) ? "opacity-control" : "") + " primary pointer-event"}
+														 icon={faChevronRight}/>
+					</a>
+				</div>
+			);
+
 		default:
 			return null
 	}
-}
+};
 
 export default MetadataInput;

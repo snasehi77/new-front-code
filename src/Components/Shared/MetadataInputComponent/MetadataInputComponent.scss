@@ -1,12 +1,13 @@
-@import '../../../Styles/variables';
+@import "../../../Styles/variables";
 
 .btn-choice-list {
   height: 70px;
   position: relative;
   text-align: left;
+  font-size: 18px;
 }
 
-.btn-choice-list:hover{
+.btn-choice-list:hover {
   background: $secondary-light;
 }
 
@@ -27,4 +28,66 @@
   .DateInput_input {
     height: calc(1.5em + .75rem + 2px);
   }
+}
+
+.toggle-label {
+  font-size: 18px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 1px solid $secondary-light;
+  cursor: pointer;
+}
+
+.toggle-button:checked + label {
+  background: $secondary;
+  color: white;
+}
+
+.toggle-button:active + label {
+  border: 1px solid red;
+}
+
+.display-opacity {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  left: 46%;
+  bottom: 4px;
+}
+
+
+.toggle-control {
+  position: absolute;
+  height: 100%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.primary {
+  color: $secondary;
+}
+
+
+.c-next {
+  right: -20px;
+}
+
+.c-back {
+  left: -20px;
+}
+
+@media (max-width: 600px) {
+  .c-next {
+    right: 0;
+  }
+
+  .c-back {
+    left: 0;
+  }
+}
+
+.opacity-control {
+  color: $green-light !important;
 }

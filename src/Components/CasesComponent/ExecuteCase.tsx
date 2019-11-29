@@ -38,7 +38,6 @@ const ExecuteCase = ({match}: any) => {
     setData(res);
     setLoading(false);
     if (res.success) {
-      // console.log(res);
       setQuestion({
         value: res.item.views[0] ? res.item.views[0] : [],
         index: 0
@@ -50,7 +49,15 @@ const ExecuteCase = ({match}: any) => {
 
   useEffect(() => {
     if (currentQuestion.value.fields) {
-      setFields(currentQuestion.value.fields);
+      let arrayFields = currentQuestion.value.fields;
+      arrayFields.push({
+        id: 999,
+        field_type: 'TOGGLE_BUTTON',
+        name: 'toggle_button1',
+        prompt: 'Select a year',
+        label: 'How many years ago it happened '
+      });
+      setFields(arrayFields);
     }
   }, [currentQuestion]);
 
@@ -85,7 +92,6 @@ const ExecuteCase = ({match}: any) => {
   }
 
   function setExecuteFlowStep(fieldsData: any) {
-    setLoading(true);
     executeFLowStep(fieldsData, data.item.flow_execution_id, data.item.id).then(
       res => {
         setInfo(null);
@@ -96,12 +102,12 @@ const ExecuteCase = ({match}: any) => {
     );
   }
 
-  // useEffect(() => {
-  //   console.log(info)
-  // }, [info]);
-
   return (
-    <>
+    <div  className="container">
+      {/*{data.item && !isLoading && (*/}
+      {/*	<h2 className="text-center">{data.item.views[0].name}</h2>*/}
+      {/*)}*/}
+
       {!fields.length && !isLoading && (
         <div className="text-center p-5 m-5">
           <h1>no results</h1>
@@ -109,28 +115,28 @@ const ExecuteCase = ({match}: any) => {
       )}
 
       {isLoading && (
-        <div className="text-center ptp-20">
+        <div className="text-center">
           <div className="spinner-border text-primary" role="status">
             <span className="sr-only">Loading...</span>
           </div>
         </div>
       )}
-
-      {
-        !isLoading && <form onSubmit={event => nextQuestion(event)}>
-          {currentQuestion.value.fields && (
-            <div className="content-forms m-auto pt-5">
+      <form onSubmit={event => nextQuestion(event)}>
+        {currentQuestion.value.fields && (
+          <div className="row justify-content-center p-0">
+            <div className="col-12 col-md-10 col-lg-8">
               {fields.map((v: any, i: any) => {
                 return (
                   <div key={i} className="form-group">
                     {(v.format === "BUTTON" ||
                       v.format === "RADIO_BUTTON" ||
+                      v.field_type === 'TOGGLE_BUTTON' ||
                       v.format === "SELECT") && (
                       <div className="text-center">
-                        <h1 className="font-weight-light">
+                        <h1>
                           <b>{v.label}</b>{" "}
                         </h1>
-                        <h4 className="font-weight-light gray-light">{v.prompt}</h4>
+                        <h4 className="gray-opacity">{v.prompt}</h4>
                       </div>
                     )}
 
@@ -138,7 +144,8 @@ const ExecuteCase = ({match}: any) => {
                       v.format === "EMAIL" ||
                       v.format === "PHONE" ||
                       v.format === "SSN") &&
-                    v.field_type !== "TIME" && (
+                    v.field_type !== "TIME" &&
+                    v.field_type !== "TOGGLE_BUTTON" && (
                       <label htmlFor={v.id}>
                         {" "}
                         <b>{v.label}</b>{" "}
@@ -173,11 +180,11 @@ const ExecuteCase = ({match}: any) => {
                 );
               })}
             </div>
-          )}
-          <button style={{display: "none"}} id="nextStep"></button>
-        </form>
-      }
-
+          </div>
+        )}
+        <button style={{display: "none"}} id="nextStep"></button>
+      </form>
+      <div style={{height: '200px'}}></div>
       {!!fields.length &&
       !fields.filter((f: any) => f.format === "BUTTON").length && (
         <div className="footer-controls d-flex justify-content-center align-items-center">
@@ -186,19 +193,19 @@ const ExecuteCase = ({match}: any) => {
               Back
             </button>
             <button disabled={isLoading}
-              onClick={() => document.getElementById("nextStep").click()}
-              className="btn btn-danger btn-cyan p2 pl-5 pr-5">
+                    onClick={() => document.getElementById("nextStep").click()}
+                    className="btn btn-danger btn-cyan p2 pl-5 pr-5">
               Next
             </button>
           </div>
 
           <span className="float-matters">
-            <FontAwesomeIcon icon={faInfoCircle} className="mr-1" />
+            <FontAwesomeIcon icon={faInfoCircle} className="mr-1"/>
             What this matters ?
           </span>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
