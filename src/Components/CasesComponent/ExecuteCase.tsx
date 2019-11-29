@@ -133,10 +133,10 @@ const ExecuteCase = ({match}: any) => {
                       v.field_type === 'TOGGLE_BUTTON' ||
                       v.format === "SELECT") && (
                       <div className="text-center">
-                        <h1>
+                        <h1 className="font-weight-light">
                           <b>{v.label}</b>{" "}
                         </h1>
-                        <h4 className="gray-opacity">{v.prompt}</h4>
+                        <h4 className="gray-light font-weight-light">{v.prompt}</h4>
                       </div>
                     )}
 

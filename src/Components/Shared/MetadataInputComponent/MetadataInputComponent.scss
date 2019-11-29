@@ -36,6 +36,7 @@
   padding-left: 40px;
   border: 1px solid $secondary-light;
   cursor: pointer;
+  color: $secondary-light;
 }
 
 .toggle-button:checked + label {
