@@ -141,7 +141,7 @@ const ExecuteCase = ({match}: any) => {
                         <h2 className="font-weight-light">
                           <b>{v.label}</b>{" "}
                         </h2>
-                        <h5 className="gray-light font-weight-light mb-5">{v.prompt}</h5>
+                        <h4 className="gray-opacity font-weight-light mb-5">{v.prompt}</h4>
                       </div>
                     )}
 
@@ -150,7 +150,9 @@ const ExecuteCase = ({match}: any) => {
                       v.format === "PHONE" ||
                       v.format === "SSN") &&
                     v.field_type !== "TIME" &&
-                    v.field_type !== "TOGGLE_BUTTON" && (
+                    v.field_type !== 'LABEL' &&
+                    v.field_type !== "TOGGLE_BUTTON"
+                    && (
                       <label htmlFor={v.id}>
                         {" "}
                         <b>{v.label}</b>{" "}
@@ -163,6 +165,7 @@ const ExecuteCase = ({match}: any) => {
                         <b>{v.prompt}</b>{" "}
                       </label>
                     )}
+
 
                     <MetadataInput
                       type={

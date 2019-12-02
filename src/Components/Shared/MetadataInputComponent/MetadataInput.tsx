@@ -56,7 +56,7 @@ enum FieldTypes {
 //   singleValue: boolean
 // }
 
-const MetadataInput = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue}: any) => {
+const MetadataInput = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue, label}: any) => {
 
 
   const [date, setDate] = useState<any>(null);
@@ -290,6 +290,31 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
                              className={(page >= (allYears.length / pageSize - 1) ? "opacity-control" : "") + " primary pointer-event"}
                              icon={faChevronRight}/>
           </a>
+        </div>
+      );
+
+    case FieldTypes.LABEL:
+      return (
+        <div className="text-center">
+          <h2 className="font-weight-light">
+            <b>{label}</b>{" "}
+          </h2>
+          <h4 className="gray-opacity font-weight-light mb-5">{placeholder}</h4>
+        </div>
+      );
+
+    case FieldTypes.BOOLEAN:
+      return (
+        <div>
+          <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
+            <input type="radio" required={true} id={id + "1"} className="mr-1" name="unique" defaultChecked={value}/>
+            True
+          </label>
+
+          <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
+            <input type="radio" required={true} id={id + "2"} className="mr-1" name="unique" defaultChecked={value}/>
+            False
+          </label>
         </div>
       );
 
