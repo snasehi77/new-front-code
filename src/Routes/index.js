@@ -1,5 +1,5 @@
 import HomeComponent from "../components/HomeComponent/HomeComponent";
-import ExecuteCase from "../components/CasesComponent/ExecuteCase";
+import ExecuteCase from "../components/ExecuteCaseComponent/ExecuteCase";
 
 
 const Routes = [

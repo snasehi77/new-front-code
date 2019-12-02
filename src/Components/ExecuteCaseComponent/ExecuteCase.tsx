@@ -21,15 +21,19 @@ const ExecuteCase = ({match}: any) => {
   useEffect(() => {
     setId(match.params.id);
     getAllChoiceList().then((res: any) => {
-      let map = toMap(res.items, "id");
-      setChoiceListMap(map);
+      if (res) {
+        let map = toMap(res.items, "id");
+        setChoiceListMap(map);
+      }
     });
   }, [match]);
 
   useEffect(() => {
     if (id) {
       getExecute(id).then((res: any) => {
-        setFlowStep(res);
+        if (res) {
+          setFlowStep(res);
+        }
       });
     }
   }, [id]);
