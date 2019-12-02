@@ -6,6 +6,7 @@ import HowItWorks from "./HowItWorks";
 
 
 const HomeComponent = () => {
+
   return (
     <div className="container-fluid p-0">
 

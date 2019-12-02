@@ -1,18 +1,27 @@
 import Axios from "axios";
-import { baseUrl } from "../Utils/Config";
+import {baseUrl} from "../Utils/Config";
 import history from "../Utils/History";
+
 const http = Axios.create({
   baseURL: baseUrl,
-  headers: { Authorization: "Bearer " + localStorage.getItem("token") }
+  headers: {Authorization: "Bearer " + localStorage.getItem('token')}
 });
 
 
+export function login(params: any): any {
+  post("login", params).then((res: any) => {
+    if (res && res.token) {
+      localStorage.setItem('token', res.token);
+    }
+  });
+}
+
 http.interceptors.request.use(
-  function(config) {
+  function (config) {
     // Do something before request is sent
     return config;
   },
-  function(error) {
+  function (error) {
     // Do something with request error
     // toast('Error with the server', 'error');
     // localStorage.removeItem('token');
@@ -22,11 +31,11 @@ http.interceptors.request.use(
 );
 // Add a response interceptor
 http.interceptors.response.use(
-  function(response) {
+  function (response) {
     // Do something with response data
     return response;
   },
-  function(error) {
+  function (error) {
     // Do something with response error
     console.log(error);
     // localStorage.removeItem('token');
@@ -36,7 +45,7 @@ http.interceptors.response.use(
 );
 
 export function setHeaderToken(token: string) {
-  http.defaults.headers = { Authorization: "Bearer " + token };
+  http.defaults.headers = {Authorization: "Bearer " + token};
 }
 
 export function get(url: string, params?: any): Promise<any> {
