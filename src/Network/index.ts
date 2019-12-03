@@ -8,10 +8,15 @@ const http = Axios.create({
 });
 
 
+export function setHeaderToken(token: string) {
+  http.defaults.headers = {Authorization: "Bearer " + token};
+}
+
 export function login(params: any): any {
   post("login", params).then((res: any) => {
     if (res && res.token) {
       localStorage.setItem('token', res.token);
+      setHeaderToken(res.token)
     }
   });
 }
@@ -43,10 +48,6 @@ http.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
-export function setHeaderToken(token: string) {
-  http.defaults.headers = {Authorization: "Bearer " + token};
-}
 
 export function get(url: string, params?: any): Promise<any> {
   return http
