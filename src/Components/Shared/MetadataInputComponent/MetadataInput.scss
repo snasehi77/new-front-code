@@ -8,7 +8,7 @@
 }
 
 .btn-choice-list:hover {
-  background: $secondary-light;
+  background: $primary-light;
 }
 
 .btn-float-icon {
@@ -34,13 +34,13 @@
   font-size: 18px;
   padding-right: 40px;
   padding-left: 40px;
-  border: 1px solid $secondary-light;
+  border: 1px solid $primary-light;
   cursor: pointer;
-  color: $secondary-light;
+  color: $primary-light;
 }
 
 .toggle-button:checked + label {
-  background: $secondary;
+  background: $primary;
   color: white;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .primary {
-  color: $secondary;
+  color: $primary;
 }
 
 

@@ -299,7 +299,7 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
           <h2 className="font-weight-light">
             <b>{label}</b>{" "}
           </h2>
-          <h4 className="gray-opacity font-weight-light mb-5">{placeholder}</h4>
+          <h4 className="gray-light font-weight-light mb-5">{placeholder}</h4>
         </div>
       );
 
@@ -307,13 +307,13 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
       return (
         <div>
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
-            <input type="radio" required={true} id={id + "1"} className="mr-1" name="unique" defaultChecked={value}/>
-            True
+            <input value={value} onChange={() => setValue(true)} type="radio" required={true} id={id + "1"}
+                   className="mr-1" name="unique" defaultChecked={value}/>True
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
-            <input type="radio" required={true} id={id + "2"} className="mr-1" name="unique" defaultChecked={value}/>
-            False
+            <input value={value} onChange={() => setValue(false)} type="radio" required={true} id={id + "2"}
+                   className="mr-1" name="unique" defaultChecked={value}/>False
           </label>
         </div>
       );

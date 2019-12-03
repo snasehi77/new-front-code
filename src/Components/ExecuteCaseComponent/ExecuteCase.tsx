@@ -172,6 +172,7 @@ const ExecuteCase = ({match}: any) => {
                         v.field_type === "CHOICE_LIST" ? v.format : v.field_type
                       }
                       id={v.id}
+                      label={v.label}
                       placeholder={v.prompt}
                       childType={v.format}
                       onChange={(value: any) =>
