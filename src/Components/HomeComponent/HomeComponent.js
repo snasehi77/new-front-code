@@ -3,6 +3,7 @@ import FrontComponent from "./FrontComponent";
 import CasesComponent from "./CasesComponent";
 import FooterComponent from "./FooterComponent";
 import HowItWorks from "./HowItWorks";
+import ContactUsComponent from "./ContactUs";
 
 
 const HomeComponent = () => {
@@ -15,6 +16,8 @@ const HomeComponent = () => {
       <CasesComponent/>
 
       <HowItWorks/>
+
+      <ContactUsComponent/>
 
       <FooterComponent/>
 
