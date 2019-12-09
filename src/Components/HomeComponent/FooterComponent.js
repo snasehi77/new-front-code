@@ -1,6 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGlobe, faPhone, faUser} from "@fortawesome/free-solid-svg-icons";
+import {NavLink, withRouter} from 'react-router-dom';
 
 const FooterComponent = () => {
   const year = new Date().getFullYear();
@@ -49,7 +50,7 @@ const FooterComponent = () => {
             </div>
 
             <div className="col-md-4 col-12">
-              <small className="white-opacity">Privacy policy</small>
+              <NavLink to="/privacy_policy" target="_blank"><small className="white-opacity">Privacy policy</small></NavLink>
             </div>
 
           </div>
