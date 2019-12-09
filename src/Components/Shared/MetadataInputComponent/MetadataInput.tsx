@@ -26,7 +26,6 @@ export function yearsToToggle(ord: string, cant: number) {
   return ord === 'DESC' ? years.sort((a: number, b: number) => b - a) : years;
 }
 
-
 enum FieldTypes {
   LABEL = "LABEL",
   SMALL_TEXT = "SMALL_TEXT",
@@ -44,18 +43,6 @@ enum FieldTypes {
   TOGGLE_BUTTON = 'TOGGLE_BUTTON'
 }
 
-// interface props {
-//   type: string,
-//   childType: string,
-//   name: string,
-//   className: string,
-//   onChange: any,
-//   placeholder: string,
-//   id: string,
-//   listOptions: [],
-//   singleValue: boolean
-// }
-
 const MetadataInput = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue, label}: any) => {
 
 
@@ -70,7 +57,7 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
   const [page, setPage] = useState(0);
 
   useEffect(() => {
-    onChange(value)
+    onChange(value);
   }, [value]);
 
   useEffect(() => {
@@ -299,21 +286,21 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
           <h2 className="font-weight-light">
             <b>{label}</b>{" "}
           </h2>
-          <h4 className="gray-light font-weight-light mb-5">{placeholder}</h4>
+          <h4 className="gray-opacity font-weight-light mb-5">{placeholder}</h4>
         </div>
       );
 
     case FieldTypes.BOOLEAN:
       return (
-        <div>
+        <div className="m-0 p-0">
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
-            <input value={value} onChange={() => setValue(true)} type="radio" required={true} id={id + "1"}
-                   className="mr-1" name="unique" defaultChecked={value}/>True
+            <input value={value} onChange={() => setValue(true)} type="radio" required={true} id={id + "1"} className="mr-1" name="unique" defaultChecked={value}/>
+            Yes
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
-            <input value={value} onChange={() => setValue(false)} type="radio" required={true} id={id + "2"}
-                   className="mr-1" name="unique" defaultChecked={value}/>False
+            <input value={value} onChange={() => setValue(false)} type="radio" required={true} id={id + "2"} className="mr-1" name="unique" defaultChecked={value}/>
+            No
           </label>
         </div>
       );
