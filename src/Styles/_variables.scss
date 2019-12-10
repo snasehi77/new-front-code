@@ -7,6 +7,10 @@ $white-opacity: rgba(247, 247, 247, 0.33);
 $orange: #ff9966;
 $green-light: #8aa990;
 
-.btn-info{
+.btn-info {
   background: $primary;
+}
+
+.bg-primary {
+  background: $primary-light !important;
 }

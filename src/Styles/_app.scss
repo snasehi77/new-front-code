@@ -13,7 +13,23 @@
 
 .content-privacy {
   border-radius: 10px;
-  border-top: 1px solid #acacac;
   padding: 20px;
   box-shadow: 2px 2px 2px #c4c4c4;
+
+  p, li {
+    font-size: 14px;
+  }
+
+  background: $beige-custom;
+}
+
+.content-privacy-policy {
+  padding-right: 5px;
+  padding-left: 5px;
+  nav {
+    background: $primary-light !important;
+    a, li{
+      color: white !important;
+    }
+  }
 }
