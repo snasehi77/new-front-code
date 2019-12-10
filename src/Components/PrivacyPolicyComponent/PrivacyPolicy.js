@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {terms} from '../../Utils/PrivacyPolicy';
 
 const PrivacyPolicy = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="bg-primary pb-3 content-privacy-policy">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
