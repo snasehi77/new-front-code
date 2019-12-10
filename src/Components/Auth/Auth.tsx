@@ -17,6 +17,7 @@ const Auth = (props:any) => {
       <div className="content-auth-form relative-size bg-beige-custom">
         <div className="col-lg-4 col-md-8 col-sm-12">
           <form>
+            <h4 className="text-center mb-3 color-primary">LOG IN</h4>
             <div className="form-group">
               <input value={state.user} onChange={({target: {value}}) => setState({...state, user: value})} type="text"
                      className="form-control" placeholder="username or email"/>
