@@ -14,3 +14,21 @@ $green-light: #8aa990;
 .bg-primary {
   background: $primary-light !important;
 }
+
+.bg-beige-custom{
+  background: $beige-custom;
+}
+
+.gray-light {
+  color: #a5a5a5;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+a {
+  .color-primary:hover {
+    color: $primary-light !important;
+  }
+}

@@ -23,13 +23,19 @@ const FooterComponent = () => {
         </div>
 
         <div className="col-lg-4 col-12 p-2">
-          <p className="m-3"><small>YourCase Lawyer Login</small></p>
-          <p className="m-3"><small>Become A YourCase Lawyer</small></p>
+          <p className="m-3"
+          ><NavLink to="auth" className="white-opacity text-decoration-none"><small>YourCase Lawyer
+            Login</small></NavLink>
+          </p>
+          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Become A YourCase
+            Lawyer</small></NavLink>
+          </p>
         </div>
 
         <div className="col-lg-4 col-12 p-2">
-          <p className="m-3"><small>Press Room</small></p>
-          <p className="m-3"><small>Affiliate Program</small></p>
+          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Press
+            Room</small></NavLink></p>
+          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Affiliate Program</small></NavLink></p>
         </div>
 
       </div>
@@ -50,7 +56,7 @@ const FooterComponent = () => {
             </div>
 
             <div className="col-md-4 col-12">
-              <NavLink to="/privacy_policy" target="_blank"><small className="white-opacity">Privacy policy</small></NavLink>
+              <NavLink to="/privacy_policy"><small className="white-opacity">Privacy policy</small></NavLink>
             </div>
 
           </div>

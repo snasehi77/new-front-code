@@ -25,13 +25,6 @@
     height: 100vh;
   }
 
-  .your-case-logo {
-    position: absolute;
-    width: 204.47px;
-    height: 64px;
-    left: 40px;
-    top: 40px;
-  }
 
   @media (max-width: 600px) {
     .content-img-home {
@@ -43,7 +36,15 @@
     }
   }
 
+}
 
+
+.your-case-logo {
+  position: absolute;
+  width: 204.47px;
+  height: 64px;
+  left: 40px;
+  top: 40px;
 }
 
 //-----------------------------CASES--------------------------------

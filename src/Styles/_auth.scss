@@ -1,0 +1,16 @@
+@import "variables";
+
+.content-auth {
+  height: 100vh;
+  width: 100%;
+  border: unset 10px 10px 10px $primary;
+  background: $primary-light;
+  &-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px $primary;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+}

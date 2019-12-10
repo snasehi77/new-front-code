@@ -1,6 +1,7 @@
 import HomeComponent from "../components/HomeComponent/HomeComponent";
 import ExecuteCase from "../components/ExecuteCaseComponent/ExecuteCase";
 import PrivacyPolicy from "../components/PrivacyPolicyComponent/PrivacyPolicy";
+import Auth from "../components/Auth/Auth";
 
 
 const Routes = [
@@ -18,6 +19,11 @@ const Routes = [
     path: '/privacy_policy',
     component: PrivacyPolicy,
     id: 3
+  },
+  {
+    path: '/auth',
+    component: Auth,
+    id: 4
   }
 ];
 
