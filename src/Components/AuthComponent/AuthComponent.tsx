@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 
 
-const Auth = () => {
+const AuthComponent = () => {
 
   const [state, setState] = useState<any>({});
 
@@ -47,4 +47,4 @@ const Auth = () => {
   )
 };
 
-export default Auth;
+export default AuthComponent;

@@ -2,7 +2,7 @@
 
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--6-oneOf-5-3!./node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./src/components/Shared/MetadataInputComponent/MetadataInput.scss ***!
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--6-oneOf-5-3!./node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./src/components/Shared/MetadataInputComponent/MetadataInputComponent.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Main/Main */ "./src/components/Main/Main.tsx");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Utils/History */ "./src/Utils/History.ts");
-/* harmony import */ var _components_Auth_Login_LoginCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Auth/Login/LoginCard */ "./src/components/Auth/Login/LoginCard.tsx");
+/* harmony import */ var _components_Auth_Login_LoginCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/AuthComponent/Login/LoginCard */ "./src/components/Auth/Login/LoginCard.tsx");
 var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/App.tsx";
 
 
@@ -451,7 +451,7 @@ function orderRows(array, key) {
 
 /***/ "./src/components/Auth/Login/LoginCard.tsx":
 /*!*************************************************!*\
-  !*** ./src/components/Auth/Login/LoginCard.tsx ***!
+  !*** ./src/components/AuthComponent/Login/LoginCard.tsx ***!
   \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -471,7 +471,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Auth/Login/LoginCard.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/AuthComponent/Login/LoginCard.tsx";
 
 
 
@@ -1548,7 +1548,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../service */ "./src/service/index.ts");
-/* harmony import */ var _Shared_MetadataInputComponent_MetadataInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Shared/MetadataInputComponent/MetadataInput */ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx");
+/* harmony import */ var _Shared_MetadataInputComponent_MetadataInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Shared/MetadataInputComponent/MetadataInputComponent */ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
@@ -4938,12 +4938,12 @@ const TopBar = props => {
 
 /***/ "./src/components/Shared/MetadataInputComponent/MetadataInput.scss":
 /*!*************************************************************************!*\
-  !*** ./src/components/Shared/MetadataInputComponent/MetadataInput.scss ***!
+  !*** ./src/components/Shared/MetadataInputComponent/MetadataInputComponent.scss ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../../node_modules/postcss-loader/src??postcss!../../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./MetadataInput.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../../node_modules/postcss-loader/src??postcss!../../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./MetadataInputComponent.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -4963,9 +4963,9 @@ if (content.locals) {
 if (true) {
   if (!content.locals) {
     module.hot.accept(
-      /*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../../node_modules/postcss-loader/src??postcss!../../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./MetadataInput.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss",
+      /*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../../node_modules/postcss-loader/src??postcss!../../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./MetadataInputComponent.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss",
       function () {
-        var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../../node_modules/postcss-loader/src??postcss!../../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./MetadataInput.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss");
+        var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../../node_modules/postcss-loader/src??postcss!../../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./MetadataInputComponent.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss");
 
         if (typeof newContent === 'string') {
           newContent = [[module.i, newContent, '']];
@@ -4985,7 +4985,7 @@ if (true) {
 
 /***/ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx":
 /*!************************************************************************!*\
-  !*** ./src/components/Shared/MetadataInputComponent/MetadataInput.tsx ***!
+  !*** ./src/components/Shared/MetadataInputComponent/MetadataInputComponentComponent.tsx ***!
   \************************************************************************/
 /*! exports provided: sliceObjects, yearsToToggle, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4999,7 +4999,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-/* harmony import */ var _MetadataInput_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MetadataInput.scss */ "./src/components/Shared/MetadataInputComponent/MetadataInput.scss");
+/* harmony import */ var _MetadataInput_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MetadataInputComponent.scss */ "./src/components/Shared/MetadataInputComponent/MetadataInput.scss");
 /* harmony import */ var _MetadataInput_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_MetadataInput_scss__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Utils/Utils */ "./src/Utils/Utils.ts");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
@@ -5011,7 +5011,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.browser.esm.js");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/MetadataInputComponent/MetadataInput.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/MetadataInputComponent/MetadataInputComponentComponent.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -7335,7 +7335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! class-transformer */ "./node_modules/class-transformer/index.js");
 /* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(class_transformer__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _Shared_MetadataInputComponent_MetadataInput__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/MetadataInputComponent/MetadataInput */ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx");
+/* harmony import */ var _Shared_MetadataInputComponent_MetadataInput__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/MetadataInputComponent/MetadataInputComponent */ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx");
 
 var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Template/TemplatePreviewItem.tsx";
 

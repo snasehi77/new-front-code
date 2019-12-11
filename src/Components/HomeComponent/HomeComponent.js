@@ -2,8 +2,8 @@ import React from 'react';
 import FrontComponent from "./FrontComponent";
 import CasesComponent from "./CasesComponent";
 import FooterComponent from "./FooterComponent";
-import HowItWorks from "./HowItWorks";
-import ContactUsComponent from "./ContactUs";
+import HowItWorks from "./HowItWorksComponent";
+import ContactUsComponent from "./ContactUsComponent";
 
 
 const HomeComponent = () => {

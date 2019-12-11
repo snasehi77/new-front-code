@@ -1,7 +1,7 @@
 import HomeComponent from "../components/HomeComponent/HomeComponent";
-import ExecuteCase from "../components/ExecuteCaseComponent/ExecuteCase";
-import PrivacyPolicy from "../components/PrivacyPolicyComponent/PrivacyPolicy";
-import Auth from "../components/Auth/Auth";
+import ExecuteCaseComponent from "../components/ExecuteCaseComponent/ExecuteCaseComponent";
+import PrivacyPolicyComponent from "../components/PrivacyPolicyComponent/PrivacyPolicyComponent";
+import AuthComponent from "../components/AuthComponent/AuthComponent";
 
 
 const Routes = [
@@ -12,17 +12,17 @@ const Routes = [
   },
   {
     path: '/:route/:id',
-    component: ExecuteCase,
+    component: ExecuteCaseComponent,
     id: 2
   },
   {
     path: '/privacy_policy',
-    component: PrivacyPolicy,
+    component: PrivacyPolicyComponent,
     id: 3
   },
   {
     path: '/auth',
-    component: Auth,
+    component: AuthComponent,
     id: 4
   }
 ];

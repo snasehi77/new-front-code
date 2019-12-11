@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {terms} from '../../Utils/PrivacyPolicy';
 
-const PrivacyPolicy = () => {
+const PrivacyPolicyComponent = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,4 +58,4 @@ const PrivacyPolicy = () => {
   )
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyComponent;

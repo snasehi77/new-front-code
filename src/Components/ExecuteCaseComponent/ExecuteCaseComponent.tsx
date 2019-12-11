@@ -5,11 +5,11 @@ import {executeFLowStep, getAllChoiceList, getExecute} from "../../Services";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {toMap} from "../../Utils/Utilities";
-import MetadataInput from "../Shared/MetadataInputComponent/MetadataInput";
+import MetadataInputComponent from "../Shared/MetadataInputComponent/MetadataInputComponent";
 
 declare var document: any;
 
-const ExecuteCase = ({match}: any) => {
+const ExecuteCaseComponent = ({match}: any) => {
   const [id, setId] = useState(0);
   const [data, setData] = useState<any>({});
   const [fields, setFields] = useState([]);
@@ -17,6 +17,7 @@ const ExecuteCase = ({match}: any) => {
   const [isLoading, setLoading] = useState(true);
   const [currentQuestion, setQuestion] = useState<any>({value: {}, index: 0});
   const [choiceListMap, setChoiceListMap] = useState<any>({});
+  const [history, setHistory] = useState<any>({});
 
   useEffect(() => {
     setId(match.params.id);
@@ -40,6 +41,7 @@ const ExecuteCase = ({match}: any) => {
 
   function setFlowStep(res: any) {
     setData(res);
+    console.log(res);
     setLoading(false);
     if (res.success) {
       setQuestion({
@@ -54,13 +56,6 @@ const ExecuteCase = ({match}: any) => {
   useEffect(() => {
     if (currentQuestion.value.fields) {
       let arrayFields = currentQuestion.value.fields;
-      // arrayFields.push({
-      //   id: 999,
-      //   field_type: 'TOGGLE_BUTTON',
-      //   name: 'toggle_button1',
-      //   prompt: 'Select a year',
-      //   label: 'How many years ago it happened '
-      // });
       setFields(arrayFields);
     }
   }, [currentQuestion]);
@@ -91,7 +86,7 @@ const ExecuteCase = ({match}: any) => {
             : ""
       });
     });
-
+    // console.log(resultFields)
     setExecuteFlowStep(resultFields);
   }
 
@@ -167,7 +162,7 @@ const ExecuteCase = ({match}: any) => {
                     )}
 
 
-                    <MetadataInput
+                    <MetadataInputComponent
                       type={
                         v.field_type === "CHOICE_LIST" ? v.format : v.field_type
                       }
@@ -223,4 +218,4 @@ const ExecuteCase = ({match}: any) => {
   );
 };
 
-export default withRouter(ExecuteCase);
+export default withRouter(ExecuteCaseComponent);

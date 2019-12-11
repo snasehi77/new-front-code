@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Input} from "reactstrap";
-import './MetadataInput.scss';
+import './MetadataInputComponent.scss';
 import {checkMail, ToArray, formatPhoneNumber, formatSSN} from "../../../Utils/Utilities";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
@@ -43,8 +43,7 @@ enum FieldTypes {
   TOGGLE_BUTTON = 'TOGGLE_BUTTON'
 }
 
-const MetadataInput = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue, label}: any) => {
-
+const MetadataInputComponent = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue, label}: any) => {
 
   const [date, setDate] = useState<any>(null);
   const [value, setValue] = useState<any>('');
@@ -55,34 +54,38 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
   const [dateRange, setDateRange] = useState({from: new Date(), to: new Date()});
   const [years, setYears] = useState<any>([]);
   const [page, setPage] = useState(0);
+  const [yesNo, setYesNo] = useState();
 
   useEffect(() => {
     onChange(value);
   }, [value]);
 
   useEffect(() => {
-    if (type === 'RADIO_BUTTON' && !singleValue) {
+    if (type === FieldTypes.RADIO_BUTTON && !singleValue) {
       setValue(ToArray(multiSelect));
     }
   }, [multiSelect]);
 
   useEffect(() => {
-    if (type === 'DATE') {
+    if (type === FieldTypes.DATE) {
       if (date)
         setValue(date._d);
-    } else if (type === 'SELECT') {
+    } else if (type === FieldTypes.SELECT) {
       if (choiceList && singleValue) {
         setValue(choiceList.value.toString())
       } else if (!singleValue && choiceList) {
         setValue(choiceList.map((c: any) => listOptions[c.value]));
       }
+    } else if (type === FieldTypes.BOOLEAN) {
+      setValue(yesNo ? "Yes" : "No")
     }
-  }, [date, choiceList]);
+  }, [date, choiceList, yesNo]);
 
 
   useEffect(() => {
     setYears(sliceObjects(allYears, pageSize, page))
   }, [page]);
+
 
   function getWithFormat(type: string, value: string) {
     switch (type) {
@@ -182,7 +185,7 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
                 {singleValue ?
                   <input required={!value} value={value || ''} onChange={() => setValue(b)} type="radio" id={id + b.id}
                          name="unique" className="mr-2"/> :
-                  <input type="checkbox" id={id + b.id} required={!value || value === ""}
+                  <input type="checkbox" id={id + b.id} required={!value}
                          value={multiSelect[b.id] || false}
                          className="mr-2"
                          onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
@@ -294,12 +297,14 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
       return (
         <div className="m-0 p-0">
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
-            <input value={value} onChange={() => setValue(true)} type="radio" required={true} id={id + "1"} className="mr-1" name="unique" defaultChecked={value}/>
+            <input value={yesNo} onChange={() => setYesNo(true)} type="radio" required={true} id={id + "1"}
+                   className="mr-1" name="unique" defaultChecked={value}/>
             Yes
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
-            <input value={value} onChange={() => setValue(false)} type="radio" required={true} id={id + "2"} className="mr-1" name="unique" defaultChecked={value}/>
+            <input value={yesNo} onChange={() => setYesNo(false)} type="radio" required={true} id={id + "2"}
+                   className="mr-1" name="unique" defaultChecked={value}/>
             No
           </label>
         </div>
@@ -310,4 +315,4 @@ const MetadataInput = ({type, childType, name, className, onChange, placeholder,
   }
 };
 
-export default MetadataInput;
+export default MetadataInputComponent;
