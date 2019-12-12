@@ -14,28 +14,26 @@ const ComingSoonComponent = () => {
 
       <img className="img-home" src={imgHome} alt=""/>
 
-      <div className="row m-0">
+      <div className="row m-0 vh-100 justify-content-center align-items-center">
         <div className="col-lg-8">
-          <div className="text-center ptp-20">
-            <h1 className="title font-weight-bold">Hey everybody! <br/> We're coming soon...</h1>
-            <p className="subtitle font-weight-bolder">We're coming soon! To tell us your cases. <br/>
-              We're working hard to give you the best experience.</p>
-          </div>
+            <h1 className="title font-weight-bold ptp-10">Coming Soon...</h1>
+            {/*<p className="subtitle font-weight-bolder">We're coming soon! To tell us your cases. <br/>*/}
+            {/*  We're working hard to give you the best experience.</p>*/}
 
         </div>
-        <div className="col-lg-12 ptp-10 d-flex justify-content-center">
+        {/*<div className="col-lg-12 ptp-10 d-flex justify-content-center">*/}
 
-          <a className="circle-item pointer-event text-decoration-none">
-            <i title="Instagram" className="fa fa-instagram">{}</i>
-          </a>
-          <a className="circle-item pointer-event text-decoration-none">
-            <i title="Twitter" className="fa fa-twitter">{}</i>
-          </a>
-          <a className="circle-item pointer-event text-decoration-none">
-            <i title="Linkedin" className="fa fa-linkedin">{}</i>
-          </a>
+        {/*  <a className="circle-item pointer-event text-decoration-none">*/}
+        {/*    <i title="Instagram" className="fa fa-instagram">{}</i>*/}
+        {/*  </a>*/}
+        {/*  <a className="circle-item pointer-event text-decoration-none">*/}
+        {/*    <i title="Twitter" className="fa fa-twitter">{}</i>*/}
+        {/*  </a>*/}
+        {/*  <a className="circle-item pointer-event text-decoration-none">*/}
+        {/*    <i title="Linkedin" className="fa fa-linkedin">{}</i>*/}
+        {/*  </a>*/}
 
-        </div>
+        {/*</div>*/}
       </div>
     </div>
   )
