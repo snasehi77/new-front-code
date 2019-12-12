@@ -135,6 +135,24 @@
 }
 
 
+.circle-item {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e2e2e2;
+  border-radius: 50%;
+  color: black;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.circle-item:hover {
+  color: black;
+  background: rgba(209, 209, 209, 0.38);
+}
+
 
 
 

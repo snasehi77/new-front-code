@@ -191,134 +191,134 @@ const MetadataInputComponent = ({type, childType, name, className, onChange, pla
                       event.click();
                     }
                   }}/> :
-                    <input type="checkbox" id={id + b.id} required={!value}
-                    value={multiSelect[b.id] || false}
-                    className="mr-2"
-                    onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
-                  <small> <b>{b.label}</b> </small>
-                  </label>
-                  </div>
-                })}
-              </>
-              );
+                  <input type="checkbox" id={id + b.id} required={!value}
+                         value={multiSelect[b.id] || false}
+                         className="mr-2"
+                         onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
+                <small> <b>{b.label}</b> </small>
+              </label>
+            </div>
+          })}
+        </>
+      );
 
-              case FieldTypes.SELECT:
-              return (
-              <Select
-                required={true}
-                className={className}
-                placeholder={placeholder}
-                name="choice"
-                value={choiceList}
-                isMulti={!singleValue}
-                options={listOptions.map((v: any, i: number) => {
-                  return {label: v.label, value: i}
-                })}
-                onChange={(e: any) => setChoiceList(e)}
-              />
-              );
+    case FieldTypes.SELECT:
+      return (
+        <Select
+          required={true}
+          className={className}
+          placeholder={placeholder}
+          name="choice"
+          value={choiceList}
+          isMulti={!singleValue}
+          options={listOptions.map((v: any, i: number) => {
+            return {label: v.label, value: i}
+          })}
+          onChange={(e: any) => setChoiceList(e)}
+        />
+      );
 
-              case FieldTypes.DATE:
-              return (
-              <div className="custom-DateInput_input">
-                <SingleDatePicker
-                  required={true}
-                  date={moment(date ? date : new Date())} // momentPropTypes.momentObj or null
-                  onDateChange={(date: any) => setDate(date)} // PropTypes.func.isRequired
-                  focused={focused} // PropTypes.bool
-                  block
-                  small
-                  onFocusChange={({focused}) => setFocused(!!focused)} // PropTypes.func.isRequired
-                  id={id.toString()} // PropTypes.string.isRequired,
-                />
+    case FieldTypes.DATE:
+      return (
+        <div className="custom-DateInput_input">
+          <SingleDatePicker
+            required={true}
+            date={moment(date ? date : new Date())} // momentPropTypes.momentObj or null
+            onDateChange={(date: any) => setDate(date)} // PropTypes.func.isRequired
+            focused={focused} // PropTypes.bool
+            block
+            small
+            onFocusChange={({focused}) => setFocused(!!focused)} // PropTypes.func.isRequired
+            id={id.toString()} // PropTypes.string.isRequired,
+          />
+        </div>
+      );
+
+    case FieldTypes.DATE_RANGE:
+      return (
+        <div className="custom-DateInput_input">
+          <DateRangePicker
+            required={true}
+            startDate={moment(dateRange.from)} // momentPropTypes.momentObj or null,
+            startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+            endDate={moment(dateRange.to)} // momentPropTypes.momentObj or null,
+            endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+            block
+            small
+            onDatesChange={({startDate, endDate}: any) => {
+              setDateRange({from: new Date(startDate), to: new Date(endDate)});
+            }} // PropTypes.func.isRequired,
+            focusedInput={inputFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+            onFocusChange={(focusedInput: any) => setInputFocused(focusedInput)} // PropTypes.func.isRequired,
+          />
+        </div>
+      );
+
+    case FieldTypes.TIME:
+      return (
+        <Input type="time"
+               id={id}
+               className={className}
+               required={true}
+               value={value || ''}
+               onChange={e => setValue(e.target.value)}/>
+      );
+
+    case FieldTypes.TOGGLE_BUTTON:
+      return (
+        <div className="row justify-content-center position-relative ">
+          {years.map((y: any) => {
+            return (
+              <div key={y} className="col-lg-3 col-md-4 col-5 mb-2 text-center">
+                <input value={value} onChange={() => setValue(y)} required={true} id={y.toString()} type="radio"
+                       name="toggle-button" className="display-opacity toggle-button"/>
+                <label htmlFor={y.toString()} className="btn btn-light toggle-label">{y}</label>
               </div>
-              );
+            )
+          })}
+          <a className=" toggle-control c-back">
+            <FontAwesomeIcon onClick={() => setPage(page > 0 ? page - 1 : page)}
+                             className={(page <= 0 ? "opacity-control" : "") + " primary pointer-event"}
+                             icon={faChevronLeft}/>
+          </a>
+          <a aria-disabled={true} className="toggle-control c-next">
+            <FontAwesomeIcon onClick={() => setPage(page < (allYears.length / pageSize - 1) ? page + 1 : page)}
+                             className={(page >= (allYears.length / pageSize - 1) ? "opacity-control" : "") + " primary pointer-event"}
+                             icon={faChevronRight}/>
+          </a>
+        </div>
+      );
 
-              case FieldTypes.DATE_RANGE:
-              return (
-              <div className="custom-DateInput_input">
-                <DateRangePicker
-                  required={true}
-                  startDate={moment(dateRange.from)} // momentPropTypes.momentObj or null,
-                  startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-                  endDate={moment(dateRange.to)} // momentPropTypes.momentObj or null,
-                  endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-                  block
-                  small
-                  onDatesChange={({startDate, endDate}: any) => {
-                    setDateRange({from: new Date(startDate), to: new Date(endDate)});
-                  }} // PropTypes.func.isRequired,
-                  focusedInput={inputFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                  onFocusChange={(focusedInput: any) => setInputFocused(focusedInput)} // PropTypes.func.isRequired,
-                />
-              </div>
-              );
+    case FieldTypes.LABEL:
+      return (
+        <div className="text-center">
+          <h2 className="font-weight-light">
+            <b>{label}</b>{" "}
+          </h2>
+          <h4 className="gray-opacity font-weight-light mb-5">{placeholder}</h4>
+        </div>
+      );
 
-              case FieldTypes.TIME:
-              return (
-              <Input type="time"
-                     id={id}
-                     className={className}
-                     required={true}
-                     value={value || ''}
-                     onChange={e => setValue(e.target.value)}/>
-              );
+    case FieldTypes.BOOLEAN:
+      return (
+        <div className="m-0 p-0">
+          <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
+            <input value={yesNo} onChange={() => setYesNo(true)} type="radio" required={true} id={id + "1"}
+                   className="mr-1" name="unique" defaultChecked={value}/>
+            Yes
+          </label>
 
-              case FieldTypes.TOGGLE_BUTTON:
-              return (
-              <div className="row justify-content-center position-relative ">
-                {years.map((y: any) => {
-                  return (
-                    <div key={y} className="col-lg-3 col-md-4 col-5 mb-2 text-center">
-                      <input value={value} onChange={() => setValue(y)} required={true} id={y.toString()} type="radio"
-                             name="toggle-button" className="display-opacity toggle-button"/>
-                      <label htmlFor={y.toString()} className="btn btn-light toggle-label">{y}</label>
-                    </div>
-                  )
-                })}
-                <a className=" toggle-control c-back">
-                  <FontAwesomeIcon onClick={() => setPage(page > 0 ? page - 1 : page)}
-                                   className={(page <= 0 ? "opacity-control" : "") + " primary pointer-event"}
-                                   icon={faChevronLeft}/>
-                </a>
-                <a aria-disabled={true} className="toggle-control c-next">
-                  <FontAwesomeIcon onClick={() => setPage(page < (allYears.length / pageSize - 1) ? page + 1 : page)}
-                                   className={(page >= (allYears.length / pageSize - 1) ? "opacity-control" : "") + " primary pointer-event"}
-                                   icon={faChevronRight}/>
-                </a>
-              </div>
-              );
+          <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
+            <input value={yesNo} onChange={() => setYesNo(false)} type="radio" required={true} id={id + "2"}
+                   className="mr-1" name="unique" defaultChecked={value}/>
+            No
+          </label>
+        </div>
+      );
 
-              case FieldTypes.LABEL:
-              return (
-              <div className="text-center">
-                <h2 className="font-weight-light">
-                  <b>{label}</b>{" "}
-                </h2>
-                <h4 className="gray-opacity font-weight-light mb-5">{placeholder}</h4>
-              </div>
-              );
+    default:
+      return null
+  }
+};
 
-              case FieldTypes.BOOLEAN:
-              return (
-              <div className="m-0 p-0">
-                <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
-                  <input value={yesNo} onChange={() => setYesNo(true)} type="radio" required={true} id={id + "1"}
-                         className="mr-1" name="unique" defaultChecked={value}/>
-                  Yes
-                </label>
-
-                <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
-                  <input value={yesNo} onChange={() => setYesNo(false)} type="radio" required={true} id={id + "2"}
-                         className="mr-1" name="unique" defaultChecked={value}/>
-                  No
-                </label>
-              </div>
-              );
-
-              default:
-              return null
-              }
-              };
-
-              export default MetadataInputComponent;
+export default MetadataInputComponent;

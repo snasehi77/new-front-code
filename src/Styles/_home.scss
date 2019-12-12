@@ -38,7 +38,6 @@
 
 }
 
-
 .your-case-logo {
   position: absolute;
   width: 204.47px;
@@ -87,6 +86,7 @@
   top: 0;
   left: 0;
   height: 20px;
+  z-index: 10;
   background: $primary;
   transition: top .4s, height .4s;
 }
@@ -95,7 +95,6 @@
   content: "";
   height: 40px;
   top: -39px;
-  z-index: auto;
 }
 
 @media (max-width: 600px) {
