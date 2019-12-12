@@ -190,7 +190,7 @@ const ExecuteCaseComponent = ({match}: any) => {
       </form>}
 
       {!!fields.length &&
-      !fields.filter((f: any) => (f.format === "BUTTON" && (f.format === "RADIO_BUTTON" && f.single_value))).length && (
+      !fields.filter((f: any) => (f.format === "BUTTON" || (f.format === "RADIO_BUTTON" && f.single_value))).length && (
         <>
           <div style={{height: '200px'}}></div>
 
