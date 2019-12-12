@@ -124,6 +124,7 @@ const MetadataInputComponent = ({type, childType, name, className, onChange, pla
           required={true}
           className={checkValue(childType, value) + " " + className}
           name={name}
+          type={childType === "EMAIL" ? "email" : "text"}
           onChange={e => setValue(e.target.value)}
           value={getWithFormat(childType, value) || ''}
           id={id}

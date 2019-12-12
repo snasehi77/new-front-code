@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/ContactUsComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorksComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PrivacyPolicyComponent/PrivacyPolicyComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Shared/MetadataInputComponent/MetadataInputComponent.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Shared/MetadataInputComponent/MetadataInputComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Images/BKG Engine_files/main.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Images/BKG Engine_files/main.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Auth/Auth.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCase.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/ContactUs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/HomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/HomeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/HowItWorks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PrivacyPolicyComponent/PrivacyPolicy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Shared/MetadataInputComponent/MetadataInput.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Shared/MetadataInputComponent/MetadataInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/_auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_auth.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shared/MetadataInputComponent/MetadataInputComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shared/MetadataInputComponent/MetadataInputComponent.tsx" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +20,11 @@
   <component name="ProjectId" id="1TcemqkBBCP9DKZWa3x42khe779" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -63,15 +51,15 @@
       <recent name="$PROJECT_DIR$/src/Shared" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -98,7 +86,12 @@
       <workItem from="1575987234942" duration="4633000" />
       <workItem from="1575994742309" duration="6861000" />
       <workItem from="1576005597117" duration="4383000" />
-      <workItem from="1576072909312" duration="3886000" />
+      <workItem from="1576072909312" duration="4291000" />
+      <workItem from="1576158260570" duration="492000" />
+      <workItem from="1576163285445" duration="515000" />
+      <workItem from="1576163880583" duration="729000" />
+      <workItem from="1576167222812" duration="58000" />
+      <workItem from="1576170019300" duration="337000" />
     </task>
     <servers />
   </component>
@@ -117,5 +110,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2014" y="-26" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576163839012">
+      <screen x="1366" y="-289" width="1920" height="1057" />
+    </state>
+    <state x="2014" y="-26" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1366.-289.1920.1057/0.23.1366.745@1366.-289.1920.1057" timestamp="1576163839012" />
   </component>
 </project>
