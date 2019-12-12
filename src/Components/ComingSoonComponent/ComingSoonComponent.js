@@ -15,10 +15,10 @@ const ComingSoonComponent = () => {
       <img className="img-home" src={imgHome} alt=""/>
 
       <div className="row m-0">
-        <div className="col-lg-12">
-          <div className="ptp-10 text-center">
-            <h1 className="title font-weight-bold">hey everybody! <br/> we're coming soon...</h1>
-            <p className="subtitle font-weight-bolder">We're coming soon! Awesome template to tell us your cases. <br/>
+        <div className="col-lg-8">
+          <div className="text-center ptp-20">
+            <h1 className="title font-weight-bold">Hey everybody! <br/> We're coming soon...</h1>
+            <p className="subtitle font-weight-bolder">We're coming soon! To tell us your cases. <br/>
               We're working hard to give you the best experience.</p>
           </div>
 
