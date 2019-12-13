@@ -43,7 +43,33 @@ enum FieldTypes {
   TOGGLE_BUTTON = 'TOGGLE_BUTTON'
 }
 
-const MetadataInputComponent = ({type, childType, name, className, onChange, placeholder, id, listOptions, singleValue, label}: any) => {
+interface props {
+  id: string;
+  type: string;
+  name?: string;
+  label: string;
+  defaultValue?: string;
+  childType: string;
+  className?: string;
+  placeholder?: string;
+  singleValue: boolean;
+  listOptions: Array<any>;
+  onChange?: (event: any) => void;
+}
+
+const MetadataInputComponent = ({
+                                  id,
+                                  type,
+                                  name,
+                                  label,
+                                  defaultValue,
+                                  childType,
+                                  className,
+                                  placeholder,
+                                  singleValue,
+                                  listOptions,
+                                  onChange,
+                                }: props) => {
 
   const [date, setDate] = useState<any>(null);
   const [value, setValue] = useState<any>('');
@@ -56,8 +82,15 @@ const MetadataInputComponent = ({type, childType, name, className, onChange, pla
   const [page, setPage] = useState(0);
   const [yesNo, setYesNo] = useState();
 
+
   useEffect(() => {
-    onChange(value);
+    console.log(defaultValue);
+  }, [defaultValue]);
+
+  useEffect(() => {
+    if (onChange) {
+      onChange(value);
+    }
   }, [value]);
 
   useEffect(() => {
@@ -304,14 +337,24 @@ const MetadataInputComponent = ({type, childType, name, className, onChange, pla
         <div className="m-0 p-0">
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
             <input value={yesNo} onChange={() => setYesNo(true)} type="radio" required={true} id={id + "1"}
-                   className="mr-1" name="unique" defaultChecked={value}/>
-            Yes
+                   className="mr-1" name="unique" defaultChecked={value} onClick={() => {
+              let event = document.getElementById('nextStep');
+              if (event) {
+                event.click();
+              }
+            }}/>
+            <small><b>Yes</b></small>
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
             <input value={yesNo} onChange={() => setYesNo(false)} type="radio" required={true} id={id + "2"}
-                   className="mr-1" name="unique" defaultChecked={value}/>
-            No
+                   className="mr-1" name="unique" defaultChecked={value} onClick={() => {
+              let event = document.getElementById('nextStep');
+              if (event) {
+                event.click();
+              }
+            }}/>
+            <small><b> No</b></small>
           </label>
         </div>
       );

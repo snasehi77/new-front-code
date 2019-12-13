@@ -173,15 +173,16 @@ const ExecuteCaseComponent = ({match}: any) => {
         <button style={{display: "none"}} id="nextStep">{}</button>
       </form>}
 
-      {!!fields.length &&
-      !fields.filter((f: any) => (f.format === "BUTTON" || (f.format === "RADIO_BUTTON" && f.single_value))).length && (
+      {!!fields.length && (
         <FooterControlsComponent disabledBack={isLoading}
                                  disabledNext={isLoading}
+                                 hiddenNext={!!fields.filter((f: any) => (f.format === "BUTTON"
+                                   || (f.format === "RADIO_BUTTON" && f.single_value))
+                                   || f.field_type === "BOOLEAN").length}
                                  onNext={() => document.getElementById("nextStep").click()}/>
       )}
     </div>
 
   );
-};
-
+}
 export default withRouter(ExecuteCaseComponent);

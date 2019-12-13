@@ -30,7 +30,7 @@ http.interceptors.request.use(
     // Do something with request error
     // toast('Error with the server', 'error');
     // localStorage.removeItem('token');
-    history.push("/");
+    // history.push("/");
     return Promise.reject(error);
   }
 );
