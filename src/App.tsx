@@ -6,7 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import {login} from "./Network";
-import ComingSoonComponent from "./components/ComingSoonComponent/ComingSoonComponent";
+//import ComingSoonComponent from "./components/ComingSoonComponent/ComingSoonComponent";
 
 
 const App = () => {
@@ -16,16 +16,16 @@ const App = () => {
   }, []);
 
   return (
-    <ComingSoonComponent/>
-    // <Router>
-    //   <Switch>
-    //     {Routes.map(r => (
-    //       <Route exact key={r.id} path={r.path}>
-    //         <r.component />
-    //       </Route>)
-    //     )}
-    //   </Switch>
-    // </Router>
+    // <ComingSoonComponent/>
+    <Router>
+      <Switch>
+        {Routes.map(r => (
+          <Route exact key={r.id} path={r.path}>
+            <r.component />
+          </Route>)
+        )}
+      </Switch>
+    </Router>
   )
 };
 

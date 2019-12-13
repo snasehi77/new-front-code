@@ -169,36 +169,5 @@ footer {
 }
 
 
-//--------------------------execute case-----
 
-.footer-controls {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 100px;
-  width: 100%;
-  border-top: 1px solid #d5d5d5;
-  background: white;
-
-  .float-matters {
-    position: absolute;
-    right: 5%;
-    top: -18%;
-    background: white;
-    box-shadow: 1px 2px 3px gray;
-    padding: 15px;
-    border-radius: 40px;
-    color: $primary-light;
-  }
-
-}
-
-@media (max-width: 700px) {
-  .footer-controls {
-    .float-matters {
-      top: -20%;
-      padding: 5px;
-    }
-  }
-}
 

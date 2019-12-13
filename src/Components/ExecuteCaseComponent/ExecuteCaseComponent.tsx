@@ -2,10 +2,9 @@ import React, {useEffect, useState} from "react";
 import {withRouter} from "react-router-dom";
 import {executeFLowStep, getAllChoiceList, getExecute} from "../../Services";
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {toMap} from "../../Utils/Utilities";
 import MetadataInputComponent from "../Shared/MetadataInputComponent/MetadataInputComponent";
+import FooterControlsComponent from "../Shared/FooterControlsComponent/FooterControlsComponent";
 
 declare var document: any;
 
@@ -128,18 +127,6 @@ const ExecuteCaseComponent = ({match}: any) => {
               {fields.map((v: any, i: any) => {
                 return (
                   <div key={i} className="form-group">
-                    {(v.format === "BUTTON" ||
-                      v.format === "RADIO_BUTTON" ||
-                      v.field_type === 'TOGGLE_BUTTON' ||
-                      v.format === "SELECT") && (
-                      <div className="text-center">
-                        <h2 className="font-weight-light">
-                          <b>{v.label}</b>{" "}
-                        </h2>
-                        <h4 className="gray-opacity font-weight-light mb-5">{v.prompt}</h4>
-                      </div>
-                    )}
-
                     {(!v.format ||
                       v.format === "EMAIL" ||
                       v.format === "PHONE" ||
@@ -149,18 +136,15 @@ const ExecuteCaseComponent = ({match}: any) => {
                     v.field_type !== "TOGGLE_BUTTON"
                     && (
                       <label htmlFor={v.id}>
-                        {" "}
-                        <b>{v.label}</b>{" "}
+                        <b>{v.label}</b>
                       </label>
                     )}
 
                     {v.field_type === "TIME" && (
                       <label htmlFor={v.id}>
-                        {" "}
-                        <b>{v.prompt}</b>{" "}
+                        <b>{v.prompt}</b>
                       </label>
                     )}
-
 
                     <MetadataInputComponent
                       type={
@@ -186,32 +170,14 @@ const ExecuteCaseComponent = ({match}: any) => {
             </div>
           </div>
         )}
-        <button style={{display: "none"}} id="nextStep"></button>
+        <button style={{display: "none"}} id="nextStep">{}</button>
       </form>}
 
       {!!fields.length &&
       !fields.filter((f: any) => (f.format === "BUTTON" || (f.format === "RADIO_BUTTON" && f.single_value))).length && (
-        <>
-          <div style={{height: '200px'}}></div>
-
-          <div className="footer-controls d-flex justify-content-center align-items-center">
-            <div>
-              <button disabled={isLoading} className="btn btn-light btn-cyan  pl-5 pr-5 mr-3">
-                Back
-              </button>
-              <button disabled={isLoading}
-                      onClick={() => document.getElementById("nextStep").click()}
-                      className="btn btn-danger btn-cyan p2 pl-5 pr-5">
-                Next
-              </button>
-            </div>
-
-            <span className="float-matters">
-            <FontAwesomeIcon icon={faInfoCircle} className="mr-1"/>
-            What this matters ?
-          </span>
-          </div>
-        </>
+        <FooterControlsComponent disabledBack={isLoading}
+                                 disabledNext={isLoading}
+                                 onNext={() => document.getElementById("nextStep").click()}/>
       )}
     </div>
 
