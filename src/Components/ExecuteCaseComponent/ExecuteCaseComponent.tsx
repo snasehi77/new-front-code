@@ -39,16 +39,16 @@ const ExecuteCaseComponent = ({match}: any) => {
   }, [id]);
 
   function setFlowStep(res: any) {
-    setData(res);
     console.log(res);
     setLoading(false);
     if (res.success) {
+      setData(res);
       setQuestion({
         value: res.item.views[0] ? res.item.views[0] : [],
         index: 0
       });
     } else {
-      setQuestion({value: [], index: 0});
+      // setQuestion({value: [], index: 0});
     }
   }
 
@@ -91,12 +91,13 @@ const ExecuteCaseComponent = ({match}: any) => {
 
   function setExecuteFlowStep(fieldsData: any) {
     setLoading(true);
-    executeFLowStep(fieldsData, data.item.flow_execution_id, data.item.id).then(
-      res => {
-        setInfo(null);
-        setFields([]);
-        setQuestion({value: {}, index: 0});
-        setFlowStep(res);
+    executeFLowStep(fieldsData, data.item.flow_execution_id, data.item.id).then(res => {
+        if (res) {
+          setInfo(null);
+          setFields([]);
+          setQuestion({value: {}, index: 0});
+          setFlowStep(res);
+        }
       }
     );
   }
@@ -184,5 +185,5 @@ const ExecuteCaseComponent = ({match}: any) => {
     </div>
 
   );
-}
+};
 export default withRouter(ExecuteCaseComponent);

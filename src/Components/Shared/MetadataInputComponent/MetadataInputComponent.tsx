@@ -148,6 +148,15 @@ const MetadataInputComponent = ({
     }
   }
 
+  function OnSubmit() {
+    let event: any = document.getElementById('nextStep');
+    if (event) {
+      setTimeout(() => {
+        event.click();
+      }, 100)
+    }
+  }
+
 
   switch (type) {
 
@@ -217,14 +226,12 @@ const MetadataInputComponent = ({
             return <div key={i}>
               <label htmlFor={id + b.id} className="form-control mb-2">
                 {singleValue ?
-                  <input required={!value} value={value || ''} onChange={() => setValue(b)} type="radio" id={id + b.id}
+                  <input required={!value} value={value || ''} type="radio" id={id + b.id}
                          name="unique" className="mr-2" onClick={() => {
-                    let event = document.getElementById('nextStep');
-                    if (event) {
-                      event.click();
-                    }
+                    setValue(b);
+                    OnSubmit();
                   }}/> :
-                  <input type="checkbox" id={id + b.id} required={!value}
+                  <input type="checkbox" id={id + b.id} required={!value || value === ""}
                          value={multiSelect[b.id] || false}
                          className="mr-2"
                          onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
@@ -336,23 +343,19 @@ const MetadataInputComponent = ({
       return (
         <div className="m-0 p-0">
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
-            <input value={yesNo} onChange={() => setYesNo(true)} type="radio" required={true} id={id + "1"}
+            <input value={yesNo} type="radio" required={true} id={id + "1"}
                    className="mr-1" name="unique" defaultChecked={value} onClick={() => {
-              let event = document.getElementById('nextStep');
-              if (event) {
-                event.click();
-              }
+              setYesNo(true);
+              OnSubmit()
             }}/>
             <small><b>Yes</b></small>
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
-            <input value={yesNo} onChange={() => setYesNo(false)} type="radio" required={true} id={id + "2"}
+            <input value={yesNo} type="radio" required={true} id={id + "2"}
                    className="mr-1" name="unique" defaultChecked={value} onClick={() => {
-              let event = document.getElementById('nextStep');
-              if (event) {
-                event.click();
-              }
+              setYesNo(false);
+              OnSubmit();
             }}/>
             <small><b> No</b></small>
           </label>
