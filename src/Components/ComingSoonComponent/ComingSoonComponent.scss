@@ -1,41 +1,21 @@
 @import "../../Styles/variables";
 
-.content-front {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4864320728291317) 0%, rgba(246, 238, 225, 1) 100%);
-  height: 100%;
-  width: 100%;
+.bkg-coming-soon {
+  color: $primary-light;
+  font-family: Graphik, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 128px;
+}
 
-  .title {
-    font-size: 50px;
-    color: #1f1f1f;
-    text-shadow: 1px 1px 1px gray;
-  }
-
-  .subtitle {
-    color: $primary;
-    font-size: 20px;
-  }
-
-  .img-home {
-    height: 130%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    filter: blur(5px);
-  }
-
-  @media (max-width: 600px) {
-    .img-home {
-      height: 90%;
-    }
-    .title {
-      text-shadow: 1px 1px 1px gray;
-    }
-    .your-case-logo {
-      left: 16px;
-      top: 16px;
-    }
-  }
-
+.bkg-inc {
+  position: absolute;
+  font-family: Graphik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  bottom: 20px;
+  color: $primary-light;
 }
