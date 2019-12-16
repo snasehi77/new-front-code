@@ -2,6 +2,7 @@ import React from 'react';
 import "./ComingSoonComponent.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
+import LogoComponent from "../Shared/LogoComponent";
 
 const ComingSoonComponent = () => {
 
@@ -9,10 +10,7 @@ const ComingSoonComponent = () => {
   return (
     <div className="bg-primary vh-100 bkg-p-auto d-flex align-items-center">
 
-      <h4 className="your-case-logo font-weight-bold cl-white">
-        <FontAwesomeIcon icon={faUser} className="mr-1"/>
-        YourCase
-      </h4>
+      <LogoComponent light className="your-case-logo"/>
 
       <p className="bkg-coming-soon p-0 m-0">Coming Soon.</p>
 
