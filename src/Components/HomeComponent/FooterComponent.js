@@ -2,6 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGlobe, faPhone, faUser} from "@fortawesome/free-solid-svg-icons";
 import {NavLink, withRouter} from 'react-router-dom';
+import LogoComponent from "../Shared/LogoComponent";
 
 const FooterComponent = () => {
   const year = new Date().getFullYear();
@@ -9,10 +10,7 @@ const FooterComponent = () => {
     <div className="container w-70">
       <div className="row justify-content-center ">
         <div className="col-lg-12 pt-5 pb-3">
-          <i>
-            <FontAwesomeIcon icon={faUser} className="mr-1"/>
-            YourCase
-          </i>
+         <LogoComponent light />
         </div>
 
         <div className="col-lg-4 col-12 p-2">

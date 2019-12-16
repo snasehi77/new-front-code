@@ -14,21 +14,25 @@
     color: $primary;
   }
 
-  .img-home {
-    height: 130%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
 
   .content-img-home {
     height: 100vh;
+
+    .img-home {
+      height: 130%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 
 
   @media (max-width: 600px) {
     .content-img-home {
       height: 50vh;
+      .img-home{
+        height: 100%;
+      }
     }
     .your-case-logo {
       left: 16px;
@@ -40,10 +44,8 @@
 
 .your-case-logo {
   position: absolute;
-  width: 204.47px;
-  height: 64px;
-  left: 40px;
-  top: 40px;
+  left: 30px;
+  top: 30px;
 }
 
 //-----------------------------CASES--------------------------------
