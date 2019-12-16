@@ -9,6 +9,16 @@
   line-height: 128px;
 }
 
+.bkg-p-auto {
+  padding: 50px;
+}
+
+@media (max-width: 800px) {
+  .bkg-p-auto {
+    padding: 20px;
+  }
+}
+
 .bkg-inc {
   position: absolute;
   font-family: Graphik, sans-serif;
