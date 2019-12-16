@@ -62,7 +62,7 @@ const CasesComponent = () => {
               <div key={c.id} className="col-lg-4 col-12 p-3">
                 <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer">
                   <div className="col-10">
-                    <h6 className="m-0 white-opacity">{c.label}</h6>
+                    <h6 className="m-0 cl-white">{c.label}</h6>
                   </div>
                   <div className="col-2">
                     <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>

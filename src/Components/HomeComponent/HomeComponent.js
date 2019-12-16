@@ -17,7 +17,7 @@ const HomeComponent = () => {
 
       <HowItWorks/>
 
-      <ContactUsComponent/>
+      {/*<ContactUsComponent/>*/}
 
       <FooterComponent/>
 

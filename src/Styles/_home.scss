@@ -7,6 +7,9 @@
   width: 100%;
 
   .title {
+    font-family: Graphik, sans-serif;
+    font-size: 56px;
+    line-height: 64px;
     font-weight: bold;
   }
 
@@ -23,6 +26,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      max-width: 110%;
     }
   }
 
@@ -30,7 +34,8 @@
   @media (max-width: 600px) {
     .content-img-home {
       height: 50vh;
-      .img-home{
+
+      .img-home {
         height: 100%;
       }
     }

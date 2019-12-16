@@ -29,8 +29,8 @@ const HowItWorks = () => {
           {steps.map(s => {
             return (
               <div key={s.num} className="col-lg-4 text-center">
-                <h1 className="font-num">{s.num}</h1>
-                <h4> {s.title}</h4>
+                <h1 className="font-num text-left pl-5">{s.num}</h1>
+                <h4 > {s.title}</h4>
                 <p className="gray-color">{s.description}</p>
               </div>
             )
@@ -63,7 +63,7 @@ const HowItWorks = () => {
           an stressful. YourCase provides people with a dignified and efficient way to find the lawyers they need, free.
         </p>
         <p>
-          you´re an attorney and you´d like to work with YourCase, get in touch.
+          you´re an attorney and you´d like to work with YourCase, <span className="text-decoration-underline pointer">get in touch.</span>
         </p>
       </div>
     </>
