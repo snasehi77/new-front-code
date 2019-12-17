@@ -38,19 +38,10 @@ const cases = [
 
 const CasesComponent = () => {
 
-  window.addEventListener('scroll', () => {
-    let scroll = document.documentElement.scrollTop;
-    let element = document.getElementById("scrolling");
-    if (element) {
-      scroll > 200 ?
-        element.className += " content-cases-transition w-80" :
-        element.className = "content-cases p-10 mb-3 w-70";
-    }
-  });
 
   return (
     <div className="container-fluid">
-      <div id="scrolling" className="content-cases p-10 mb-3 w-70">
+      <div id="scrolling" className="content-cases mb-3 w-80 content-cases-transition ">
         <div className="text-center mb-3 ">
           <h2 className="font-weight-bolder"> Have a case? We can help. </h2>
           <h6 className="white-opacity">We can find you can attorney who focuses on cases like yours</h6>

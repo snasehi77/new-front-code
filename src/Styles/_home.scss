@@ -58,7 +58,7 @@
 .content-cases {
   background: $primary;
   height: auto;
-  padding-bottom: 80px !important;
+  padding: 0 80px 80px 80px !important;
   position: relative;
   color: white;
   margin: auto;
@@ -66,7 +66,7 @@
 
   .item-route {
     background: $primary-light;
-    height: 96px;
+    height: 86px;
     border-radius: 4px;
     transition: background .4s;
 
