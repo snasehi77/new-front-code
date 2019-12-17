@@ -12,13 +12,14 @@ const ComingSoonComponent = () => {
 
       <LogoComponent light className="your-case-logo"/>
 
-      <p className="bkg-coming-soon p-0 m-0">Coming Soon.</p>
+      <p className="bkg-coming-soon p-0 m-0">Coming soon.</p>
 
-      <p className="bkg-inc">
+      <p className="bkg-inc pl-2">
         <small className="white-opacity">
-          <i className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.
+          <i className="fa fa-copyright">&nbsp;</i>{year} YourCase.com, LLC.
         </small>
       </p>
+
     </div>
   )
 };
