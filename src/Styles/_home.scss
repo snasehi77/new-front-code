@@ -8,7 +8,7 @@
 
   .title {
     font-family: Graphik, sans-serif;
-    font-size: 56px;
+    font-size: 50px;
     line-height: 64px;
     font-weight: bold;
   }
@@ -17,26 +17,42 @@
     color: $primary;
   }
 
+  .p-responsive {
+    padding-left: 150px;
+  }
 
   .content-img-home {
     height: 100vh;
 
     .img-home {
-      height: 130%;
       position: absolute;
       bottom: 0;
       right: 0;
-      max-width: 110%;
+      width: 100%;
     }
   }
 
+  @media (max-width: 800px) {
+    .p-responsive {
+      padding-left: 20px;
+    }
+    .content-img-home {
+      .img-home {
+        width: 70%;
+      }
+    }
+  }
 
   @media (max-width: 600px) {
+    .p-responsive {
+      padding-left: 20px;
+    }
     .content-img-home {
-      height: 50vh;
+      height: 80vh;
 
       .img-home {
         height: 100%;
+        width: auto;
       }
     }
     .your-case-logo {
@@ -58,7 +74,7 @@
 .content-cases {
   background: $primary;
   height: auto;
-  padding: 0 80px 80px 80px !important;
+  padding: 20px 80px 120px 80px !important;
   position: relative;
   color: white;
   margin: auto;
@@ -90,19 +106,14 @@
   content: "";
   position: absolute;
   width: 100%;
-  top: 0;
+  top: -50px;
   left: 0;
-  height: 20px;
+  height: 60px;
   z-index: 10;
   background: $primary;
   transition: top .4s, height .4s;
 }
 
-.content-cases-transition:after {
-  content: "";
-  height: 40px;
-  top: -39px;
-}
 
 @media (max-width: 600px) {
   .content-cases {

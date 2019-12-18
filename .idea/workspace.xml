@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ComingSoonComponent/ComingSoonComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ComingSoonComponent/ComingSoonComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomeComponent/CasesComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponent/FooterComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponent/FooterComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,8 @@
       <workItem from="1576243599059" duration="10560000" />
       <workItem from="1576272773492" duration="82000" />
       <workItem from="1576508249941" duration="1987000" />
-      <workItem from="1576610046241" duration="4947000" />
+      <workItem from="1576610046241" duration="5088000" />
+      <workItem from="1576675938478" duration="2304000" />
     </task>
     <servers />
   </component>

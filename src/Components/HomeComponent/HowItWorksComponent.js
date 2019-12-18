@@ -22,13 +22,13 @@ const steps = [
 const HowItWorks = () => {
   return (
     <>
-      <div className="container w-80 mt-5 mb-5 content-steps">
+      <div className="container w-80 ptp-10 pbp-10 content-steps">
         <hr className="hr-primary w-10"/>
         <h1 className="text-center mb-5">Here´s how it works</h1>
         <div className="row mb-5">
           {steps.map(s => {
             return (
-              <div key={s.num} className="col-lg-4 text-center">
+              <div key={s.num} className="col-lg-4 text-left">
                 <h1 className="font-num text-left pl-5">{s.num}</h1>
                 <h4 > {s.title}</h4>
                 <p className="gray-color">{s.description}</p>
@@ -36,7 +36,6 @@ const HowItWorks = () => {
             )
           })}
         </div>
-        <span className="m-3"></span>
       </div>
       <div className="blue-background row">
         <div className="col-lg-4 col-sm-12 ">
@@ -54,7 +53,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-      <div style={{margin: '100px auto 100px auto'}} className="text-center w-60 ">
+      <div className="text-center w-60 m-auto ptp-10 pbp-10">
         <hr className="hr-primary w-10 mt-5 mb-5"/>
         <h3>About YourCase</h3>
         <p>

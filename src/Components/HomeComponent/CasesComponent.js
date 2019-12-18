@@ -41,7 +41,7 @@ const CasesComponent = () => {
 
   return (
     <div className="container-fluid">
-      <div id="scrolling" className="content-cases mb-3 w-80 content-cases-transition ">
+      <div id="scrolling" className="content-cases mb-3 w-80">
         <div className="text-center mb-3 ">
           <h2 className="font-weight-bolder"> Have a case? We can help. </h2>
           <h6 className="white-opacity">We can find you can attorney who focuses on cases like yours</h6>
@@ -50,7 +50,7 @@ const CasesComponent = () => {
         <div className="row">
           {cases.map(c => {
             return (
-              <div key={c.id} className="col-lg-4 col-12 p-3">
+              <div key={c.id} className="col-lg-4 col-12 p-2">
                 <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer">
                   <div className="col-10">
                     <h6 className="m-0 cl-white">{c.label}</h6>
