@@ -10,7 +10,7 @@ const ComingSoonComponent = () => {
   return (
     <div className="bg-primary vh-100 bkg-p-auto d-flex align-items-center">
 
-      <LogoComponent light className="your-case-logo"/>
+      <LogoComponent light className="your-case-logo pl-3" styles={{width: "204px"}}/>
 
       <p className="bkg-coming-soon p-0 m-0">Coming soon.</p>
 
