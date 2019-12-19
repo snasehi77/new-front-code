@@ -3,11 +3,11 @@ import React from 'react';
 import imgHome from '../../Assets/Images/woman.png';
 import LogoComponent from "../Shared/LogoComponent";
 
-const FrontComponent = () => {
+const  FrontComponent = () => {
   return (
     <div className="content-front">
 
-      <LogoComponent className="your-case-logo"/>
+      <LogoComponent className="your-case-logo" styles={{width: "204px"}}/>
 
       <div className="row m-0">
         <div className="col-lg-7 col-md-6 col-12 p-2">

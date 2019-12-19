@@ -1,6 +1,6 @@
 import React from 'react';
-import logoBlack from '../../Assets/Images/logoBlack.png'
-import logoWhite from '../../Assets/Images/logoWhite.png'
+import logoBlack from '../../Assets/Images/yourcase-logo-dark.png'
+import logoWhite from '../../Assets/Images/yourcase-logo-light.png'
 
 interface props {
   className?: string,

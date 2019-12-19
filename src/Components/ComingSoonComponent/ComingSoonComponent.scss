@@ -5,8 +5,8 @@
   font-family: Graphik, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 90px;
-  line-height: 128px;
+  font-size: 64px;
+  line-height: 64px;
 }
 
 .bkg-p-auto {
@@ -16,6 +16,11 @@
 @media (max-width: 800px) {
   .bkg-p-auto {
     padding: 20px;
+
+    .your-case-logo {
+      left: 2px;
+      top: 16px;
+    }
   }
 }
 

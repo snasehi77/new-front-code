@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da30740c8f58626db665cc0e0d73284d",
+    "revision": "253baed85e98df8fb3f7fc7a6bc6f107",
     "url": "/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.411ec52d.chunk.css"
   },
   {
-    "revision": "929bfa493db4db937c3e",
-    "url": "/static/css/main.93b27a04.chunk.css"
+    "revision": "7876b6e357277684fc41",
+    "url": "/static/css/main.17fe6ab9.chunk.css"
   },
   {
     "revision": "6341f855183d9da128f0",
     "url": "/static/js/2.93980430.chunk.js"
   },
   {
-    "revision": "929bfa493db4db937c3e",
-    "url": "/static/js/main.261e7386.chunk.js"
+    "revision": "7876b6e357277684fc41",
+    "url": "/static/js/main.4b31a860.chunk.js"
   },
   {
     "revision": "a602d1c9f196cb4b12bf",
@@ -50,5 +50,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "72b3515a25ee16f9f61725b0f4a21968",
     "url": "/static/media/woman.72b3515a.png"
+  },
+  {
+    "revision": "6d8bc809d71e258fec35d5fef928dd4f",
+    "url": "/static/media/yourcase-logo-dark.6d8bc809.png"
+  },
+  {
+    "revision": "0f87592443ff20199dd3fdb42bb4e768",
+    "url": "/static/media/yourcase-logo-light.0f875924.png"
   }
 ]);

@@ -9,8 +9,8 @@ const FooterComponent = () => {
   return <footer>
     <div className="container w-70">
       <div className="row justify-content-center ">
-        <div className="col-lg-12 pt-5 vh-20">
-         <LogoComponent light styles={{position: "absolute", left: "-2px"}} />
+        <div className="col-lg-12 pt-5 pb-3">
+          <LogoComponent light styles={{width: "204px"}}/>
         </div>
 
         <div className="col-lg-4 col-12 p-2">
@@ -33,7 +33,8 @@ const FooterComponent = () => {
         <div className="col-lg-4 col-12 p-2">
           <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Press
             Room</small></NavLink></p>
-          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Affiliate Program</small></NavLink></p>
+          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Affiliate
+            Program</small></NavLink></p>
         </div>
 
       </div>
