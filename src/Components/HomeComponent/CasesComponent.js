@@ -77,7 +77,7 @@ const CasesComponent = () => {
                          className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
                   <div className="text-center">
                     <img src={c.icon} alt=""/>
-                    <h6 className="m-0 subtitle">{c.label}</h6>
+                    <h6 className="mt-4 subtitle">{c.label}</h6>
                   </div>
                 </NavLink>
               </div>
