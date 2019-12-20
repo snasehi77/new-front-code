@@ -1,6 +1,92 @@
 @import 'variables';
 
 //-----------------------------FRONT--------------------------------
+//.content-front {
+//  background: $beige-custom;
+//  height: 100%;
+//  width: 100%;
+//
+//  .title {
+//    font-family: Graphik, sans-serif;
+//    font-size: 50px;
+//    line-height: 64px;
+//    font-weight: bold;
+//  }
+//
+//  .subtitle {
+//    color: $primary;
+//  }
+//
+//  .p-responsive {
+//    padding-left: 150px;
+//  }
+//
+//  .content-img-home {
+//    height: 100vh;
+//
+//    .img-home {
+//      position: absolute;
+//      bottom: 0;
+//      right: 0;
+//      width: 100%;
+//    }
+//  }
+//}
+//
+//@media (max-width: 800px) {
+//  .content-front {
+//    .p-responsive {
+//      padding-left: 20px;
+//    }
+//
+//    .content-img-home {
+//      .img-home {
+//        width: 70%;
+//      }
+//    }
+//  }
+//}
+//
+//@media (max-width: 600px) {
+//  .content-front {
+//
+//    .p-responsive {
+//      padding-left: 20px;
+//    }
+//
+//    .title {
+//      margin-top: 80px;
+//      font-size: 30px;
+//      line-height: 44px;
+//    }
+//
+//    .content-img-home {
+//      height: 80vh;
+//
+//      .img-home {
+//        height: 100%;
+//        width: auto;
+//      }
+//    }
+//
+//    .your-case-logo {
+//      left: 16px;
+//      top: 16px;
+//    }
+//  }
+//}
+//
+//
+//.your-case-logo {
+//  position: absolute;
+//  left: 32px;
+//  top: 30px;
+//}
+
+// END OPTION A AND------
+
+// ---------------------------START OPTION G---------------------------
+
 .content-front {
   background: $beige-custom;
   height: 100%;
@@ -24,6 +110,10 @@
   .content-img-home {
     height: 100vh;
 
+    &-flip {
+      display: none;
+    }
+
     .img-home {
       position: absolute;
       bottom: 0;
@@ -31,37 +121,77 @@
       width: 100%;
     }
   }
+}
 
-  @media (max-width: 800px) {
+@media (max-width: 800px) {
+  .content-front {
     .p-responsive {
       padding-left: 20px;
     }
+
     .content-img-home {
       .img-home {
         width: 70%;
       }
     }
   }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  .content-front {
+
+    background: white;
+
     .p-responsive {
       padding-left: 20px;
     }
+
+    .title {
+      margin-top: 80px;
+      font-size: 30px;
+      line-height: 44px;
+    }
+
     .content-img-home {
       height: 80vh;
+      margin-top: 100px;
+
 
       .img-home {
-        height: 100%;
-        width: auto;
+        display: none;
+      }
+
+      &-flip {
+        display: block;
+        width: 100%;
+        height: 101%;
+        border-bottom: 300px solid $primary;
+
+        &-green {
+          overflow: hidden;
+          position: absolute;
+          width: 90%;
+          height: 380px;
+          left: 5%;
+          background: rgb(159, 186, 196);
+
+          .img-home-flip {
+            height: 175%;
+            position: absolute;
+            top: -48%;
+            left: -18%;
+          }
+        }
       }
     }
+
     .your-case-logo {
       left: 16px;
       top: 16px;
     }
   }
-
 }
+
 
 .your-case-logo {
   position: absolute;
@@ -71,6 +201,37 @@
 
 //-----------------------------CASES--------------------------------
 
+//.content-cases {
+//  background: $primary;
+//  height: auto;
+//  padding: 20px 80px 120px 80px !important;
+//  position: relative;
+//  color: white;
+//  margin: auto;
+//  transition: width .4s;
+//
+//  .item-route {
+//    background: $primary-light;
+//    height: 86px;
+//    border-radius: 4px;
+//    transition: background .4s;
+//
+//    h6 {
+//      transition: color .4s;
+//    }
+//  }
+//
+//  .item-route:hover {
+//    background: #00805f;
+//    text-decoration: none;
+//
+//    h6 {
+//      color: white;
+//    }
+//  }
+//
+//}
+
 .content-cases {
   background: $primary;
   height: auto;
@@ -79,6 +240,10 @@
   color: white;
   margin: auto;
   transition: width .4s;
+
+  .icon-on-display {
+    display: none !important;
+  }
 
   .item-route {
     background: $primary-light;
@@ -101,6 +266,28 @@
   }
 
 }
+
+@media (max-width: 600px) {
+
+  .content-cases {
+    .item-on-display {
+      display: none !important;
+    }
+
+    .icon-on-display {
+      display: flex !important;
+    }
+
+    .item-route {
+      height: 164px;
+      width: 164px;
+      background: $beige-custom;
+      border-radius: 0;
+      color: $primary-light !important;
+    }
+  }
+}
+
 
 .content-cases:after {
   content: "";
@@ -165,6 +352,10 @@
 
 
 @media (max-width: 991px) {
+  .content-steps {
+
+    text-align: center;
+  }
   .img-steps {
     width: 100%;
     top: -80%;

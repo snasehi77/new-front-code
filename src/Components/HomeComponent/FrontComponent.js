@@ -1,6 +1,7 @@
 import React from 'react';
 
 import imgHome from '../../Assets/Images/woman.png';
+import imgHomeFlip from "../../Assets/Images/image.png";
 import LogoComponent from "../Shared/LogoComponent";
 
 const  FrontComponent = () => {
@@ -17,8 +18,13 @@ const  FrontComponent = () => {
             <button className="btn btn-danger">Get started now</button>
           </div>
         </div>
-        <div className="col-lg-5 col-md-6 col-12 content-img-home">
+        <div className="col-lg-5 col-md-6 col-12 content-img-home p-0">
           <img className="img-home" src={imgHome} alt=""/>
+          <div className="content-img-home-flip">
+            <div className="content-img-home-flip-green">
+              <img className="img-home-flip" src={imgHomeFlip} alt=""/>
+            </div>
+          </div>
         </div>
       </div>
     </div>

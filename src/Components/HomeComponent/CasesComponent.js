@@ -2,37 +2,49 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {NavLink, withRouter} from "react-router-dom";
+import icon_accidents_and_injuries from "../../Assets/icons/Layer 5.png"
+import icon_health_and_medical_issues from "../../Assets/icons/health_medical 1.png"
+import icon_labor_work_place_issues from "../../Assets/icons/labor_workplace 1.png";
+import icon_sexual_harassment from "../../Assets/icons/sexual_harassment 1.png";
+import icon_sexual_abuse from "../../Assets/icons/sexual_abuse 1.png";
+import icon_elder_abuse from "../../Assets/icons/elder 1.png";
 
 const cases = [
   {
     id: 1,
     routeUrl: '/accidents_and_injuries/30',
-    label: 'Accidents & Injuries'
+    label: 'Accidents & Injuries',
+    icon: icon_accidents_and_injuries
   },
   {
     id: 2,
     routeUrl: '/health_and_medical_issues/30',
-    label: 'Health & Medical Issues'
+    label: 'Health & Medical Issues',
+    icon: icon_health_and_medical_issues
   },
   {
     id: 3,
     routeUrl: '/labor_work_place_issues/30',
-    label: 'Labor & WorkPlace Issues'
+    label: 'Labor & WorkPlace Issues',
+    icon: icon_labor_work_place_issues
   },
   {
     id: 4,
     routeUrl: 'sexual_harassment/30',
-    label: 'Sexual Harassment'
+    label: 'Sexual Harassment',
+    icon: icon_sexual_harassment
   },
   {
     id: 5,
     routeUrl: 'sexual_abuse/30',
-    label: 'Sexual Abuse'
+    label: 'Sexual Abuse',
+    icon: icon_sexual_abuse
   },
   {
     id: 6,
     routeUrl: 'elder_abuse/30',
-    label: 'Elder Abuse'
+    label: 'Elder Abuse',
+    icon: icon_elder_abuse
   }
 ];
 
@@ -50,8 +62,9 @@ const CasesComponent = () => {
         <div className="row">
           {cases.map(c => {
             return (
-              <div key={c.id} className="col-lg-4 col-12 p-2">
-                <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer">
+              <div key={c.id + "item"} className="col-lg-4 col-6 p-2">
+
+                <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer item-on-display">
                   <div className="col-10">
                     <h6 className="m-0 cl-white">{c.label}</h6>
                   </div>
@@ -59,7 +72,16 @@ const CasesComponent = () => {
                     <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>
                   </div>
                 </NavLink>
+
+                <NavLink to={c.routeUrl}
+                         className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
+                  <div className="text-center">
+                    <img src={c.icon} alt=""/>
+                    <h6 className="m-0 subtitle">{c.label}</h6>
+                  </div>
+                </NavLink>
               </div>
+
             )
           })}
         </div>

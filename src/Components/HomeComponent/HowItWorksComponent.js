@@ -25,11 +25,11 @@ const HowItWorks = () => {
       <div className="container w-80 ptp-10 pbp-10 content-steps">
         <hr className="hr-primary w-10"/>
         <h1 className="text-center mb-5">Here´s how it works</h1>
-        <div className="row mb-5">
+        <div className="row mb-5 justify-content-center">
           {steps.map(s => {
             return (
-              <div key={s.num} className="col-lg-4 text-left">
-                <h1 className="font-num text-left pl-5">{s.num}</h1>
+              <div key={s.num} className="col-lg-4 col-md-6 col-12">
+                <h1 className="font-num">{s.num}</h1>
                 <h4 > {s.title}</h4>
                 <p className="gray-color">{s.description}</p>
               </div>
