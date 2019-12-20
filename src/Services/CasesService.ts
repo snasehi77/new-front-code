@@ -19,3 +19,13 @@ export function executeFLowStep(fields: any, flowId: number, stepId: number) {
 export function getAllChoiceList(): Promise<any> {
   return get('cl');
 }
+
+export function getExecuteFLowStep(flowId: number, stepId: number) {
+  return get(`exec/${flowId}/step/${stepId}`)
+    .then(res => {
+      if (!res) {
+        return {success: false}
+      }
+      return res;
+    });
+}

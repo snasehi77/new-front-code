@@ -1,7 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGlobe, faPhone, faUser} from "@fortawesome/free-solid-svg-icons";
-import {NavLink, withRouter} from 'react-router-dom';
+import {faGlobe, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {NavLink} from 'react-router-dom';
 import LogoComponent from "../Shared/LogoComponent";
 
 const FooterComponent = () => {

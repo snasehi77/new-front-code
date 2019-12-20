@@ -3,7 +3,7 @@ import FrontComponent from "./FrontComponent";
 import CasesComponent from "./CasesComponent";
 import FooterComponent from "./FooterComponent";
 import HowItWorks from "./HowItWorksComponent";
-import ContactUsComponent from "./ContactUsComponent";
+// import ContactUsComponent from "./ContactUsComponent";
 
 
 const HomeComponent = () => {

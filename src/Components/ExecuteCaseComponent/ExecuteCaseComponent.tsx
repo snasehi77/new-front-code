@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {withRouter} from "react-router-dom";
-import {executeFLowStep, getAllChoiceList, getExecute} from "../../Services";
+import * as Service from "../../Services";
 
 import {toMap} from "../../Utils/Utilities";
 import MetadataInputComponent from "../Shared/MetadataInputComponent/MetadataInputComponent";
@@ -14,41 +14,32 @@ const ExecuteCaseComponent = ({match}: any) => {
   const [fields, setFields] = useState([]);
   const [info, setInfo] = useState<any>({});
   const [isLoading, setLoading] = useState(true);
-  const [currentQuestion, setQuestion] = useState<any>({value: {}, index: 0});
+  const [currentQuestion, setQuestion] = useState<any>({value: {}});
   const [choiceListMap, setChoiceListMap] = useState<any>({});
-  const [history, setHistory] = useState<any>({});
-
+  const [defaultValues, setValuesDefault] = useState<any>({});
   useEffect(() => {
     setId(match.params.id);
-    getAllChoiceList().then((res: any) => {
-      if (res) {
-        let map = toMap(res.items, "id");
-        setChoiceListMap(map);
-      }
+    Service.getAllChoiceList().then((res: any) => {
+      let map = toMap(res.items, "id");
+      setChoiceListMap(map);
     });
   }, [match]);
 
   useEffect(() => {
     if (id) {
-      getExecute(id).then((res: any) => {
-        if (res) {
-          setFlowStep(res);
-        }
+      Service.getExecute(id).then((res: any) => {
+        setFlowStep(res);
       });
     }
   }, [id]);
 
   function setFlowStep(res: any) {
-    console.log(res);
     setLoading(false);
     if (res.success) {
       setData(res);
       setQuestion({
-        value: res.item.views[0] ? res.item.views[0] : [],
-        index: 0
+        value: res.item.views[0] ? res.item.views[0] : []
       });
-    } else {
-      // setQuestion({value: [], index: 0});
     }
   }
 
@@ -58,6 +49,7 @@ const ExecuteCaseComponent = ({match}: any) => {
       setFields(arrayFields);
     }
   }, [currentQuestion]);
+
 
   function nextQuestion(event: any) {
     event.preventDefault();
@@ -85,21 +77,35 @@ const ExecuteCaseComponent = ({match}: any) => {
             : ""
       });
     });
-    // console.log(resultFields)
-    setExecuteFlowStep(resultFields);
+    console.log(resultFields);
+    setExecuteFlowStep(resultFields, data.item.id);
   }
 
-  function setExecuteFlowStep(fieldsData: any) {
+  function setExecuteFlowStep(fieldsData: any, id: number) {
     setLoading(true);
-    executeFLowStep(fieldsData, data.item.flow_execution_id, data.item.id).then(res => {
+    Service.executeFLowStep(fieldsData, data.item.flow_execution_id, id).then(
+      res => {
         if (res) {
           setInfo(null);
           setFields([]);
-          setQuestion({value: {}, index: 0});
+          setQuestion({value: {}});
           setFlowStep(res);
         }
       }
     );
+  }
+
+  async function getStep() {
+    const res = await Service.getExecuteFLowStep(data.item.flow_execution_id, data.item.prev_step_execution_id);
+    if (res && res.success) {
+      setFlowStep(res);
+      const valuesForm: any = Object.values(res.item.form_data).reduce((obj: any, i: any) => {
+        obj[i.id] = i.value;
+        return obj
+      }, {});
+      setValuesDefault(valuesForm)
+    }
+
   }
 
   return (
@@ -131,6 +137,7 @@ const ExecuteCaseComponent = ({match}: any) => {
                     {(!v.format ||
                       v.format === "EMAIL" ||
                       v.format === "PHONE" ||
+                      v.format === "ZIPCODE" ||
                       v.format === "SSN") &&
                     v.field_type !== "TIME" &&
                     v.field_type !== 'LABEL' &&
@@ -143,7 +150,7 @@ const ExecuteCaseComponent = ({match}: any) => {
 
                     {v.field_type === "TIME" && (
                       <label htmlFor={v.id}>
-                        <b>{v.prompt}</b>
+                        <b>{v.label}</b>
                       </label>
                     )}
 
@@ -151,13 +158,12 @@ const ExecuteCaseComponent = ({match}: any) => {
                       type={
                         v.field_type === "CHOICE_LIST" ? v.format : v.field_type
                       }
+                      defaultValue={defaultValues ? defaultValues[v.id] : null}
                       id={v.id}
                       label={v.label}
                       placeholder={v.prompt}
                       childType={v.format}
-                      onChange={(value: any) =>
-                        setInfo({...info, [v.id]: value})
-                      }
+                      onChange={(value: any) => setInfo({...info, [v.id]: value})}
                       singleValue={v.single_value}
                       listOptions={
                         choiceListMap[v.choice_list_id]
@@ -175,12 +181,15 @@ const ExecuteCaseComponent = ({match}: any) => {
       </form>}
 
       {!!fields.length && (
-        <FooterControlsComponent disabledBack={isLoading}
-                                 disabledNext={isLoading}
-                                 hiddenNext={!!fields.filter((f: any) => (f.format === "BUTTON"
-                                   || (f.format === "RADIO_BUTTON" && f.single_value))
-                                   || f.field_type === "BOOLEAN").length}
-                                 onNext={() => document.getElementById("nextStep").click()}/>
+        <FooterControlsComponent
+          onBack={getStep}
+          disabledBack={isLoading}
+          disabledNext={isLoading}
+          hiddenBack={!data.item.prev_step_execution_id}
+          hiddenNext={!!fields.filter((f: any) => (f.format === "BUTTON"
+            || (f.format === "RADIO_BUTTON" && f.single_value))
+            || f.field_type === "BOOLEAN").length}
+          onNext={() => document.getElementById("nextStep").click()}/>
       )}
     </div>
 

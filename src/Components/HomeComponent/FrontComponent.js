@@ -21,6 +21,7 @@ const  FrontComponent = () => {
         <div className="col-lg-5 col-md-6 col-12 content-img-home p-0">
           <img className="img-home" src={imgHome} alt=""/>
           <div className="content-img-home-flip">
+            <span className="bg-primary position-absolute vh-40 w-100" style={{bottom: "-1px"}}>{""}</span>
             <div className="content-img-home-flip-green">
               <img className="img-home-flip" src={imgHomeFlip} alt=""/>
             </div>

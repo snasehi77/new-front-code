@@ -7,6 +7,7 @@ import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {DateRangePicker, SingleDatePicker} from "react-dates";
 import moment from "moment";
 import Select from "react-select";
+import useDidMountEffect from "../../../Hooks/useDidMountEffect";
 
 const pageSize = 16;
 const allYears = yearsToToggle('DESC', 80);
@@ -48,7 +49,7 @@ interface props {
   type: string;
   name?: string;
   label: string;
-  defaultValue?: string;
+  defaultValue?: any;
   childType: string;
   className?: string;
   placeholder?: string;
@@ -71,8 +72,8 @@ const MetadataInputComponent = ({
                                   onChange,
                                 }: props) => {
 
-  const [date, setDate] = useState<any>(null);
-  const [value, setValue] = useState<any>('');
+  const [date, setDate] = useState<any>(new Date());
+  const [value, setValue] = useState<any>("");
   const [focused, setFocused] = useState(false);
   const [multiSelect, setMultiSelect] = useState<any>({});
   const [inputFocused, setInputFocused] = useState(null);
@@ -83,34 +84,97 @@ const MetadataInputComponent = ({
   const [yesNo, setYesNo] = useState();
 
 
-  useEffect(() => {
-    console.log(defaultValue);
-  }, [defaultValue]);
-
-  useEffect(() => {
+  useDidMountEffect(() => {
     if (onChange) {
       onChange(value);
     }
   }, [value]);
 
+  useDidMountEffect(() => {
+    setValue(`${dateRange.from} , ${dateRange.to}`)
+  }, [dateRange]);
+
   useEffect(() => {
-    if (type === FieldTypes.RADIO_BUTTON && !singleValue) {
+    if (defaultValue) {
+      console.log(defaultValue);
+      switch (type) {
+        case FieldTypes.BOOLEAN:
+          setYesNo(defaultValue === "Yes");
+          break;
+        case FieldTypes.RADIO_BUTTON:
+          if (singleValue) {
+            const val = listOptions.filter((o: any) => o.label === defaultValue);
+            setValue(val.length ? val[0] : false)
+          } else {
+            let multi: any = {};
+            listOptions.forEach((l: any) => {
+              multi[l.id] = defaultValue.filter((d: any) => d === l.label).length ? l : false;
+            });
+            setMultiSelect(multi);
+          }
+          break;
+        case FieldTypes.SMALL_TEXT:
+        case FieldTypes.LARGE_TEXT:
+        case FieldTypes.NUMBER:
+        case FieldTypes.PHONE:
+        case FieldTypes.SSN:
+        case FieldTypes.TIME:
+          setValue(defaultValue);
+          break;
+        case FieldTypes.DATE:
+          setDate(defaultValue);
+          break;
+        case FieldTypes.DATE_RANGE:
+          const range = defaultValue.split(" , ");
+          setDateRange({from: range[0], to: range[1]});
+          break;
+        case FieldTypes.SELECT:
+          if (singleValue) {
+            const temp = listOptions.filter((l: any) => l.value === defaultValue)[0];
+            setChoiceList({label: temp.label, value: temp.id});
+          } else {
+            // PENDING MULTIPLE SELECTIONS
+            let temp = listOptions.filter((a: any) => {
+              return defaultValue.some((b: string) => b === a.value)
+            });
+
+            temp = temp.map((a: any) => {
+              return {label: a.label, value: a.id}
+            });
+
+            setChoiceList(temp);
+          }
+          break;
+        case FieldTypes.TOGGLE_BUTTON:
+          // ?
+          break;
+      }
+    }
+  }, [defaultValue]);
+
+  useEffect(() => {
+    if (type === 'RADIO_BUTTON' && !singleValue) {
       setValue(ToArray(multiSelect));
     }
   }, [multiSelect]);
 
-  useEffect(() => {
+  useDidMountEffect(() => {
     if (type === FieldTypes.DATE) {
       if (date)
         setValue(date._d);
     } else if (type === FieldTypes.SELECT) {
       if (choiceList && singleValue) {
-        setValue(choiceList.value.toString())
+        setValue(listOptions.filter((l: any) => l.id === choiceList.value)[0]);
       } else if (!singleValue && choiceList) {
-        setValue(choiceList.map((c: any) => listOptions[c.value]));
+        const temp = listOptions.filter((a: any) => {
+          return choiceList.some((b: any) => b.value === a.id)
+        });
+        setValue(temp);
       }
     } else if (type === FieldTypes.BOOLEAN) {
-      setValue(yesNo ? "Yes" : "No")
+      if (yesNo !== undefined) {
+        setValue(yesNo ? "Yes" : "No")
+      }
     }
   }, [date, choiceList, yesNo]);
 
@@ -118,7 +182,6 @@ const MetadataInputComponent = ({
   useEffect(() => {
     setYears(sliceObjects(allYears, pageSize, page))
   }, [page]);
-
 
   function getWithFormat(type: string, value: string) {
     switch (type) {
@@ -156,7 +219,6 @@ const MetadataInputComponent = ({
       }, 100)
     }
   }
-
 
   switch (type) {
 
@@ -226,13 +288,13 @@ const MetadataInputComponent = ({
             return <div key={i}>
               <label htmlFor={id + b.id} className="form-control mb-2">
                 {singleValue ?
-                  <input required={!value} value={value || ''} type="radio" id={id + b.id}
+                  <input required={!value} checked={value.label === b.label} type="radio" id={id + b.id}
                          name="unique" className="mr-2" onClick={() => {
                     setValue(b);
                     OnSubmit();
-                  }}/> :
-                  <input type="checkbox" id={id + b.id} required={!value || value === ""}
-                         value={multiSelect[b.id] || false}
+                  }} onChange={() => null}/> :
+                  <input type="checkbox" id={id + b.id} required={!ToArray(multiSelect).length}
+                         checked={multiSelect[b.id] || false}
                          className="mr-2"
                          onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
                 <small> <b>{b.label}</b> </small>
@@ -251,8 +313,8 @@ const MetadataInputComponent = ({
           name="choice"
           value={choiceList}
           isMulti={!singleValue}
-          options={listOptions.map((v: any, i: number) => {
-            return {label: v.label, value: i}
+          options={listOptions.map((v: any) => {
+            return {label: v.label, value: v.id}
           })}
           onChange={(e: any) => setChoiceList(e)}
         />
@@ -343,20 +405,20 @@ const MetadataInputComponent = ({
       return (
         <div className="m-0 p-0">
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
-            <input value={yesNo} type="radio" required={true} id={id + "1"}
-                   className="mr-1" name="unique" defaultChecked={value} onClick={() => {
+            <input type="radio" required={true} id={id + "1"}
+                   className="mr-1" name="unique" checked={value === "Yes"} onClick={() => {
               setYesNo(true);
               OnSubmit()
-            }}/>
+            }} onChange={() => null}/>
             <small><b>Yes</b></small>
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
-            <input value={yesNo} type="radio" required={true} id={id + "2"}
-                   className="mr-1" name="unique" defaultChecked={value} onClick={() => {
+            <input type="radio" required={true} id={id + "2"}
+                   className="mr-1" name="unique" checked={value === "No"} onClick={() => {
               setYesNo(false);
               OnSubmit();
-            }}/>
+            }} onChange={() => null}/>
             <small><b> No</b></small>
           </label>
         </div>
