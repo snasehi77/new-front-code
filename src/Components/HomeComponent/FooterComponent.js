@@ -61,7 +61,7 @@ const FooterComponent = () => {
           </div>
         </div>
 
-        <div className="col-lg-4 col-12 text-right">
+        <div className="col-lg-4 col-12 text-right footer-responsive">
           <i title="Instagram" className="fa fa-instagram mr-2 pointer">&nbsp;</i>
           <i title="Twitter" className="fa fa-twitter mr-2 pointer">&nbsp;</i>
           <i title="Linkedin" className="fa fa-linkedin pointer">&nbsp;</i>
