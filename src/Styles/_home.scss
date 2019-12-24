@@ -375,10 +375,11 @@ footer {
   background: $primary;
   color: white;
   padding-bottom: 50px;
-  @media(max-width: 600px) {
+  @media(max-width: 1000px) {
     .footer-responsive {
       text-align: left !important;
       padding-top: 30px;
+      padding-bottom: 100px;
     }
   }
 }

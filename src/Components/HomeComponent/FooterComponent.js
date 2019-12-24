@@ -41,7 +41,7 @@ const FooterComponent = () => {
 
       <hr className="mt-5 hr-white"/>
 
-      <div className="row">
+      <div className="row pt-5">
 
         <div className="col-lg-8 col-12">
           <div className="row">
@@ -62,9 +62,9 @@ const FooterComponent = () => {
         </div>
 
         <div className="col-lg-4 col-12 text-right footer-responsive">
-          <i title="Instagram" className="fa fa-instagram mr-2 pointer">&nbsp;</i>
-          <i title="Twitter" className="fa fa-twitter mr-2 pointer">&nbsp;</i>
-          <i title="Linkedin" className="fa fa-linkedin pointer">&nbsp;</i>
+          <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x ">&nbsp;</i>
+          <i title="Twitter" className="fa fa-twitter mr-2 pointer fa-2x">&nbsp;</i>
+          <i title="Linkedin" className="fa fa-linkedin pointer fa-2x">&nbsp;</i>
         </div>
 
       </div>
