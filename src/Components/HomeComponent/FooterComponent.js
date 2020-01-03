@@ -22,18 +22,18 @@ const FooterComponent = () => {
 
         <div className="col-lg-4 col-12 p-2">
           <p className="m-3"
-          ><NavLink to="auth" className="white-opacity text-decoration-none"><small>YourCase Lawyer
+          ><NavLink to="auth" className="text-decoration-none"><small>YourCase Lawyer
             Login</small></NavLink>
           </p>
-          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Become A YourCase
+          <p className="m-3"><NavLink to="/" className="text-decoration-none"><small>Become A YourCase
             Lawyer</small></NavLink>
           </p>
         </div>
 
         <div className="col-lg-4 col-12 p-2">
-          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Press
+          <p className="m-3"><NavLink to="/" className="text-decoration-none"><small>Press
             Room</small></NavLink></p>
-          <p className="m-3"><NavLink to="/" className="white-opacity text-decoration-none"><small>Affiliate
+          <p className="m-3"><NavLink to="/" className="text-decoration-none"><small>Affiliate
             Program</small></NavLink></p>
         </div>
 

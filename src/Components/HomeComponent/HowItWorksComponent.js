@@ -1,5 +1,5 @@
 import React from 'react';
-import imgSteps from '../../Assets/Images/man.png'
+import imgSteps from '../../Assets/Images/man2.png'
 
 const steps = [
     {
@@ -54,41 +54,21 @@ const HowItWorks = () => {
             {/*  </div>*/}
             {/*</div>*/}
 
-            {/*<div className="container">*/}
-            {/*    <div className="row justify-content-center">*/}
-            {/*        <div className="col-10 p-0">*/}
-            {/*            <img className="img-fluid" src={imgSteps} alt=""/>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-
-            {/*    <div className="row justify-content-center align-items-center">*/}
-            {/*        <div className="col-10 blue-temp">*/}
-            {/*            <h1 style={{color: '#F5CCF5'}} className="fa-4x text-center ">❝</h1>*/}
-            {/*            <p className="text-center white-opacity ">*/}
-            {/*                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum*/}
-            {/*                has been the*/}
-            {/*                industry's standard dummy text.*/}
-            {/*            </p>*/}
-            {/*          <p className="case-paragraph-footer mb-5">Luis, 46<br/>San Mateo, CA</p>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
 
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-10 col-sm-2 p-0 d-sm-none">
-                <img className="img-fluid" src={imgSteps} alt=""/>
+                <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>
               </div>
-              <div className="col-10 col-sm-8 col-md-8 blue-temp col-lg-6" style={{height: "340px"}}>
-                <div className="row">
-                  <div className="col-sm-4 d-none d-sm-block img-steps">
-                    <img style={{width: "207px"}} src={imgSteps} alt=""/>
+              <div className="col-10 col-sm-8 col-md-8 blue-temp col-lg-8 container-height-steps">
+                <div className="row h-100 align-items-center">
+                  <div className="col-sm-4 d-none d-sm-block img-steps-div">
+                    <img className="img-steps" src={imgSteps} alt=""/>
                   </div>
 
-                  <div className="col-sm-8 pt-md-4 pt-5">
+                  <div className="col-sm-8 pt-md-4 d-block-flex justify-content-center align-items-center">
                     <h1 style={{color: '#F5CCF5'}} className="fa-4x text-center ">❝</h1>
-                    <p className="text-center white-opacity">
+                    <p className="text-center case-paragraph">
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                       has been the
                       industry's standard dummy text.

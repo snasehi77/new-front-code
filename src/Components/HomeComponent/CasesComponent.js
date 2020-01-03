@@ -59,28 +59,56 @@ const CasesComponent = () => {
           <h6 className="white-opacity">We can find you can attorney who focuses on cases like yours</h6>
         </div>
 
+        {/*<div className="row">*/}
+        {/*  {cases.map(c => {*/}
+        {/*    return (*/}
+        {/*      <div key={c.id + "item"} className="col-lg-4 col-6 p-2">*/}
+
+        {/*        <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer item-on-display">*/}
+        {/*          <div className="col-10">*/}
+        {/*            <h6 className="m-0 cl-white">{c.label}</h6>*/}
+        {/*          </div>*/}
+        {/*          <div className="col-2">*/}
+        {/*            <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>*/}
+        {/*          </div>*/}
+        {/*        </NavLink>*/}
+
+        {/*        <NavLink to={c.routeUrl}*/}
+        {/*                 className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">*/}
+        {/*          <div className="text-center">*/}
+        {/*            <img src={c.icon} alt=""/>*/}
+        {/*            <h6 className="mt-4 subtitle">{c.label}</h6>*/}
+        {/*          </div>*/}
+        {/*        </NavLink>*/}
+        {/*      </div>*/}
+
+        {/*    )*/}
+        {/*  })}*/}
+        {/*</div>*/}
+
+
         <div className="row">
           {cases.map(c => {
             return (
-              <div key={c.id + "item"} className="col-lg-4 col-6 p-2">
+                <div key={c.id + "item"} className="col-lg-4 col-6 p-2">
 
-                <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer item-on-display">
-                  <div className="col-10">
-                    <h6 className="m-0 cl-white">{c.label}</h6>
-                  </div>
-                  <div className="col-2">
-                    <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>
-                  </div>
-                </NavLink>
+                  <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer item-on-display">
+                    <div className="col-10">
+                      <h6 className="m-0 cl-white">{c.label}</h6>
+                    </div>
+                    <div className="col-2">
+                      <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>
+                    </div>
+                  </NavLink>
 
-                <NavLink to={c.routeUrl}
-                         className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
-                  <div className="text-center">
-                    <img src={c.icon} alt=""/>
-                    <h6 className="mt-4 subtitle">{c.label}</h6>
-                  </div>
-                </NavLink>
-              </div>
+                  <NavLink to={c.routeUrl}
+                           className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
+                    <div className="text-center">
+                      <img src={c.icon} alt=""/>
+                      <h6 className="mt-4 subtitle">{c.label}</h6>
+                    </div>
+                  </NavLink>
+                </div>
 
             )
           })}
