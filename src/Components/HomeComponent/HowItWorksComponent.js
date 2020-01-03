@@ -86,7 +86,7 @@ const HowItWorks = () => {
                     <img style={{width: "207px"}} src={imgSteps} alt=""/>
                   </div>
 
-                  <div className="col-sm-8 pt-md-4">
+                  <div className="col-sm-8 pt-md-4 pt-5">
                     <h1 style={{color: '#F5CCF5'}} className="fa-4x text-center ">❝</h1>
                     <p className="text-center white-opacity">
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
