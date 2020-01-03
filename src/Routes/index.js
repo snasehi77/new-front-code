@@ -1,8 +1,7 @@
-import HomeComponent from "../components/HomeComponent/HomeComponent";
-import ExecuteCaseComponent from "../components/ExecuteCaseComponent/ExecuteCaseComponent";
-import PrivacyPolicyComponent from "../components/PrivacyPolicyComponent/PrivacyPolicyComponent";
-import AuthComponent from "../components/AuthComponent/AuthComponent";
-
+import HomeComponent from "../Components/HomeComponent/HomeComponent";
+import ExecuteCaseComponent from "../Components/ExecuteCaseComponent/ExecuteCaseComponent";
+import PrivacyPolicyComponent from "../Components/PrivacyPolicyComponent/PrivacyPolicyComponent";
+import AuthComponent from "../Components/AuthComponent/AuthComponent";
 
 const Routes = [
   {

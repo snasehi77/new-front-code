@@ -17,6 +17,7 @@ const ExecuteCaseComponent = ({match}: any) => {
   const [currentQuestion, setQuestion] = useState<any>({value: {}});
   const [choiceListMap, setChoiceListMap] = useState<any>({});
   const [defaultValues, setValuesDefault] = useState<any>({});
+
   useEffect(() => {
     setId(match.params.id);
     Service.getAllChoiceList().then((res: any) => {
