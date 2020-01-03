@@ -67,7 +67,7 @@ const HowItWorks = () => {
                   </div>
 
                   <div className="col-sm-8 pt-md-4 d-block-flex justify-content-center align-items-center">
-                    <h1 style={{color: '#F5CCF5'}} className="fa-4x text-center ">❝</h1>
+                    <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>
                     <p className="text-center case-paragraph">
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                       has been the
