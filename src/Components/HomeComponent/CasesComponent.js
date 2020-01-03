@@ -12,37 +12,37 @@ import icon_elder_abuse from "../../Assets/icons/elder 1.png";
 const cases = [
   {
     id: 1,
-    routeUrl: '/accidents_and_injuries/30',
+    routeUrl: '/accidents_and_injuries/24',
     label: 'Accidents & Injuries',
     icon: icon_accidents_and_injuries
   },
   {
     id: 2,
-    routeUrl: '/health_and_medical_issues/30',
+    routeUrl: '/health_and_medical_issues/24',
     label: 'Health & Medical Issues',
     icon: icon_health_and_medical_issues
   },
   {
     id: 3,
-    routeUrl: '/labor_work_place_issues/30',
+    routeUrl: '/labor_work_place_issues/24',
     label: 'Labor & WorkPlace Issues',
     icon: icon_labor_work_place_issues
   },
   {
     id: 4,
-    routeUrl: 'sexual_harassment/30',
+    routeUrl: 'sexual_harassment/24',
     label: 'Sexual Harassment',
     icon: icon_sexual_harassment
   },
   {
     id: 5,
-    routeUrl: 'sexual_abuse/30',
+    routeUrl: 'sexual_abuse/24',
     label: 'Sexual Abuse',
     icon: icon_sexual_abuse
   },
   {
     id: 6,
-    routeUrl: 'elder_abuse/30',
+    routeUrl: 'elder_abuse/24',
     label: 'Elder Abuse',
     icon: icon_elder_abuse
   }
