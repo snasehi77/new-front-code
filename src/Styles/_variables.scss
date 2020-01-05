@@ -27,8 +27,13 @@ $green-light: #8aa990;
   color: $primary;
 }
 
+.color-primary-light{
+  color: $primary-light;
+}
+
 a {
   .color-primary:hover {
     color: $primary-light !important;
   }
 }
+
