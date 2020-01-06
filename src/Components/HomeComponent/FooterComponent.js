@@ -10,7 +10,7 @@ const FooterComponent = () => {
     <div className="container w-70">
       <div className="row justify-content-center ">
         <div className="col-lg-12 pt-5 pb-3">
-          <LogoComponent light styles={{width: "204px"}}/>
+          <LogoComponent light styles={{width: "150px"}}/>
         </div>
 
         <div className="col-lg-4 col-12 p-2">
