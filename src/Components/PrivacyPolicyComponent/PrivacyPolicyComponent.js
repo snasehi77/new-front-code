@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {terms} from '../../Utils/PrivacyPolicy';
+import LogoComponent from "../Shared/LogoComponent";
 
 const PrivacyPolicyComponent = () => {
 
@@ -15,10 +16,7 @@ const PrivacyPolicyComponent = () => {
     <div className="bg-primary pb-3 content-privacy-policy">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <NavLink to="/" className="navbar-brand" href="#">
-          <i>
-            <FontAwesomeIcon icon={faUser} className="mr-1"/>
-            YourCase
-          </i>
+          <LogoComponent className="mr-1" light styles={{width: "120px"}} />
         </NavLink>
       </nav>
       <div className="container-fluid content-privacy">

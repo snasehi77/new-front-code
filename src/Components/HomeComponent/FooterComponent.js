@@ -13,7 +13,8 @@ const FooterComponent = () => {
                     <LogoComponent light styles={{width: "150px"}}/>
                 </div>
 
-                <div className="col-lg-4 col-md-4 col-12 p-2">
+                {/*<div className="col-lg-4 col-md-4 col-12 p-2">*/}
+                <div className="col-md-12 col-12 p-2">
                     <p className="m-3"><FontAwesomeIcon icon={faGlobe}/><small
                         className="ml-2 color-yellow text-footer">United States
                         (EN)</small></p>
@@ -22,23 +23,24 @@ const FooterComponent = () => {
                         555.401.2014</small></p>
                 </div>
 
-                <div className="col-lg-4 col-md-4 col-12 p-2">
-                    <p className="m-3"
-                    ><NavLink to="auth" className="text-decoration-none"><small className="text-footer">YourCase Lawyer
-                        Login</small></NavLink>
-                    </p>
-                    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Press
-                        Room</small></NavLink></p>
-                </div>
 
-                <div className="col-lg-4 col-md-4 col-12 p-2">
-                    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Become A
-                        YourCase
-                        Lawyer</small></NavLink>
-                    </p>
-                    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Affiliate
-                        Program</small></NavLink></p>
-                </div>
+                {/*<div className="col-lg-4 col-md-4 col-12 p-2">*/}
+                {/*    <p className="m-3"*/}
+                {/*    ><NavLink to="auth" className="text-decoration-none"><small className="text-footer">YourCase Lawyer*/}
+                {/*        Login</small></NavLink>*/}
+                {/*    </p>*/}
+                {/*    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Press*/}
+                {/*        Room</small></NavLink></p>*/}
+                {/*</div>*/}
+
+                {/*<div className="col-lg-4 col-md-4 col-12 p-2">*/}
+                {/*    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Become A*/}
+                {/*        YourCase*/}
+                {/*        Lawyer</small></NavLink>*/}
+                {/*    </p>*/}
+                {/*    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Affiliate*/}
+                {/*        Program</small></NavLink></p>*/}
+                {/*</div>*/}
 
             </div>
 

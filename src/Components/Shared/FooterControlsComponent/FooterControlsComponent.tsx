@@ -38,10 +38,11 @@ const FooterControlsComponent = ({
           </button>}
         </div>
 
-        <span className="float-matters">
-            <FontAwesomeIcon icon={faInfoCircle} className="mr-1"/>
-            What this matters ?
-          </span>
+
+        {/*<span className="float-matters">*/}
+        {/*    <FontAwesomeIcon icon={faInfoCircle} className="mr-1"/>*/}
+        {/*    What this matters ?*/}
+        {/*  </span>*/}
       </div>
     </>
   )
