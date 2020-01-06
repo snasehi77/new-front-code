@@ -81,8 +81,16 @@
   color: #a9a9a9;
 }
 
+.description-color{
+  color: #545454;
+}
+
 .white-opacity {
   color: $white-opacity
+}
+
+.cases-subtitle{
+  color: #B1CAC6;
 }
 
 .hr-white {
@@ -162,7 +170,16 @@
 }
 
 .text-decoration-underline {
-  text-decoration: underline;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 600px) {
+  .text-decoration-underline{
+    border-bottom: 0;
+  }
+  .cases-subtitle{
+    color: #CFDDE6;
+  }
 }
 
 

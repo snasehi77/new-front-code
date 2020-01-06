@@ -19,7 +19,7 @@ const  FrontComponent = () => {
           <div className="ptp-20 text-left p-responsive">
             <h1 className="title color-primary">What happened to you <br/> matters to us.</h1>
             <p className="pb-4 color-primary-light">Find the attorney you need in minutes. Free.</p>
-            <button className="btn btn-danger mb-5 mb-md-0">Get started now</button>
+            <button className="btn btn-front mb-5 mb-md-0">Get started now</button>
           </div>
         </div>
         <div className="col-lg-5 col-md-6 col-12 content-img-home p-0">

@@ -24,14 +24,14 @@ const HowItWorks = () => {
         <>
             <div className="container w-80 ptp-10 pbp-10 content-steps">
                 <hr className="hr-primary" style={{width: "100px"}}/>
-                <h1 className="text-center mb-5">Here´s how it works</h1>
+                <h1 className="text-center how-it-works-title mb-5">Here´s how it works</h1>
                 <div className="row mb-5 justify-content-center">
                     {steps.map(s => {
                         return (
                             <div key={s.num} className="col-lg-4 col-md-6 col-12">
                                 <h1 className="font-num">{s.num}</h1>
                                 <h4> {s.title}</h4>
-                                <p className="gray-color">{s.description}</p>
+                                <p className="description-color">{s.description}</p>
                             </div>
                         )
                     })}
@@ -73,7 +73,7 @@ const HowItWorks = () => {
                       has been the
                       industry's standard dummy text.
                     </p>
-                    <p className="case-paragraph-footer">Luis, 46<br/>San Mateo, CA</p>
+                    <p className="case-paragraph-footer"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
                   </div>
                 </div>
               </div>
@@ -86,13 +86,11 @@ const HowItWorks = () => {
                 <h3>About YourCase</h3>
                 <p>
                     YourCase was created by a team of legal professionals who believed that finding an attorney online
-                    was
-                    unnecessarily confusing, impersonal
-                    an stressful. YourCase provides people with a dignified and efficient way to find the lawyers they
+                    was unnecessarily confusing, impersonal, and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they
                     need, free.
                 </p>
                 <p>
-                    you´re an attorney and you´d like to work with YourCase, <span
+                    If you´re an attorney and you´d like to work with YourCase, <span
                     className="text-decoration-underline pointer">get in touch.</span>
                 </p>
             </div>
