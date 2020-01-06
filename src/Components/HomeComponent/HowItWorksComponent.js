@@ -24,7 +24,7 @@ const HowItWorks = () => {
         <>
             <div className="container mt-5 mt-md-0 w-80 ptp-10 pbp-10 content-steps">
                 <hr className="hr-primary" style={{width: "100px"}}/>
-                <h1 className="text-center how-it-works-title mb-5">Here´s how it works</h1>
+                <h1 className="text-center font-weight-bold how-it-works-title mb-5">Here´s how it works</h1>
                 <div className="row mb-5 justify-content-center">
                     {steps.map(s => {
                         return (
