@@ -85,7 +85,142 @@
 
 // END OPTION A AND------
 
-// ---------------------------START OPTION G---------------------------
+//// ---------------------------START OPTION G---------------------------
+//
+//.content-front {
+//  background: $beige-custom;
+//  height: 100%;
+//  width: 100%;
+//
+//  .title {
+//    font-family: Graphik, sans-serif;
+//    font-size: 50px;
+//    line-height: 64px;
+//    font-weight: bold;
+//    color: black;
+//  }
+//
+//  .subtitle {
+//    color: $primary;
+//  }
+//
+//  .p-responsive {
+//    padding-left: 150px;
+//  }
+//
+//  .content-img-home {
+//    height: 100vh;
+//
+//    &-flip {
+//      display: none;
+//    }
+//
+//    .img-home {
+//      position: absolute;
+//      bottom: 0;
+//      right: 0;
+//      width: 100%;
+//    }
+//  }
+//}
+//
+//.btn-front {
+//  background-color: #ED5454;
+//  color: white;
+//}
+//
+//
+//@media (max-width: 800px) {
+//  .content-front {
+//    .p-responsive {
+//      padding-left: 20px;
+//    }
+//
+//    .content-img-home {
+//      .img-home {
+//        width: 70%;
+//      }
+//    }
+//  }
+//}
+//
+//.bg-navbar-front {
+//  background-color: $beige-custom;
+//}
+//
+//
+//@media (max-width: 600px) {
+//  .content-front {
+//
+//    background: white;
+//
+//    .p-responsive {
+//      padding-left: 20px;
+//    }
+//
+//    .title {
+//      margin-top: 80px;
+//      font-size: 30px;
+//      line-height: 44px;
+//      color: $primary
+//    }
+//
+//    .content-img-home {
+//      height: 60vh;
+//      //margin-top: 100px;
+//
+//      .img-home {
+//        display: none;
+//      }
+//
+//      &-flip {
+//        display: block;
+//        width: 100%;
+//        height: 101%;
+//
+//
+//        &-green {
+//          overflow: hidden;
+//          position: absolute;
+//          width: 90%;
+//          height: 380px;
+//          left: 5%;
+//          background: rgb(159, 186, 196);
+//
+//
+//          .img-home-flip {
+//            height: 175%;
+//            position: absolute;
+//            top: -48%;
+//            left: -18%;
+//          }
+//        }
+//      }
+//    }
+//
+//    .your-case-logo {
+//      //left: 16px;
+//      left: -17px;
+//      top: 16px;
+//    }
+//  }
+//
+//  .bg-navbar-front {
+//    background-color: white;
+//  }
+//
+//}
+//
+//
+//.your-case-logo {
+//  position: absolute;
+//  left: 32px;
+//  top: 30px;
+//}
+
+
+
+// ---------------------------START OPTION H---------------------------
 
 .content-front {
   background: $beige-custom;
@@ -124,6 +259,10 @@
   }
 }
 
+.title-padding{
+  padding-top: 20%;
+}
+
 .btn-front {
   background-color: #ED5454;
   color: white;
@@ -151,8 +290,10 @@
 
 @media (max-width: 600px) {
   .content-front {
-
-    background: white;
+    .content-img-home {
+      height: 40vh;
+      //margin-top: 100px;
+    }
 
     .p-responsive {
       padding-left: 20px;
@@ -165,48 +306,19 @@
       color: $primary
     }
 
-    .content-img-home {
-      height: 60vh;
-      //margin-top: 100px;
-
-      .img-home {
-        display: none;
-      }
-
-      &-flip {
-        display: block;
-        width: 100%;
-        height: 101%;
-
-
-        &-green {
-          overflow: hidden;
-          position: absolute;
-          width: 90%;
-          height: 380px;
-          left: 5%;
-          background: rgb(159, 186, 196);
-
-
-          .img-home-flip {
-            height: 175%;
-            position: absolute;
-            top: -48%;
-            left: -18%;
-          }
-        }
-      }
-    }
-
     .your-case-logo {
       //left: 16px;
-      left: -17px;
+      left: 4px;
       top: 16px;
     }
   }
 
   .bg-navbar-front {
     background-color: white;
+  }
+
+  .title-padding{
+    padding-top: 10%;
   }
 
 }
