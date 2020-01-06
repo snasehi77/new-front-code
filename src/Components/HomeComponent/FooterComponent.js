@@ -50,18 +50,18 @@ const FooterComponent = () => {
               <small className="white-opacity text-footer"><i className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.</small>
             </div>
 
-            <div className="col-md-4 col-12">
+            <div className="col-md-4 col-12 pt-2 pt-md-0">
               <small className="white-opacity text-footer">Members term of service</small>
             </div>
 
-            <div className="col-md-4 col-12">
+            <div className="col-md-4 col-12 pt-2 pt-md-0">
               <NavLink to="/privacy_policy"><small className="white-opacity text-footer">Privacy policy</small></NavLink>
             </div>
 
           </div>
         </div>
 
-        <div className="col-lg-4 col-12 text-right footer-responsive">
+        <div className="col-lg-4 col-12 text-right footer-responsive pt-5 pt-md-0">
           <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x">&nbsp;</i>
           <i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x">&nbsp;</i>
           <i title="Linkedin" className="fa fa-linkedin ml-4 pointer fa-2x">&nbsp;</i>

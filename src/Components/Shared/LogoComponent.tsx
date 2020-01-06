@@ -1,7 +1,7 @@
 import React from 'react';
-import logoBlack from '../../Assets/Images/yourcase-logo-dark.png'
+// import logoBlack from '../../Assets/Images/yourcase-logo-dark.png'
 import logoWhite from '../../Assets/Images/yourcase-logo-light.png'
-import logo from '../../Assets/Images/yourcase-logo-green.png';
+import logoGreen from '../../Assets/Images/yourcase-logo-green.png';
 
 interface props {
   className?: string,
@@ -11,8 +11,7 @@ interface props {
 
 const LogoComponent = ({className, styles, light}: props) => {
 
-  // return <img className={className} style={styles} src={light ? logoWhite : logoBlack } alt=""/>
-  return <img className={className} style={styles} src={logo} alt=""/>
+  return <img className={className} style={styles} src={light ? logoWhite : logoGreen } alt=""/>
 
 };
 
