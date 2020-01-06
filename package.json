@@ -32,8 +32,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "start:prod": "REACT_APP_ENVIRONMENT=PROD npm run start",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && rm -rf deploy && mv build deploy"
+    "build:dev": "REACT_APP_ENVIRONMENT=DEV npm run build",
+    "build:prod": "REACT_APP_ENVIRONMENT=PROD npm run build",
+    "deploy:dev": "npm run build:dev && rm -rf deploy && mv build deploy",
+    "deploy:prod": "npm run build:prod && rm -rf deploy && mv build deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
