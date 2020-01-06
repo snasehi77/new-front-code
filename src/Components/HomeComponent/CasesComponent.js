@@ -56,7 +56,7 @@ const CasesComponent = () => {
       <div id="scrolling" className="content-cases mb-3 w-80">
         <div className="text-center mb-3 ">
           <h2 className="font-weight-bolder"> Have a case? We can help. </h2>
-          <h6 className="white-opacity">We can find you can attorney who focuses on cases like yours</h6>
+          <h6 className="white-opacity">We can find you an attorney who focuses on cases like yours.</h6>
         </div>
 
         {/*<div className="row">*/}

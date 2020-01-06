@@ -9,13 +9,13 @@ const steps = [
     },
     {
         num: '2',
-        title: 'We make an introduction',
+        title: 'We make an introduction.',
         description: 'Based on your answers, we find an attorney for you.'
     },
     {
         num: '3',
-        title: 'They get in touch',
-        description: 'within minutes, you´ll be introduced an attorney interested in representing you.'
+        title: 'They get in touch.',
+        description: 'Within minutes, you´ll be introduced to an attorney interested in representing you.'
     }
 ];
 

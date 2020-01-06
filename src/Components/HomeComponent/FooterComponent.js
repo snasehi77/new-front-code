@@ -47,15 +47,15 @@ const FooterComponent = () => {
           <div className="row">
 
             <div className="col-md-4 col-12">
-              <small className="white-opacity text-footer"><i className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.</small>
+              <small className="white-opacity text-footer-social"><i className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.</small>
             </div>
 
             <div className="col-md-4 col-12 pt-2 pt-md-0">
-              <small className="white-opacity text-footer">Members term of service</small>
+              <small className="white-opacity text-footer-social">Members term of service</small>
             </div>
 
             <div className="col-md-4 col-12 pt-2 pt-md-0">
-              <NavLink to="/privacy_policy"><small className="white-opacity text-footer">Privacy policy</small></NavLink>
+              <NavLink to="/privacy_policy"><small className="white-opacity text-footer-social">Privacy policy</small></NavLink>
             </div>
 
           </div>
