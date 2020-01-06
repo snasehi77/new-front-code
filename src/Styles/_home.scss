@@ -124,7 +124,7 @@
   }
 }
 
-.btn-front{
+.btn-front {
   background-color: #ED5454;
   color: white;
 }
@@ -143,6 +143,11 @@
     }
   }
 }
+
+.bg-navbar-front {
+  background-color: $beige-custom;
+}
+
 
 @media (max-width: 600px) {
   .content-front {
@@ -200,6 +205,9 @@
     }
   }
 
+  .bg-navbar-front {
+    background-color: white;
+  }
 
 }
 
@@ -328,46 +336,46 @@
     padding: 0;
   }
 
-  .how-it-works-title{
+  .how-it-works-title {
     font-size: 24px;
   }
 
-  .cases-subtitle{
+  .cases-subtitle {
     color: #CFDDE6;
   }
-  .about-case-title{
+  .about-case-title {
     font-size: 24px;
   }
-  .description-about{
+  .description-about {
     font-size: 16px;
   }
 }
 
-.cases-title{
+.cases-title {
   font-family: Graphik, sans-serif;
 }
 
-.how-it-works-title{
+.how-it-works-title {
   font-family: Graphik, sans-serif;
   line-height: 28px;
 }
 
 @media (min-width: 700px) {
-  .description-about{
+  .description-about {
     font-size: 24px;
   }
 }
 
-.about-case-title{
+.about-case-title {
   font-weight: bold;
   font-family: Graphik, 'sans-serif';
 }
 
-.font-graphik{
+.font-graphik {
   font-family: Graphik, 'sans-serif';
 }
 
-.description-about{
+.description-about {
   font-family: Graphik, 'sans-serif';
 }
 
@@ -402,25 +410,25 @@
 //}
 
 
-.container-height-steps{
+.container-height-steps {
   height: 450px;
 }
 
-.blue-temp{
+.blue-temp {
   background: $tertiary;
 }
 
-.img-steps-div{
+.img-steps-div {
   right: 50px;
   //top: 33px;
 }
 
-.img-steps{
+.img-steps {
   width: 310px;
   background: #E5E5E5;
 }
 
-.case-paragraph{
+.case-paragraph {
   font-family: Graphik, 'sans-serif';
   color: white;
   font-size: 24px;
@@ -448,23 +456,23 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px){
-  .img-steps{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .img-steps {
     width: 207px;
   }
 
-  .case-paragraph{
+  .case-paragraph {
     font-size: 20px;
     line-height: 28px;
   }
 
-  .container-height-steps{
+  .container-height-steps {
     height: 328px;
   }
 }
 
 
-.case-paragraph-footer{
+.case-paragraph-footer {
   font-family: Graphik, 'sans-serif';
   text-align: center;
   font-size: 14px;
@@ -487,17 +495,17 @@ footer {
     }
   }
 
-  a{
+  a {
     color: white;
   }
 }
 
-.text-footer{
+.text-footer {
   font-size: 16px;
 }
 
 
-.text-footer-social{
+.text-footer-social {
   font-size: 14px;
 }
 
