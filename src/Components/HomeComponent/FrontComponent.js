@@ -4,6 +4,7 @@ import imgHome from '../../Assets/Images/woman.png';
 import imgHomeFlip from "../../Assets/Images/image.png";
 import LogoComponent from "../Shared/LogoComponent";
 import logoGreen from "../../Assets/Images/yourcase-logo-green.png";
+import {NavLink} from "react-router-dom";
 
 const  FrontComponent = () => {
   return (
@@ -19,7 +20,7 @@ const  FrontComponent = () => {
           <div className="ptp-20 text-left p-responsive">
             <h1 className="title color-primary">What happened to you <br/> matters to us.</h1>
             <p className="pb-4 color-primary-light">Find the attorney you need in minutes. Free.</p>
-            <button className="btn btn-front mb-5 mb-md-0">Get started now</button>
+            <NavLink to="/accidents_and_injuries/24" className="btn btn-front mb-5 mb-md-0">Get started now</NavLink>
           </div>
         </div>
         <div className="col-lg-5 col-md-6 col-12 content-img-home p-0">
