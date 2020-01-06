@@ -54,7 +54,7 @@ const CasesComponent = () => {
   return (
     <div className="container-fluid">
       <div id="scrolling" className="content-cases mb-3 w-80">
-        <div className="text-center mb-3 ">
+        <div className="text-center mb-3 mt-5 mt-md-0">
           {/*<h2 className="font-weight-bolder"> Have a case? We can help. </h2>*/}
           <h2 className="cases-title font-weight-bold"> Have a case? We can help. </h2>
           <h6 className="cases-subtitle">We can find you an attorney who focuses on cases like yours.</h6>

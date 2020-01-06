@@ -327,6 +327,10 @@
   .container-fluid {
     padding: 0;
   }
+
+  .how-it-works-title{
+    font-size: 24px;
+  }
 }
 
 .cases-title{
@@ -335,7 +339,6 @@
 
 .how-it-works-title{
   font-family: Graphik, sans-serif;
-  font-size: 24px;
   line-height: 28px;
 }
 
@@ -388,6 +391,7 @@
 }
 
 .case-paragraph{
+  font-family: Graphik, 'sans-serif';
   color: white;
   font-size: 24px;
   line-height: 32px;
@@ -429,11 +433,9 @@
   }
 }
 
-@media (width: 1026px) {
-
-}
 
 .case-paragraph-footer{
+  font-family: Graphik, 'sans-serif';
   text-align: center;
   font-size: 14px;
   line-height: 20px;

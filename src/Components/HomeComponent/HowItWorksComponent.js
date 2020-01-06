@@ -22,14 +22,14 @@ const steps = [
 const HowItWorks = () => {
     return (
         <>
-            <div className="container w-80 ptp-10 pbp-10 content-steps">
+            <div className="container mt-5 mt-md-0 w-80 ptp-10 pbp-10 content-steps">
                 <hr className="hr-primary" style={{width: "100px"}}/>
                 <h1 className="text-center how-it-works-title mb-5">Here´s how it works</h1>
                 <div className="row mb-5 justify-content-center">
                     {steps.map(s => {
                         return (
                             <div key={s.num} className="col-lg-4 col-md-6 col-12">
-                                <h1 className="font-num">{s.num}</h1>
+                                <h1 className={s.num === '1' ? "font-num" : "font-num mt-5 mt-md-0"}>{s.num}</h1>
                                 <h4> {s.title}</h4>
                                 <p className="description-color">{s.description}</p>
                             </div>
@@ -83,13 +83,13 @@ const HowItWorks = () => {
 
             <div className="text-center w-60 m-auto ptp-10 pbp-10">
                 <hr className="hr-primary mt-5 mb-5" style={{width: '100px'}}/>
-                <h3>About YourCase</h3>
-                <p>
+                <h1 className="about-case-title">About YourCase</h1>
+                <p className="description-about pt-5">
                     YourCase was created by a team of legal professionals who believed that finding an attorney online
                     was unnecessarily confusing, impersonal, and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they
                     need, free.
                 </p>
-                <p>
+                <p className="description-about">
                     If you´re an attorney and you´d like to work with YourCase, <span
                     className="text-decoration-underline pointer">get in touch.</span>
                 </p>

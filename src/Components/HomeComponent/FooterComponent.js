@@ -24,19 +24,19 @@ const FooterComponent = () => {
 
                 <div className="col-lg-4 col-md-4 col-12 p-2">
                     <p className="m-3"
-                    ><NavLink to="auth" className="text-decoration-none text-footer"><small>YourCase Lawyer
+                    ><NavLink to="auth" className="text-decoration-none"><small className="text-footer">YourCase Lawyer
                         Login</small></NavLink>
                     </p>
-                    <p className="m-3"><NavLink to="/" className="text-decoration-none text-footer"><small>Press
+                    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Press
                         Room</small></NavLink></p>
                 </div>
 
                 <div className="col-lg-4 col-md-4 col-12 p-2">
-                    <p className="m-3"><NavLink to="/" className="text-decoration-none text-footer"><small>Become A
+                    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Become A
                         YourCase
                         Lawyer</small></NavLink>
                     </p>
-                    <p className="m-3"><NavLink to="/" className="text-decoration-none text-footer"><small>Affiliate
+                    <p className="m-3"><NavLink to="/" className="text-decoration-none"><small className="text-footer">Affiliate
                         Program</small></NavLink></p>
                 </div>
 
