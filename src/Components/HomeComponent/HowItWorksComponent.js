@@ -112,13 +112,12 @@ const HowItWorks = () => {
                 <hr className="hr-primary mt-5 mb-5" style={{width: '100px'}}/>
                 <h1 className="about-case-title font-graphik-medium">About YourCase</h1>
                 <p className="description-about font-graphik-regular pt-5">
-                    YourCase was created by a team of legal professionals who believed that finding an attorney online
-                    was unnecessarily confusing, impersonal, and stressful. YourCase provides people with a dignified
-                    and efficient way to find the lawyers they
-                    need, free.
+                    YourCase was created by a team of legal professionals who believed that finding an attorney
+                    online was unnecessarily confusing, impersonal and stressful.
+                    YourCase provides people with a dignified and efficient way to find the lawyers they need, free.
                 </p>
                 <p className="description-about font-graphik-regular">
-                    If you´re an attorney and you´d like to work with YourCase, <span
+                    If you're an attorney and you'd like to work with YourCase, <span
                     className="text-decoration-underline pointer">get in touch.</span>
                 </p>
             </div>
