@@ -89,7 +89,7 @@ const HowItWorks = () => {
 
             <div className="container d-md-flex p-0">
                 <div className="row m-0 col-12 col-md-5 col-lg-5 col-xl-4 pr-md-0 blue-temp-gradient">
-                    <div className="col-8 my-auto mx-auto d-block p-0 img-steps">
+                    <div className="col-8 col-sm-7 col-md-5 my-auto mx-auto d-block p-0 img-steps">
                         <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>
                     </div>
                 </div>
@@ -98,9 +98,9 @@ const HowItWorks = () => {
                     <div className="col-12 pl-md-0 pt-5">
                         <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>
                         <p className="text-center case-paragraph font-graphik-regular">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the
-                            industry's standard dummy text.
+                            {/*Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum*/}
+                            {/*has been the*/}
+                            {/*industry's standard dummy text.*/}
                         </p>
                         <p className="case-paragraph-footer font-graphik-regular mb-5"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
                     </div>
