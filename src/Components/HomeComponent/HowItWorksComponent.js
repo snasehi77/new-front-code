@@ -30,17 +30,19 @@ const HowItWorks = () => {
                         return (
                             <div key={s.num} className="col-lg-4 col-md-6 col-12">
                                 <h1 className={s.num === '1' ? "font-num" : "font-num mt-5 mt-md-0"}>{s.num}</h1>
-                                <h4> {s.title}</h4>
-                                <p className="description-color">{s.description}</p>
+                                <h4 className="title-mobile"> {s.title}</h4>
+                                <p className="description-color description-mobile">{s.description}</p>
                             </div>
                         )
                     })}
                 </div>
             </div>
+
+
             {/*<div className="blue-background row">*/}
             {/*  <div className="col-lg-4 col-sm-12 ">*/}
             {/*    <div className="img-steps">*/}
-            {/*      <img src={imgSteps} alt=""/>*/}
+            {/*      <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>*/}
             {/*    </div>*/}
             {/*  </div>*/}
             {/*  <div className="col-lg-8 col-sm-12 d-flex justify-content-center align-items-center">*/}
@@ -54,31 +56,56 @@ const HowItWorks = () => {
             {/*  </div>*/}
             {/*</div>*/}
 
+            {/*----------------Option G----------------*/}
 
-          <div className="container">
-            <div className="row justify-content-center align-items-center">
-              <div className="col-10 col-sm-2 p-0 d-sm-none">
-                <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>
-              </div>
-              <div className="col-10 col-sm-8 col-md-8 blue-temp col-lg-8 container-height-steps">
-                <div className="row h-100 align-items-center">
-                  <div className="col-sm-4 d-none d-sm-block img-steps-div">
-                    <img className="img-steps" src={imgSteps} alt=""/>
-                  </div>
 
-                  <div className="col-sm-8 pt-md-4 d-block-flex justify-content-center align-items-center">
-                    <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>
-                    <p className="text-center case-paragraph">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                      has been the
-                      industry's standard dummy text.
-                    </p>
-                    <p className="case-paragraph-footer"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
-                  </div>
+            {/*<div className="container">*/}
+            {/*  <div className="row justify-content-center align-items-center">*/}
+            {/*    <div className="col-10 col-sm-2 p-0 d-sm-none">*/}
+            {/*      <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>*/}
+            {/*    </div>*/}
+            {/*    <div className="col-12 col-sm-8 col-md-8 blue-temp col-lg-8 container-height-steps">*/}
+            {/*      <div className="row h-100 align-items-center">*/}
+            {/*        <div className="col-sm-4 d-none d-sm-block img-steps-div">*/}
+            {/*          <img className="img-steps" src={imgSteps} alt=""/>*/}
+            {/*        </div>*/}
+
+            {/*        <div className="col-sm-8 pt-md-4 d-block-flex justify-content-center align-items-center">*/}
+            {/*          <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>*/}
+            {/*          <p className="text-center case-paragraph">*/}
+            {/*            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum*/}
+            {/*            has been the*/}
+            {/*            industry's standard dummy text.*/}
+            {/*          </p>*/}
+            {/*          <p className="case-paragraph-footer"><strong>Luis, 46</strong><br/>San Mateo, CA</p>*/}
+            {/*        </div>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+
+
+            {/*----------------Option H----------------*/}
+
+            <div className="container d-md-flex p-0">
+                <div className="row m-0 col-12 col-md-5 col-lg-5 col-xl-4 pr-md-0 blue-temp-gradient">
+                    <div className="col-8 my-auto mx-auto d-block p-0 img-steps">
+                        <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>
+                    </div>
                 </div>
-              </div>
+
+                <div className="row col-12 col-md-5 m-0 col-lg-5 col-xl-6 pl-md-0 blue-temp">
+                    <div className="col-12 pl-md-0 pt-5">
+                        <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>
+                        <p className="text-center case-paragraph">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been the
+                            industry's standard dummy text.
+                        </p>
+                        <p className="case-paragraph-footer mb-5"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
 
             <div className="text-center w-60 m-auto ptp-10 pbp-10">
@@ -86,7 +113,8 @@ const HowItWorks = () => {
                 <h1 className="about-case-title">About YourCase</h1>
                 <p className="description-about pt-5">
                     YourCase was created by a team of legal professionals who believed that finding an attorney online
-                    was unnecessarily confusing, impersonal, and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they
+                    was unnecessarily confusing, impersonal, and stressful. YourCase provides people with a dignified
+                    and efficient way to find the lawyers they
                     need, free.
                 </p>
                 <p className="description-about">
