@@ -24,14 +24,14 @@ const HowItWorks = () => {
         <>
             <div className="container mt-5 mt-md-0 w-80 ptp-10 pbp-10 content-steps">
                 <hr className="hr-primary" style={{width: "100px"}}/>
-                <h1 className="text-center font-weight-bold how-it-works-title mb-5">Here´s how it works</h1>
+                <h1 className="text-center how-it-works-title font-graphik-medium mb-5">Here´s how it works</h1>
                 <div className="row mb-5 justify-content-center">
                     {steps.map(s => {
                         return (
                             <div key={s.num} className="col-lg-4 col-md-6 col-12">
                                 <h1 className={s.num === '1' ? "font-num" : "font-num mt-5 mt-md-0"}>{s.num}</h1>
-                                <h4 className="title-mobile"> {s.title}</h4>
-                                <p className="description-color description-mobile">{s.description}</p>
+                                <h4 className="title-mobile font-graphik-medium"> {s.title}</h4>
+                                <p className="description-color description-mobile font-graphik-regular">{s.description}</p>
                             </div>
                         )
                     })}
@@ -97,12 +97,12 @@ const HowItWorks = () => {
                 <div className="row col-12 col-md-5 m-0 col-lg-5 col-xl-6 pl-md-0 blue-temp">
                     <div className="col-12 pl-md-0 pt-5">
                         <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>
-                        <p className="text-center case-paragraph">
+                        <p className="text-center case-paragraph font-graphik-regular">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                             has been the
                             industry's standard dummy text.
                         </p>
-                        <p className="case-paragraph-footer mb-5"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
+                        <p className="case-paragraph-footer font-graphik-regular mb-5"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
                     </div>
                 </div>
             </div>
@@ -110,14 +110,14 @@ const HowItWorks = () => {
 
             <div className="text-center w-60 m-auto ptp-10 pbp-10">
                 <hr className="hr-primary mt-5 mb-5" style={{width: '100px'}}/>
-                <h1 className="about-case-title">About YourCase</h1>
-                <p className="description-about pt-5">
+                <h1 className="about-case-title font-graphik-medium">About YourCase</h1>
+                <p className="description-about font-graphik-regular pt-5">
                     YourCase was created by a team of legal professionals who believed that finding an attorney online
                     was unnecessarily confusing, impersonal, and stressful. YourCase provides people with a dignified
                     and efficient way to find the lawyers they
                     need, free.
                 </p>
-                <p className="description-about">
+                <p className="description-about font-graphik-regular">
                     If you´re an attorney and you´d like to work with YourCase, <span
                     className="text-decoration-underline pointer">get in touch.</span>
                 </p>

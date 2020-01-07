@@ -7,7 +7,7 @@
 //  width: 100%;
 //
 //  .title {
-//    font-family: Graphik, sans-serif;
+//    //font-family: Graphik, 'sans-serif';
 //    font-size: 50px;
 //    line-height: 64px;
 //    font-weight: bold;
@@ -93,7 +93,7 @@
 //  width: 100%;
 //
 //  .title {
-//    font-family: Graphik, sans-serif;
+//    //font-family: Graphik, 'sans-serif';
 //    font-size: 50px;
 //    line-height: 64px;
 //    font-weight: bold;
@@ -226,13 +226,6 @@
   height: 100%;
   width: 100%;
 
-  .title {
-    font-family: Graphik, sans-serif;
-    font-size: 50px;
-    line-height: 64px;
-    font-weight: bold;
-    color: black;
-  }
 
   .subtitle {
     color: $primary;
@@ -330,10 +323,10 @@
     position: absolute;
     width: 300px;
     object-fit: contain;
-    object-position: 26px;
+    object-position: 45px;
     height: 511px;
     left: 162px;
-    top: 113px;
+    top: 120px;
   }
 
 }
@@ -478,32 +471,11 @@
   }
 }
 
-.cases-title {
-  font-family: Graphik, sans-serif;
-}
-
-.how-it-works-title {
-  font-family: Graphik, sans-serif;
-  line-height: 28px;
-}
 
 @media (min-width: 700px) {
   .description-about {
     font-size: 24px;
   }
-}
-
-.about-case-title {
-  font-weight: bold;
-  font-family: Graphik, 'sans-serif';
-}
-
-.font-graphik {
-  font-family: Graphik, 'sans-serif';
-}
-
-.description-about {
-  font-family: Graphik, 'sans-serif';
 }
 
 
@@ -555,14 +527,6 @@
 //  background: #E5E5E5;
 //}
 
-.case-paragraph {
-  font-family: Graphik, 'sans-serif';
-  color: white;
-  font-size: 20px;
-  line-height: 32px;
-  /* or 133% */
-  text-align: center;
-}
 
 .blue-temp-gradient {
   background: linear-gradient(270deg, rgba(0, 45, 68, 1) 50%, rgba(255, 255, 255, 1) 50%);
@@ -625,14 +589,6 @@
 //}
 
 
-.case-paragraph-footer {
-  font-family: Graphik, 'sans-serif';
-  text-align: center;
-  font-size: 14px;
-  line-height: 20px;
-  color: #F9C6C6;
-}
-
 //-----------------------------FOOTER--------------------------------
 
 footer {
@@ -663,5 +619,59 @@ footer {
 }
 
 
+// ------------------------ Fonts ------------
 
+
+@font-face {
+  font-family: 'Graphik semibold';
+  font-style: normal;
+  src: url('../Assets/Fonts/Graphik_Font/Graphik-Semibold.otf') format('truetype')
+}
+
+
+@font-face {
+  font-family: 'Graphik regular';
+  font-style: normal;
+  src: url('../Assets/Fonts/Graphik_Font/Graphik-Regular.otf') format('truetype')
+}
+
+// Semibold, thin, black, medium
+@font-face {
+  font-family: 'Graphik medium';
+  font-style: normal;
+  src: url('../Assets/Fonts/Graphik_Font/Graphik-Medium.otf') format('truetype')
+}
+
+.case-paragraph-footer {
+  //font-family: Graphik, 'sans-serif';
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #F9C6C6;
+}
+
+.case-paragraph {
+  //font-family: Graphik, 'sans-serif';;;
+  color: white;
+  font-size: 20px;
+  line-height: 32px;
+  /* or 133% */
+  text-align: center;
+}
+
+.title {
+  font-family: 'Graphik semibold', serif;
+  font-size: 50px;
+  line-height: 64px;
+  color: black;
+}
+
+
+.font-graphik-regular {
+  font-family: 'Graphik regular', serif;
+}
+
+.font-graphik-medium{
+  font-family: 'Graphik medium', serif;
+}
 
