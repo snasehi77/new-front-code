@@ -2,6 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGlobe, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from 'react-router-dom';
+import linkedinIcon from '../../Assets/icons/linkedin-icon.png';
 import LogoComponent from "../Shared/LogoComponent";
 
 const FooterComponent = () => {
@@ -15,12 +16,12 @@ const FooterComponent = () => {
 
                 {/*<div className="col-lg-4 col-md-4 col-12 p-2">*/}
                 <div className="col-md-12 col-12 p-2">
-                    <p className="m-3"><FontAwesomeIcon icon={faGlobe}/><small
-                        className="ml-2 text-footer font-graphik-regular" style={{color: '#FBECC6'}}>United States
-                        (EN)</small></p>
-                    <p className="m-3"><FontAwesomeIcon icon={faPhone}/><small
-                        className="ml-2 text-footer font-graphik-regular" style={{color: '#FBECC6'}}>+1
-                        555.401.2014</small></p>
+                    <p className="m-3"><FontAwesomeIcon icon={faGlobe}/><span
+                        className="ml-2 text-footer-location">United States
+                        (EN)</span></p>
+                    <p className="m-3"><FontAwesomeIcon icon={faPhone}/><span
+                        className="ml-2 text-footer-location">+1
+                        555.401.2014</span></p>
                 </div>
 
 
@@ -52,17 +53,17 @@ const FooterComponent = () => {
                     <div className="row">
 
                         <div className="col-md-4 col-12">
-                            <small className="text-footer font-graphik-regular" style={{color: '#62948C'}}><i
-                                className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.</small>
+                            <span className="text-footer-bottom"><i
+                                className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.</span>
                         </div>
 
                         <div className="col-md-4 col-12 pt-2 pt-md-0">
-                            <small className="text-footer font-graphik-regular" style={{color: '#62948C'}}>Members term of service</small>
+                            <span className="text-footer-bottom">Members term of service</span>
                         </div>
 
                         <div className="col-md-4 col-12 pt-2 pt-md-0">
-                            <NavLink to="/privacy_policy"><small className="text-footer font-graphik-regular" style={{color: '#62948C'}}>Privacy
-                                policy</small></NavLink>
+                            <NavLink to="/privacy_policy"><span className="text-footer-bottom">Privacy
+                                policy</span></NavLink>
                         </div>
 
                     </div>
@@ -71,7 +72,7 @@ const FooterComponent = () => {
                 <div className="col-lg-4 col-12 text-right footer-responsive pt-5 pt-md-0">
                     <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x">&nbsp;</i>
                     <i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x">&nbsp;</i>
-                    <i title="Linkedin" className="fa fa-linkedin ml-4 pointer fa-2x">&nbsp;</i>
+                    <i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x">&nbsp;</i>
                 </div>
 
             </div>

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import LogoComponent from "../Shared/LogoComponent";
 import mainImage from "../../Assets/Images/woman.png";
-import {NavLink} from "react-router-dom";
 import {flow_id} from "../../Utils/Config";
+import {Collapse, Nav, Navbar, NavbarToggler, NavItem} from "reactstrap";
+import {NavLink} from "react-router-dom";
 
 const FrontComponent = () => {
+
+    const [collapsed, setCollapsed] = useState(true);
+
+    const toggleNavbar = () => setCollapsed(!collapsed);
+
     return (
         // <div className="content-front">
         //
@@ -36,12 +42,29 @@ const FrontComponent = () => {
 
         <div className="bg-front overflow-hidden">
 
-            <LogoComponent className="your-case-logo ml-5 pt-5"/>
+            <div className="container">
+                <div className="row navbar-front pt-5 pt-md-3">
+                    <LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-1"/>
+
+                    <Navbar color="faded" className="ml-auto" light>
+                        <NavbarToggler onClick={toggleNavbar} className="mr-2 d-block d-sm-none" style={{border: '0'}}/>
+                        <Collapse isOpen={!collapsed} navbar>
+                            <Nav navbar>
+                                <NavItem>
+                                </NavItem>
+                                <NavItem>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </Navbar>
+                </div>
+            </div>
+
             <div className="container d-flex" style={{marginBottom: '-3rem'}}>
                 <div className="row">
-                    <div className="col-12 col-md-7 pt-5 pl-5">
-                        <div className="row d-block pt-5">
-                            <h1 className="main-title pt-5">What happened to you <br/> matters to us.</h1>
+                    <div className="col-12 col-md-7 mt-lg-5 pt-5 pl-5">
+                        <div className="row d-block pb-4 pt-md-5 mt-md-0">
+                            <span className="main-title pt-5">What happened to you <br/> matters to us.</span>
                             <p className="pt-2 main-subtitle">Find the attorney you need in minutes. Free.</p>
                             <NavLink to={`/accidents_and_injuries/${flow_id}`}
                                      className="btn btn-front mb-5 mt-4">Get

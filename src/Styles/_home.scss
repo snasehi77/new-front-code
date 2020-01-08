@@ -233,8 +233,12 @@
 //-----------Front Style ------
 
 .your-case-logo {
-  position: absolute;
+  //position: absolute;
   width: 190px;
+}
+
+.navbar-front{
+  position: absolute;
 }
 
 .main-title {
@@ -263,40 +267,234 @@
 }
 
 @media (min-width: 800px) {
-  .bg-front{
+  .bg-front {
     margin-bottom: -2rem;
   }
 }
 
+//-----------Front Style ------
+
+
+//-----------Cases Style----------
+.cases-title {
+  font-family: 'Graphik medium', serif;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.cases-subtitle {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Graphik regular', serif;
+  color: #B1CAC6;
+}
+
+.cases-label {
+  font-family: 'Graphik medium', serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+//-----------Cases Style----------
+
+
+//--------- How it horks -------------
+
+.how-it-works-title {
+  font-family: 'Graphik medium', serif;
+  font-size: 40px;
+  line-height: 48px;
+  color: #001622;
+}
+
+.how-it-works-num {
+  font-family: 'Graphik medium', serif;
+  font-size: 128px;
+  line-height: 128px;
+  color: #FF9966;
+}
+
+.how-it-works-title-num {
+  font-family: 'Graphik medium', serif;
+  font-size: 24px;
+  line-height: 38px;
+  color: #001622;
+}
+
+.how-it-works-description-num {
+  font-family: 'Graphik regular', serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #545454;
+}
+
+.how-it-works-about-title {
+  font-family: 'Graphik medium', serif;
+  font-size: 40px;
+  line-height: 48px;
+  color: #001622;
+}
+
+.how-it-works-about-text {
+  font-family: 'Graphik regular', serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #001622;
+}
+
+
+//--------- How it horks -------------
+
+//------------ Footer -------
+
+.text-footer-location {
+  font-family: 'Graphik regular', serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FBECC6;
+}
+
+.text-footer-bottom {
+  font-family: 'Graphik regular', serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #62948C;
+}
+
+//------------ Footer -------
 
 
 //-------- Mobile responsive ------
 
 @media (max-width: 700px) {
+
+  //.your-case-logo{
+  //  width: 165px;
+  //  height: 34px;
+  //}
+
+  .navbar-front{
+    position: static;
+  }
+
+  //-----------Front Style ------
+
   .main-title {
     font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
   }
 
   .main-subtitle {
-    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   .main-image {
     position: relative;
     object-fit: cover;
     object-position: 122px;
-    width: 368px;
-    height: 358px;
-    margin-bottom: -7rem;
-    bottom: 144px;
-    left: 42px;
+    width: 507px;
+    height: 493px;
+    margin-bottom: -8rem;
+    bottom: 170px;
+    left: -62px;
   }
+
+  .btn-front {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  //-----------Front Style ------
+
+
+  //-----------Cases Style----------
+
+
+  .cases-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .cases-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .cases-label-mobile {
+    font-family: 'Graphik regular', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #0D3F37;
+  }
+
+
+  //-----------Cases Style----------
+
+  //--------- How it horks -------------
+
+
+  .how-it-works-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .how-it-works-num {
+    font-size: 96px;
+    line-height: 96px;
+    color: #FF9966;
+  }
+
+  .how-it-works-title-num {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .how-it-works-description-num {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .how-it-works-about-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .how-it-works-about-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  //--------- How it horks -------------
+
+  //------------ Footer -------
+
+  .text-footer-location {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .text-footer-bottom {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  //------------ Footer -------
+
 }
 
 //-------- Mobile responsive ------
 
-
-//-----------Front Style ------
 
 //-----------------------------CASES--------------------------------
 
@@ -417,13 +615,13 @@
     padding: 0;
   }
 
-  .how-it-works-title {
-    font-size: 24px;
-  }
+  //.how-it-works-title {
+  //  font-size: 24px;
+  //}
 
-  .cases-subtitle {
-    color: #CFDDE6;
-  }
+  //.cases-subtitle {
+  //  color: #CFDDE6;
+  //}
   .about-case-title {
     font-size: 24px;
   }
@@ -442,11 +640,11 @@
 
 //-----------------------------STEPS--------------------------------
 .content-steps {
-  .font-num {
-    font-size: 104px;
-
-    color: $orange;
-  }
+  //.font-num {
+  //  font-size: 104px;
+  //
+  //  color: $orange;
+  //}
 }
 
 .blue-background {
@@ -570,14 +768,15 @@ footer {
   }
 }
 
-.text-footer {
-  font-size: 14px;
-}
-
-
-.text-footer-social {
-  font-size: 14px;
-}
+//.text-footer {
+//  font-size: 14px;
+//
+//}
+//
+//
+//.text-footer-social {
+//  font-size: 14px;
+//}
 
 
 // ------------------------ Fonts ------------
@@ -611,9 +810,9 @@ footer {
   color: #F9C6C6;
 }
 
-.cases-title {
-  font-family: 'Graphik medium', serif;
-}
+//.cases-title {
+//  font-family: 'Graphik medium', serif;
+//}
 
 @media (max-width: 800px) {
   font-family: 'Graphik regular', serif;
