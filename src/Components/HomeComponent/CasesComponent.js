@@ -53,7 +53,7 @@ const CasesComponent = () => {
 
   return (
     <div className="container-fluid">
-      <div id="scrolling" className="content-cases mb-3 w-80">
+      <div id="scrolling" className="content-cases mb-3 col-12 col-md-10">
         <div className="text-center mb-3 mt-5 mt-md-0">
           {/*<h2 className="font-weight-bolder"> Have a case? We can help. </h2>*/}
           <h2 className="font-graphik-medium"> Have a case? We can help. </h2>
@@ -95,7 +95,7 @@ const CasesComponent = () => {
 
                   <NavLink to={c.routeUrl} className="item-route d-flex align-items-center pointer item-on-display">
                     <div className="col-10">
-                      <h6 className="m-0 cl-white font-graphik-regular">{c.label}</h6>
+                      <h6 className="m-0 cl-white font-graphik-medium">{c.label}</h6>
                     </div>
                     <div className="col-2">
                       <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>
@@ -106,7 +106,7 @@ const CasesComponent = () => {
                            className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
                     <div className="text-center">
                       <img src={c.icon} alt=""/>
-                      <h6 className="mt-4 subtitle">{c.label}</h6>
+                      <h6 className="mt-4 font-graphik-regular">{c.label}</h6>
                     </div>
                   </NavLink>
                 </div>

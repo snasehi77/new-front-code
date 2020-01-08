@@ -221,123 +221,82 @@
 
 // ---------------------------START OPTION H---------------------------
 
-.content-front {
-  background: $beige-custom;
-  height: 100%;
-  width: 100%;
 
-
-  .subtitle {
-    color: $primary;
-  }
-
-  .p-responsive {
-    padding-left: 150px;
-  }
-
-  .content-img-home {
-    height: 100vh;
-
-    &-flip {
-      display: none;
-    }
-
-    .img-home {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-    }
-  }
+//---------- General Style --------
+.bg-front {
+  background-color: $beige-custom;
 }
 
-.title-padding {
-  padding-top: 20%;
+//---------- General Style --------
+
+
+//-----------Front Style ------
+
+.your-case-logo {
+  position: absolute;
+  width: 190px;
+}
+
+.main-title {
+  font-family: 'Graphik semibold', serif;
+  font-size: 56px;
+}
+
+.main-subtitle {
+  font-family: 'Graphik regular', serif;
+  font-size: 20px;
+  color: $primary-light;
 }
 
 .btn-front {
   background-color: #ED5454;
   color: white;
+  font-family: 'Graphik medium', serif;
+  font-size: 16px;
 }
 
+.main-image {
+  object-fit: cover;
+  object-position: center -197px;
+  width: 600px;
+  height: 600px;
+}
 
-@media (max-width: 800px) {
-  .content-front {
-    .p-responsive {
-      padding-left: 20px;
-    }
-
-    .content-img-home {
-      .img-home {
-        width: 70%;
-      }
-    }
+@media (min-width: 800px) {
+  .bg-front{
+    margin-bottom: -2rem;
   }
 }
 
-.bg-navbar-front {
-  background-color: $beige-custom;
+
+
+//-------- Mobile responsive ------
+
+@media (max-width: 700px) {
+  .main-title {
+    font-size: 32px;
+  }
+
+  .main-subtitle {
+    font-size: 16px;
+  }
+
+  .main-image {
+    position: relative;
+    object-fit: cover;
+    object-position: 122px;
+    width: 368px;
+    height: 358px;
+    margin-bottom: -7rem;
+    bottom: 144px;
+    left: 42px;
+  }
 }
 
-
-@media (max-width: 600px) {
-  .content-front {
-    .content-img-home {
-      //height: 40vh;
-      //object-fit: cover;
-      //margin-top: 100px;
-
-    }
-
-    .front-height {
-      height: 557px;
-    }
-
-    .p-responsive {
-      padding-left: 20px;
-    }
-
-    .title {
-      margin-top: 80px;
-      font-size: 30px;
-      line-height: 44px;
-    }
-
-    .your-case-logo {
-      //left: 16px;
-      left: 19px;
-      top: 16px;
-      width: 143px;
-    }
-  }
-
-  .bg-navbar-front {
-    background-color: white;
-  }
-
-  .title-padding {
-    padding-top: 10%;
-  }
-
-  .img-home {
-    position: absolute;
-    width: 300px;
-    object-fit: contain;
-    object-position: 45px;
-    height: 511px;
-    left: 162px;
-    top: 120px;
-  }
-
-}
+//-------- Mobile responsive ------
 
 
-.your-case-logo {
-  position: absolute;
-  left: 32px;
-  top: 30px;
-  width: 190px;
-}
+//-----------Front Style ------
 
 //-----------------------------CASES--------------------------------
 
@@ -429,17 +388,17 @@
 }
 
 
-.content-cases:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  top: -50px;
-  left: 0;
-  height: 60px;
-  z-index: 10;
-  background: $primary;
-  transition: top .4s, height .4s;
-}
+//.content-cases:after {
+//  content: "";
+//  position: absolute;
+//  width: 100%;
+//  top: -50px;
+//  left: 0;
+//  height: 60px;
+//  z-index: 10;
+//  background: $primary;
+//  transition: top .4s, height .4s;
+//}
 
 
 @media (max-width: 600px) {
@@ -447,12 +406,13 @@
     width: 100% !important;
     padding: 20px 20px 120px 20px !important;
   }
-  .content-cases:after {
-    content: "";
-    height: 0;
-    background: transparent;
-    top: 0;
-  }
+  //.content-cases:after {
+  //  content: "";
+  //  height: 0;
+  //  background: transparent;
+  //  top: 0;
+  //}
+
   .container-fluid {
     padding: 0;
   }
@@ -484,7 +444,7 @@
 .content-steps {
   .font-num {
     font-size: 104px;
-    font-weight: bold;
+
     color: $orange;
   }
 }
@@ -651,6 +611,14 @@ footer {
   color: #F9C6C6;
 }
 
+.cases-title {
+  font-family: 'Graphik medium', serif;
+}
+
+@media (max-width: 800px) {
+  font-family: 'Graphik regular', serif;
+}
+
 .case-paragraph {
   //font-family: Graphik, 'sans-serif';;;
   color: white;
@@ -672,7 +640,12 @@ footer {
   font-family: 'Graphik regular', serif;
 }
 
-.font-graphik-medium{
+.font-graphik-medium {
   font-family: 'Graphik medium', serif;
 }
+
+.font-graphik-semibold {
+  font-family: 'Graphik semibold', serif;
+}
+
 

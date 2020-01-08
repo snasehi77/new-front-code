@@ -24,12 +24,12 @@ const HowItWorks = () => {
         <>
             <div className="container mt-5 mt-md-0 w-80 ptp-10 pbp-10 content-steps">
                 <hr className="hr-primary" style={{width: "100px"}}/>
-                <h1 className="text-center how-it-works-title font-graphik-medium mb-5">Here´s how it works</h1>
+                <h1 className="text-center how-it-works-title font-graphik-medium pt-4 mb-5">Here´s how it works</h1>
                 <div className="row mb-5 justify-content-center">
                     {steps.map(s => {
                         return (
                             <div key={s.num} className="col-lg-4 col-md-6 col-12">
-                                <h1 className={s.num === '1' ? "font-num" : "font-num mt-5 mt-md-0"}>{s.num}</h1>
+                                <h1 className={s.num === '1' ? "font-num font-graphik-medium" : "font-num font-graphik-medium mt-5 mt-md-0"}>{s.num}</h1>
                                 <h4 className="title-mobile font-graphik-medium"> {s.title}</h4>
                                 <p className="description-color description-mobile font-graphik-regular">{s.description}</p>
                             </div>
@@ -87,28 +87,28 @@ const HowItWorks = () => {
 
             {/*----------------Option H----------------*/}
 
-            <div className="container d-md-flex p-0">
-                <div className="row m-0 col-12 col-md-5 col-lg-5 col-xl-4 pr-md-0 blue-temp-gradient">
-                    <div className="col-8 col-sm-7 col-md-5 my-auto mx-auto d-block p-0 img-steps">
-                        <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>
-                    </div>
-                </div>
+            {/*<div className="container d-md-flex p-0">*/}
+            {/*    <div className="row m-0 col-12 col-md-5 col-lg-5 col-xl-4 pr-md-0 blue-temp-gradient">*/}
+            {/*        <div className="col-8 col-sm-7 col-md-5 my-auto mx-auto d-block p-0 img-steps">*/}
+            {/*            <img className="img-fluid" style={{background: '#E5E5E5'}} src={imgSteps} alt=""/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
-                <div className="row col-12 col-md-5 m-0 col-lg-5 col-xl-6 pl-md-0 blue-temp">
-                    <div className="col-12 pl-md-0 pt-5">
-                        <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>
-                        <p className="text-center case-paragraph font-graphik-regular">
-                            {/*Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum*/}
-                            {/*has been the*/}
-                            {/*industry's standard dummy text.*/}
-                        </p>
-                        <p className="case-paragraph-footer font-graphik-regular mb-5"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
-                    </div>
-                </div>
-            </div>
+            {/*    <div className="row col-12 col-md-5 m-0 col-lg-5 col-xl-6 pl-md-0 blue-temp">*/}
+            {/*        <div className="col-12 pl-md-0 pt-5">*/}
+            {/*            <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center ">❝</h1>*/}
+            {/*            <p className="text-center case-paragraph font-graphik-regular">*/}
+            {/*                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum*/}
+            {/*                has been the*/}
+            {/*                industry's standard dummy text.*/}
+            {/*            </p>*/}
+            {/*            <p className="case-paragraph-footer font-graphik-regular mb-5"><strong>Luis, 46</strong><br/>San Mateo, CA</p>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
 
-            <div className="text-center w-60 m-auto ptp-10 pbp-10">
+            <div className="text-center w-60 m-auto pbp-10">
                 <hr className="hr-primary mt-5 mb-5" style={{width: '100px'}}/>
                 <h1 className="about-case-title font-graphik-medium">About YourCase</h1>
                 <p className="description-about font-graphik-regular pt-5">
