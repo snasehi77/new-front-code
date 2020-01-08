@@ -237,7 +237,7 @@
   width: 190px;
 }
 
-.navbar-front{
+.navbar-front {
   position: absolute;
 }
 
@@ -272,6 +272,9 @@
   }
 }
 
+.navbar-sticky {
+  position: absolute;
+}
 //-----------Front Style ------
 
 
@@ -374,8 +377,13 @@
   //  height: 34px;
   //}
 
-  .navbar-front{
+  .navbar-front {
     position: static;
+  }
+
+  .navbar-sticky {
+    position: fixed;
+    z-index: 1;
   }
 
   //-----------Front Style ------
@@ -398,16 +406,22 @@
     position: relative;
     object-fit: cover;
     object-position: 122px;
-    width: 507px;
-    height: 493px;
+    width: 479px;
+    height: 613px;
     margin-bottom: -8rem;
-    bottom: 170px;
+    bottom: 171px;
     left: -62px;
   }
 
   .btn-front {
     font-size: 16px;
     line-height: 24px;
+    width: 155px;
+    height: 48px;
+  }
+
+  .position-to-sticky-mobile {
+    top: 79px;
   }
 
   //-----------Front Style ------

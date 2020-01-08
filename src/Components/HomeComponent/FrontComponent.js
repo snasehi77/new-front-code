@@ -42,9 +42,10 @@ const FrontComponent = () => {
 
         <div className="bg-front overflow-hidden">
 
-            <div className="container">
-                <div className="row navbar-front pt-5 pt-md-3">
-                    <LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-1"/>
+
+            <div className="container-fluid bg-front navbar-sticky">
+                <div className="row  pt-4 pt-md-3">
+                    <LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>
 
                     <Navbar color="faded" className="ml-auto" light>
                         <NavbarToggler onClick={toggleNavbar} className="mr-2 d-block d-sm-none" style={{border: '0'}}/>
@@ -60,9 +61,10 @@ const FrontComponent = () => {
                 </div>
             </div>
 
+
             <div className="container d-flex" style={{marginBottom: '-3rem'}}>
                 <div className="row">
-                    <div className="col-12 col-md-7 mt-lg-5 pt-5 pl-5">
+                    <div className="col-12 col-md-6 position-to-sticky-mobile col-md-7 mt-lg-5 pt-5 pl-4 ml-2">
                         <div className="row d-block pb-4 pt-md-5 mt-md-0">
                             <span className="main-title pt-5">What happened to you <br/> matters to us.</span>
                             <p className="pt-2 main-subtitle">Find the attorney you need in minutes. Free.</p>
@@ -71,7 +73,7 @@ const FrontComponent = () => {
                                 started now</NavLink>
                         </div>
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-4">
                         <img src={mainImage} className="main-image" alt="Yourcase main image"/>
                     </div>
                 </div>
