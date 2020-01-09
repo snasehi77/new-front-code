@@ -62,11 +62,12 @@ const FrontComponent = () => {
             </div>
 
 
-            <div className="container d-flex" style={{marginBottom: '-3rem'}}>
+            <div className="container d-flex p-0" style={{marginBottom: '-3rem'}}>
                 <div className="row">
-                    <div className="col-12 col-md-6 position-to-sticky-mobile col-md-7 mt-lg-5 pt-5 pl-4 ml-2">
+                    <div className="col-12 position-to-sticky-mobile col-md-7 mt-lg-5 pt-md-5 pl-5 ml-md-0 ml-lg-5 ml-xl-0 pl-xl-3 ml-3">
                         <div className="row d-block pb-4 pt-md-5 mt-md-0">
-                            <span className="main-title pt-5">What happened to you <br/> matters to us.</span>
+                            <span className="main-title pt-5 d-block d-md-none">What happened to <br/>you matters to us.</span>
+                            <span className="main-title pt-5 d-none d-md-block">What happened to you <br/>matters to us.</span>
                             <p className="pt-2 main-subtitle">Find the attorney you need in minutes. Free.</p>
                             <NavLink to={`/accidents_and_injuries/${flow_id}`}
                                      className="btn btn-front mb-5 mt-4">

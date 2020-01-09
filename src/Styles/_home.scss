@@ -244,6 +244,7 @@
 .main-title {
   font-family: 'Graphik semibold', serif;
   font-size: 56px;
+  line-height: 64px;
 }
 
 .main-subtitle {
@@ -369,6 +370,12 @@
 //------------ Footer -------
 
 
+//---------Media querys------
+
+
+//---------Media querys------
+
+
 //-------- Mobile responsive ------
 
 @media (max-width: 700px) {
@@ -408,11 +415,11 @@
     position: relative;
     object-fit: cover;
     object-position: 122px;
-    width: 479px;
-    height: 613px;
-    margin-bottom: -8rem;
-    bottom: 171px;
-    left: -62px;
+    width: 400px;
+    height: 606px;
+    margin-bottom: -12rem;
+    bottom: 230px;
+    left: 9px;
   }
 
   .btn-front {
@@ -423,7 +430,7 @@
   }
 
   .position-to-sticky-mobile {
-    top: 79px;
+    top: 52px;
   }
 
   //-----------Front Style ------
