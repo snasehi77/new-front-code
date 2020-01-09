@@ -44,7 +44,7 @@ const FrontComponent = () => {
 
 
             <div className="container-fluid bg-front navbar-sticky">
-                <div className="row  pt-4 pt-md-3">
+                <div className="row pt-md-3">
                     <LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>
 
                     <Navbar color="faded" className="ml-auto" light>
@@ -69,8 +69,8 @@ const FrontComponent = () => {
                             <span className="main-title pt-5">What happened to you <br/> matters to us.</span>
                             <p className="pt-2 main-subtitle">Find the attorney you need in minutes. Free.</p>
                             <NavLink to={`/accidents_and_injuries/${flow_id}`}
-                                     className="btn btn-front mb-5 mt-4">Get
-                                started now</NavLink>
+                                     className="btn btn-front mb-5 mt-4">
+                                <span>Get started now</span></NavLink>
                         </div>
                     </div>
                     <div className="col-md-4">

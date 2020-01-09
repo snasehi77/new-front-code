@@ -275,6 +275,7 @@
 .navbar-sticky {
   position: absolute;
 }
+
 //-----------Front Style ------
 
 
@@ -372,10 +373,11 @@
 
 @media (max-width: 700px) {
 
-  //.your-case-logo{
-  //  width: 165px;
-  //  height: 34px;
-  //}
+  .your-case-logo {
+    object-fit: contain;
+    width: 153.35px;
+    height: 48px;
+  }
 
   .navbar-front {
     position: static;
@@ -415,7 +417,7 @@
 
   .btn-front {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 36px;
     width: 155px;
     height: 48px;
   }

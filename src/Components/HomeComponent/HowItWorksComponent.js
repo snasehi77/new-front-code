@@ -1,21 +1,24 @@
 import React from 'react';
-import imgSteps from '../../Assets/Images/man2.png'
+// import imgSteps from '../../Assets/Images/man2.png'
 
 const steps = [
     {
         num: '1',
         title: 'Tell us what happened.',
-        description: 'Answer a few simple questions about your case.'
+        p1: "Answer a few simple questions",
+        p2: " about your case."
     },
     {
         num: '2',
         title: 'We make an introduction.',
-        description: 'Based on your answers, we find an attorney for you.'
+        p1: "Based on your answers,",
+        p2: " we find an attorney for you."
     },
     {
         num: '3',
         title: 'They get in touch.',
-        description: 'Within minutes, you´ll be introduced to an attorney interested in representing you.'
+        p1: "Within minutes, you'll be introduced to an attorney interested in representing you."
+        // p2: " attorney interested in representing you."
     }
 ];
 
@@ -30,8 +33,8 @@ const HowItWorks = () => {
                         return (
                             <div key={s.num} className="col-lg-4 col-md-6 col-12">
                                 <h1 className={s.num === '1' ? "how-it-works-num" : "how-it-works-num mt-5 mt-md-0"}>{s.num}</h1>
-                                <span className="how-it-works-title-num"> {s.title}</span>
-                                <p className="how-it-works-description-num pt-4">{s.description}</p>
+                                <p className="how-it-works-title-num"> {s.title}</p>
+                                <p className="how-it-works-description-num">{s.p1}<br/>{s.p2 && s.p2}</p>
                             </div>
                         )
                     })}
@@ -108,7 +111,7 @@ const HowItWorks = () => {
             {/*</div>*/}
 
 
-            <div className="text-center w-60 m-auto pbp-10">
+            <div className="text-center w-70 m-auto pbp-10">
                 <hr className="hr-primary mt-5 mb-5" style={{width: '100px'}}/>
                 <span className="how-it-works-about-title">About YourCase</span>
                 <p className="how-it-works-about-text pt-5">
