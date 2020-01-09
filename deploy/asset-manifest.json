@@ -1,30 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a9870e6.chunk.css",
-    "main.js": "/static/js/main.491dfffd.chunk.js",
-    "main.js.map": "/static/js/main.491dfffd.chunk.js.map",
+    "main.css": "/static/css/main.4b48aed6.chunk.css",
+    "main.js": "/static/js/main.f6fe91e4.chunk.js",
+    "main.js.map": "/static/js/main.f6fe91e4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.50d3f9d9.js",
     "runtime-main.js.map": "/static/js/runtime-main.50d3f9d9.js.map",
-    "static/css/2.411ec52d.chunk.css": "/static/css/2.411ec52d.chunk.css",
-    "static/js/2.af20d109.chunk.js": "/static/js/2.af20d109.chunk.js",
-    "static/js/2.af20d109.chunk.js.map": "/static/js/2.af20d109.chunk.js.map",
+    "static/css/2.79ce22ba.chunk.css": "/static/css/2.79ce22ba.chunk.css",
+    "static/js/2.b92dc95c.chunk.js": "/static/js/2.b92dc95c.chunk.js",
+    "static/js/2.b92dc95c.chunk.js.map": "/static/js/2.b92dc95c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8141a68132ecba9bd8672e883f5205b9.js": "/precache-manifest.8141a68132ecba9bd8672e883f5205b9.js",
+    "precache-manifest.874840552974f49cc2cceab80d09b6b4.js": "/precache-manifest.874840552974f49cc2cceab80d09b6b4.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.411ec52d.chunk.css.map": "/static/css/2.411ec52d.chunk.css.map",
-    "static/css/main.9a9870e6.chunk.css.map": "/static/css/main.9a9870e6.chunk.css.map",
+    "static/css/2.79ce22ba.chunk.css.map": "/static/css/2.79ce22ba.chunk.css.map",
+    "static/css/main.4b48aed6.chunk.css.map": "/static/css/main.4b48aed6.chunk.css.map",
     "static/media/index.scss": "/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/image.png": "/static/media/image.39aecec4.png",
-    "static/media/man2.png": "/static/media/man2.55ae59a2.png",
     "static/media/woman.png": "/static/media/woman.72b3515a.png",
     "static/media/yourcase-logo-dark.png": "/static/media/yourcase-logo-dark.6d8bc809.png",
     "static/media/yourcase-logo-light.png": "/static/media/yourcase-logo-light.0f875924.png"
   },
   "entrypoints": [
     "static/js/runtime-main.50d3f9d9.js",
-    "static/css/2.411ec52d.chunk.css",
-    "static/js/2.af20d109.chunk.js",
-    "static/css/main.9a9870e6.chunk.css",
-    "static/js/main.491dfffd.chunk.js"
+    "static/css/2.79ce22ba.chunk.css",
+    "static/js/2.b92dc95c.chunk.js",
+    "static/css/main.4b48aed6.chunk.css",
+    "static/js/main.f6fe91e4.chunk.js"
   ]
 }
