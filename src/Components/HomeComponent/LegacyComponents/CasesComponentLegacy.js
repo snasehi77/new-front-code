@@ -2,12 +2,12 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {NavLink, withRouter} from "react-router-dom";
-import icon_accidents_and_injuries from "../../Assets/icons/Layer 5.png"
-import icon_health_and_medical_issues from "../../Assets/icons/health_medical 1.png"
-import icon_labor_work_place_issues from "../../Assets/icons/labor_workplace 1.png";
-import icon_sexual_harassment from "../../Assets/icons/sexual_harassment 1.png";
-import icon_sexual_abuse from "../../Assets/icons/sexual_abuse 1.png";
-import icon_elder_abuse from "../../Assets/icons/elder 1.png";
+import icon_accidents_and_injuries from "../../../Assets/icons/Layer 5.png"
+import icon_health_and_medical_issues from "../../../Assets/icons/health_medical 1.png"
+import icon_labor_work_place_issues from "../../../Assets/icons/labor_workplace 1.png";
+import icon_sexual_harassment from "../../../Assets/icons/sexual_harassment 1.png";
+import icon_sexual_abuse from "../../../Assets/icons/sexual_abuse 1.png";
+import icon_elder_abuse from "../../../Assets/icons/elder 1.png";
 
 const cases = [
     {
@@ -49,12 +49,12 @@ const cases = [
     }
 ];
 
-const CasesComponent = () => {
+const CasesComponentLegacy = () => {
 
 
     return (
         <div className="container-fluid">
-            <div id="scrolling" className="content-cases mb-3 col-12 col-md-10">
+            <div className="content-cases col-12 col-lg-10 mx-auto">
                 <div className="text-center pt-md-5 mt-5 mt-md-0">
                     {/*<h2 className="font-weight-bolder"> Have a case? We can help. </h2>*/}
                     <span className="cases-title"> Have a case? We can help. </span>
@@ -123,4 +123,4 @@ const CasesComponent = () => {
 };
 
 
-export default withRouter(CasesComponent);
+export default withRouter(CasesComponentLegacy);

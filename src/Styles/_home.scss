@@ -227,10 +227,17 @@
   background-color: $beige-custom;
 }
 
+
+
 //---------- General Style --------
 
 
 //-----------Front Style ------
+
+.custom-container{
+  height: 80vh;
+  //margin-bottom: -2rem;
+}
 
 .your-case-logo {
   //position: absolute;
@@ -261,17 +268,11 @@
 }
 
 .main-image {
+  width: 487px;
+  top: -241px;
   object-fit: cover;
-  object-position: center -197px;
-  width: 600px;
-  height: 600px;
 }
 
-@media (min-width: 800px) {
-  .bg-front {
-    margin-bottom: -2rem;
-  }
-}
 
 .navbar-sticky {
   position: absolute;
@@ -378,12 +379,44 @@
 
 //-------- Mobile responsive ------
 
+@media (max-width: 1024px) and (min-width: 801px) {
+  .main-image{
+    width: 427px;
+    top: -198px;
+    object-fit: cover;
+    left: -75px;
+  }
+}
+
+
+@media (max-width: 800px) and (min-width: 600px) {
+  .main-image{
+    width: 337px;
+    top: -65px;
+    object-fit: cover;
+    left: -75px;
+  }
+}
+
 @media (max-width: 700px) {
 
   .your-case-logo {
     object-fit: contain;
     width: 153.35px;
     height: 48px;
+  }
+
+  .sticky{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .custom-container{
+    height: auto;
   }
 
   .navbar-front {
@@ -393,6 +426,10 @@
   .navbar-sticky {
     position: fixed;
     z-index: 1;
+  }
+
+  .overflow-container{
+    overflow: hidden;
   }
 
   //-----------Front Style ------
@@ -411,15 +448,15 @@
     line-height: 18px;
   }
 
-  .main-image {
+  .main-image-mobile {
     position: relative;
     object-fit: cover;
-    object-position: 122px;
+    object-position: 106px;
     width: 400px;
     height: 606px;
     margin-bottom: -12rem;
-    bottom: 230px;
-    left: 9px;
+    bottom: 187px;
+    left: 12px;
   }
 
   .btn-front {
@@ -554,37 +591,38 @@
 
 .content-cases {
   background: $primary;
-  height: auto;
+  //height: auto;
   padding: 20px 80px 120px 80px !important;
   position: relative;
   color: white;
-  margin: auto;
-  transition: width .4s;
+  //margin: auto;
+  //transition: width .4s;
 
-  .icon-on-display {
-    display: none !important;
+}
+
+
+.icon-on-display {
+  display: none !important;
+}
+
+.item-route {
+  background: $primary-light;
+  height: 86px;
+  border-radius: 4px;
+  transition: background .4s;
+
+  h6 {
+    transition: color .4s;
   }
+}
 
-  .item-route {
-    background: $primary-light;
-    height: 86px;
-    border-radius: 4px;
-    transition: background .4s;
+.item-route:hover {
+  background: #00805f;
+  text-decoration: none;
 
-    h6 {
-      transition: color .4s;
-    }
+  h6 {
+    color: white;
   }
-
-  .item-route:hover {
-    background: #00805f;
-    text-decoration: none;
-
-    h6 {
-      color: white;
-    }
-  }
-
 }
 
 @media (max-width: 600px) {

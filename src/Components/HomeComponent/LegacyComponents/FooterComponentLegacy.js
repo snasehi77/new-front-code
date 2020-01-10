@@ -2,10 +2,10 @@ import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGlobe, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from 'react-router-dom';
-import linkedinIcon from '../../Assets/icons/linkedin-icon.png';
-import LogoComponent from "../Shared/LogoComponent";
+import linkedinIcon from '../../../Assets/icons/linkedin-icon.png';
+import LogoComponent from "../../Shared/LogoComponent";
 
-const FooterComponent = () => {
+const FooterComponentLegacy = () => {
     const year = new Date().getFullYear();
     return <footer>
         <div className="container w-70">
@@ -81,4 +81,4 @@ const FooterComponent = () => {
     </footer>
 };
 
-export default FooterComponent;
+export default FooterComponentLegacy;

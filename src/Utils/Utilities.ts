@@ -1,3 +1,10 @@
+import icon_accidents_and_injuries from "../Assets/icons/Layer 5.png";
+import icon_health_and_medical_issues from "../Assets/icons/health_medical 1.png";
+import icon_labor_work_place_issues from "../Assets/icons/labor_workplace 1.png";
+import icon_sexual_harassment from "../Assets/icons/sexual_harassment 1.png";
+import icon_sexual_abuse from "../Assets/icons/sexual_abuse 1.png";
+import icon_elder_abuse from "../Assets/icons/elder 1.png";
+
 export function getMonths() {
   return [
     {abbreviation: 'Jan', month: 'January'},
@@ -68,3 +75,65 @@ export function formatSSN(SSN: string) {
 export const checkMail = (mail: string) => {
   return mail.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 };
+
+
+export const cases = [
+  {
+    id: 1,
+    routeUrl: '/accidents_and_injuries/24',
+    label: 'Accidents & Injuries',
+    icon: icon_accidents_and_injuries
+  },
+  {
+    id: 2,
+    routeUrl: '/health_and_medical_issues/24',
+    label: 'Health & Medical Issues',
+    icon: icon_health_and_medical_issues
+  },
+  {
+    id: 3,
+    routeUrl: '/labor_work_place_issues/24',
+    label: 'Labor & WorkPlace Issues',
+    mobileLabel: 'Labor & WorkPlace',
+    icon: icon_labor_work_place_issues
+  },
+  {
+    id: 4,
+    routeUrl: 'sexual_harassment/24',
+    label: 'Sexual Harassment',
+    icon: icon_sexual_harassment
+  },
+  {
+    id: 5,
+    routeUrl: 'sexual_abuse/24',
+    label: 'Sexual Abuse',
+    icon: icon_sexual_abuse
+  },
+  {
+    id: 6,
+    routeUrl: 'elder_abuse/24',
+    label: 'Elder Abuse',
+    icon: icon_elder_abuse
+  }
+];
+
+export const steps = [
+  {
+    num: '1',
+    title: 'Tell us what happened.',
+    p1: "Answer a few simple questions",
+    p2: " about your case."
+  },
+  {
+    num: '2',
+    title: 'We make an introduction.',
+    p1: "Based on your answers,",
+    p2: " we find an attorney for you."
+  },
+  {
+    num: '3',
+    title: 'They get in touch.',
+    p1: "Within minutes, you'll be introduced to an attorney interested in representing you."
+    // p2: " attorney interested in representing you."
+  }
+];

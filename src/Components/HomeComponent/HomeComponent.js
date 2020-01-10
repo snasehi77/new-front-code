@@ -1,28 +1,39 @@
 import React from 'react';
-import FrontComponent from "./FrontComponent";
-import CasesComponent from "./CasesComponent";
-import FooterComponent from "./FooterComponent";
-import HowItWorks from "./HowItWorksComponent";
-// import ContactUsComponent from "./ContactUsComponent";
+import NavbarComponent from "../Shared/NavbarComponent";
+import FrontComponent from "./FrontComponent.tsx";
+import CasesComponent from "./CasesComponent.tsx";
+import HowItWork from "./HowItWork.tsx";
+import FooterComponent from "./FooterComponent.tsx";
+
 
 
 const HomeComponent = () => {
 
-  return (
-    <div className="container-fluid p-0">
+    return (
+        <div>
 
-      <FrontComponent/>
+            <NavbarComponent/>
 
-      <CasesComponent/>
+            <FrontComponent/>
 
-      <HowItWorks/>
+            <CasesComponent/>
 
-      {/*<ContactUsComponent/>*/}
+            <HowItWork/>
 
-      <FooterComponent/>
+            <FooterComponent/>
 
-    </div>
-  )
+            {/*<FrontComponentLegacy/>*/}
+
+            {/*<CasesComponentLegacy/>*/}
+
+            {/*<HowItWork/>*/}
+
+            {/*<ContactUsComponentLegacy/>*/}
+
+            {/*<FooterComponentLegacy/>*/}
+
+        </div>
+    )
 };
 
 

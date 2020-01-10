@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ContactUsComponent = () => {
+const ContactUsComponentLegacy = () => {
   return (
     <div className="text-center p-2">
       <hr className="hr-primary w-10 mt-5 mb-5"/>
@@ -43,4 +43,4 @@ const ContactUsComponent = () => {
   )
 };
 
-export default ContactUsComponent;
+export default ContactUsComponentLegacy;
