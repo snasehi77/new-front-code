@@ -228,13 +228,83 @@
 }
 
 
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+
+
+/* Hide the browser's default radio button */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 9px;
+  height: 19px;
+  left: 9px;
+  width: 19px;
+  border: 1px gray solid;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark {
+  background-color: white;
+}
+
+.container-radio input:checked ~ .checkmark {
+  background-color: green;
+
+}
+
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+  border-color: black;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
 
 //---------- General Style --------
 
 
 //-----------Front Style ------
 
-.custom-container{
+.custom-container {
   height: 80vh;
   //margin-bottom: -2rem;
 }
@@ -379,8 +449,18 @@
 
 //-------- Mobile responsive ------
 
+@media (max-width: 1400px) and (min-width: 1025px) {
+  .main-image {
+    width: 473px;
+    top: -198px;
+    object-fit: cover;
+    left: -93px;
+  }
+}
+
+
 @media (max-width: 1024px) and (min-width: 801px) {
-  .main-image{
+  .main-image {
     width: 427px;
     top: -198px;
     object-fit: cover;
@@ -390,7 +470,7 @@
 
 
 @media (max-width: 800px) and (min-width: 600px) {
-  .main-image{
+  .main-image {
     width: 337px;
     top: -65px;
     object-fit: cover;
@@ -406,7 +486,7 @@
     height: 48px;
   }
 
-  .sticky{
+  .sticky {
     position: fixed;
     left: 0;
     right: 0;
@@ -415,7 +495,7 @@
     width: 100%;
   }
 
-  .custom-container{
+  .custom-container {
     height: auto;
   }
 
@@ -428,7 +508,7 @@
     z-index: 1;
   }
 
-  .overflow-container{
+  .overflow-container {
     overflow: hidden;
   }
 

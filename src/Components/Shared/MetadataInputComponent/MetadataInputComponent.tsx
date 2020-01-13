@@ -286,7 +286,8 @@ const MetadataInputComponent = ({
         <>
           {listOptions.map((b: any, i: any) => {
             return <div key={i}>
-              <label htmlFor={id + b.id} className="form-control mb-2">
+              <label htmlFor={id + b.id} className="form-control container-radio mb-2"
+                     style={(value && (value.label === b.label)) ?  {borderColor: 'green'}:{}}>
                 {singleValue ?
                   <input required={!value} checked={value.label === b.label} type="radio" id={id + b.id}
                          name="unique" className="mr-2" onClick={() => {
@@ -298,6 +299,7 @@ const MetadataInputComponent = ({
                          className="mr-2"
                          onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
                 <small> <b>{b.label}</b> </small>
+                {singleValue && <span className="checkmark" />}
               </label>
             </div>
           })}
