@@ -39,13 +39,6 @@ http.interceptors.response.use(
   function (response) {
     // Do something with response data
     return response;
-  },
-  function (error) {
-    // Do something with response error
-    console.log(error);
-    // localStorage.removeItem('token');
-    history.push("/");
-    return Promise.reject(error);
   }
 );
 

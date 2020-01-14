@@ -12,7 +12,7 @@ import icon_elder_abuse from "../../Assets/icons/elder 1.png";
 const cases = [
     {
         id: 1,
-        routeUrl: '/accidents_and_injuries/24',
+        routeUrl: '/accidents_and_injuries/112',
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
