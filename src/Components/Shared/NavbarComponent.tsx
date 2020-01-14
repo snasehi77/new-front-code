@@ -8,7 +8,7 @@ const NavbarComponent = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
     const toggleNavbar = () => setCollapsed(!collapsed);
 
-    return <div className="container-fluid p-0">
+    return <div className="container-fluid position-absolute p-0">
         <Navbar className="bg-front sticky" light>
             <NavbarBrand href="/" className="mr-auto">
                 <LogoComponent className="your-case-logo my-auto ml-1 pt-md-3 ml-md-4"/>

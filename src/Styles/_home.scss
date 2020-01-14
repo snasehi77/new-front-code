@@ -305,7 +305,7 @@
 //-----------Front Style ------
 
 .custom-container {
-  height: 80vh;
+  //height: 80vh;
   //margin-bottom: -2rem;
 }
 
@@ -337,10 +337,17 @@
   font-size: 16px;
 }
 
-.main-image {
-  width: 487px;
-  top: -241px;
+//.main-image {
+//  width: 487px;
+//  top: -241px;
+//  object-fit: cover;
+//}
+
+.main-image{
   object-fit: cover;
+  object-position: center -197px;
+  width: 600px;
+  height: 600px;
 }
 
 
@@ -449,32 +456,32 @@
 
 //-------- Mobile responsive ------
 
-@media (max-width: 1400px) and (min-width: 1025px) {
-  .main-image {
-    width: 473px;
-    top: -198px;
-    object-fit: cover;
-    left: -93px;
-  }
-}
+//@media (max-width: 1400px) and (min-width: 1025px) {
+//  .main-image {
+//    width: 473px;
+//    top: -198px;
+//    object-fit: cover;
+//    left: -93px;
+//  }
+//}
 
-
-@media (max-width: 1024px) and (min-width: 801px) {
-  .main-image {
-    width: 427px;
-    top: -198px;
-    object-fit: cover;
-    left: -75px;
-  }
-}
-
-
+//
+//@media (max-width: 1024px) and (min-width: 801px) {
+//  .main-image {
+//    width: 427px;
+//    top: -198px;
+//    object-fit: cover;
+//    left: -75px;
+//  }
+//}
+//
+//
 @media (max-width: 800px) and (min-width: 600px) {
   .main-image {
-    width: 337px;
-    top: -65px;
     object-fit: cover;
-    left: -75px;
+    object-position: -103px;
+    width: 561px;
+    height: 592px;
   }
 }
 
@@ -496,7 +503,7 @@
   }
 
   .custom-container {
-    height: auto;
+    margin-bottom: -3rem;
   }
 
   .navbar-front {

@@ -6,7 +6,7 @@ import mainImage from '../../Assets/Images/woman.png';
 
 const FrontComponent = () => {
 
-    return <div className="container-fluid bg-front mt-5 pt-5 mt-md-0 pt-md-0  custom-container">
+    return <div className="container-fluid bg-front overflow-hidden mt-5 pt-5 mt-md-0 pt-md-0  custom-container">
         <div className="container overflow-container">
             <div className="row">
                 <div className="pt-3 pl-5 pl-md-0 pt-md-5 mt-md-5 col-12 col-md-8">
@@ -19,8 +19,8 @@ const FrontComponent = () => {
                              className="btn btn-front">
                         <span>Get started now</span></NavLink>
                 </div>
-                <div className="col-4 d-none d-md-block position-relative">
-                    <img className="main-image position-absolute" src={mainImage} alt=""/>
+                <div className="col-md-4 d-none d-md-block">
+                    <img className="main-image" src={mainImage} alt=""/>
                 </div>
                 <div className="col-4 d-block  d-md-none">
                     <img className="main-image-mobile" src={mainImage} alt=""/>
