@@ -13,20 +13,20 @@ const CasesComponent = () => {
                     <p className="cases-subtitle pt-3">We can find you an attorney who focuses on cases like yours.</p>
                 </div>
             </div>
-            <div className="row pt-md-5">
+            <div className="row pt-md-4">
                 {cases.map(c => {
                     return (
-                        <div key={c.id + "item"} className="col-lg-4 col-6 p-2">
+                        <div key={c.id + "item"} className="col-md-4 col-6 p-2">
 
-                            <NavLink to={c.routeUrl}
-                                     className="item-route d-flex align-items-center pointer item-on-display">
-                                <div className="col-10">
-                                    <h6 className="m-0 cases-label">{c.label}</h6>
-                                </div>
-                                <div className="col-2">
-                                    <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>
-                                </div>
-                            </NavLink>
+                            {/*<NavLink to={c.routeUrl}*/}
+                            {/*         className="item-route d-flex align-items-center pointer item-on-display">*/}
+                            {/*    <div className="col-10">*/}
+                            {/*        <h6 className="m-0 cases-label">{c.label}</h6>*/}
+                            {/*    </div>*/}
+                            {/*    <div className="col-2">*/}
+                            {/*        <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>*/}
+                            {/*    </div>*/}
+                            {/*</NavLink>*/}
 
                             <NavLink to={c.routeUrl}
                                      className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
