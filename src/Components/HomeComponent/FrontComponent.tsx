@@ -9,7 +9,7 @@ const FrontComponent = () => {
     return <div className="container-fluid bg-front overflow-hidden mt-5 pt-5 mt-md-0 pt-md-0  custom-container">
         <div className="container overflow-container">
             <div className="row">
-                <div className="pt-3 pl-5 pl-md-0 pt-md-5 mt-md-5 col-12 col-md-8">
+                <div className="pt-3 pl-4 pl-md-0 pt-md-5 mt-md-5 col-12 col-md-8">
                 <span
                     className="main-title d-block d-md-none">What happened to <br/>you matters to us.</span>
                     <span
