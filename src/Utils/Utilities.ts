@@ -1,9 +1,9 @@
-import icon_accidents_and_injuries from "../Assets/icons/Layer 5.png";
-import icon_health_and_medical_issues from "../Assets/icons/health_medical 1.png";
-import icon_labor_work_place_issues from "../Assets/icons/labor_workplace 1.png";
-import icon_sexual_harassment from "../Assets/icons/sexual_harassment 1.png";
-import icon_sexual_abuse from "../Assets/icons/sexual_abuse 1.png";
-import icon_elder_abuse from "../Assets/icons/elder 1.png";
+import icon_accidents_and_injuries from "../Assets/icons/accident 1.png";
+import icon_health_and_medical_issues from "../Assets/icons/health_medical 2.png";
+import icon_labor_work_place_issues from "../Assets/icons/labor_workplace 2.png";
+import icon_sexual_harassment from "../Assets/icons/sexual_harassment 2.png";
+import icon_sexual_abuse from "../Assets/icons/sexual_abuse 2.png";
+import icon_elder_abuse from "../Assets/icons/elder 2.png";
 
 export function getMonths() {
   return [
