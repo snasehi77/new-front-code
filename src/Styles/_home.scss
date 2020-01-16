@@ -397,9 +397,14 @@
 
 .how-it-works-title {
   font-family: 'Graphik medium', serif;
-  font-size: 40px;
-  line-height: 48px;
-  color: #001622;
+  //font-size: 40px;
+  //line-height: 48px;
+  //color: #001622;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #0D3F37;
 }
 
 .how-it-works-num {
@@ -411,16 +416,26 @@
 
 .how-it-works-title-num {
   font-family: 'Graphik medium', serif;
-  font-size: 24px;
-  line-height: 38px;
-  color: #001622;
+  //font-size: 24px;
+  //line-height: 38px;
+  //color: #001622;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0D3F37;
 }
 
 .how-it-works-description-num {
   font-family: 'Graphik regular', serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: #545454;
+  //font-size: 16px;
+  //line-height: 24px;
+  //color: #545454;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #095D4D;
 }
 
 .how-it-works-about-title {
@@ -738,14 +753,14 @@
   }
 }
 
-.item-route:hover {
-  background: #00805f;
-  text-decoration: none;
-
-  h6 {
-    color: white;
-  }
-}
+//.item-route:hover {
+//  background: #00805f;
+//  text-decoration: none;
+//
+//  h6 {
+//    color: white;
+//  }
+//}
 
 .final-case-paragraph {
   font-family: Graphik, serif;
@@ -1061,18 +1076,23 @@ footer {
   src: url('../Assets/Fonts/Graphik_Font/Graphik-Regular.otf') format('truetype')
 }
 
-// Semibold, thin, black, medium
 @font-face {
   font-family: 'Graphik medium';
   font-style: normal;
   src: url('../Assets/Fonts/Graphik_Font/Graphik-Medium.otf') format('truetype')
 }
 
+
+
 .case-paragraph-footer {
-  //font-family: Graphik, 'sans-serif';
-  text-align: center;
+  font-family: Graphik, serif;
+  //text-align: center;
+  //font-size: 14px;
+  //line-height: 20px;
+  font-style: normal;
+  font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
   color: #F9C6C6;
 }
 
@@ -1086,11 +1106,17 @@ footer {
 
 .case-paragraph {
   //font-family: Graphik, 'sans-serif';;;
-  color: white;
-  font-size: 20px;
-  line-height: 32px;
-  /* or 133% */
-  text-align: center;
+  //color: white;
+  //font-size: 20px;
+  //line-height: 32px;
+  ///* or 133% */
+  //text-align: center;
+  font-family: 'Graphik regular', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #F6EEE1;
 }
 
 .title {
