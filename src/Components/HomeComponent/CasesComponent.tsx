@@ -5,7 +5,7 @@ import {cases} from "../../Utils/Utilities";
 const CasesComponent = () => {
 
     return <div className="container container-tablet-view content-cases">
-            <div className="row row pt-5 pb-5 row pt-md-0 pb-md-0">
+            <div className="row pt-5 pb-5 mt-3">
                 <div className="col text-center">
                     <span className="cases-title"> Have a case? We can help. </span>
                     <p className="cases-subtitle pt-3">We can find you an attorney who focuses on cases like yours.</p>
@@ -36,7 +36,7 @@ const CasesComponent = () => {
                         </div>
                     )
                 })}
-                <span className="final-case-paragraph pt-4 pt-md-3 mt-1">Can’t find what you are looking for? <strong>Contact us.</strong></span>
+                <span className="final-case-paragraph pt-4 pt-md-3 mt-3">Can’t find what you are looking for? <strong>Contact us.</strong></span>
             </div>
         </div>
 };

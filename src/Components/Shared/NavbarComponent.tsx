@@ -11,9 +11,9 @@ const NavbarComponent = () => {
     return <div className="container-fluid position-absolute p-0">
         <Navbar className="bg-front sticky" light>
             <NavbarBrand href="/" className="mr-auto">
-                <LogoComponent className="your-case-logo my-auto ml-1 pt-md-3 ml-md-4"/>
+                <LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>
             </NavbarBrand>
-            <NavbarToggler onClick={toggleNavbar} className="mr-2 d-block d-md-none" style={{border: '0'}}/>
+            <NavbarToggler onClick={toggleNavbar} className="mr-2 d-block d-lg-none" style={{border: '0'}}/>
             <Collapse isOpen={!collapsed} navbar>
                 <Nav navbar>
                     {/*<NavItem>*/}
