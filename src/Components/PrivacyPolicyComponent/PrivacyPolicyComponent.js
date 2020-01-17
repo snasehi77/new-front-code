@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
 import {NavLink} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {terms} from '../../Utils/PrivacyPolicy';
 import LogoComponent from "../Shared/LogoComponent";
 

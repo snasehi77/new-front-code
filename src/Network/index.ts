@@ -1,6 +1,5 @@
 import Axios from "axios";
 import {baseUrl} from "../Utils/Config";
-import history from "../Utils/History";
 
 const http = Axios.create({
   baseURL: baseUrl,

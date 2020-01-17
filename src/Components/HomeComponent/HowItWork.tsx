@@ -60,7 +60,7 @@ const HowItWork = () => {
                 </div>
                 <div className="col-10 col-md-5 col-xl-5 p-5 p-md-0 d-flex justify-content-center flex-column"
                      style={{backgroundColor: '#002D44'}}>
-                    <div>
+                    <div className="p-5">
                         <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center">❝</h1>
                         <p className="text-center case-paragraph">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod

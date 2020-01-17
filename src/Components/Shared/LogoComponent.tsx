@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import logoBlack from '../../Assets/Images/yourcase-logo-dark.png'
 import logoWhite from '../../Assets/Images/yourcase-logo-light.png'
 

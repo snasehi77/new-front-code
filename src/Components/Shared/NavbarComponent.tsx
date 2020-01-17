@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
+import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler} from "reactstrap";
 import LogoComponent from "./LogoComponent";
 
 
