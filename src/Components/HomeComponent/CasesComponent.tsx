@@ -5,7 +5,7 @@ import {cases} from "../../Utils/Utilities";
 const CasesComponent = () => {
 
     return <div className="container container-tablet-view content-cases">
-            <div className="row">
+            <div className="row row pt-5 pb-5 row pt-md-0 pb-md-0">
                 <div className="col text-center">
                     <span className="cases-title"> Have a case? We can help. </span>
                     <p className="cases-subtitle pt-3">We can find you an attorney who focuses on cases like yours.</p>
@@ -30,7 +30,7 @@ const CasesComponent = () => {
                                      className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
                                 <div className="text-center p-2">
                                     <img src={c.icon} className="mobile-image-size" alt=""/>
-                                    <h6 className="mt-4 cases-label-mobile">{c.mobileLabel ? c.mobileLabel : c.label}</h6>
+                                    <h6 className="mt-4 cases-label">{c.mobileLabel ? c.mobileLabel : c.label}</h6>
                                 </div>
                             </NavLink>
                         </div>

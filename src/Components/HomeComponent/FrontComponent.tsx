@@ -14,7 +14,8 @@ const FrontComponent = () => {
                     className="main-title d-block d-md-none">What happened to <br/>you matters to us.</span>
                     <span
                         className="main-title d-none d-md-block pt-5 mt-md-0 pt-5 mt-md-0  pt-lg-5 mt-lg-5 ">What happened to you <br/>matters to us.</span>
-                    <p className="main-subtitle">Find the attorney you need in minutes. Free.</p>
+                    <p className="main-subtitle d-none d-md-flex">Find the attorney you need in minutes. Free.</p>
+                    <p className="main-subtitle d-flex d-md-none pt-4 pb-2 pt-md-0 pb-md-0">Find the attorney you need <br/>in minutes. Free.</p>
                     <NavLink to={`/accidents_and_injuries/${flow_id}`}
                              className="btn btn-front">
                         <span>Get started now</span></NavLink>

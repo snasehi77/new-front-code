@@ -16,7 +16,7 @@ const HowItWork = () => {
             <div className="row mb-5 pt-5 justify-content-center">
                 {steps.map(s => {
                     return (
-                        <div key={s.num} className="col-md-4 col-8  p-0">
+                        <div key={s.num} className={`p-0 col-md-4 ${s.num === '1' ? "col-6" : "col-8"}`}>
                             <h1 className={`how-it-works-num text-center ${s.num === '1' ? "" : "mt-5 mt-md-0"}`}>{s.num}</h1>
                             <p className="how-it-works-title-num text-center mb-0"> {s.title}</p>
                             <p className="how-it-works-description-num text-center pt-2">{s.p1}<br/>{s.p2 && s.p2}
@@ -97,7 +97,7 @@ const HowItWork = () => {
                 <div className="col-md-6 col-lg-5 col-xl-4 mr-lg-5 p-0 pt-4 pt-md-0 text-center">
                     <span className="how-it-works-about-title">About YourCase</span>
                 </div>
-                <div className="col-11 col-md-6 text-center text-md-left col-lg-5 col-xl-4 p-0 pr-md-5">
+                <div className="col-10 col-md-6 text-center text-md-left col-lg-5 col-xl-4 p-0 pr-md-5">
                     <hr className="float-left hr-about d-none d-md-flex"/>
                     <p className="how-it-works-about-text pt-5">
                         YourCase was created by a team of legal professionals who believed that finding an attorney
