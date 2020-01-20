@@ -58,16 +58,17 @@ const HowItWork = () => {
                 <div className="col-10 col-md-5 col-xl-4 p-0">
                     <img className="img-fluid" style={{background: '#C4C4C4'}} src={imgSteps} alt="manCases"/>
                 </div>
-                <div className="col-10 col-md-5 col-xl-5 p-5 p-md-0 d-flex justify-content-center flex-column"
+                <div className="col-10 col-md-7 col-lg-6 col-xl-5 p-4 p-md-3 p-lg-1 p-xl-5 d-flex justify-content-center
+                flex-column pt-5"
                      style={{backgroundColor: '#002D44'}}>
-                    <div className="p-5">
+                    <div className="p-3 pt-md-4 pl-md-5 pr-md-5 pt-lg-4 pl-lg-5 pr-lg-5">
                         <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center">❝</h1>
-                        <p className="text-center case-paragraph">
+                        <p className="text-center case-paragraph pt-3">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                             tincidunt
                             ut laoreet dolore magna aliquam erat volutpat.
                         </p>
-                        <p className="text-center case-paragraph-footer"><strong>Luis, 46</strong><br/>San Mateo, CA</p>
+                        <p className="text-center case-paragraph-footer pt-2 "><strong>Luis, 46</strong><br/>San Mateo, CA</p>
                     </div>
                 </div>
             </div>
@@ -99,7 +100,7 @@ const HowItWork = () => {
                 </div>
                 <div className="col-10 col-md-6 text-center text-md-left col-lg-5 col-xl-4 p-0 pr-md-5">
                     <hr className="float-left hr-about d-none d-md-flex"/>
-                    <p className="how-it-works-about-text pt-5">
+                    <p className="how-it-works-about-text pt-5 pr-md-4 pr-lg-5">
                         YourCase was created by a team of legal professionals who believed that finding an attorney
                         online was unnecessarily confusing, impersonal and stressful.
                         YourCase provides people with a dignified and efficient way to find the lawyers they need, free.

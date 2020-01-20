@@ -417,6 +417,21 @@
   //color: #0D3F37;
 }
 
+.case-paragraph {
+  //font-family: Graphik, 'sans-serif';;;
+  //color: white;
+  //font-size: 20px;
+  //line-height: 32px;
+  ///* or 133% */
+  //text-align: center;
+  font-family: 'Graphik regular', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #F6EEE1;
+}
+
 //-----------Cases Style----------
 
 
@@ -603,7 +618,7 @@
     line-height: 56px;
   }
 
-  .how-it-works-num{
+  .how-it-works-num {
     font-weight: 500;
     font-size: 96px;
     line-height: 96px;
@@ -625,9 +640,14 @@
 }
 
 
-
 @media (max-width: 700px) {
 
+  .case-paragraph {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
 
   .your-case-logo {
     object-fit: contain;
@@ -743,16 +763,18 @@
   //}
 
 
-
-
   //-----------Cases Style----------
 
   //--------- How it horks -------------
 
 
   .how-it-works-title {
-    font-size: 24px;
-    line-height: 28px;
+    //font-size: 24px;
+    //line-height: 28px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .how-it-works-num {
@@ -762,13 +784,21 @@
   }
 
   .how-it-works-title-num {
-    font-size: 16px;
-    line-height: 20px;
+    //font-size: 16px;
+    //line-height: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .how-it-works-description-num {
-    font-size: 14px;
-    line-height: 18px;
+    //font-size: 14px;
+    //line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .how-it-works-about-title {
@@ -777,9 +807,15 @@
   }
 
   .how-it-works-about-text {
-    font-size: 16px;
+    //font-size: 16px;
+    //line-height: 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
     line-height: 24px;
   }
+
+
   //--------- How it horks -------------
 
   //------------ Footer -------
@@ -837,7 +873,7 @@
 .content-cases {
   background: $primary;
   //height: auto;
-  padding: 20px 80px 55px 80px !important;
+  padding: 20px 80px 70px 80px !important;
   position: relative;
   color: white;
   //margin: auto;
@@ -871,7 +907,7 @@
 //}
 
 .final-case-paragraph {
-  font-family: "Graphik regular";
+  font-family: "Graphik regular", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -975,7 +1011,7 @@
 
 @media (max-width: 900px) and (min-width: 700px) {
 
-  .container-width{
+  .container-width {
     width: 96%;
   }
 
@@ -1005,14 +1041,14 @@
     width: 80%;
   }
 
-  .main-title{
+  .main-title {
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 56px;
   }
 
-  .main-subtitle{
+  .main-subtitle {
     font-style: normal;
     line-height: 56px;
   }
@@ -1080,7 +1116,6 @@
 }
 
 
-
 //.content-cases:after {
 //  content: "";
 //  position: absolute;
@@ -1094,7 +1129,7 @@
 //}
 
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .content-cases {
     width: 100% !important;
     padding: 20px 20px 64px 20px !important;
@@ -1218,17 +1253,17 @@
 }
 
 
-@media (min-width: 768px) {
-  //.img-steps {
-  //  width: 207px;
-  //}
-
-  .case-paragraph {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-}
+//@media (min-width: 768px) {
+//  //.img-steps {
+//  //  width: 207px;
+//  //}
+//
+//  .case-paragraph {
+//    font-size: 20px;
+//    line-height: 28px;
+//  }
+//
+//}
 
 //@media (min-width: 768px) and (max-width: 1024px) {
 //  //.img-steps {
@@ -1298,7 +1333,7 @@ footer {
 
 
 .case-paragraph-footer {
-  font-family: Graphik, serif;
+  font-family: "Graphik regular", serif;
   //text-align: center;
   //font-size: 14px;
   //line-height: 20px;
@@ -1317,20 +1352,7 @@ footer {
   font-family: 'Graphik regular', serif;
 }
 
-.case-paragraph {
-  //font-family: Graphik, 'sans-serif';;;
-  //color: white;
-  //font-size: 20px;
-  //line-height: 32px;
-  ///* or 133% */
-  //text-align: center;
-  font-family: 'Graphik regular', serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #F6EEE1;
-}
+
 
 .title {
   font-family: 'Graphik semibold', serif;
