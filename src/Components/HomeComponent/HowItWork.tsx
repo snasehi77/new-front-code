@@ -58,10 +58,10 @@ const HowItWork = () => {
                 <div className="col-10 col-md-5 col-xl-4 p-0">
                     <img className="img-fluid" style={{background: '#C4C4C4'}} src={imgSteps} alt="manCases"/>
                 </div>
-                <div className="col-10 col-md-7 col-lg-6 col-xl-5 p-4 p-md-3 p-lg-1 p-xl-5 d-flex justify-content-center
-                flex-column pt-5"
+                <div className="col-10 col-md-7 col-lg-6 col-xl-5 p-4 p-md-3 p-lg-1 p-xl-2 d-flex
+                justify-content-center flex-column pt-5"
                      style={{backgroundColor: '#002D44'}}>
-                    <div className="p-3 pt-md-4 pl-md-5 pr-md-5 pt-lg-4 pl-lg-5 pr-lg-5">
+                    <div className="p-3 pt-md-4 pl-md-5 pr-md-5 pt-lg-4 pl-lg-5 pr-lg-5 pr-xl-5 pl-xl-5">
                         <h1 style={{color: '#F9C6C6'}} className="fa-4x text-center">❝</h1>
                         <p className="text-center case-paragraph pt-3">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
@@ -98,7 +98,7 @@ const HowItWork = () => {
                 <div className="col-md-6 col-lg-5 col-xl-4 mr-lg-5 p-0 pt-4 pt-md-0 text-center">
                     <span className="how-it-works-about-title">About YourCase</span>
                 </div>
-                <div className="col-10 col-md-6 text-center text-md-left col-lg-5 col-xl-4 p-0 pr-md-5">
+                <div className="col-10 col-md-6 text-center text-md-left col-lg-5 col-xl-4 p-0 pr-md-5 pt-md-3">
                     <hr className="float-left hr-about d-none d-md-flex"/>
                     <p className="how-it-works-about-text pt-5 pr-md-4 pr-lg-5">
                         YourCase was created by a team of legal professionals who believed that finding an attorney

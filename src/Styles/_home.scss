@@ -344,7 +344,12 @@
   background-color: #ED5454;
   color: white;
   font-family: 'Graphik medium', serif;
+  font-style: normal;
+  font-weight: 500;
   font-size: 16px;
+  line-height: 24px;
+  width: 171px;
+  height: 48px;
 }
 
 //.main-image {
@@ -731,12 +736,12 @@
     left: 51px;
   }
 
-  .btn-front {
-    font-size: 16px;
-    line-height: 36px;
-    width: 155px;
-    height: 48px;
-  }
+  //.btn-front {
+  //  font-size: 16px;
+  //  line-height: 36px;
+  //  width: 155px;
+  //  height: 48px;
+  //}
 
   .position-to-sticky-mobile {
     top: 52px;
