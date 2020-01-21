@@ -319,7 +319,8 @@
 
 .your-case-logo {
   //position: absolute;
-  width: 190px;
+  //width: 190px;
+  width: 178.91px;
 }
 
 .navbar-front {
@@ -367,12 +368,18 @@
   //object-position: center -59px;
   //width: 465px;
   //height: 591px;
+  //object-fit: cover;
+  //object-position: center -179px;
+  //width: 587px;
+  //height: 602px;
+  //position: relative;
+  //right: 153px;
   object-fit: cover;
-  object-position: center -179px;
-  width: 587px;
-  height: 602px;
+  object-position: center -98px;
+  width: 570px;
+  height: 641px;
   position: relative;
-  right: 153px;
+  right: 98px;
 
 }
 
@@ -656,8 +663,8 @@
 
   .your-case-logo {
     object-fit: contain;
-    width: 153.35px;
-    height: 48px;
+    width: 178.91px;
+    height: 56px;
   }
 
   .mobile-image-size {
