@@ -3,6 +3,9 @@ import LogoComponent from "../Shared/LogoComponent";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGlobe, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
+import linkedin from "../../Assets/icons/linkedin.png"
+import instagram from "../../Assets/icons/instagram.png"
+import twiter from "../../Assets/icons/twitter.png"
 
 const FooterComponent = () => {
     const year = new Date().getFullYear();
@@ -39,10 +42,13 @@ const FooterComponent = () => {
 
             <div className="row pt-5">
 
-                <div className="col-md-3 d-flex d-lg-none">
-                    <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x">&nbsp;</i>
-                    <i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x">&nbsp;</i>
-                    <i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x">&nbsp;</i>
+                <div className="col-md-3 p-0 d-flex d-lg-none">
+                    {/*<i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
+                    {/*<i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
+                    {/*<i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
+                    <img className="ml-3 pointer" src={instagram} alt=""/>
+                    <img className="ml-4 pl-3 pointer" src={twiter} alt=""/>
+                    <img className="ml-4 pl-3 pointer" src={linkedin} alt=""/>
                 </div>
 
                 <div className="col-lg-3 col-12 pt-5 pt-lg-0">
@@ -60,9 +66,9 @@ const FooterComponent = () => {
                 </div>
 
                 <div className="col-md-3 d-none d-lg-flex">
-                    <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x">&nbsp;</i>
-                    <i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x">&nbsp;</i>
-                    <i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x">&nbsp;</i>
+                    <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>
+                    <i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>
+                    <i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x footer-icon-size">&nbsp;</i>
                 </div>
             </div>
 
