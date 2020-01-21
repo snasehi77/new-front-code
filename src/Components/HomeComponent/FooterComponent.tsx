@@ -66,9 +66,12 @@ const FooterComponent = () => {
                 </div>
 
                 <div className="col-md-3 d-none d-lg-flex">
-                    <i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>
-                    <i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>
-                    <i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x footer-icon-size">&nbsp;</i>
+                    {/*<i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
+                    {/*<i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
+                    {/*<i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
+                    <img className="mr-2 pointer" src={instagram} style={{objectFit: "contain"}} alt=""/>
+                    <img className="ml-4 mr-2 pointer" src={twiter} style={{objectFit: "contain"}} alt=""/>
+                    <img className="ml-4 pointer" src={linkedin} style={{objectFit: "contain"}} alt=""/>
                 </div>
             </div>
 
