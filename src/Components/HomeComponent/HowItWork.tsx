@@ -55,8 +55,8 @@ const HowItWork = () => {
 
         <div className="container p-0 pl-md-3 pr-md-3 pb-4">
             <div className="row justify-content-center m-0">
-                <div className="col-10 col-md-5 col-xl-4 p-0">
-                    <img className="img-fluid" style={{background: '#C4C4C4'}} src={imgSteps} alt="manCases"/>
+                <div className="col-10 col-md-5 col-xl-4 p-0" style={{background: '#C4C4C4'}}>
+                    {/*<img className="img-fluid" style={{background: '#C4C4C4'}} src={imgSteps} alt="manCases"/>*/}
                 </div>
                 <div className="col-10 col-md-7 col-lg-6 col-xl-5 p-4 p-md-3 p-lg-1 p-xl-2 d-flex
                 justify-content-center flex-column pt-5"
@@ -72,8 +72,8 @@ const HowItWork = () => {
                     </div>
                 </div>
             </div>
-            <PaginationComponent classStyle="rounded-circle" totalItems={1}
-                                 pageSize={1} changePage={(currentPage: number) => handleChange(currentPage)}/>
+            {/*<PaginationComponent classStyle="rounded-circle" totalItems={1}*/}
+            {/*                     pageSize={1} changePage={(currentPage: number) => handleChange(currentPage)}/>*/}
         </div>
 
         {/*<div className="row m-0">*/}
