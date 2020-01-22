@@ -92,7 +92,7 @@ const HowItWork = () => {
         {/*    </div>*/}
         {/*</div>*/}
 
-        <div className="container mt-5 pt-5 mb-5 pb-5">
+        <div className="container mb-5 pb-5">
             <div className="row justify-content-center">
                 <hr className="float-left hr-about d-flex d-md-none"/>
                 <div className="col-md-6 col-lg-5 col-xl-4 mr-lg-5 p-0 pt-4 pt-md-0 text-center">
