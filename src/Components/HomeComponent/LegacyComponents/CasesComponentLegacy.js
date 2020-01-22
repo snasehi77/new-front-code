@@ -25,7 +25,7 @@ const cases = [
     {
         id: 3,
         routeUrl: '/labor_work_place_issues/24',
-        label: 'Labor & WorkPlace Issues',
+        label: 'Labor & Workplace Issues',
         mobileLabel: 'Labor & WorkPlace',
         icon: icon_labor_work_place_issues
     },

@@ -93,8 +93,8 @@ export const cases = [
     {
         id: 3,
         routeUrl: '/labor_work_place_issues/24',
-        label: 'Labor & WorkPlace Issues',
-        mobileLabel: 'Labor & WorkPlace',
+        label: 'Labor & Workplace Issues',
+        mobileLabel: 'Labor & Workplace',
         icon: icon_labor_work_place_issues
     },
     {
