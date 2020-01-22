@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler} from "reactstrap";
-import LogoComponent from "./LogoComponent";
 import logo from '../../Assets/Images/yourcase-logo-green.png'
 
 
