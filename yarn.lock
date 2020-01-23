@@ -4269,9 +4269,9 @@ execa@^1.0.0:
     strip-eof "^1.0.0"
 
 execution-input@^2.0.5:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.0.9.tgz#8df6ce55a04e27544d2a1b1825c726753350b496"
-  integrity sha512-yM2MlVP+Wl2azvTsakwsslZ/1KvUJwmgxaJ6Xw9E9Kl4rlcrUxA0H5Ex66oKkCMR52pk98OUoiVD1qpo+40sLA==
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.1.7.tgz#80644611e80f470478c24b3a66c4fffdd723ff67"
+  integrity sha512-BwzwzXsiDqmxPaBc6YwvXcnLSmujjLqtbHvBULym1+yn8thZsd3qWRwNZbzqZDW5Dv2CKnVoCW9YDnQH1+hpEw==
   dependencies:
     "@types/react-select" "^3.0.10"
     moment "^2.24.0"
