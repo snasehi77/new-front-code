@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d513709a.chunk.css",
+    "main.css": "/static/css/main.070c00c4.chunk.css",
     "main.js": "/static/js/main.b83d71fe.chunk.js",
     "main.js.map": "/static/js/main.b83d71fe.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.50d3f9d9.js",
@@ -9,10 +9,10 @@
     "static/js/2.d24ff2a8.chunk.js": "/static/js/2.d24ff2a8.chunk.js",
     "static/js/2.d24ff2a8.chunk.js.map": "/static/js/2.d24ff2a8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.06a917661d66e4504ad6c3236931a4ce.js": "/precache-manifest.06a917661d66e4504ad6c3236931a4ce.js",
+    "precache-manifest.4ef866f2de77130ed1eafcc4be8be1b2.js": "/precache-manifest.4ef866f2de77130ed1eafcc4be8be1b2.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.411ec52d.chunk.css.map": "/static/css/2.411ec52d.chunk.css.map",
-    "static/css/main.d513709a.chunk.css.map": "/static/css/main.d513709a.chunk.css.map",
+    "static/css/main.070c00c4.chunk.css.map": "/static/css/main.070c00c4.chunk.css.map",
     "static/media/index.scss": "/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/woman.png": "/static/media/woman.72b3515a.png",
     "static/media/yourcase-logo-dark.png": "/static/media/yourcase-logo-dark.6d8bc809.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.50d3f9d9.js",
     "static/css/2.411ec52d.chunk.css",
     "static/js/2.d24ff2a8.chunk.js",
-    "static/css/main.d513709a.chunk.css",
+    "static/css/main.070c00c4.chunk.css",
     "static/js/main.b83d71fe.chunk.js"
   ]
 }
