@@ -9,6 +9,8 @@ import moment from "moment";
 import FooterControlsComponent from "../Shared/FooterControlsComponent/FooterControlsComponent";
 import ModalComponent from "../Shared/ModalComponent/ModalComponent";
 import history from "../../Utils/History";
+import Auth from 'ibf-auth-hoc';
+import LogoComponent from "../Shared/LogoComponent";
 
 const ExecuteFlowCasesComponent = () => {
     const {id} = useParams();
@@ -20,7 +22,6 @@ const ExecuteFlowCasesComponent = () => {
     const [defaultValues, setValuesDefault] = useState<any>(null);
     const [endFlow, setEndFlow] = useState<boolean>(false);
     //------------ for inputs
-    const [focused, setFocused] = useState<any>({});
     useEffect(() => {
         if (id) executeFLow(parseInt(id));
         Service.getAllChoiceList().then((res: any) => {
@@ -70,15 +71,6 @@ const ExecuteFlowCasesComponent = () => {
 
     function setValuesField(type: string, id: string, value: any) {
         setValues({...values, [id]: value});
-    }
-
-
-    function openFocused(type: string, id: string) {
-        if (type === "DATE_RANGE") {
-            return focused[id] ? focused[id] : null;
-        } else if (type === "DATE") {
-            return focused[id] ? focused[id] : false;
-        }
     }
 
     function getValuesField(type: string, id: string, sg: boolean) {
@@ -142,75 +134,77 @@ const ExecuteFlowCasesComponent = () => {
     }
 
     return (
-        <div className="w-50 pt-5 m-auto">
-            <LoadingSpinnerComponent loading={loadingFlow}/>
-            <form onSubmit={(e) => onSubmit(e)}>
-                {!!fields.length && !loadingFlow && <div>
-                    {fields.map((f: any) => {
-                        return <div key={f.id + "field"}>
-                            <ExecutionInput id={f.id + "fields_type"}
-                                            label={f.label}
-                                            moment={moment}
-                                            required
-                                            radioAction={() => eventClick("onSubmit")}
-                                            childType={f.format}
-                                            placeholder={f.prompt}
-                                            singleValue={f.single_value}
-                                            DateRangePicker={DateRangePicker}
-                                            SingleDatePicker={SingleDatePicker}
-                                            options={getOptions(f.choice_list_id, choiceListMap)}
-                                            focused={openFocused(f.field_type, f.id)}
-                                            onChange={e => setValuesField(f.field_type, f.id, e)}
-                                            type={f.field_type === "CHOICE_LIST" ? f.format : f.field_type}
-                                            setFocused={(e: any) => setFocused({...focused, [f.id]: e})}
-                                            value={getValuesField(f.field_type === "CHOICE_LIST" ? f.format : f.field_type, f.id, f.single_value)}
-                            />
-                        </div>
-                    })}
-                </div>}
-                <button className="invisible" id="onSubmit">{}</button>
-            </form>
+        <>
+            <LogoComponent className="m-4" styles={{width: "200px"}}/>
+            <div className="w-50 pt-5 m-auto">
+                <LoadingSpinnerComponent loading={loadingFlow}/>
+                <form onSubmit={(e) => onSubmit(e)}>
+                    {!!fields.length && !loadingFlow && <div>
+                        {fields.map((f: any) => {
+                            return <div key={f.id + "field"}>
+                                <ExecutionInput id={f.id + "fields_type"}
+                                                label={f.label}
+                                                moment={moment}
+                                                required
+                                                className={f.format === "RADIO_BUTTON" && f.single_value ? "container-radio" : ""}
+                                                radioAction={() => eventClick("onSubmit")}
+                                                childType={f.format}
+                                                placeholder={f.prompt}
+                                                singleValue={f.single_value}
+                                                DateRangePicker={DateRangePicker}
+                                                SingleDatePicker={SingleDatePicker}
+                                                options={getOptions(f.choice_list_id, choiceListMap)}
+                                                onChange={e => setValuesField(f.field_type, f.id, e)}
+                                                type={f.field_type === "CHOICE_LIST" ? f.format : f.field_type}
+                                                value={getValuesField(f.field_type === "CHOICE_LIST" ? f.format : f.field_type, f.id, f.single_value)}
+                                />
+                            </div>
+                        })}
+                    </div>}
+                    <button className="invisible" id="onSubmit">{}</button>
+                </form>
 
-            {!!fields.length && (
-                <FooterControlsComponent
-                    onBack={backFlow}
-                    disabledBack={loadingFlow}
-                    disabledNext={loadingFlow}
-                    hiddenBack={!currentFlow.prev_step_execution_id}
-                    hiddenNext={!!fields.filter((f: any) => (f.format === "BUTTON"
-                        || (f.format === "RADIO_BUTTON" && f.single_value))
-                        || f.field_type === "BOOLEAN").length}
-                    onNext={() => eventClick("onSubmit")}/>
-            )}
+                {!!fields.length && (
+                    <FooterControlsComponent
+                        onBack={backFlow}
+                        disabledBack={loadingFlow}
+                        disabledNext={loadingFlow}
+                        hiddenBack={!currentFlow.prev_step_execution_id}
+                        hiddenNext={!!fields.filter((f: any) => (f.format === "BUTTON"
+                            || (f.format === "RADIO_BUTTON" && f.single_value))
+                            || f.field_type === "BOOLEAN").length}
+                        onNext={() => eventClick("onSubmit")}/>
+                )}
 
-            <ModalComponent isOpen={false} toggle={() => {
-            }} size="md" noFooter>
-                <div className="pl-5 pr-5 text-center">
-                    <p>
-                        Unfortunately, based on the information provided you do not meet the
-                        prescreen requirements of the lawyers in our network.
-                    </p>
-                    <button onClick={() => {
-                        history.push('/')
-                    }} className="btn btn-danger m-3">Back To Homepage
-                    </button>
-                </div>
-            </ModalComponent>
+                <ModalComponent isOpen={false} toggle={() => {
+                }} size="md" noFooter>
+                    <div className="pl-5 pr-5 text-center">
+                        <p>
+                            Unfortunately, based on the information provided you do not meet the
+                            prescreen requirements of the lawyers in our network.
+                        </p>
+                        <button onClick={() => {
+                            history.push('/')
+                        }} className="btn btn-danger m-3">Back To Homepage
+                        </button>
+                    </div>
+                </ModalComponent>
 
-            <ModalComponent isOpen={endFlow} toggle={() => {
-            }} size="md" noFooter>
-                <div className="pl-5 pr-5 text-center">
-                    <p>
-                        Unfortunately, based on the information provided you do not meet the
-                        prescreen requirements of the lawyers in our network.
-                    </p>
-                    <button onClick={() => {
-                        history.push('/')
-                    }} className="btn btn-danger m-3">Back To Homepage
-                    </button>
-                </div>
-            </ModalComponent>
-        </div>
+                <ModalComponent isOpen={endFlow} toggle={() => {
+                }} size="md" noFooter>
+                    <div className="pl-5 pr-5 text-center">
+                        <p>
+                            Unfortunately, based on the information provided you do not meet the
+                            prescreen requirements of the lawyers in our network.
+                        </p>
+                        <button onClick={() => {
+                            history.push('/')
+                        }} className="btn btn-danger m-3">Back To Homepage
+                        </button>
+                    </div>
+                </ModalComponent>
+            </div>
+        </>
     )
 };
 
