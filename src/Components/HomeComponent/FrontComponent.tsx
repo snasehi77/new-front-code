@@ -11,7 +11,7 @@ const FrontComponent = () => {
             <div className="row">
                 <div className="pt-3 pl-5 pt-md-5 mt-md-5 col-12 col-md-8">
                 <span
-                    className="main-title d-block d-md-none">What happened to <br/>you matters to us.</span>
+                    className="main-title d-block d-md-none">What happened to you matters to us.</span>
                     <span
                         className="main-title d-none d-md-block pt-5 mt-md-0 pt-5 mt-md-0  pt-lg-5 mt-lg-5 ">What happened to you <br/>matters to us.</span>
                     <p className="main-subtitle d-none d-md-flex">Find the attorney you need in minutes. Free.</p>
