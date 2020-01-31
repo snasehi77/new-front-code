@@ -1,15 +1,7 @@
 import React from 'react';
 import {steps} from "../../Utils/Utilities";
-import imgSteps from '../../Assets/Images/man2.png'
-import PaginationComponent from "../Shared/PaginationComponent";
-
 
 const HowItWork = () => {
-
-    const handleChange = (num: number) => {
-    };
-
-
     return <div className="container-fluid">
         <div className="container mt-5 mt-md-0 pt-3 pt-md-5 mt-md-3 pb-5 container-width">
             <h1 className="text-center how-it-works-title  pt-4 mb-5">Here´s how it works</h1>

@@ -90,7 +90,6 @@ export function setDefaultValues(C: any, A: Array<any>, cp: any) {
             obj[f.id] = {from: range[0], to: range[1]};
         }
     });
-    console.log(obj);
     return obj;
 }
 
