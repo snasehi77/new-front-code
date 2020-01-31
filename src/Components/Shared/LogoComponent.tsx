@@ -5,13 +5,22 @@ import logoWhite from '../../Assets/Images/yourcase-logo-light.png'
 interface props {
   className?: string,
   styles?: any,
-  light?: boolean
+  light?: boolean;
+  onClick?: () => void;
 }
 
-const LogoComponent = ({className, styles, light}: props) => {
+const LogoComponent = ({
+                         className,
+                         styles, light,
+                         onClick
+                       }: props) => {
 
 
-  return <img className={className} style={styles} src={light ? logoWhite : logoBlack } alt=""/>
+  return <img className={className}
+              style={styles}
+              src={light ? logoWhite : logoBlack}
+              alt=""
+              onClick={onClick}/>
 
 };
 
