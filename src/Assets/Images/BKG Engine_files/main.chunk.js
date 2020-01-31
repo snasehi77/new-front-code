@@ -2,7 +2,7 @@
 
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/components/Shared/MetadataInputComponent/MetadataInput.scss":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--6-oneOf-5-3!./node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./src/components/Shared/MetadataInputComponent/MetadataInputComponent.scss ***!
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--6-oneOf-5-3!./node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./src/Components/Shared/MetadataInputComponent/MetadataInputComponent.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -68,10 +68,10 @@ exports.push([module.i, "@charset \"UTF-8\";\n/**\n * Dashboard UI\n */\n/*!\n *
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Main/Main */ "./src/components/Main/Main.tsx");
+/* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Components/Main/Main */ "./src/components/Main/Main.tsx");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Utils/History */ "./src/Utils/History.ts");
-/* harmony import */ var _components_Auth_Login_LoginCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/AuthComponent/Login/LoginCard */ "./src/components/Auth/Login/LoginCard.tsx");
+/* harmony import */ var _components_Auth_Login_LoginCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/AuthComponent/Login/LoginCard */ "./src/components/Auth/Login/LoginCard.tsx");
 var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/App.tsx";
 
 
@@ -451,7 +451,7 @@ function orderRows(array, key) {
 
 /***/ "./src/components/Auth/Login/LoginCard.tsx":
 /*!*************************************************!*\
-  !*** ./src/components/AuthComponent/Login/LoginCard.tsx ***!
+  !*** ./src/Components/AuthComponent/Login/LoginCard.tsx ***!
   \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -471,7 +471,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/AuthComponent/Login/LoginCard.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/AuthComponent/Login/LoginCard.tsx";
 
 
 
@@ -668,7 +668,7 @@ const LoginCard = () => {
 
 /***/ "./src/components/ChoiceList/ChoiceListComponent.tsx":
 /*!***********************************************************!*\
-  !*** ./src/components/ChoiceList/ChoiceListComponent.tsx ***!
+  !*** ./src/Components/ChoiceList/ChoiceListComponent.tsx ***!
   \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -683,7 +683,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utils/History */ "./src/Utils/History.ts");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/ChoiceList/ChoiceListComponent.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/ChoiceList/ChoiceListComponent.tsx";
 
 
 
@@ -884,7 +884,7 @@ const ChoiceListComponent = () => {
 
 /***/ "./src/components/ChoiceList/ChoiceListDashboard.tsx":
 /*!***********************************************************!*\
-  !*** ./src/components/ChoiceList/ChoiceListDashboard.tsx ***!
+  !*** ./src/Components/ChoiceList/ChoiceListDashboard.tsx ***!
   \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -896,7 +896,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _ChoiceListComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChoiceListComponent */ "./src/components/ChoiceList/ChoiceListComponent.tsx");
 /* harmony import */ var _ChoiceListDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ChoiceListDetail */ "./src/components/ChoiceList/ChoiceListDetail.tsx");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/ChoiceList/ChoiceListDashboard.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/ChoiceList/ChoiceListDashboard.tsx";
 
 
 
@@ -945,7 +945,7 @@ const ChoiceListDashboard = ({
 
 /***/ "./src/components/ChoiceList/ChoiceListDetail.tsx":
 /*!********************************************************!*\
-  !*** ./src/components/ChoiceList/ChoiceListDetail.tsx ***!
+  !*** ./src/Components/ChoiceList/ChoiceListDetail.tsx ***!
   \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -963,7 +963,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_ChoiceListValue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../models/ChoiceListValue */ "./src/models/ChoiceListValue.ts");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/ChoiceList/ChoiceListDetail.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/ChoiceList/ChoiceListDetail.tsx";
 
 
 
@@ -1217,7 +1217,7 @@ const ChoiceListDetail = ({
 
 /***/ "./src/components/ChoiceList/CreateChoiceListInline.tsx":
 /*!**************************************************************!*\
-  !*** ./src/components/ChoiceList/CreateChoiceListInline.tsx ***!
+  !*** ./src/Components/ChoiceList/CreateChoiceListInline.tsx ***!
   \**************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1234,7 +1234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/ChoiceList/CreateChoiceListInline.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/ChoiceList/CreateChoiceListInline.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -1474,7 +1474,7 @@ const CreateChoiceListInline = ({
 
 /***/ "./src/components/Execution/Execution.tsx":
 /*!************************************************!*\
-  !*** ./src/components/Execution/Execution.tsx ***!
+  !*** ./src/Components/Execution/Execution.tsx ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1486,7 +1486,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _ExecutionTable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExecutionTable */ "./src/components/Execution/ExecutionTable.tsx");
 /* harmony import */ var _ExecutionFlow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExecutionFlow */ "./src/components/Execution/ExecutionFlow.tsx");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Execution/Execution.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Execution/Execution.tsx";
 
 
 
@@ -1535,7 +1535,7 @@ const Execution = ({
 
 /***/ "./src/components/Execution/ExecutionFlow.tsx":
 /*!****************************************************!*\
-  !*** ./src/components/Execution/ExecutionFlow.tsx ***!
+  !*** ./src/Components/Execution/ExecutionFlow.tsx ***!
   \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1554,7 +1554,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Execution/ExecutionFlow.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Execution/ExecutionFlow.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -1907,7 +1907,7 @@ const ExecutionFlow = ({
 
 /***/ "./src/components/Execution/ExecutionTable.tsx":
 /*!*****************************************************!*\
-  !*** ./src/components/Execution/ExecutionTable.tsx ***!
+  !*** ./src/Components/Execution/ExecutionTable.tsx ***!
   \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1921,7 +1921,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Utils/History */ "./src/Utils/History.ts");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Execution/ExecutionTable.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Execution/ExecutionTable.tsx";
 
 
 
@@ -2090,7 +2090,7 @@ const ExecutionTable = () => {
 
 /***/ "./src/components/Flow/FlowDashboard.tsx":
 /*!***********************************************!*\
-  !*** ./src/components/Flow/FlowDashboard.tsx ***!
+  !*** ./src/Components/Flow/FlowDashboard.tsx ***!
   \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2104,7 +2104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FlowDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FlowDetail */ "./src/components/Flow/FlowDetail.tsx");
 /* harmony import */ var _Step_Step__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Step/Step */ "./src/components/Flow/Step/Step.tsx");
 /* harmony import */ var _View_ViewDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./View/ViewDetail */ "./src/components/Flow/View/ViewDetail.tsx");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/FlowDashboard.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/FlowDashboard.tsx";
 
 
 
@@ -2174,7 +2174,7 @@ const FlowDashboard = ({
 
 /***/ "./src/components/Flow/FlowDetail.tsx":
 /*!********************************************!*\
-  !*** ./src/components/Flow/FlowDetail.tsx ***!
+  !*** ./src/Components/Flow/FlowDetail.tsx ***!
   \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2198,7 +2198,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _View_AddNewViewModal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./View/AddNewViewModal */ "./src/components/Flow/View/AddNewViewModal.tsx");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/FlowDetail.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/FlowDetail.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -2508,7 +2508,7 @@ const FlowDetail = ({
 
 /***/ "./src/components/Flow/FlowList.tsx":
 /*!******************************************!*\
-  !*** ./src/components/Flow/FlowList.tsx ***!
+  !*** ./src/Components/Flow/FlowList.tsx ***!
   \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2526,7 +2526,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 /* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../service */ "./src/service/index.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/FlowList.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/FlowList.tsx";
 
 
 
@@ -2641,7 +2641,7 @@ const FlowList = ({
 
 /***/ "./src/components/Flow/FlowView.tsx":
 /*!******************************************!*\
-  !*** ./src/components/Flow/FlowView.tsx ***!
+  !*** ./src/Components/Flow/FlowView.tsx ***!
   \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2655,7 +2655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FlowList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FlowList */ "./src/components/Flow/FlowList.tsx");
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utils/History */ "./src/Utils/History.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/FlowView.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/FlowView.tsx";
 
 
 
@@ -2784,7 +2784,7 @@ const Flow = () => {
 
 /***/ "./src/components/Flow/Step/Route/Route.tsx":
 /*!**************************************************!*\
-  !*** ./src/components/Flow/Step/Route/Route.tsx ***!
+  !*** ./src/Components/Flow/Step/Route/Route.tsx ***!
   \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2801,7 +2801,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/Step/Route/Route.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/Step/Route/Route.tsx";
 
 
 
@@ -3220,7 +3220,7 @@ const Route = ({
 
 /***/ "./src/components/Flow/Step/Step.tsx":
 /*!*******************************************!*\
-  !*** ./src/components/Flow/Step/Step.tsx ***!
+  !*** ./src/Components/Flow/Step/Step.tsx ***!
   \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -3248,7 +3248,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Route_Route__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Route/Route */ "./src/components/Flow/Step/Route/Route.tsx");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/Step/Step.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/Step/Step.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -3750,7 +3750,7 @@ const StepComponent = ({
 
 /***/ "./src/components/Flow/View/AddNewViewModal.tsx":
 /*!******************************************************!*\
-  !*** ./src/components/Flow/View/AddNewViewModal.tsx ***!
+  !*** ./src/Components/Flow/View/AddNewViewModal.tsx ***!
   \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -3766,7 +3766,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Utils/Utils */ "./src/Utils/Utils.ts");
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Utils/History */ "./src/Utils/History.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/View/AddNewViewModal.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/View/AddNewViewModal.tsx";
 
 
 
@@ -3992,7 +3992,7 @@ const AddNewViewModal = ({
 
 /***/ "./src/components/Flow/View/ViewDetail.tsx":
 /*!*************************************************!*\
-  !*** ./src/components/Flow/View/ViewDetail.tsx ***!
+  !*** ./src/Components/Flow/View/ViewDetail.tsx ***!
   \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4021,7 +4021,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Hooks_useDidMountEffect__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../Hooks/useDidMountEffect */ "./src/Hooks/useDidMountEffect.js");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Flow/View/ViewDetail.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Flow/View/ViewDetail.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -4525,7 +4525,7 @@ const ViewDetail = ({
 
 /***/ "./src/components/Main/Main.tsx":
 /*!**************************************!*\
-  !*** ./src/components/Main/Main.tsx ***!
+  !*** ./src/Components/Main/Main.tsx ***!
   \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4541,7 +4541,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ChoiceList_ChoiceListDashboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ChoiceList/ChoiceListDashboard */ "./src/components/ChoiceList/ChoiceListDashboard.tsx");
 /* harmony import */ var _Execution_Execution__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Execution/Execution */ "./src/components/Execution/Execution.tsx");
 /* harmony import */ var _Template_TemplateDashboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Template/TemplateDashboard */ "./src/components/Template/TemplateDashboard.tsx");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Main/Main.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Main/Main.tsx";
 
 
 
@@ -4631,7 +4631,7 @@ function Main() {
 
 /***/ "./src/components/Main/TopBar.tsx":
 /*!****************************************!*\
-  !*** ./src/components/Main/TopBar.tsx ***!
+  !*** ./src/Components/Main/TopBar.tsx ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4642,7 +4642,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Main/TopBar.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Main/TopBar.tsx";
 
 
  // import { Logout } from '../../Services/AuthService';
@@ -4938,7 +4938,7 @@ const TopBar = props => {
 
 /***/ "./src/components/Shared/MetadataInputComponent/MetadataInput.scss":
 /*!*************************************************************************!*\
-  !*** ./src/components/Shared/MetadataInputComponent/MetadataInputComponent.scss ***!
+  !*** ./src/Components/Shared/MetadataInputComponent/MetadataInputComponent.scss ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4970,13 +4970,13 @@ if (true) {
         if (typeof newContent === 'string') {
           newContent = [[module.i, newContent, '']];
         }
-        
+
         update(newContent);
       }
     )
   }
 
-  module.hot.dispose(function() { 
+  module.hot.dispose(function() {
     update();
   });
 }
@@ -4985,7 +4985,7 @@ if (true) {
 
 /***/ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx":
 /*!************************************************************************!*\
-  !*** ./src/components/Shared/MetadataInputComponent/MetadataInputComponentComponent.tsx ***!
+  !*** ./src/Components/Shared/MetadataInputComponent/MetadataInputComponentComponent.tsx ***!
   \************************************************************************/
 /*! exports provided: sliceObjects, yearsToToggle, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -5011,7 +5011,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.browser.esm.js");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/MetadataInputComponent/MetadataInputComponentComponent.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Shared/MetadataInputComponent/MetadataInputComponentComponent.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -5591,7 +5591,7 @@ const MetadataInput = ({
 
 /***/ "./src/components/Shared/ModalComponent/ModalComponent.tsx":
 /*!*****************************************************************!*\
-  !*** ./src/components/Shared/ModalComponent/ModalComponent.tsx ***!
+  !*** ./src/Components/Shared/ModalComponent/ModalComponent.tsx ***!
   \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -5603,7 +5603,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/ModalComponent/ModalComponent.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Shared/ModalComponent/ModalComponent.tsx";
 
 
 
@@ -5693,7 +5693,7 @@ const ModalComponent = ({
 
 /***/ "./src/components/Shared/TableComponent/ConfirmationActionsRow.tsx":
 /*!*************************************************************************!*\
-  !*** ./src/components/Shared/TableComponent/ConfirmationActionsRow.tsx ***!
+  !*** ./src/Components/Shared/TableComponent/ConfirmationActionsRow.tsx ***!
   \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -5703,7 +5703,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/TableComponent/ConfirmationActionsRow.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Shared/TableComponent/ConfirmationActionsRow.tsx";
 
 
 
@@ -5746,7 +5746,7 @@ const ConfirmationActionsRow = ({
 
 /***/ "./src/components/Shared/TableComponent/Row.js":
 /*!*****************************************************!*\
-  !*** ./src/components/Shared/TableComponent/Row.js ***!
+  !*** ./src/Components/Shared/TableComponent/Row.js ***!
   \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -5765,7 +5765,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Utils/Utils */ "./src/Utils/Utils.ts");
 
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/TableComponent/Row.js";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Shared/TableComponent/Row.js";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -6063,7 +6063,7 @@ const Row = ({
 
 /***/ "./src/components/Shared/TableComponent/RowTable.js":
 /*!**********************************************************!*\
-  !*** ./src/components/Shared/TableComponent/RowTable.js ***!
+  !*** ./src/Components/Shared/TableComponent/RowTable.js ***!
   \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6074,7 +6074,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/TableComponent/RowTable.js";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Shared/TableComponent/RowTable.js";
 
 
 
@@ -6153,7 +6153,7 @@ const RowTable = ({
 
 /***/ "./src/components/Shared/TableComponent/TableComponent.tsx":
 /*!*****************************************************************!*\
-  !*** ./src/components/Shared/TableComponent/TableComponent.tsx ***!
+  !*** ./src/Components/Shared/TableComponent/TableComponent.tsx ***!
   \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6171,7 +6171,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Shared/TableComponent/TableComponent.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Shared/TableComponent/TableComponent.tsx";
 
 
 
@@ -6421,7 +6421,7 @@ const TableComponent = ({
 
 /***/ "./src/components/Template/TemplateComponent.tsx":
 /*!*******************************************************!*\
-  !*** ./src/components/Template/TemplateComponent.tsx ***!
+  !*** ./src/Components/Template/TemplateComponent.tsx ***!
   \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6436,7 +6436,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_TableComponent_TableComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Shared/TableComponent/TableComponent */ "./src/components/Shared/TableComponent/TableComponent.tsx");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Template/TemplateComponent.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Template/TemplateComponent.tsx";
 
 
 
@@ -6608,7 +6608,7 @@ const TemplateComponent = () => {
 
 /***/ "./src/components/Template/TemplateDashboard.tsx":
 /*!*******************************************************!*\
-  !*** ./src/components/Template/TemplateDashboard.tsx ***!
+  !*** ./src/Components/Template/TemplateDashboard.tsx ***!
   \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6620,7 +6620,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _TemplateDetail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TemplateDetail */ "./src/components/Template/TemplateDetail.tsx");
 /* harmony import */ var _TemplateComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TemplateComponent */ "./src/components/Template/TemplateComponent.tsx");
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Template/TemplateDashboard.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Template/TemplateDashboard.tsx";
 
 
 
@@ -6669,7 +6669,7 @@ const TemplateDashboard = ({
 
 /***/ "./src/components/Template/TemplateDetail.tsx":
 /*!****************************************************!*\
-  !*** ./src/components/Template/TemplateDetail.tsx ***!
+  !*** ./src/Components/Template/TemplateDetail.tsx ***!
   \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6693,7 +6693,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Utils/History */ "./src/Utils/History.ts");
 /* harmony import */ var _models_FieldTypesWithFormat__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../models/FieldTypesWithFormat */ "./src/models/FieldTypesWithFormat.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Template/TemplateDetail.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Template/TemplateDetail.tsx";
 
 
 
@@ -7186,7 +7186,7 @@ const TemplateDetail = ({
 
 /***/ "./src/components/Template/TemplatePreview.tsx":
 /*!*****************************************************!*\
-  !*** ./src/components/Template/TemplatePreview.tsx ***!
+  !*** ./src/Components/Template/TemplatePreview.tsx ***!
   \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7203,7 +7203,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 /* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../service */ "./src/service/index.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Template/TemplatePreview.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Template/TemplatePreview.tsx";
 
 
 
@@ -7318,7 +7318,7 @@ const TemplatePreview = ({
 
 /***/ "./src/components/Template/TemplatePreviewItem.tsx":
 /*!*********************************************************!*\
-  !*** ./src/components/Template/TemplatePreviewItem.tsx ***!
+  !*** ./src/Components/Template/TemplatePreviewItem.tsx ***!
   \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7337,7 +7337,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(class_transformer__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _Shared_MetadataInputComponent_MetadataInput__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shared/MetadataInputComponent/MetadataInputComponent */ "./src/components/Shared/MetadataInputComponent/MetadataInput.tsx");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/Template/TemplatePreviewItem.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/Template/TemplatePreviewItem.tsx";
 
 
 
@@ -7605,13 +7605,13 @@ if (true) {
         if (typeof newContent === 'string') {
           newContent = [[module.i, newContent, '']];
         }
-        
+
         update(newContent);
       }
     )
   }
 
-  module.hot.dispose(function() { 
+  module.hot.dispose(function() {
     update();
   });
 }

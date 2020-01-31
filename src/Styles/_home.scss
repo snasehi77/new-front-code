@@ -919,7 +919,10 @@
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 24px;
-	color: #ff9966;
+}
+
+.final-case-paragraph-link {
+    color: #ff9966;
 }
 
 @media (max-width: 699px) and (min-width: 471px) {
@@ -1033,16 +1036,23 @@
 	}
 }
 
+@media (max-width: 1200px) and (min-width: 1000px) {
+    .main-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+
+
+.navbar-toggler{
+    display: none !important;
+}
+
 @media (max-width: 1100px) and (min-width: 901px) {
 	.container-width {
 		width: 80%;
-	}
-
-	.main-title {
-		font-style: normal;
-		font-weight: 600;
-		font-size: 48px;
-		line-height: 56px;
 	}
 
 	.main-subtitle {

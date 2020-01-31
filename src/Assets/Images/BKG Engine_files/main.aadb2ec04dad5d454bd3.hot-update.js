@@ -2,7 +2,7 @@ webpackHotUpdate("main",{
 
 /***/ "./src/components/ChoiceList/ChoiceListComponent.tsx":
 /*!***********************************************************!*\
-  !*** ./src/components/ChoiceList/ChoiceListComponent.tsx ***!
+  !*** ./src/Components/ChoiceList/ChoiceListComponent.tsx ***!
   \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_History__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utils/History */ "./src/Utils/History.ts");
 /* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Utils/Utils */ "./src/Utils/Utils.ts");
 
-var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/components/ChoiceList/ChoiceListComponent.tsx";
+var _jsxFileName = "/Users/frankcarpio/Desktop/code/BKG/flow-engine-front/src/Components/ChoiceList/ChoiceListComponent.tsx";
 
 
 
