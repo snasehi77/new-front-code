@@ -268,20 +268,20 @@
 	background-color: green;
 }
 
-@media (min-width: 576px) and (max-width: 1280px) {
+@media (min-width: 576px) and (max-width: 1200px) {
 	.container.container-tablet-view {
 		max-width: 100%;
 	}
 }
 
-@media (max-width: 1280px) and (min-width: 700px) {
+@media (max-width: 1200px) and (min-width: 700px) {
 	.container-tablet-view {
 		max-width: 100%;
 	}
 
 	.mobile-image-size {
-		width: 64px;
-		height: 64px;
+		width: 92px;
+		height: 92px;
 	}
 }
 
@@ -648,8 +648,8 @@
 
 @media (max-width: 1100px) {
 	.mobile-image-size {
-		width: 64px;
-		height: 64px;
+		width: 92px;
+		height: 92px;
 	}
 }
 
@@ -991,7 +991,7 @@
 	}
 }
 
-@media (max-width: 1400px) and (min-width: 1001px) {
+@media (max-width: 1400px) and (min-width: 1151px) {
 	.content-cases {
 		.item-on-display {
 			display: none !important;
@@ -1002,17 +1002,17 @@
 		}
 
 		.item-route {
-			width: 327px;
-			height: 246px;
+			width: 317px;
+			height: 270px;
 			background: $beige-custom;
 			border-radius: 0;
 			color: $primary-light !important;
-			img { width: 100px; height: 100px}
+			img { width: 200px; height: 200px}
 		}
 	}
 }
 
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 950px) and (min-width: 700px) {
 	.container-width {
 		width: 96%;
 	}
@@ -1050,7 +1050,7 @@
     display: none !important;
 }
 
-@media (max-width: 1100px) and (min-width: 901px) {
+@media (max-width: 1150px) and (min-width: 951px) {
 	.container-width {
 		width: 80%;
 	}
@@ -1076,6 +1076,7 @@
 			background: $beige-custom;
 			border-radius: 0;
 			color: $primary-light !important;
+            img { width: 150px; height: 150px}
 		}
 	}
 }
@@ -1092,11 +1093,11 @@
 
 		.item-route {
 			width: 317px;
-			height: 246px;
+			height: 270px;
 			background: $beige-custom;
 			border-radius: 0;
 			color: $primary-light !important;
-			img { width: 150px; height: 150px}
+			img { width: 200px; height: 200px}
 		}
 	}
 }
