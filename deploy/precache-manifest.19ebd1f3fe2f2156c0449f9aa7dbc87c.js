@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e2bf5195321b679c10024899d1a3f2e1",
+    "revision": "2d9d8538864cc5a5d912526935887525",
     "url": "/index.html"
   },
   {
-    "revision": "654ec42e7ff97c1a7a8f",
-    "url": "/static/css/2.7bceade8.chunk.css"
+    "revision": "0482fe75b1403b0b8713",
+    "url": "/static/css/2.fe48dec6.chunk.css"
   },
   {
-    "revision": "eafa5fabf65440d74443",
-    "url": "/static/css/main.b9a2eaa9.chunk.css"
+    "revision": "2043af2e242b828fc93d",
+    "url": "/static/css/main.b00fbcb7.chunk.css"
   },
   {
-    "revision": "654ec42e7ff97c1a7a8f",
+    "revision": "0482fe75b1403b0b8713",
     "url": "/static/js/2.083c3535.chunk.js"
   },
   {
-    "revision": "eafa5fabf65440d74443",
-    "url": "/static/js/main.04d6a4d7.chunk.js"
+    "revision": "2043af2e242b828fc93d",
+    "url": "/static/js/main.ebd92c81.chunk.js"
   },
   {
     "revision": "a602d1c9f196cb4b12bf",
@@ -34,6 +34,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "99c54fc5e6f750bc0d849ccfbf8ab8cf",
     "url": "/static/media/Graphik-Semibold.99c54fc5.otf"
+  },
+  {
+    "revision": "419498d25703bf1105553f06bff9c2b5",
+    "url": "/static/media/YC_Icon_Auto_Accidents_Green@2x.419498d2.png"
+  },
+  {
+    "revision": "7a95f7b4ea52f4508d86d361a401d125",
+    "url": "/static/media/YC_Icon_Elder_Care_Green@2x.7a95f7b4.png"
+  },
+  {
+    "revision": "2e2ad69a30ea3e8203267520b3f70188",
+    "url": "/static/media/YC_Icon_Health_Medical_Green@2x.2e2ad69a.png"
+  },
+  {
+    "revision": "b51b2f0d1c3a36b350ae23c4e3e6c9d5",
+    "url": "/static/media/YC_Icon_Sexual_Harassment_Green@2x.b51b2f0d.png"
+  },
+  {
+    "revision": "cf1fc6b6a39b7edf7a1599a938bbbff6",
+    "url": "/static/media/YC_Icon_Workplace_Discrimination_Green@2x.cf1fc6b6.png"
+  },
+  {
+    "revision": "6591dd82407cb5bf15255d121c240fbf",
+    "url": "/static/media/YC_Icon_Workplace_Injuries_Green@2x.6591dd82.png"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
