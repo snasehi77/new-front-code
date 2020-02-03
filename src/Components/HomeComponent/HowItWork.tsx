@@ -86,13 +86,9 @@ const HowItWork = () => {
 
         <div className="container mb-5 pb-5">
             <div className="row justify-content-center">
-                <hr className="float-left hr-about d-flex d-md-none"/>
-                <div className="col-md-6 col-lg-5 col-xl-4 mr-lg-5 p-0 pt-4 pt-md-0 text-center">
-                    <span className="how-it-works-about-title">About YourCase</span>
-                </div>
-                <div className="col-10 col-md-6 text-center text-md-left col-lg-5 col-xl-4 p-0 pr-md-5 pt-md-3">
-                    <hr className="float-left hr-about d-none d-md-flex"/>
-                    <p className="how-it-works-about-text pt-5 pr-md-4 pr-lg-5">
+                <span className="how-it-works-about-title">About YourCase</span>
+                <div className="col-12 col-md-12 text-center text-md-left pr-md-5 pt-md-3">
+                    <p className="how-it-works-about-text pt-4 pr-md-4 pr-lg-3">
                         YourCase was created by a team of legal professionals who believed that finding an attorney
                         online was unnecessarily confusing, impersonal and stressful.
                         YourCase provides people with a dignified and efficient way to find the lawyers they need, free.

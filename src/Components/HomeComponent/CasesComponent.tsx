@@ -36,7 +36,7 @@ const CasesComponent = () => {
                         </div>
                     )
                 })}
-                <span className="final-case-paragraph pt-4 pt-md-3 mt-3">Can’t find what you are looking for? <strong>Contact us.</strong></span>
+                <span className="final-case-paragraph pt-4 pt-md-3 mt-3">Can’t find what you are looking for? <strong className="final-case-paragraph-link">Contact us.</strong></span>
             </div>
         </div>
 };

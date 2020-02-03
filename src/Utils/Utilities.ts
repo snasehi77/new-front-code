@@ -1,9 +1,9 @@
-import icon_accidents_and_injuries from "../Assets/icons/accident 1.png";
-import icon_health_and_medical_issues from "../Assets/icons/health_medical 2.png";
-import icon_labor_work_place_issues from "../Assets/icons/labor_workplace 2.png";
-import icon_sexual_harassment from "../Assets/icons/sexual_harassment 2.png";
-import icon_sexual_abuse from "../Assets/icons/sexual_abuse 2.png";
-import icon_elder_abuse from "../Assets/icons/elder 2.png";
+import icon_accidents_and_injuries from "../Assets/icons/YC_Icon_Auto_Accidents_Green@2x.png";
+import icon_health_and_medical_issues from "../Assets/icons/YC_Icon_Health_Medical_Green@2x.png";
+import icon_labor_work_place_issues from "../Assets/icons/YC_Icon_Workplace_Injuries_Green@2x.png";
+import icon_sexual_harassment from "../Assets/icons/YC_Icon_Sexual_Harassment_Green@2x.png";
+import icon_workplace_discrimination from "../Assets/icons/YC_Icon_Workplace_Discrimination_Green@2x.png";
+import icon_elder_abuse from "../Assets/icons/YC_Icon_Elder_Care_Green@2x.png";
 
 export function getMonths() {
     return [
@@ -179,9 +179,9 @@ export const cases = [
     },
     {
         id: 5,
-        routeUrl: 'sexual_abuse/24',
-        label: 'Sexual Abuse',
-        icon: icon_sexual_abuse
+        routeUrl: 'workplace_discrimination/24',
+        label: 'Workplace Discrimination',
+        icon: icon_workplace_discrimination
     },
     {
         id: 6,
