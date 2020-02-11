@@ -226,42 +226,6 @@
 }
 
 
-.container-checkbox {
-  input[type=checkbox] {
-    display: none;
-  }
-
-  .checkbox-active {
-    border: 2px solid green;
-  }
-
-  .custom-check {
-    background: white;
-  }
-
-  .custom-checked {
-    background: orange;
-  }
-}
-
-.container-radio {
-  input[type=radio] {
-    display: none;
-  }
-
-  .radio-active {
-    border: 2px solid green;
-  }
-
-  .custom-check {
-    background: white;
-  }
-
-  .custom-checked {
-    background: orange;
-  }
-
-}
 
 
 @media (min-width: 576px) and (max-width: 1200px) {

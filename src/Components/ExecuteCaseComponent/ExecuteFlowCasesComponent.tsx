@@ -5,7 +5,7 @@ import {baseUrl} from "../../Utils/Config";
 import LogoComponent from "../Shared/LogoComponent";
 import history from "../../Utils/History";
 import ModalComponent from "../Shared/ModalComponent/ModalComponent";
-
+import "./ExecuteCaseComponent.scss";
 const ExecuteFlowCasesComponent = () => {
     const {id} = useParams();
     const [endFlow, setEndFlow] = useState<boolean>(false);

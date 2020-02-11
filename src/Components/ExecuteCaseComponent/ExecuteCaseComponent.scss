@@ -1,0 +1,56 @@
+@import "../../Styles/variables";
+$bg-form:  #F6EEE1;
+h1, h2, h3, h5, h6, label {
+  color: $primary-light;
+}
+
+h4 {
+  color: $orange;
+}
+
+.form-group {
+  .form-control {
+    border: none;
+    background: #F6EEE1;
+    color: $primary-light;
+  }
+}
+
+.container-checkbox {
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .checkbox-active {
+    border: 2px solid green;
+  }
+
+  .custom-check {
+    background: $bg-form;
+    color: $bg-form !important;
+  }
+
+  .custom-checked {
+    background: $orange;
+  }
+}
+
+.container-radio {
+  input[type=radio] {
+    display: none;
+  }
+
+  .radio-active {
+    border: 2px solid green;
+  }
+
+  .custom-check {
+    background: $bg-form;
+    color: $bg-form !important;
+  }
+
+  .custom-checked {
+    background: $orange;
+  }
+
+}
