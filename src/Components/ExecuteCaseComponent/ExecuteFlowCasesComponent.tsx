@@ -27,7 +27,7 @@ const ExecuteFlowCasesComponent = () => {
         }} className="m-4" styles={{width: "200px"}}/>
         {id && <ExecutionFlow flowId={parseInt(id)}
                               url={baseUrl}
-                              className="col-lg-6 col-md-8 col-12 m-auto"
+                              className="col-xl-4 col-lg-6 col-md-8 col-12 m-auto"
                               onAction={onActions}/>}
 
         <ModalComponent isOpen={endFlow} toggle={() => {
