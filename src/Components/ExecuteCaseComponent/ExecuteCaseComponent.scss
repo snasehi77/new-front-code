@@ -1,5 +1,6 @@
 @import "../../Styles/variables";
-$bg-form:  #F6EEE1;
+// this class add styles to library execution-flow l
+$bg-form: #F6EEE1;
 h1, h2, h3, h5, h6, label {
   color: $primary-light;
 }
@@ -11,7 +12,7 @@ h4 {
 .form-group {
   .form-control {
     border: none;
-    background: #F6EEE1;
+    background: $bg-form;
     color: $primary-light;
   }
 }
@@ -53,4 +54,35 @@ h4 {
     background: $orange;
   }
 
+}
+
+.css-yk16xz-control {
+  border-color: $bg-form !important;
+
+  .css-1hwfws3 {
+    background: $bg-form;
+
+    .css-1rhbuit-multiValue {
+      * {
+        color: $primary-light !important;
+      }
+    }
+  }
+
+  .css-1hb7zxy-IndicatorsContainer {
+    background: $bg-form;
+  }
+}
+
+.custom-DateInput_input {
+  .DateRangePickerInput {
+    background: $bg-form !important;
+    border: none !important;
+  }
+
+  .DateInput_input {
+    height: calc(1.5em + .75rem + 2px);
+    background: $bg-form !important;
+    color: $primary-light !important;
+  }
 }
