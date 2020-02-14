@@ -4293,10 +4293,10 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.0.3.tgz#ed311c128363b6a05d44dafbac671d3db3d134db"
-  integrity sha512-FWog5PWM6vksCG/XxwxqspUvuV7vZbbOnd/nNfS6Ut8Tnqf8SIqpXykW5wvfL+befC3m5F53TB0oAvwGO55WPw==
+execution-flow@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.0.9.tgz#39fe987739167c45463c13d654065ceb0df10f54"
+  integrity sha512-5UK4m5cCtReuR2bdqwXc2Z5vrFTP3/iicELRPmXhpsjBnAAXw4tc7WsRsvNGKe73PI+GYOA1KzrHw2780bAj6g==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/free-solid-svg-icons" "^5.12.1"
