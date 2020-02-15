@@ -4,6 +4,7 @@ import icon_labor_work_place_issues from "../Assets/icons/YC_Icon_Workplace_Inju
 import icon_sexual_harassment from "../Assets/icons/YC_Icon_Sexual_Harassment_Green@2x.png";
 import icon_workplace_discrimination from "../Assets/icons/YC_Icon_Workplace_Discrimination_Green@2x.png";
 import icon_elder_abuse from "../Assets/icons/YC_Icon_Elder_Care_Green@2x.png";
+import {flow_id} from "./Config";
 
 export function getMonths() {
     return [
@@ -154,38 +155,38 @@ export const checkMail = (mail: string) => {
 export const cases = [
     {
         id: 1,
-        routeUrl: '/accidents_and_injuries/24',
+        routeUrl: '/accidents_and_injuries/' + flow_id,
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
         id: 2,
-        routeUrl: '/health_and_medical_issues/24',
+        routeUrl: '/health_and_medical_issues/' + flow_id,
         label: 'Health & Medical Issues',
         icon: icon_health_and_medical_issues
     },
     {
         id: 3,
-        routeUrl: '/labor_work_place_issues/24',
+        routeUrl: '/labor_work_place_issues/' + flow_id,
         label: 'Labor & Workplace Issues',
         mobileLabel: 'Labor & Workplace',
         icon: icon_labor_work_place_issues
     },
     {
         id: 4,
-        routeUrl: 'sexual_harassment/24',
+        routeUrl: 'sexual_harassment/' + flow_id,
         label: 'Sexual Harassment',
         icon: icon_sexual_harassment
     },
     {
         id: 5,
-        routeUrl: 'workplace_discrimination/24',
+        routeUrl: 'workplace_discrimination/' + flow_id,
         label: 'Workplace Discrimination',
         icon: icon_workplace_discrimination
     },
     {
         id: 6,
-        routeUrl: 'elder_abuse/24',
+        routeUrl: 'elder_abuse/' + flow_id,
         label: 'Elder Abuse',
         icon: icon_elder_abuse
     }
