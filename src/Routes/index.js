@@ -3,6 +3,7 @@ import HomeComponent from "../Components/HomeComponent/HomeComponent";
 import PrivacyPolicyComponent from "../Components/PrivacyPolicyComponent/PrivacyPolicyComponent";
 import AuthComponent from "../Components/AuthComponent/AuthComponent";
 import ExecuteFlowCasesComponent from "../Components/ExecuteCaseComponent/ExecuteFlowCasesComponent";
+import MemberTermsComponent from "../Components/MemberTermsComponent/MemberTermsComponent";
 
 
 const Routes = [
@@ -25,7 +26,12 @@ const Routes = [
     path: '/auth',
     component: AuthComponent,
     id: 4
-  }
+  },
+  {
+    path: '/member-terms-of-service',
+    component: MemberTermsComponent,
+    id: 3
+  },
 ];
 
 export default Routes;

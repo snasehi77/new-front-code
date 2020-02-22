@@ -57,7 +57,7 @@ const FooterComponent = () => {
                 </div>
 
                 <div className="col-lg-3 col-12 pt-3 pt-lg-0 p-lg-0">
-                    <span className="text-footer-bottom">Member terms of service</span>
+                    <NavLink to="/member-terms-of-service"><span className="text-footer-bottom">Member terms of service</span></NavLink>
                 </div>
 
                 <div className="col-lg-3 col-12  pt-3 pt-lg-0 p-lg-0">
