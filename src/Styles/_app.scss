@@ -15,6 +15,9 @@
   font-family: 'Graphik regular', serif;
   margin-bottom: 120px;
   margin-top: 150px;
+  b, strong {
+    font-weight: bold;
+  }
   .relevant-info{
     background-color: #f6eee1;
     padding: 32px 16px;
@@ -23,7 +26,7 @@
   h1 {
     margin-bottom: 150px;
   }
-  p{
+  p, li{
     color: #095d4d;
   }
 }
