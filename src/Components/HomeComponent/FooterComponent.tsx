@@ -19,22 +19,16 @@ const FooterComponent = () => {
 
             <div className="row justify-content-center pt-5">
                 <div className="col-12 col-lg">
-                    <p><FontAwesomeIcon icon={faGlobe}/><span
-                        className="ml-2 ml-md-4 text-footer-location">United States
-                        (EN)</span></p>
-                    <p><FontAwesomeIcon icon={faPhone}/><span
-                        className="ml-2 ml-md-4 text-footer-location">+1
-                        555.401.2014</span></p>
+                    <NavLink to="/yourcase-lawyer-login"><p className="text-footer">YourCase Lawyer Login</p></NavLink>
+                    <p className="text-footer" style={{display: "none"}}>Press Room</p>
                 </div>
 
                 <div className="col-12 col-lg pt-5 pt-lg-0">
-                    <p className="text-footer">YourCase Lawyer Login</p>
-                    <p className="text-footer">Press Room</p>
+                    <NavLink to="/become-a-yourcase-lawyer"><p className="text-footer">Become A YourCase Lawyer</p></NavLink>
+                    <NavLink to="/affiliate-program"><p className="text-footer">Affiliate Program</p></NavLink>
                 </div>
 
                 <div className="col-12 col-lg p-lg-0">
-                    <p className="text-footer">Become A YourCase Lawyer</p>
-                    <p className="text-footer">Affiliate Program</p>
                 </div>
             </div>
 

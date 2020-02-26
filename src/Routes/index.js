@@ -4,6 +4,7 @@ import PrivacyPolicyComponent from "../Components/PrivacyPolicyComponent/Privacy
 import AuthComponent from "../Components/AuthComponent/AuthComponent";
 import ExecuteFlowCasesComponent from "../Components/ExecuteCaseComponent/ExecuteFlowCasesComponent";
 import MemberTermsComponent from "../Components/MemberTermsComponent/MemberTermsComponent";
+import ComingSoonComponent from "../Components/ComingSoonComponent/ComingSoonComponent";
 
 
 const Routes = [
@@ -30,7 +31,22 @@ const Routes = [
   {
     path: '/member-terms-of-service',
     component: MemberTermsComponent,
-    id: 3
+    id: 5
+  },
+  {
+    path: '/yourcase-lawyer-login',
+    component: ComingSoonComponent,
+    id: 6
+  },
+  {
+    path: '/become-a-yourcase-lawyer',
+    component: ComingSoonComponent,
+    id: 7
+  },
+  {
+    path: '/affiliate-program',
+    component: ComingSoonComponent,
+    id: 8
   },
 ];
 
