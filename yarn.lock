@@ -1525,6 +1525,14 @@
     "@types/react" "*"
     popper.js "^1.14.1"
 
+"@types/reactstrap@^8.4.2":
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/@types/reactstrap/-/reactstrap-8.4.2.tgz#e7066d0e67e2924dab0a52c6aedcf922f2be53b6"
+  integrity sha512-ag4hfFqBZaeoNSSTKjCtedvdcO68QqqlBrFd3obg94JSmhgNTmHz50BvNJkf9NjSzx1yGTW4l/OyP/khLPKqww==
+  dependencies:
+    "@types/react" "*"
+    popper.js "^1.14.1"
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -3556,6 +3564,18 @@ deep-equal@^1.0.1:
     object-keys "^1.1.1"
     regexp.prototype.flags "^1.2.0"
 
+deep-equal@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.1.1.tgz#b5c98c942ceffaf7cb051e24e1434a25a2e6076a"
+  integrity sha512-yd9c5AdiqVcR+JjcwUQb9DkhJc8ngNr0MahEBGvDiJw8puWab2yZlh+nkasOnZP+EGTAP6rRp2JzJhJZzvNF8g==
+  dependencies:
+    is-arguments "^1.0.4"
+    is-date-object "^1.0.1"
+    is-regex "^1.0.4"
+    object-is "^1.0.1"
+    object-keys "^1.1.1"
+    regexp.prototype.flags "^1.2.0"
+
 deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
@@ -4293,21 +4313,31 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.0.9.tgz#39fe987739167c45463c13d654065ceb0df10f54"
-  integrity sha512-5UK4m5cCtReuR2bdqwXc2Z5vrFTP3/iicELRPmXhpsjBnAAXw4tc7WsRsvNGKe73PI+GYOA1KzrHw2780bAj6g==
+execution-flow@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.1.0.tgz#f6b20c7f7cbe9e8fab9823b8f354853e9896e96a"
+  integrity sha512-iF14HVU8/pJ3Yit8V6juPuQ1WOCnsse61m05SnSA8hn7tGPlMeFIIqolUdvWKA50uXbMglprZj5sNl2nGFdHtw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/free-solid-svg-icons" "^5.12.1"
     "@fortawesome/react-fontawesome" "^0.1.8"
-    execution-input "^2.2.7"
+    "@types/reactstrap" "^8.4.2"
+    execution-input "^2.3.3"
     history "^4.10.1"
+    reactstrap "^8.4.1"
 
 execution-input@^2.2.7:
   version "2.2.7"
   resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.2.7.tgz#3f4e369dfadb785eb44b77ce679c5cffe6243adb"
   integrity sha512-2m1isW2eAkGChHu1jat0Tc1VSUzy4jRoc6dbvgu45ugzkc7Rj709Hj1dbr9/fk81F+SJFhyo6GghEo+muXaNcg==
+  dependencies:
+    "@types/react-dates" "^17.1.7"
+    react-select "^3.0.8"
+
+execution-input@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.3.3.tgz#8fc0943b89aa124cff762375c4b13a8021fbe1de"
+  integrity sha512-oC7W1n+DNpWhSrDrCO2DAIuHhS9+PWcAaLWdIzUXYIl2SDTPadQTf5QihjVMo0Zz6n42QSPTtUiM05hWQLdAEQ==
   dependencies:
     "@types/react-dates" "^17.1.7"
     react-select "^3.0.8"
@@ -8981,6 +9011,19 @@ react-popper@^1.3.3:
     typed-styles "^0.0.7"
     warning "^4.0.2"
 
+react-popper@^1.3.6:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.3.7.tgz#f6a3471362ef1f0d10a4963673789de1baca2324"
+  integrity sha512-nmqYTx7QVjCm3WUZLeuOomna138R1luC4EqkW3hxJUrAe+3eNz3oFCLYdnPwILfn0mX1Ew2c3wctrjlUMYYUww==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    create-react-context "^0.3.0"
+    deep-equal "^1.1.1"
+    popper.js "^1.14.4"
+    prop-types "^15.6.1"
+    typed-styles "^0.0.7"
+    warning "^4.0.2"
+
 react-portal@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.2.0.tgz#5400831cdb0ae64dccb8128121cf076089ab1afd"
@@ -9154,6 +9197,18 @@ reactstrap@^8.1.1:
     prop-types "^15.5.8"
     react-lifecycles-compat "^3.0.4"
     react-popper "^1.3.3"
+    react-transition-group "^2.3.1"
+
+reactstrap@^8.4.1:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-8.4.1.tgz#c7f63b9057f58b52833061711ebe235b9ec4e3e5"
+  integrity sha512-oAjp9PYYUGKl7SLXwrQ1oRIrYw0MqfO2mUqYgGapFKHG2uwjEtLip5rYxtMujkGx3COjH5FX1WtcfNU4oqpH0Q==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    classnames "^2.2.3"
+    prop-types "^15.5.8"
+    react-lifecycles-compat "^3.0.4"
+    react-popper "^1.3.6"
     react-transition-group "^2.3.1"
 
 read-pkg-up@^1.0.1:
