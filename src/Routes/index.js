@@ -5,6 +5,7 @@ import AuthComponent from "../Components/AuthComponent/AuthComponent";
 import ExecuteFlowCasesComponent from "../Components/ExecuteCaseComponent/ExecuteFlowCasesComponent";
 import MemberTermsComponent from "../Components/MemberTermsComponent/MemberTermsComponent";
 import ComingSoonComponent from "../Components/ComingSoonComponent/ComingSoonComponent";
+import PlaceholderComponent from "../Components/PlaceholderComponent/PlaceholderComponent";
 
 
 const Routes = [
@@ -47,6 +48,11 @@ const Routes = [
     path: '/affiliate-program',
     component: ComingSoonComponent,
     id: 8
+  },
+  {
+    path: '/personal-injury',
+    component: PlaceholderComponent,
+    id: 9
   },
 ];
 

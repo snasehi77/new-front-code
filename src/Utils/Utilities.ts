@@ -155,42 +155,47 @@ export const checkMail = (mail: string) => {
 export const cases = [
     {
         id: 1,
-        routeUrl: '/accidents_and_injuries/' + flow_id,
-        label: 'Accidents & Injuries',
+        routeUrl: '/personal-injury/',
+        label: 'Personal Injury',
         icon: icon_accidents_and_injuries
-    },
-    {
-        id: 2,
-        routeUrl: '/health_and_medical_issues/' + flow_id,
-        label: 'Health & Medical Issues',
-        icon: icon_health_and_medical_issues
     },
     {
         id: 3,
         routeUrl: '/labor_work_place_issues/' + flow_id,
-        label: 'Labor & Workplace Issues',
-        mobileLabel: 'Labor & Workplace',
+        label: 'Workplace Injuries',
+        mobileLabel: 'Workplace Injuries',
         icon: icon_labor_work_place_issues
-    },
-    {
-        id: 4,
-        routeUrl: 'sexual_harassment/' + flow_id,
-        label: 'Sexual Harassment',
-        icon: icon_sexual_harassment
     },
     {
         id: 5,
         routeUrl: 'workplace_discrimination/' + flow_id,
-        label: 'Workplace Discrimination',
+        label: 'Employment Issues',
         icon: icon_workplace_discrimination
+    },
+    {
+        id: 4,
+        routeUrl: 'sexual_harassment/' + flow_id,
+        label: 'Harassment & Sexual Abuse',
+        icon: icon_sexual_harassment
     },
     {
         id: 6,
         routeUrl: 'elder_abuse/' + flow_id,
         label: 'Elder Abuse',
         icon: icon_elder_abuse
+    },
+    {
+        id: 2,
+        routeUrl: '/health_and_medical_issues/' + flow_id,
+        label: 'Health & Medical',
+        icon: icon_health_and_medical_issues
     }
 ];
+
+export const linkCases =
+    {
+        '/personal-injury/': '/#/execution/48'
+    };
 
 export const steps = [
     {
