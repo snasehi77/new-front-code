@@ -168,7 +168,7 @@ export const cases = [
     },
     {
         id: 5,
-        routeUrl: 'workplace_discrimination/' + flow_id,
+        routeUrl: '/employment-isues/',
         label: 'Employment Issues',
         icon: icon_workplace_discrimination
     },
@@ -197,7 +197,7 @@ export const linkCases =
         '/personal-injury/': '/#/execution/48',
         '/workplace-injuries/': '/#/execution/52',
         '/elder-abuse/': '/#/execution/47',
-
+        '/employment-isues/': '/#/execution/50',
     };
 
 export const steps = [
