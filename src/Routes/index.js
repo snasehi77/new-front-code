@@ -55,6 +55,11 @@ const Routes = [
     id: 9
   },
   {
+    path: '/health_and_medical',
+    component: PlaceholderComponent,
+    id: 10
+  },
+  {
     path: '/elder-abuse',
     component: PlaceholderComponent,
     id: 12
@@ -68,7 +73,7 @@ const Routes = [
     path: '/employment-isues/',
     component: PlaceholderComponent,
     id: 14
-  },
+  }
 ];
 
 export default Routes;

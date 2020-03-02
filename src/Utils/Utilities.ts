@@ -186,7 +186,7 @@ export const cases = [
     },
     {
         id: 2,
-        routeUrl: '/health_and_medical_issues/' + flow_id,
+        routeUrl: '/health_and_medical/',
         label: 'Health & Medical',
         icon: icon_health_and_medical_issues
     }
@@ -195,6 +195,7 @@ export const cases = [
 export const linkCases =
     {
         '/personal-injury/': '/#/execution/48',
+        '/health_and_medical/': '/#/execution/49',
         '/workplace-injuries/': '/#/execution/52',
         '/elder-abuse/': '/#/execution/47',
         '/employment-isues/': '/#/execution/50',
