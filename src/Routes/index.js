@@ -59,6 +59,11 @@ const Routes = [
     component: PlaceholderComponent,
     id: 12
   },
+  {
+    path: '/workplace-injuries',
+    component: PlaceholderComponent,
+    id: 13
+  },
 ];
 
 export default Routes;

@@ -161,7 +161,7 @@ export const cases = [
     },
     {
         id: 3,
-        routeUrl: '/labor_work_place_issues/' + flow_id,
+        routeUrl: '/workplace-injuries/' ,
         label: 'Workplace Injuries',
         mobileLabel: 'Workplace Injuries',
         icon: icon_labor_work_place_issues
@@ -195,6 +195,7 @@ export const cases = [
 export const linkCases =
     {
         '/personal-injury/': '/#/execution/48',
+        '/workplace-injuries/': '/#/execution/52',
         '/elder-abuse/': '/#/execution/47',
 
     };
