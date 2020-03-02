@@ -60,6 +60,11 @@ const Routes = [
     id: 10
   },
   {
+    path: '/harassment-sexual-abuse/',
+    component: PlaceholderComponent,
+    id: 11
+  },
+  {
     path: '/elder-abuse',
     component: PlaceholderComponent,
     id: 12

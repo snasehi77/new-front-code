@@ -174,7 +174,7 @@ export const cases = [
     },
     {
         id: 4,
-        routeUrl: 'sexual_harassment/' + flow_id,
+        routeUrl: '/harassment-sexual-abuse/',
         label: 'Harassment & Sexual Abuse',
         icon: icon_sexual_harassment
     },
@@ -199,6 +199,7 @@ export const linkCases =
         '/workplace-injuries/': '/#/execution/52',
         '/elder-abuse/': '/#/execution/47',
         '/employment-isues/': '/#/execution/50',
+        '/harassment-sexual-abuse/': '/#/execution/51',
     };
 
 export const steps = [
