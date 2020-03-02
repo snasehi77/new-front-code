@@ -180,7 +180,7 @@ export const cases = [
     },
     {
         id: 6,
-        routeUrl: 'elder_abuse/' + flow_id,
+        routeUrl: '/elder-abuse/',
         label: 'Elder Abuse',
         icon: icon_elder_abuse
     },
@@ -194,7 +194,9 @@ export const cases = [
 
 export const linkCases =
     {
-        '/personal-injury/': '/#/execution/48'
+        '/personal-injury/': '/#/execution/48',
+        '/elder-abuse/': '/#/execution/47',
+
     };
 
 export const steps = [
