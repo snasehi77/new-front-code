@@ -912,6 +912,20 @@
   }
 }
 
+@media (max-width: 574px) {
+  .main-image-mobile {
+    position: relative;
+    object-fit: cover;
+    object-position: -15px;
+    width: 413px;
+    height: 573px;
+    margin-bottom: -15rem;
+    bottom: 230px;
+    left: 65px;
+    margin-top: 160px;
+  }
+}
+
 @media (max-width: 470px) {
   .content-cases {
     .item-on-display {
@@ -931,17 +945,6 @@
     }
   }
 
-
-  .main-image-mobile {
-    position: relative;
-    object-fit: cover;
-    object-position: 106px;
-    width: 414px;
-    height: 606px;
-    margin-bottom: -15rem;
-    bottom: 234px;
-    left: 91px;
-  }
 
   .final-case-paragraph {
     font-style: normal;
@@ -1086,7 +1089,7 @@
 
     .item-route {
       height: 164px;
-      width: 163px;
+      width: 142px;
       background: #f6eee1;
       border-radius: 0;
       color: #095d4d !important;
