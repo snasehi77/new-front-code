@@ -156,7 +156,7 @@ export const cases = [
     {
         id: 1,
         routeUrl: '/personal-injury/',
-        label: 'Personal Injury',
+        label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
