@@ -466,9 +466,13 @@
   //color: #001622;
   font-style: normal;
   font-weight: normal;
+  text-align: center;
   font-size: 16px;
   line-height: 24px;
   color: #095d4d;
+  a {
+    color: #095d4d;
+  }
 }
 
 .pagination-buttons {
@@ -785,6 +789,10 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
+    text-align: left;
+    br {
+      display: none;
+    }
   }
 
   //--------- How it horks -------------
