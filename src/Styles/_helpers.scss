@@ -182,6 +182,17 @@
   }
 
 }
+@media (max-width: 768px) {
+  .hr-primary-mobile {
+    border: 1px solid $primary;
+  }
+}
+
+@media (min-width: 768px) {
+  .hr-primary-mobile {
+    display: none
+  }
+}
 
 
 
