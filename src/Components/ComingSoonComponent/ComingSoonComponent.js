@@ -1,27 +1,32 @@
-import React from 'react';
-import "./ComingSoonComponent.scss";
-
+import React, {useEffect} from 'react';
+import {NavLink} from "react-router-dom";
 import LogoComponent from "../Shared/LogoComponent";
+import FooterComponent from "../HomeComponent/FooterComponent";
 
 const ComingSoonComponent = () => {
 
-  const year = new Date().getFullYear();
-  return (
-    <div className="bkg-coming-soon vh-100 bkg-p-auto d-flex align-items-center">
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-      <LogoComponent light className="your-case-logo pl-3" styles={{width: "204px"}}/>
 
-      <p className="bkg-coming-soon p-0 m-0">Coming soon.</p>
-
-      <p className="bkg-inc pl-2">
-        <small className="white-opacity">
-          <i className="fa fa-copyright">&nbsp;</i>{year} YourCase.com, LLC.
-        </small>
-      </p>
-
-    </div>
-  )
+    return (
+        <div className='bg-beige-custom'>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <NavLink to="/" className="navbar-brand" href="#">
+                    <LogoComponent className="mr-1" light={false} styles={{width: "120px"}} />
+                </NavLink>
+            </nav>
+            <div className="container coming-soon">
+               <div className="row align-self-center">
+                   <div className="col">
+                       <h1 className="text-center">Coming Soon</h1>
+                   </div>
+               </div>
+            </div>
+            <FooterComponent/>
+        </div>
+    )
 };
-
 
 export default ComingSoonComponent;

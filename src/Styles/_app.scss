@@ -11,6 +11,25 @@
   border: 1px solid #c2c2c2;
 }
 
+.member-terms-privacy {
+  font-family: 'Graphik regular', serif;
+  margin-bottom: 120px;
+  margin-top: 150px;
+  b, strong {
+    font-weight: bold;
+  }
+  .relevant-info{
+    background-color: #f6eee1;
+    padding: 32px 16px;
+    width: 95%;
+  }
+  h1 {
+    margin-bottom: 150px;
+  }
+  p, li{
+    color: #095d4d;
+  }
+}
 .content-privacy {
   border-radius: 10px;
   padding: 20px;
@@ -29,6 +48,14 @@
     a, li{
       color: white !important;
     }
+  }
+}
+
+.coming-soon{
+  height: calc(100vh - 461px);
+  padding-top: 10vh;
+  h1 {
+    font-family: 'Graphik semibold', serif;
   }
 }
 

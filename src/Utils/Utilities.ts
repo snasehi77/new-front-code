@@ -155,42 +155,52 @@ export const checkMail = (mail: string) => {
 export const cases = [
     {
         id: 1,
-        routeUrl: '/accidents_and_injuries/' + flow_id,
+        routeUrl: '/personal-injury/',
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
-        id: 2,
-        routeUrl: '/health_and_medical_issues/' + flow_id,
-        label: 'Health & Medical Issues',
-        icon: icon_health_and_medical_issues
-    },
-    {
         id: 3,
-        routeUrl: '/labor_work_place_issues/' + flow_id,
-        label: 'Labor & Workplace Issues',
-        mobileLabel: 'Labor & Workplace',
+        routeUrl: '/workplace-injuries/' ,
+        label: 'Workplace Injuries',
+        mobileLabel: 'Workplace Injuries',
         icon: icon_labor_work_place_issues
     },
     {
-        id: 4,
-        routeUrl: 'sexual_harassment/' + flow_id,
-        label: 'Sexual Harassment',
-        icon: icon_sexual_harassment
-    },
-    {
         id: 5,
-        routeUrl: 'workplace_discrimination/' + flow_id,
-        label: 'Workplace Discrimination',
+        routeUrl: '/employment-isues/',
+        label: 'Employment Issues',
         icon: icon_workplace_discrimination
     },
     {
+        id: 4,
+        routeUrl: '/harassment-sexual-abuse/',
+        label: 'Harassment & Sexual Abuse',
+        icon: icon_sexual_harassment
+    },
+    {
         id: 6,
-        routeUrl: 'elder_abuse/' + flow_id,
+        routeUrl: '/elder-abuse/',
         label: 'Elder Abuse',
         icon: icon_elder_abuse
+    },
+    {
+        id: 2,
+        routeUrl: '/health_and_medical/',
+        label: 'Health & Medical',
+        icon: icon_health_and_medical_issues
     }
 ];
+
+export const linkCases =
+    {
+        '/personal-injury/': '/#/execution/48',
+        '/health_and_medical/': '/#/execution/49',
+        '/workplace-injuries/': '/#/execution/52',
+        '/elder-abuse/': '/#/execution/47',
+        '/employment-isues/': '/#/execution/50',
+        '/harassment-sexual-abuse/': '/#/execution/51',
+    };
 
 export const steps = [
     {
