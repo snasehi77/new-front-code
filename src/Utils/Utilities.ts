@@ -4,7 +4,6 @@ import icon_labor_work_place_issues from "../Assets/icons/YC_Icon_Workplace_Inju
 import icon_sexual_harassment from "../Assets/icons/YC_Icon_Sexual_Harassment_Green@2x.png";
 import icon_workplace_discrimination from "../Assets/icons/YC_Icon_Workplace_Discrimination_Green@2x.png";
 import icon_elder_abuse from "../Assets/icons/YC_Icon_Elder_Care_Green@2x.png";
-import {flow_id} from "./Config";
 
 export function getMonths() {
     return [
@@ -152,43 +151,52 @@ export const checkMail = (mail: string) => {
 };
 
 
+enum casesId {
+    elder_abuse = 47,
+    accidents_and_injuries = 48,
+    health_and_medical_issues = 49,
+    labor_work_place_issues = 50,
+    sexual_harassment = 51,
+    workplace_discrimination = 52
+}
+
 export const cases = [
     {
         id: 1,
-        routeUrl: '/personal-injury/',
+        routeUrl: '/accidents_and_injuries/' + casesId.accidents_and_injuries,
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
+        id: 2,
+        routeUrl: '/health_and_medical_issues/' + casesId.health_and_medical_issues,
+        label: 'Health & Medical Issues',
+        icon: icon_health_and_medical_issues
+    },
+    {
         id: 3,
-        routeUrl: '/workplace-injuries/' ,
-        label: 'Workplace Injuries',
-        mobileLabel: 'Workplace Injuries',
+        routeUrl: '/labor_work_place_issues/' + casesId.labor_work_place_issues,
+        label: 'Labor & Workplace Issues',
+        mobileLabel: 'Labor & Workplace',
         icon: icon_labor_work_place_issues
     },
     {
-        id: 5,
-        routeUrl: '/employment-isues/',
-        label: 'Employment Issues',
-        icon: icon_workplace_discrimination
-    },
-    {
         id: 4,
-        routeUrl: '/harassment-sexual-abuse/',
-        label: 'Harassment & Sexual Abuse',
+        routeUrl: 'sexual_harassment/' + casesId.sexual_harassment,
+        label: 'Sexual Harassment',
         icon: icon_sexual_harassment
     },
     {
-        id: 6,
-        routeUrl: '/elder-abuse/',
-        label: 'Elder Abuse',
-        icon: icon_elder_abuse
+        id: 5,
+        routeUrl: 'workplace_discrimination/' + casesId.workplace_discrimination,
+        label: 'Workplace Discrimination',
+        icon: icon_workplace_discrimination
     },
     {
-        id: 2,
-        routeUrl: '/health_and_medical/',
-        label: 'Health & Medical',
-        icon: icon_health_and_medical_issues
+        id: 6,
+        routeUrl: 'elder_abuse/' + casesId.elder_abuse,
+        label: 'Elder Abuse',
+        icon: icon_elder_abuse
     }
 ];
 
