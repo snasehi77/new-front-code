@@ -85,17 +85,18 @@ const HowItWork = () => {
         {/*</div>*/}
 
         <div className="container mb-5 pb-5">
-            <div className="row justify-content-center">
+            <hr className="hr-primary-mobile" style={{width: "100px"}}/>
+            <div className="row justify-content-center pt-4">
                 <span className="how-it-works-about-title">About YourCase</span>
                 <div className="col-12 col-md-12 pr-md-5 pt-md-3">
                     <p className="how-it-works-about-text pt-4 pr-md-4 pr-lg-3">
-                        YourCase was created by a team of legal professionals who believed <br/>
-                        that finding an attorney online was unnecessarily confusing,<br/>
-                        impersonal and stressful. YourCase provides people with a dignified <br/>
-                        and efficient way to find the lawyers they need, free.
+                        YourCase was created by a team of <br className="br-xs"/> legal professionals who believed <br className="br-lg"/>
+                        that <br className="br-xs"/> finding an attorney online was<br className="br-xs"/> unnecessarily confusing,<br className="br-lg"/>
+                        impersonal<br className="br-xs"/> and stressful. YourCase provides<br className="br-xs"/> people with a dignified <br className="br-lg"/>
+                        and efficient<br className="br-xs"/> way to find the lawyers they need, free.
                     </p>
                     <p className="how-it-works-about-text">
-                        If you're an attorney and you'd like to work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
+                        If you're an attorney and you'd like to<br className="br-xs"/> work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
                         className="pointer"><b>get in touch.</b></a>
                     </p>
                 </div>

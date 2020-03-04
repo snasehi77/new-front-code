@@ -617,6 +617,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .br-xs {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .case-paragraph {
     font-style: normal;
@@ -789,8 +795,8 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
-    text-align: left;
-    br {
+    text-align: center;
+    .br-lg {
       display: none;
     }
   }
