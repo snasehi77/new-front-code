@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarComponent from "../Shared/NavbarComponent";
 import FrontComponent from "./FrontComponent.tsx";
 import CasesComponent from "./CasesComponent.tsx";
-import HowItWork from "./HowItWork.tsx";
+import HowItWork from "./HowItWork.jsx";
 import FooterComponent from "./FooterComponent.tsx";
 
 

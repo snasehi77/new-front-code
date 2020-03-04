@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavbarComponent from "../Shared/NavbarComponent";
 import FrontComponentCase from "./FrontComponentCase";
-import HowItWork from "../HomeComponent/HowItWork.tsx";
+import HowItWork from "../HomeComponent/HowItWork.jsx";
 import FooterComponent from "../HomeComponent/FooterComponent.tsx";
 import { useLocation} from "react-router";
 import { useHistory } from 'react-router-dom';
@@ -31,7 +31,7 @@ const PlaceholderComponent = (props) => {
 
             <FrontComponentCase buttonLink={linkBtn} />
 
-            <HowItWork/>
+            <HowItWork background={'bg-beige-custom'}/>
 
             <FooterComponent/>
 
