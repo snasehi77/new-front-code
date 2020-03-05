@@ -8,7 +8,7 @@ const CasesComponent = () => {
             <div className="row pt-5 pb-5 mt-3">
                 <div className="col text-center">
                     <span className="cases-title"> Have a case? We can help. </span>
-                    <p className="cases-subtitle pt-3">We can find you an attorney who focuses <br/>on cases like yours.</p>
+                    <p className="cases-subtitle pt-2">We can find you an attorney who focuses <br className={'br-xs'}/>on cases like yours.</p>
                 </div>
             </div>
             <div className="row justify-content-center pt-md-4">

@@ -350,7 +350,7 @@
 //-----------Cases Style----------
 .cases-title {
   font-family: 'Graphik medium', serif;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
 }
 
@@ -358,7 +358,7 @@
   font-family: 'Graphik regular', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   //color: #B1CAC6;
 }
@@ -623,6 +623,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .cases-subtitle {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 767px) {
   .case-paragraph {
     font-style: normal;
@@ -739,12 +745,12 @@
     line-height: 32px;
   }
 
-  //.cases-subtitle {
-  //  font-style: normal;
-  //  font-weight: normal;
-  //  font-size: 14px;
-  //  line-height: 18px;
-  //}
+  .cases-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
   //-----------Cases Style----------
 
