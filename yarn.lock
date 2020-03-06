@@ -1386,6 +1386,11 @@
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.3.tgz#856c99cdc1551d22c22b18b5402719affec9839a"
   integrity sha512-cS5owqtwzLN5kY+l+KgKdRJ/Cee8tlmQoGQuIE9tWnSmS3JMKzmxo2HIAk2wODMifGwO20d62xZQLYz+RLfXmw==
 
+"@types/history@^4.7.5":
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.5.tgz#527d20ef68571a4af02ed74350164e7a67544860"
+  integrity sha512-wLD/Aq2VggCJXSjxEwrMafIP51Z+13H78nXIX0ABEuIGhmB5sNGbR113MOKo+yfw+RDo1ZU3DM6yfnnRF/+ouw==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -4313,16 +4318,17 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.1.0.tgz#f6b20c7f7cbe9e8fab9823b8f354853e9896e96a"
-  integrity sha512-iF14HVU8/pJ3Yit8V6juPuQ1WOCnsse61m05SnSA8hn7tGPlMeFIIqolUdvWKA50uXbMglprZj5sNl2nGFdHtw==
+execution-flow@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.1.7.tgz#672fda30cdb7ba59de2979f64069e1d13fb5772c"
+  integrity sha512-ttvteCPz/mVWuTS1vBoiikFpFPKw6PUq6V8UyTrDCTguz63MXMMzokNKRq4v0PSfaM+Vipd6pJKQnoty84aZew==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/free-solid-svg-icons" "^5.12.1"
     "@fortawesome/react-fontawesome" "^0.1.8"
+    "@types/history" "^4.7.5"
     "@types/reactstrap" "^8.4.2"
-    execution-input "^2.3.3"
+    execution-input "^2.4.0"
     history "^4.10.1"
     reactstrap "^8.4.1"
 
@@ -4334,10 +4340,10 @@ execution-input@^2.2.7:
     "@types/react-dates" "^17.1.7"
     react-select "^3.0.8"
 
-execution-input@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.3.3.tgz#8fc0943b89aa124cff762375c4b13a8021fbe1de"
-  integrity sha512-oC7W1n+DNpWhSrDrCO2DAIuHhS9+PWcAaLWdIzUXYIl2SDTPadQTf5QihjVMo0Zz6n42QSPTtUiM05hWQLdAEQ==
+execution-input@^2.4.0:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.4.2.tgz#b314db895683609520b3268d98a06fc2c9f388d9"
+  integrity sha512-JVrxAfqcEK/xBskofmzpXdTtT3iH8QDCQ5NA+n0vBdbX5oG2+oscfSJL0IRhdldYlFNvsVYuefWnZjwyiSLRCA==
   dependencies:
     "@types/react-dates" "^17.1.7"
     react-select "^3.0.8"
