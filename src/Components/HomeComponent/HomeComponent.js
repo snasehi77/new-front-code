@@ -18,7 +18,7 @@ const HomeComponent = () => {
 
             <CasesComponent/>
 
-            <HowItWork/>
+            <HowItWork background={'bg-beige-custom'}/>
 
             <FooterComponent/>
 

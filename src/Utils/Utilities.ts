@@ -207,7 +207,8 @@ export const steps = [
 	{
 		num: '1',
 		title: 'Tell us what happened.',
-		p1: 'Answer a few simple questions about your case.'
+		p1: 'Answer a few simple questions',
+		p2: 'about your case.'
 	},
 	{
 		num: '2',
