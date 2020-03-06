@@ -63,9 +63,15 @@ const FooterComponent = () => {
                     {/*<i title="Instagram" className="fa fa-instagram mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
                     {/*<i title="Twitter" className="fa fa-twitter ml-4 mr-2 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
                     {/*<i title="Linkedin" className="fa fa-linkedin-square ml-4 pointer fa-2x footer-icon-size">&nbsp;</i>*/}
-                    <img className="mr-2 pointer" src={instagram} style={{objectFit: "contain"}} alt=""/>
-                    <img className="ml-4 mr-2 pointer" src={twiter} style={{objectFit: "contain"}} alt=""/>
-                    <img className="ml-4 pointer" src={linkedin} style={{objectFit: "contain"}} alt=""/>
+                    <a href="https://www.instagram.com/your_case_matters/" target={'_blank'}>
+                      <img className="mr-2 pointer" src={instagram} style={{objectFit: "contain"}} alt=""/>
+                    </a>
+                    <a href="https://twitter.com/yourcasecom/" target={'_blank'}>
+                      <img className="ml-4 mr-2 pointer" src={twiter} style={{objectFit: "contain"}} alt=""/>
+                    </a>
+                    <a href="https://www.linkedin.com/company/yourcasematters/about/" target={'_blank'}>
+                      <img className="ml-4 pointer" src={linkedin} style={{objectFit: "contain"}} alt=""/>
+                    </a>
                 </div>
             </div>
 
