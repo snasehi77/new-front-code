@@ -17,7 +17,7 @@ const FrontComponentLegacy = () => {
         //             <div className="title-padding text-left p-responsive">
         //                 <h1 className="title">What happened to you <br/> matters to us.</h1>
         //                 <p className="pb-4 color-primary-light font-graphik-regular">Find the attorney you need in minutes. Free.</p>
-        //                 <NavLink to={`/accidents_and_injuries/${flow_id}`} className="btn btn-front mb-5 mb-md-0 font-graphik-medium">Get
+        //                 <NavLink to={`/execute_flow/${flow_id}`} className="btn btn-front mb-5 mb-md-0 font-graphik-medium">Get
         //                     started now</NavLink>
         //                 <img className="img-home d-block d-md-none" src={imgHome} alt=""/>
         //             </div>
@@ -47,7 +47,7 @@ const FrontComponentLegacy = () => {
                         <span
                             className="main-title pt-5 d-none d-md-block">What happened to you <br/>matters to us.</span>
                         <p className="pt-2 main-subtitle">Find the attorney you need in minutes. Free.</p>
-                        <NavLink to={`/accidents_and_injuries/${flow_id}`}
+                        <NavLink to={`/execute_flow/${flow_id}`}
                                  className="btn btn-front mb-5 mt-4">
                             <span>Get started now</span></NavLink>
                     </div>
@@ -62,7 +62,7 @@ const FrontComponentLegacy = () => {
             {/*        <div className="col-md-7">*/}
             {/*            <h1 className="main-title">What happened to you <br/> matters to us.</h1>*/}
             {/*            <p className="pt-2 main-subtitle">Find the attorney you need in minutes. Free.</p>*/}
-            {/*            <NavLink to={`/accidents_and_injuries/${flow_id}`}*/}
+            {/*            <NavLink to={`/execute_flow/${flow_id}`}*/}
             {/*                     className="btn btn-front mb-5 mt-4">Get*/}
             {/*                started now</NavLink>*/}
             {/*        </div>*/}

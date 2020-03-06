@@ -15,7 +15,7 @@ const Routes = [
     id: 1
   },
   {
-    path: '/:route/:id',
+    path: '/execute_flow/:id',
     component: ExecuteFlowCasesComponent,
     id: 2
   },

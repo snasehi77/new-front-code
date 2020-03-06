@@ -157,38 +157,38 @@ enum casesId {
 export const cases = [
 	{
 		id: 1,
-		routeUrl: '/accidents_and_injuries/' + casesId.accidents_and_injuries,
+		routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
 		label: 'Accidents & Injuries',
 		icon: icon_accidents_and_injuries
 	},
 	{
 		id: 2,
-		routeUrl: '/accidents_and_injuries/' + casesId.accidents_and_injuries,
+		routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
 		label: 'Health & Medical Issues',
 		icon: icon_health_and_medical_issues
 	},
 	{
 		id: 3,
-		routeUrl: '/accidents_and_injuries/' + casesId.accidents_and_injuries,
+		routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
 		label: 'Labor & Workplace Issues',
 		mobileLabel: 'Labor & Workplace',
 		icon: icon_labor_work_place_issues
 	},
 	{
 		id: 4,
-		routeUrl: 'accidents_and_injuries/' + casesId.accidents_and_injuries,
+		routeUrl: 'execute_flow/' + casesId.accidents_and_injuries,
 		label: 'Sexual Harassment',
 		icon: icon_sexual_harassment
 	},
 	{
 		id: 5,
-		routeUrl: 'accidents_and_injuries/' + casesId.accidents_and_injuries,
+		routeUrl: 'execute_flow/' + casesId.accidents_and_injuries,
 		label: 'Workplace Discrimination',
 		icon: icon_workplace_discrimination
 	},
 	{
 		id: 6,
-		routeUrl: 'accidents_and_injuries/' + casesId.accidents_and_injuries,
+		routeUrl: 'execute_flow/' + casesId.accidents_and_injuries,
 		label: 'Elder Abuse',
 		icon: icon_elder_abuse
 	}

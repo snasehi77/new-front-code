@@ -11,7 +11,7 @@ const FrontComponent = () => {
         <p className="main-subtitle d-none d-md-flex">Find the attorney you need in minutes. Free.</p>
         <p className="main-subtitle d-flex d-md-none pt-3 pb-1 pt-md-0 pb-md-0">Find the attorney you
             need <br/>in minutes. Free.</p>
-        <NavLink to={`/accidents_and_injuries/${flow_id}`}
+        <NavLink to={`/execute_flow/${flow_id}`}
                  className="btn btn-front">
             <span style={{verticalAlign: "text-top"}}>Get started now</span></NavLink></div>;
 
