@@ -155,52 +155,52 @@ enum casesId {
 }
 
 export const cases = [
-	{
-		id: 1,
-		routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
-		label: 'Accidents & Injuries',
-		icon: icon_accidents_and_injuries
-	},
-	{
-		id: 2,
-		routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
-		label: 'Health & Medical Issues',
-		icon: icon_health_and_medical_issues
-	},
-	{
-		id: 3,
-		routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
-		label: 'Labor & Workplace Issues',
-		mobileLabel: 'Labor & Workplace',
-		icon: icon_labor_work_place_issues
-	},
-	{
-		id: 4,
-		routeUrl: 'execute_flow/' + casesId.accidents_and_injuries,
-		label: 'Sexual Harassment',
-		icon: icon_sexual_harassment
-	},
-	{
-		id: 5,
-		routeUrl: 'execute_flow/' + casesId.accidents_and_injuries,
-		label: 'Workplace Discrimination',
-		icon: icon_workplace_discrimination
-	},
-	{
-		id: 6,
-		routeUrl: 'execute_flow/' + casesId.accidents_and_injuries,
-		label: 'Elder Abuse',
-		icon: icon_elder_abuse
-	}
+    {
+        id: 1,
+        routeUrl: '/personal-injury/',
+        label: 'Accidents & Injuries',
+        icon: icon_accidents_and_injuries
+    },
+    {
+        id: 3,
+        routeUrl: '/workplace-injuries/' ,
+        label: 'Workplace Injuries',
+        mobileLabel: 'Workplace Injuries',
+        icon: icon_labor_work_place_issues
+    },
+    {
+        id: 5,
+        routeUrl: '/employment-isues/',
+        label: 'Employment Issues',
+        icon: icon_workplace_discrimination
+    },
+    {
+        id: 4,
+        routeUrl: '/harassment-sexual-abuse/',
+        label: 'Harassment & Sexual Abuse',
+        icon: icon_sexual_harassment
+    },
+    {
+        id: 6,
+        routeUrl: '/elder-abuse/',
+        label: 'Elder Abuse',
+        icon: icon_elder_abuse
+    },
+    {
+        id: 2,
+        routeUrl: '/health_and_medical/',
+        label: 'Health & Medical',
+        icon: icon_health_and_medical_issues
+    }
 ];
 
 export const linkCases = {
-	'/personal-injury/': '/#/execution/48',
-	'/health_and_medical/': '/#/execution/49',
-	'/workplace-injuries/': '/#/execution/52',
-	'/elder-abuse/': '/#/execution/47',
-	'/employment-isues/': '/#/execution/50',
-	'/harassment-sexual-abuse/': '/#/execution/51'
+	'/personal-injury/': '/execute_flow/' + casesId.accidents_and_injuries,
+	'/health_and_medical/': '/execute_flow/' + casesId.health_and_medical_issues,
+  '/workplace-injuries/': '/execute_flow/' + casesId.workplace_discrimination,
+	'/elder-abuse/': '/execute_flow/' + casesId.elder_abuse,
+	'/employment-isues/': '/execute_flow/' + casesId.labor_work_place_issues,
+	'/harassment-sexual-abuse/': '/execute_flow/' + casesId.sexual_harassment
 };
 
 export const steps = [
