@@ -7,7 +7,7 @@ import mainImage from '../../Assets/Images/woman.png';
 const FrontComponent = () => {
 
     const text_header =  <div><span
-        className="main-title d-md-block pt-5 mt-md-0 pt-5 mt-md-0  pt-lg-5 mt-lg-5 ">What happened<br/>to you matters<br/>to us.</span>
+        className="main-title d-md-block pt-5 mt-md-0 pt-5 mt-md-0  pt-lg-5 mt-lg-5 ">What happened<br className={'br-xs'}/> to you<br className={'br-lg'}/> matters<br className={'br-xs'}/> to us.</span>
         <p className="main-subtitle d-none d-md-flex">Find the attorney you need in minutes. Free.</p>
         <p className="main-subtitle d-flex d-md-none pt-3 pb-1 pt-md-0 pb-md-0">Find the attorney you
             need <br/>in minutes. Free.</p>
