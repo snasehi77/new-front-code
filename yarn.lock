@@ -4318,10 +4318,10 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.1.7.tgz#672fda30cdb7ba59de2979f64069e1d13fb5772c"
-  integrity sha512-ttvteCPz/mVWuTS1vBoiikFpFPKw6PUq6V8UyTrDCTguz63MXMMzokNKRq4v0PSfaM+Vipd6pJKQnoty84aZew==
+execution-flow@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.1.8.tgz#cb3b8b8b603b3a3ff85587aa70c20887c9478482"
+  integrity sha512-5VwRaFr0WHyP1Am3E2YrCm41thh5YxdYIZN6HvJNJCg95IaeR8huj4R6BnEzSOLdnoidZm0uQH0b1YxkQ6pifA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/free-solid-svg-icons" "^5.12.1"
@@ -4332,15 +4332,7 @@ execution-flow@^1.1.7:
     history "^4.10.1"
     reactstrap "^8.4.1"
 
-execution-input@^2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.2.7.tgz#3f4e369dfadb785eb44b77ce679c5cffe6243adb"
-  integrity sha512-2m1isW2eAkGChHu1jat0Tc1VSUzy4jRoc6dbvgu45ugzkc7Rj709Hj1dbr9/fk81F+SJFhyo6GghEo+muXaNcg==
-  dependencies:
-    "@types/react-dates" "^17.1.7"
-    react-select "^3.0.8"
-
-execution-input@^2.4.0:
+execution-input@^2.4.0, execution-input@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.4.2.tgz#b314db895683609520b3268d98a06fc2c9f388d9"
   integrity sha512-JVrxAfqcEK/xBskofmzpXdTtT3iH8QDCQ5NA+n0vBdbX5oG2+oscfSJL0IRhdldYlFNvsVYuefWnZjwyiSLRCA==

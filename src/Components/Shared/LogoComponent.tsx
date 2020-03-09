@@ -1,5 +1,5 @@
 import React from 'react';
-import logoBlack from '../../Assets/Images/yourcase-logo-dark.png'
+import logoBlack from '../../Assets/Images/yourcase-logo-green.png'
 import logoWhite from '../../Assets/Images/yourcase-logo-light.png'
 
 interface props {

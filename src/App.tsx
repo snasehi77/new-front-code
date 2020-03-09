@@ -1,18 +1,16 @@
 import React, {useEffect} from 'react';
 import Routes from './Routes'
-import {
-  HashRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import {login} from "./Network";
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import {http, login} from "./Network";
 //import ComingSoonComponent from "./components/ComingSoonComponent/ComingSoonComponent";
+import {initialize} from "execution-flow/dist";
 
 
 const App = () => {
 
   useEffect(() => {
     login({username: 'hans@allcode.com', password: 'wpwd'});
+    initialize(http);
   }, []);
 
   return (
@@ -21,7 +19,7 @@ const App = () => {
       <Switch>
         {Routes.map(r => (
           <Route exact key={r.id} path={r.path}>
-            <r.component  />
+            <r.component/>
           </Route>)
         )}
       </Switch>

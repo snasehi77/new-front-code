@@ -16,17 +16,7 @@ const CasesComponent = () => {
                     return (
                         <div key={c.id + "item"} className="col-md-4 col-6 p-2">
 
-                            {/*<NavLink to={c.routeUrl}*/}
-                            {/*         className="item-route d-flex align-items-center pointer item-on-display">*/}
-                            {/*    <div className="col-10">*/}
-                            {/*        <h6 className="m-0 cases-label">{c.label}</h6>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="col-2">*/}
-                            {/*        <FontAwesomeIcon className="white-opacity" icon={faChevronRight}/>*/}
-                            {/*    </div>*/}
-                            {/*</NavLink>*/}
-
-                            <NavLink to={c.routeUrl}
+                          <NavLink to={c.routeUrl}
                                      className="item-route m-auto d-flex justify-content-center align-items-center icon-on-display">
                                 <div className="text-center p-2">
                                     <img src={c.icon} className="mobile-image-size" alt=""/>

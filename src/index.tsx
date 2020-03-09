@@ -5,7 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-ReactDOM.render(<App />, document.getElementById('root'));
+import {initialize} from "execution-flow";
+import {http} from "./Network";
+
+initialize(http);
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

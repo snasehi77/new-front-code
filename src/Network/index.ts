@@ -1,11 +1,10 @@
 import Axios from "axios";
 import {baseUrl} from "../Utils/Config";
 
-const http = Axios.create({
+export const http = Axios.create({
   baseURL: baseUrl,
   headers: {Authorization: "Bearer " + localStorage.getItem('token')}
 });
-
 
 export function setHeaderToken(token: string) {
   http.defaults.headers = {Authorization: "Bearer " + token};

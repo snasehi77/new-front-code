@@ -7,15 +7,30 @@ $white-opacity: rgba(247, 247, 247, 0.33);
 $orange: #ff9966;
 $green-light: #8aa990;
 
-.btn-info {
+.btn-info, .btn-primary {
   background: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:hover {
+  background: $primary-light;
+  border-color: $primary-light;
+}
+
+@import "bootstrap";
+
+/* ------- customize primary buttons -------- */
+
+.text-primary {
+  color: $primary !important;
 }
 
 .bg-primary {
   background: $primary !important;
 }
 
-.bg-beige-custom{
+
+.bg-beige-custom {
   background: $beige-custom;
 }
 
@@ -27,7 +42,7 @@ $green-light: #8aa990;
   color: $primary;
 }
 
-.color-primary-light{
+.color-primary-light {
   color: $primary-light;
 }
 
