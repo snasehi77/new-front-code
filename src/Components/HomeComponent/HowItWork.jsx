@@ -7,9 +7,9 @@ const HowItWork = (props) => {
 
     return <div>
         <div  className={`container-fluid ${bg}`}>
-            <div className="container  mt-md-0 pt-3 pt-md-5  pb-5 container-width ">
+            <div className="container  mt-md-0 pt-5 pt-md-5  pb-5 container-width ">
                 <hr className="hr-primary-mobile mt-5 mt-md-3" style={{width: "100px"}}/>
-                <h1 className="text-center how-it-works-title  pt-4 mb-5">Here´s how it works</h1>
+                <h1 className="text-center how-it-works-title  pt-3 mb-5">Here´s how it works</h1>
                 <div className="row mb-5 pt-5 justify-content-center">
                     {steps.map(s => {
                         return (
@@ -90,14 +90,14 @@ const HowItWork = (props) => {
             {/*    </div>*/}
             {/*</div>*/}
 
-            <div className="container mb-5 pb-5">
-                <hr className="hr-primary-mobile" style={{width: "100px"}}/>
+            <div className="container mb-5 pb-5 pt-5">
+                <hr className="hr-primary-mobile mt-5" style={{width: "100px"}}/>
                 <div className="row justify-content-center pt-4">
                     <span className="how-it-works-about-title">About YourCase</span>
                     <div className="col-12 col-md-12 pr-md-5 pt-md-3">
                         <p className="how-it-works-about-text pt-4 pr-md-4 pr-lg-3">
                             YourCase was created by a team of <br className="br-xs"/> legal professionals who believed <br className="br-lg"/>
-                            that <br className="br-xs"/> finding an attorney online was<br className="br-xs"/> unnecessarily confusing,<br className="br-lg"/>
+                            that <br className="br-xs"/> finding an attorney online was<br className="br-xs"/> unnecessarily confusing, <br className="br-lg"/>
                             impersonal<br className="br-xs"/> and stressful. YourCase provides<br className="br-xs"/> people with a dignified <br className="br-lg"/>
                             and efficient<br className="br-xs"/> way to find the lawyers they need, free.
                         </p>
