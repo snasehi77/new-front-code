@@ -12,7 +12,7 @@ const NavbarComponent = () => {
         <Navbar className="bg-front sticky" light>
             <NavbarBrand href="/" className="mr-auto">
                 {/*<LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>*/}
-                <img  className="your-case-logo my-auto ml-2 pt-md-3 ml-md-4" src={logo} alt="logo"/>
+                <img  className="your-case-logo my-auto ml-2 pt-md-3 ml-md-2" src={logo} alt="logo"/>
             </NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="mr-2 d-block d-lg-none" style={{border: '0'}}/>
             <Collapse isOpen={!collapsed} navbar>
