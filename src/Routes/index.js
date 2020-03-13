@@ -78,11 +78,7 @@ const Routes = [
     path: '/employment-isues/',
     component: PlaceholderComponent,
     id: 14
-  },{
-		path: '/second-home/',
-		component: HomeComponent,
-		id: 15
-	}
+  }
 ];
 
 export default Routes;

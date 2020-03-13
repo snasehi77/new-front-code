@@ -1335,12 +1335,13 @@ footer {
 
 /** Media queries for the mobile image to adapt and allow the text and the button on the main screen to be always visible */
 @media (max-height: 896px) {
-  .second-container{
+  .container-fluid{
     margin-top: 0px !important;
   }
 
-  .second-nav{
+  .navbar{
     background: transparent;
+    position: absolute;
   }
 
   .main-title{
@@ -1356,40 +1357,14 @@ footer {
     object-fit: cover;
     object-position: -15px;
     width: 413px;
-    max-height: 415px;
+    max-height: 500px;
     min-height: 370px;
     margin-bottom: -15rem;
-    bottom: 230px;
+    bottom: 180px;
     left: 65px;
-    margin-top: 160px;
+    margin-top: 130px;
   }
 }
-
-@media (max-height: 846px) {
-  .main-image-mobile {
-    max-height: 400px;
-  }
-}
-
-@media (max-height: 812px) {
-  .main-image-mobile {
-    max-height: 400px;
-  }
-}
-
-
-@media (max-height: 786px) {
-  .main-image-mobile {
-    max-height: 400px;
-  }
-}
-
-@media (max-height: 740px) {
-  .main-image-mobile {
-    max-height: 400px;
-  }
-}
-
 
 .navbar{
   padding: 0px;

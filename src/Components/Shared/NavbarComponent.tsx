@@ -8,9 +8,8 @@ const NavbarComponent = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
     const toggleNavbar = () => setCollapsed(!collapsed);
 
-    const wrapperClass = window.location.href.includes("second-home") ? "second-nav" : "";
     return <div className="container-fluid position-absolute p-0">
-        <Navbar className={"bg-front sticky " + wrapperClass} light>
+        <Navbar className="bg-front sticky" light>
             <NavbarBrand href="/" className="mr-auto">
                 {/*<LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>*/}
                 <img  className="your-case-logo my-auto ml-2 pt-md-3 ml-md-2" src={logo} alt="logo"/>
