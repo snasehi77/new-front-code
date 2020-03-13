@@ -157,38 +157,38 @@ enum casesId {
 export const cases = [
     {
         id: 1,
-        routeUrl: '/personal-injury/',
+        routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
         id: 3,
-        routeUrl: '/workplace-injuries/' ,
+        routeUrl: '/execute_flow/' + casesId.workplace_discrimination,
         label: 'Workplace Injuries',
         mobileLabel: 'Workplace Injuries',
         icon: icon_labor_work_place_issues
     },
     {
         id: 5,
-        routeUrl: '/employment-isues/',
+        routeUrl: '/execute_flow/' + casesId.labor_work_place_issues,
         label: 'Employment Issues',
         icon: icon_workplace_discrimination
     },
     {
         id: 4,
-        routeUrl: '/harassment-sexual-abuse/',
+        routeUrl: '/execute_flow/' + casesId.sexual_harassment,
         label: 'Harassment & Sexual Abuse',
         icon: icon_sexual_harassment
     },
     {
         id: 6,
-        routeUrl: '/elder-abuse/',
+        routeUrl: '/execute_flow/' + casesId.elder_abuse,
         label: 'Elder Abuse',
         icon: icon_elder_abuse
     },
     {
         id: 2,
-        routeUrl: '/health_and_medical/',
+        routeUrl: '/execute_flow/' + casesId.health_and_medical_issues,
         label: 'Health & Medical',
         icon: icon_health_and_medical_issues
     }

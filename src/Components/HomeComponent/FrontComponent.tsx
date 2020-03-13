@@ -15,7 +15,8 @@ const FrontComponent = () => {
                  className="btn btn-front">
             <span style={{verticalAlign: "text-top"}}>Get started now</span></NavLink></div>;
 
-    return <div className="container-fluid bg-front overflow-hidden mt-5 p-0 pt-5 mt-md-0 pt-md-0 ">
+    const wrapperClass = window.location.href.includes("second-home") ? "second-container" : "";
+    return <div className={"container-fluid bg-front overflow-hidden mt-5 p-0 pt-5 mt-md-0 pt-md-0 " + wrapperClass}>
         <div className="container overflow-container">
             <div className="row">
                 <div className="pt-3 pl-5 pt-md-5 mt-md-5 col-12 col-md-8 d-none d-sm-block">
