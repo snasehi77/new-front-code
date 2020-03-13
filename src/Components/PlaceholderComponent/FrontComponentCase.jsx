@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavLink} from "react-router-dom";
 import {MRRESET_ENGINE} from "../../Utils/Config";
 import mainImage from '../../Assets/Images/woman.png';
@@ -9,8 +9,17 @@ const FrontComponentCase = (props) => {
 
     const localtion = useLocation();
 
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    });
+
     return <div className="container-fluid bg-front overflow-hidden mt-5 p-0 pt-5 mt-md-0 pt-md-0 ">
-        <div className="container overflow-container">
+      <div className="row m-0 justify-content-end">
+        <div className="d-block d-md-none">
+          <img className="main-image-mobile" src={mainImage} alt=""/>
+        </div>
+      </div>
+      <div className="container overflow-container">
             <div className="row">
                 <div className="pt-3 pl-5 pt-md-5 mt-md-5 col-12 col-md-8">
                     <span
@@ -30,12 +39,6 @@ const FrontComponentCase = (props) => {
                 {/*</div>*/}
             </div>
         </div>
-        <div className="row m-0 justify-content-end">
-            <div className="d-block d-md-none">
-                <img className="main-image-mobile" src={mainImage} alt=""/>
-            </div>
-        </div>
-
     </div>
 };
 

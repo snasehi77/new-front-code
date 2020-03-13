@@ -33,7 +33,7 @@ const FrontComponent = () => {
             <div className="d-block d-md-none">
                 <img className="main-image-mobile" src={mainImage} alt=""/>
             </div>
-            <div className="pt-5 pb-4 pl-4 col-12 col-md-8 d-block d-sm-none bg-white">
+            <div className="pt-5 pb-4 pl-4 col-12 col-md-8 d-block d-sm-none bg-white main-title-section">
                 {text_header}
             </div>
         </div>

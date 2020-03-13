@@ -238,11 +238,6 @@
   .container-tablet-view {
     max-width: 100%;
   }
-
-  .mobile-image-size {
-    width: 92px;
-    height: 92px;
-  }
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -609,10 +604,15 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .mobile-image-size {
-    width: 92px;
-    height: 92px;
+    margin-top: 15px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .cases-label{
+    margin-top: -10px !important;
   }
 }
 
@@ -691,35 +691,6 @@
     //font-size: 14px;
     font-size: 17px;
     line-height: 24px;
-  }
-
-  .main-image-mobile {
-    //position: relative;
-    //object-fit: cover;
-    //object-position: 106px;
-    //width: 414px;
-    //height: 606px;
-    //margin-bottom: -12rem;
-    //bottom: 182px;
-    //left: -6px;
-    ////---------
-    //position: relative;
-    //object-fit: cover;
-    //object-position: 159px;
-    //width: 414px;
-    //height: 574px;
-    //margin-bottom: -12rem;
-    //bottom: 203px;
-    //left: 51px;
-    //------------
-    position: relative;
-    object-fit: cover;
-    /* object-position: 159px; */
-    width: 409px;
-    height: 574px;
-    margin-bottom: -15rem;
-    bottom: 240px;
-    left: 146px;
   }
 
   //.btn-front {
@@ -932,20 +903,6 @@
   }
 }
 
-@media (max-width: 574px) {
-  .main-image-mobile {
-    position: relative;
-    object-fit: cover;
-    object-position: -15px;
-    width: 413px;
-    height: 573px;
-    margin-bottom: -15rem;
-    bottom: 230px;
-    left: 65px;
-    margin-top: 160px;
-  }
-}
-
 @media (max-width: 470px) {
   .content-cases {
     .item-on-display {
@@ -1097,7 +1054,21 @@
   }
 }
 
+@media (max-width: 420px) {
+  .final-case-paragraph {
+    text-align: center;
+  }
+
+  .final-case-paragraph-link{
+    display: block;
+  }
+}
+
 @media (max-width: 400px) {
+  .final-case-paragraph{
+    text-align: center;
+  }
+
   .content-cases {
     .item-on-display {
       display: none !important;
@@ -1108,7 +1079,7 @@
     }
 
     .item-route {
-      height: 164px;
+      height: 180px;
       width: 142px;
       background: #f6eee1;
       border-radius: 0;
@@ -1359,4 +1330,59 @@ footer {
 
 .font-graphik-semibold {
   font-family: 'Graphik semibold', serif;
+}
+
+
+/** Media queries for the mobile image to adapt and allow the text and the button on the main screen to be always visible */
+@media (max-height: 896px) {
+  .main-title{
+    padding-top: 0px !important;
+  }
+
+  .main-title-section{
+    padding-top: 1.5rem !important;
+  }
+
+  .main-image-mobile {
+    position: relative;
+    object-fit: cover;
+    object-position: -15px;
+    width: 413px;
+    max-height: 415px;
+    min-height: 370px;
+    margin-bottom: -15rem;
+    bottom: 230px;
+    left: 65px;
+    margin-top: 160px;
+  }
+}
+
+@media (max-height: 846px) {
+  .main-image-mobile {
+    max-height: 400px;
+  }
+}
+
+@media (max-height: 812px) {
+  .main-image-mobile {
+    max-height: 400px;
+  }
+}
+
+
+@media (max-height: 786px) {
+  .main-image-mobile {
+    max-height: 400px;
+  }
+}
+
+@media (max-height: 740px) {
+  .main-image-mobile {
+    max-height: 400px;
+  }
+}
+
+
+.navbar{
+  padding: 0px;
 }
