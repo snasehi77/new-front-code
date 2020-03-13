@@ -1335,6 +1335,14 @@ footer {
 
 /** Media queries for the mobile image to adapt and allow the text and the button on the main screen to be always visible */
 @media (max-height: 896px) {
+  .container-fluid{
+    margin-top: 0px !important;
+  }
+
+  .navbar{
+    background: transparent;
+  }
+
   .main-title{
     padding-top: 0px !important;
   }
