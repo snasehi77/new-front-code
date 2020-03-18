@@ -6,14 +6,30 @@ const HowItWork = (props) => {
     const bg = props.background;
 
     return <div>
-        <div  className={`container-fluid ${bg}`}>
-            <div className="container  mt-md-0 pt-5 pt-md-5  pb-5 container-width ">
-                <hr className="hr-primary-mobile mt-5 mt-md-3" style={{width: "100px"}}/>
+        <div className="yc-about">
+            <div className="yc-container">
+                <hr className="hr-thin mt-5" style={{width: "80px"}}/>
+                <div className="row justify-content-center pt-4 pt-md-0">
+                    <h2 className="how-it-works-about-title mb-4">About YourCase</h2>
+                    <div className="col-12">
+                        <p className="how-it-works-about-text pt-5 pt-md-0 mb-4">
+                            YourCase was created by a team of legal professionals who believed that finding an attorney online was unnecessarily confusing, impersonal and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they&nbsp;need,&nbsp;free.
+                        </p>
+                        <p className="how-it-works-about-text">
+                            If you're an attorney and you'd like to work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
+                                                                                                                    className="pointer"><b>get&nbsp;in&nbsp;touch.</b></a>
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        </div>       
+        <div className="how-it-works">
+            <div class="yc-container">
                 <h1 className="text-center how-it-works-title  pt-3 mb-5">Here´s how it works</h1>
-                <div className="row mb-5 pt-5 justify-content-center">
+                <div className="row pt-5">
                     {steps.map(s => {
                         return (
-                            <div key={s.num} className={`p-0 col-md-4 ${s.num === '1' ? "col-6" : "col-8"}`}>
+                            <div key={s.num} className="how-it-works-step p-0 col-md-4 col-6 offset-3 offset-md-0">
                                 <h1 className={`how-it-works-num text-center ${s.num === '1' ? "" : "mt-5 mt-md-0"}`}>{s.num}</h1>
                                 <p className="how-it-works-title-num text-center mb-0"> {s.title}</p>
                                 <p className="how-it-works-description-num text-center pt-2">{s.p1}<br/>{s.p2 && s.p2}
@@ -90,24 +106,7 @@ const HowItWork = (props) => {
             {/*    </div>*/}
             {/*</div>*/}
 
-            <div className="container mb-5 pb-5 pt-5">
-                <hr className="hr-primary-mobile mt-5" style={{width: "100px"}}/>
-                <div className="row justify-content-center pt-4">
-                    <span className="how-it-works-about-title">About YourCase</span>
-                    <div className="col-12 col-md-12 pr-md-5 pt-md-3">
-                        <p className="how-it-works-about-text pt-4 pr-md-4 pr-lg-3">
-                            YourCase was created by a team of <br className="br-xs"/> legal professionals who believed <br className="br-lg"/>
-                            that <br className="br-xs"/> finding an attorney online was<br className="br-xs"/> unnecessarily confusing, <br className="br-lg"/>
-                            impersonal<br className="br-xs"/> and stressful. YourCase provides<br className="br-xs"/> people with a dignified <br className="br-lg"/>
-                            and efficient<br className="br-xs"/> way to find the lawyers they need, free.
-                        </p>
-                        <p className="how-it-works-about-text">
-                            If you're an attorney and you'd like to<br className="br-xs"/> work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
-                                                                                                                  className="pointer"><b>get in touch.</b></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 };
