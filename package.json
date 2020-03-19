@@ -34,12 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "start:prod": "REACT_APP_ENVIRONMENT=PROD npm run start",
-    "eject": "react-scripts eject",
-    "build:dev": "REACT_APP_ENVIRONMENT=DEV npm run build",
-    "build:prod": "REACT_APP_ENVIRONMENT=PROD npm run build",
-    "deploy:dev": "npm run build:dev && rm -rf deploy && mv build deploy",
-    "deploy:prod": "npm run build:prod && rm -rf deploy && mv build deploy"
+    "deploy": "npm run build && aws s3 sync ./build $S3_BUCKET --profile bkg",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
