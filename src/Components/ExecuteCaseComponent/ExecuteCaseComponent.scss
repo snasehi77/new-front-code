@@ -70,20 +70,13 @@ h4 {
 .more_info:after {
   content: "";
   position: absolute;
-  width: 5%;
+  width: 50px;
+  margin-left: 50%;
   height: 4px;
   border-radius: 30px;
   background: #d5d5d5;
-  left: 47.5%;
-  top: 10px;
-}
-
-@media (max-width: 600px) {
-  .more_info:after {
-    content: "";
-    width: 10%;
-    left: 45%;
-  }
+  left: -25px;
+  top: 7px;
 }
 
 .css-yk16xz-control {
