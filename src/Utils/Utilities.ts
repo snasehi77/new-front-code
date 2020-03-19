@@ -146,49 +146,49 @@ export const checkMail = (mail: string) => {
 };
 
 enum casesId {
-	elder_abuse = 47,
-	accidents_and_injuries = 45,
-	health_and_medical_issues = 49,
-	labor_work_place_issues = 50,
-	sexual_harassment = 51,
-	workplace_discrimination = 52
+	elder_abuse = 64,
+	accidents_and_injuries = 64,
+	health_and_medical_issues = 64,
+	labor_work_place_issues = 64,
+	sexual_harassment = 64,
+	workplace_discrimination = 64
 }
 
 export const cases = [
     {
         id: 1,
-        routeUrl: '/personal-injury/',
+        routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
         id: 3,
-        routeUrl: '/workplace-injuries/' ,
+        routeUrl: '/execute_flow/' + casesId.workplace_discrimination,
         label: 'Workplace Injuries',
         mobileLabel: 'Workplace Injuries',
         icon: icon_labor_work_place_issues
     },
     {
         id: 5,
-        routeUrl: '/employment-isues/',
+        routeUrl: '/execute_flow/' + casesId.labor_work_place_issues,
         label: 'Employment Issues',
         icon: icon_workplace_discrimination
     },
     {
         id: 4,
-        routeUrl: '/harassment-sexual-abuse/',
+        routeUrl: '/execute_flow/' + casesId.sexual_harassment,
         label: 'Harassment & Sexual Abuse',
         icon: icon_sexual_harassment
     },
     {
         id: 6,
-        routeUrl: '/elder-abuse/',
+        routeUrl: '/execute_flow/' + casesId.elder_abuse,
         label: 'Elder Abuse',
         icon: icon_elder_abuse
     },
     {
         id: 2,
-        routeUrl: '/health_and_medical/',
+        routeUrl: '/execute_flow/' + casesId.health_and_medical_issues,
         label: 'Health & Medical',
         icon: icon_health_and_medical_issues
     }

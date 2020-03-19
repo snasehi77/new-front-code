@@ -9,10 +9,10 @@ const NavbarComponent = () => {
     const toggleNavbar = () => setCollapsed(!collapsed);
 
     return <div className="container-fluid position-absolute p-0">
-        <Navbar className="bg-front sticky" light>
+        <Navbar className="sticky" light>
             <NavbarBrand href="/" className="mr-auto">
                 {/*<LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>*/}
-                <img  className="your-case-logo my-auto ml-2 pt-md-3 ml-md-4" src={logo} alt="logo"/>
+                <img  className="your-case-logo my-auto ml-3 ml-md-0" src={logo} alt="logo"/>
             </NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="mr-2 d-block d-lg-none" style={{border: '0'}}/>
             <Collapse isOpen={!collapsed} navbar>
