@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import mainImage from '../../Assets/Images/woman.png';
 
 import { useLocation } from "react-router";
