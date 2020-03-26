@@ -6,7 +6,7 @@ import mainImage from '../../Assets/Images/woman.png';
 
 const FrontComponent = () => {
 
-    const text_header =  <div className="yc-main-hero-title"><h1
+    const text_header =  <div className="yc-main-hero-content"><h1
         className="main-title">What happened to you matters&nbsp;to&nbsp;us.</h1>
         <p className="main-subtitle">Find the attorney you need in&nbsp;minutes.&nbsp;Free.</p>
         <NavLink to={`/execute_flow/${flow_id}`}
