@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
-import {NavLink} from "react-router-dom";
-import LogoComponent from "../Shared/LogoComponent";
+import NavbarComponent from "../Shared/NavbarComponent";
 import FooterComponent from "../HomeComponent/FooterComponent";
 
 const PrivacyPolicyComponent = () => {
@@ -12,14 +11,11 @@ const PrivacyPolicyComponent = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <NavLink to="/" className="navbar-brand" href="#">
-                    <LogoComponent className="mr-1" light={false} styles={{width: "120px"}} />
-                </NavLink>
-            </nav>
-            <div className="container member-terms-privacy">
+            <NavbarComponent/>
+            <div className="yc-container doc-privacy-policy">
                 <div className="row">
-                    <div className="col-lg-10 col-md-10 col-sm-10 col-xs-12"><h1 className="font-weight-bold text-center">Privacy Policy</h1>
+                    <div className="col-lg-10 offset-lg-1 col-12">
+                        <h1 className="font-weight-bold">Privacy Policy</h1>
                         <p className="subtitle font-weight-bold"><b>Effective Date:
                             February 1, 2020</b></p>
                             <p className="subtitle font-weight-light">

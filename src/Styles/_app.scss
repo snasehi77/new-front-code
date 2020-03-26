@@ -3,6 +3,7 @@
 @import "footer";
 @import "helpers";
 @import "auth";
+@import "tos-privacy";
 .relative-size {
   width: 100%;
   height: 100%;
@@ -12,45 +13,6 @@
   border: 1px solid #c2c2c2;
 }
 
-.member-terms-privacy {
-  font-family: 'Graphik regular', serif;
-  margin-bottom: 120px;
-  margin-top: 150px;
-  b, strong {
-    font-weight: bold;
-  }
-  .relevant-info{
-    background-color: #f6eee1;
-    padding: 32px 16px;
-    width: 95%;
-  }
-  h1 {
-    margin-bottom: 150px;
-  }
-  p, li{
-    color: #095d4d;
-  }
-}
-.content-privacy {
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 2px 2px 2px #c4c4c4;
-
-  p, li {
-    font-size: 14px;
-  }
-
-  background: $beige-custom;
-}
-
-.content-privacy-policy {
-  nav {
-    background: $primary-light !important;
-    a, li{
-      color: white !important;
-    }
-  }
-}
 
 .coming-soon{
   height: calc(100vh - 461px);

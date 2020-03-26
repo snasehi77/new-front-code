@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
-import {NavLink} from "react-router-dom";
-import LogoComponent from "../Shared/LogoComponent";
+import NavbarComponent from "../Shared/NavbarComponent";
 import FooterComponent from "../HomeComponent/FooterComponent";
 
 const MemberTermsComponent = () => {
@@ -12,14 +11,10 @@ const MemberTermsComponent = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <NavLink to="/" className="navbar-brand" href="#">
-                    <LogoComponent className="mr-1" light={false} styles={{width: "120px"}} />
-                </NavLink>
-            </nav>
-            <div className="container member-terms-privacy">
+            <NavbarComponent/>
+            <div className="yc-container doc-tos">
                 <div className="row">
-                    <div className="col-lg-10 col-md-10 col-sm-10 col-xs-12"><h1 className="font-weight-bold text-center">Terms of
+                    <div className="col-lg-10 offset-lg-1 col-12"><h1 className="font-weight-bold">Terms of
                         Service</h1>
                         <p className="subtitle font-weight-bold"><b>Effective Date:
                             February 1, 2020</b></p>
@@ -241,7 +236,7 @@ const MemberTermsComponent = () => {
                             or material you send to the Site for any purpose whatsoever including, but not limited to
                             developing, manufacturing and marketing products using such information.</p></div>
                         <div className="mt-2"><h3 className="font-weight-bold pt-4 pb-3">International Use</h3><p
-                            className="subtitle font-weight-light ">None of the products or
+                            className="subtitle font-weight-light">None of the products or
                             underlying information or technology available at this Site may be downloaded or otherwise exported
                             (i) into (or to a national or resident of) Cuba, Iraq, Iran, Libya, North Korea, Sudan, Syria, or
                             any other country to which the United States has embargoed goods; or (ii) to anyone on the United

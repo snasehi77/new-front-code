@@ -1,0 +1,58 @@
+.doc-tos ,
+.doc-privacy-policy {
+  margin-bottom: 100px;
+  padding-top: 120px;
+  color: $primary;
+  font-family: 'Graphik regular', serif;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  b, strong {
+    font-weight: bold;
+  }
+  .relevant-info{
+    background-color: #f6eee1;
+    padding: 32px 16px;
+    width: 95%;
+  }
+  h1 {
+    color: inherit;
+    font-family: 'Graphik medium', serif;
+    font-size: 30px;
+    margin-bottom: 70px;
+  }
+  p, li{
+  //   color: #095d4d;
+    font-weight: 500;
+  }
+  h3 {
+    color: inherit;
+    font-size: 24px;
+  }
+
+
+}
+
+
+@media (min-width: 480px) {
+  .doc-tos,
+  .doc-privacy-policy {
+    padding-top: 240px;
+    padding-left: 32px;
+    padding-right: 32px;
+    h1 {
+      margin-bottom: 150px;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .doc-tos,
+  .doc-privacy-policy {
+    padding-top: 180px;
+  }
+
+}
+
