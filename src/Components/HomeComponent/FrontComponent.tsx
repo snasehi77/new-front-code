@@ -19,7 +19,7 @@ const FrontComponent = () => {
         </div>
         <div className="yc-container overflow-container">
             <div className="row">
-                <div className="pt-4 pb-4 pt-sm-5 pb-sm-5 pt-md-5 mt-md-5 col-12 col-md-10 col-lg-8">
+                <div className="yc-main-hero-header col-12 col-md-10 col-lg-8">
                     {text_header}
                 </div>
             </div>
