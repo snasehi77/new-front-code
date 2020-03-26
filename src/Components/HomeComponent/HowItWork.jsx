@@ -24,7 +24,7 @@ const HowItWork = (props) => {
             </div> 
         </div>       
         <div className="how-it-works">
-            <div class="yc-container">
+            <div className="yc-container">
                 <h1 className="text-center how-it-works-title pt-3">Here‘s how it works</h1>
                 <div className="how-it-works-steps row">
                     {steps.map(s => {
