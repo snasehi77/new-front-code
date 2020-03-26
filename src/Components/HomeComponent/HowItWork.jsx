@@ -6,23 +6,7 @@ const HowItWork = (props) => {
     const bg = props.background;
 
     return <div>
-        <div className="yc-about">
-            <div className="yc-container">
-                <hr className="hr-thin mt-5 mb-4"/>
-                <div className="row justify-content-center">
-                    <h2 className="how-it-works-about-title mb-3 mt-2">About YourCase</h2>
-                    <div className="col-12">
-                        <p className="how-it-works-about-text pt-5 pb-4">
-                            YourCase was created by a team of legal professionals who believed that finding an attorney online was unnecessarily confusing, impersonal and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they&nbsp;need,&nbsp;free.
-                        </p>
-                        <p className="how-it-works-about-text">
-                            If you're an attorney and you'd like to work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
-                                                                                                                    className="pointer"><b>get&nbsp;in&nbsp;touch.</b></a>
-                        </p>
-                    </div>
-                </div>
-            </div> 
-        </div>       
+     
         <div className="how-it-works">
             <div className="yc-container">
                 <h1 className="text-center how-it-works-title pt-3">Here‘s how it works</h1>
@@ -40,6 +24,23 @@ const HowItWork = (props) => {
                 </div>
             </div>
         </div>
+        <div className="yc-about">
+            <div className="yc-container">
+                <hr className="hr-thin mt-5 mb-4"/>
+                <div className="row justify-content-center">
+                    <h2 className="how-it-works-about-title mb-3 mt-2">About YourCase</h2>
+                    <div className="col-12">
+                        <p className="how-it-works-about-text pt-5 pb-4">
+                            YourCase was created by a team of legal professionals who believed that finding an attorney online was unnecessarily confusing, impersonal and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they&nbsp;need,&nbsp;free.
+                        </p>
+                        <p className="how-it-works-about-text">
+                            If you're an attorney and you'd like to work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
+                                                                                                                    className="pointer"><b>get&nbsp;in&nbsp;touch.</b></a>
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        </div>  
         <div className="container-fluid">
             {/*<div className="container">*/}
             {/*    <div className="row justify-content-center align-items-center">*/}
