@@ -731,7 +731,7 @@
     background: #f6eee1;
     // height: 86px;
     border-radius: 4px;
-    transition: background 0.4s;
+    transition: background-color 0.4s;
     position: relative;
     padding-bottom: 100%;
   
@@ -830,15 +830,10 @@
 
 .content-cases-item {
   padding: 8px;
-  &:hover {
-
-  }
 }
 
 .item-route:hover {
-  .cases-label {
-    text-decoration: underline;
-  }
+  background-color: #FFF7E9;
 }
 
 // .icon-on-display {
