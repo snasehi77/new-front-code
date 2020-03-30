@@ -64,7 +64,6 @@ h4 {
 .more_info {
   color: green;
   font-size: 12px;
-
 }
 
 .more_info:after {
@@ -107,5 +106,19 @@ h4 {
     height: calc(1.5em + .75rem + 2px);
     background: $bg-form !important;
     color: $primary-light !important;
+  }
+}
+
+
+.lb {
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: $primary-light;
+  }
+  .subtitle{
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
   }
 }
