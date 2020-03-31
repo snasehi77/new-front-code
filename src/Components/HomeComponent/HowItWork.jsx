@@ -24,18 +24,13 @@ const HowItWork = (props) => {
                 </div>
             </div>
         </div>
-        <div className="yc-about">
+        <div className="yc-about text-center">
             <div className="yc-container">
                 <div className="row justify-content-center">
-                    <h2 className="how-it-works-about-title mb-3 mt-2">About YourCase</h2>
-                    <div className="col-12">
-                        <p className="how-it-works-about-text pt-5 pb-4">
-                            YourCase was created by a team of legal professionals who believed that finding an attorney online was unnecessarily confusing, impersonal and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they&nbsp;need,&nbsp;free.
-                        </p>
-                        <p className="how-it-works-about-text">
-                            If you're an attorney and you'd like to work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com"
-                                                                                                                    className="pointer"><b>get&nbsp;in&nbsp;touch.</b></a>
-                        </p>
+                    <h2 className="mb-3 mt-2 text-center">About YourCase</h2>
+                    <div className="col-12 ">
+                        <p className="pt-5 pb-4">YourCase was created by a team of legal professionals who believed that finding an attorney online was unnecessarily confusing, impersonal and stressful. YourCase provides people with a dignified and efficient way to find the lawyers they&nbsp;need,&nbsp;free.</p>
+                        <p>If you're an attorney and you'd like to work with YourCase, <a href="mailto: attorneyinquiries@yourcase.com" className="pointer"><b>get&nbsp;in&nbsp;touch.</b></a></p>
                     </div>
                 </div>
             </div> 
