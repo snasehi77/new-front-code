@@ -47,7 +47,7 @@ const FooterComponent = () => {
                 </div>
                 <div className="small-print">
                     <div className="mb-3 mb-lg-0">
-                        <span className="text-footer-bottom"><i className="fa fa-copyright">&nbsp;</i>{year} Your Case Inc.</span>
+                        <span className="text-footer-bottom"><i className="fa fa-copyright">&nbsp;</i>{year} YourCase.com, LLC</span>
                     </div>
 
                     <div className="mb-3 mb-lg-0">
