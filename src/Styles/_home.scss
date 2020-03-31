@@ -513,9 +513,14 @@
     background-color: $beige-custom;
     // height: 86px;
     border-radius: 4px;
-    transition: background-color 0.4s;
+    transition: background-color 0.6s ease, box-shadow 0.6s ease;
     position: relative;
     padding-bottom: 100%;
+
+    &:hover {
+      background-color: #FFF7E9;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    }
   
     h6 {
       position: absolute;
@@ -555,6 +560,8 @@
     }
   }
 }
+
+
 
 
 
@@ -613,14 +620,6 @@
 .content-cases-item {
   padding: 8px;
 }
-
-.item-route:hover {
-  background-color: #FFF7E9;
-}
-
-// .icon-on-display {
-//   display: none !important;
-// }
 
 
 
