@@ -13,7 +13,7 @@ const HowItWork = (props) => {
                 <div className="how-it-works-steps row">
                     {steps.map(s => {
                         return (
-                            <div key={s.num} className="how-it-works-step p-0 col-10 col-sm-4 offset-1 offset-sm-4">
+                            <div key={s.num} className="how-it-works-step p-0 col-10 col-sm-6 offset-1 offset-sm-3 offset-md-0">
                                 <h1 className={`how-it-works-num text-center ${s.num === '1' ? "" : "mt-5 mt-md-0"}`}>{s.num}</h1>
                                 <p className="how-it-works-title-num text-center mb-0"> {s.title}</p>
                                 <p className="how-it-works-description-num text-center pt-2">{s.p1}<br/>{s.p2 && s.p2}

@@ -278,7 +278,6 @@
 
 
 .how-it-works {
-  background-color: #fbf6ef;
   padding-top: 40px;
   padding-bottom: 60px;
 }
@@ -343,12 +342,6 @@
     line-height: 96px;
   }
 
-  .how-it-works-title-num {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.4;
-  }
 
 
 }
@@ -367,9 +360,6 @@
     margin-left: auto;
   }
 
-  .how-it-works-title-num {
-    font-size: 20px;
-  }
 
   .how-it-works-description-num {
     font-size: 16px;
@@ -389,6 +379,7 @@
 .yc-about {
   padding-top: 70px;
   padding-bottom: 100px;
+  background-color: #fbf6ef;
   h2 {
     font-family: 'Graphik medium', serif;
     font-size: 32px;
@@ -421,8 +412,8 @@
 
 @media (min-width: 768px) {
   .yc-about {
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
