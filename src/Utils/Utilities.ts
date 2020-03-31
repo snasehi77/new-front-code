@@ -146,12 +146,12 @@ export const checkMail = (mail: string) => {
 };
 
 enum casesId {
-	elder_abuse = 246,
-	accidents_and_injuries = 246,
-	health_and_medical_issues = 246,
-	labor_work_place_issues = 246,
-	sexual_harassment = 246,
-	workplace_discrimination = 246
+	elder_abuse = 252,
+	accidents_and_injuries = 252,
+	health_and_medical_issues = 252,
+	labor_work_place_issues = 252,
+	sexual_harassment = 252,
+	workplace_discrimination = 252
 }
 
 export const cases = [
