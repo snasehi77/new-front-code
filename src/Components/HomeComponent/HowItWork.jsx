@@ -26,7 +26,6 @@ const HowItWork = (props) => {
         </div>
         <div className="yc-about">
             <div className="yc-container">
-                <hr className="hr-thin mt-5 mb-4"/>
                 <div className="row justify-content-center">
                     <h2 className="how-it-works-about-title mb-3 mt-2">About YourCase</h2>
                     <div className="col-12">

@@ -58,13 +58,6 @@
 }
 
 
-
-.hr-thin {
-  border: 0.5px solid $primary;
-  width: 80px;
-  margin: 20px auto;
-}
-
 .yc-container {
   width: 100%;
   padding-right: 32px;
@@ -363,8 +356,11 @@
 
 
 .yc-about {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 100px;
+  a {
+    color: $orange;
+  }
 }
 
 .how-it-works-about-title {
@@ -454,10 +450,6 @@
   .yc-about {
     padding-top: 80px;
     padding-bottom: 120px;
-
-    .hr-thin {
-      width: 120px;
-    }
   }
 
 }
