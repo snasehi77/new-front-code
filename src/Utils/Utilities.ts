@@ -4,6 +4,7 @@ import icon_labor_work_place_issues from '../Assets/icons/YC_Icon_Workplace_Inju
 import icon_sexual_harassment from '../Assets/icons/YC_Icon_Sexual_Harassment_Green.svg';
 import icon_workplace_discrimination from '../Assets/icons/YC_Icon_Workplace_Discrimination_Green.svg';
 import icon_elder_abuse from '../Assets/icons/YC_Icon_Elder_Care_Green.svg';
+import {flow_id} from "./Config";
 
 export function getMonths() {
 	return [
@@ -145,62 +146,54 @@ export const checkMail = (mail: string) => {
 	return mail.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 };
 
-enum casesId {
-	elder_abuse = 252,
-	accidents_and_injuries = 252,
-	health_and_medical_issues = 252,
-	labor_work_place_issues = 252,
-	sexual_harassment = 252,
-	workplace_discrimination = 252
-}
 
 export const cases = [
     {
         id: 1,
-        routeUrl: '/execute_flow/' + casesId.accidents_and_injuries,
+        routeUrl: '/execute_flow/' + flow_id,
         label: 'Accidents & Injuries',
         icon: icon_accidents_and_injuries
     },
     {
         id: 3,
-        routeUrl: '/execute_flow/' + casesId.workplace_discrimination,
+        routeUrl: '/execute_flow/' + flow_id,
         label: 'Workplace Injuries',
         mobileLabel: 'Workplace Injuries',
         icon: icon_labor_work_place_issues
     },
     {
         id: 5,
-        routeUrl: '/execute_flow/' + casesId.labor_work_place_issues,
+        routeUrl: '/execute_flow/' + flow_id,
         label: 'Employment Issues',
         icon: icon_workplace_discrimination
     },
     {
         id: 4,
-        routeUrl: '/execute_flow/' + casesId.sexual_harassment,
+        routeUrl: '/execute_flow/' + flow_id,
         label: 'Harassment & Sexual Abuse',
         icon: icon_sexual_harassment
     },
     {
         id: 6,
-        routeUrl: '/execute_flow/' + casesId.elder_abuse,
+        routeUrl: '/execute_flow/' + flow_id,
         label: 'Elder Abuse',
         icon: icon_elder_abuse
     },
     {
         id: 2,
-        routeUrl: '/execute_flow/' + casesId.health_and_medical_issues,
+        routeUrl: '/execute_flow/' + flow_id,
         label: 'Health & Medical',
         icon: icon_health_and_medical_issues
     }
 ];
 
 export const linkCases = {
-	'/personal-injury/': '/execute_flow/' + casesId.accidents_and_injuries,
-	'/health_and_medical/': '/execute_flow/' + casesId.health_and_medical_issues,
-  '/workplace-injuries/': '/execute_flow/' + casesId.workplace_discrimination,
-	'/elder-abuse/': '/execute_flow/' + casesId.elder_abuse,
-	'/employment-isues/': '/execute_flow/' + casesId.labor_work_place_issues,
-	'/harassment-sexual-abuse/': '/execute_flow/' + casesId.sexual_harassment
+	'/personal-injury/': '/execute_flow/' + flow_id,
+	'/health_and_medical/': '/execute_flow/' + flow_id,
+  '/workplace-injuries/': '/execute_flow/' + flow_id,
+	'/elder-abuse/': '/execute_flow/' + flow_id,
+	'/employment-isues/': '/execute_flow/' + flow_id,
+	'/harassment-sexual-abuse/': '/execute_flow/' + flow_id
 };
 
 export const steps = [

@@ -34,7 +34,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "npm run build && aws s3 sync ./build $S3_BUCKET --profile bkg",
+    "deploy": "npm run build && aws s3 sync ./build $S3_BUCKET",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
