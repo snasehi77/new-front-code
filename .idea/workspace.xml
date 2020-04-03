@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteFlowCasesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteFlowCasesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +150,7 @@
       <workItem from="1585931688743" duration="8000" />
       <workItem from="1585931704902" duration="145000" />
       <workItem from="1585931861369" duration="174000" />
-      <workItem from="1585932048968" duration="1664000" />
+      <workItem from="1585932048968" duration="1776000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implement new command and fix issues with the flow id">
       <created>1585754451501</created>
@@ -163,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585754451501</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update library execution flow">
+      <created>1585933747961</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585933747961</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,8 +186,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat: implement new command and fix issues with the flow id" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement new command and fix issues with the flow id" />
+    <MESSAGE value="update library execution flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="update library execution flow" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585932284153">
@@ -197,10 +203,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="459" y="222" key="#start/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932119489" />
-    <state x="-1351" y="152" key="CommitChangelistDialog2" timestamp="1585754451355">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="569" y="96" key="CommitChangelistDialog2" timestamp="1585933747406">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1351" y="152" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585754451355" />
+    <state x="569" y="96" key="CommitChangelistDialog2/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585933747406" />
     <state x="594" y="308" key="EnvironmentVariablesDialog" timestamp="1585689220366">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
