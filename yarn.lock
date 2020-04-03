@@ -4318,24 +4318,24 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.3.3.tgz#037796392fbc0cccab1f183c52ef06bdd2cfc58a"
-  integrity sha512-Oe11f7WzHTBKKSg/eU4g545Q6+udChOK8keOee7v5RNKl0I7trGHs9I+ozY+Pth/riiBm59y4BQ23gC16U5Y4Q==
+execution-flow@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.4.5.tgz#02683712d2f9c8638960acf2ea4368e725cce937"
+  integrity sha512-m8sKaApfZ0RQ8LCEIp6rumHs6moElMZEEwd2fNAwuT3q2HwU2Hiiws7A42/DSv348xdRcjD79AIr7v1bjopxLA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/free-solid-svg-icons" "^5.12.1"
     "@fortawesome/react-fontawesome" "^0.1.8"
     "@types/history" "^4.7.5"
     "@types/reactstrap" "^8.4.2"
-    execution-input "^2.4.7"
+    execution-input "^2.6.6"
     history "^4.10.1"
     reactstrap "^8.4.1"
 
-execution-input@^2.4.7:
-  version "2.4.7"
-  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.4.7.tgz#199b4da2afe6544f5b4c7941d87b22642b206591"
-  integrity sha512-CXVvRoZaosIhK9/aERNrhqtY0XYR9zOLmiD9K0p/aTnsluIa2NN9pNUs4trnUFkV/gCaHruUU2l5/IWronYc8w==
+execution-input@^2.6.6:
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.6.6.tgz#cee30d7fbf2a35931d787461f3d891d06eab6c60"
+  integrity sha512-zQWKI+VWZtH9ueePwVQ1MlWStDZCycjGjD5t3q9EgC3Pr0X/EolNXGmfQl6K4wzLxlInCwyCgjJ4MywnH/Pvdg==
   dependencies:
     "@types/react-dates" "^17.1.7"
     react-select "^3.0.8"

@@ -15,9 +15,9 @@ const ExecuteFlowCasesComponent = () => {
           {/*<LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>*/}
           <img className="your-case-logo my-auto ml-2 pt-md-3 ml-md-2" src={logo} alt="logo"/>
         </NavbarBrand>
-        <div style={{height: "95%"}}>
+        <div style={{height: "94%"}}>
           {id && <ExecutionFlow flowId={parseInt(id)}
-                                className="col-xl-4 col-lg-6 col-md-8 col-12 m-auto"/>}
+                                className="col-xl-4 col-lg-8 col-md-10 col-12 m-auto"/>}
         </div>
       </div>
     )

@@ -22,6 +22,10 @@ h4 {
   }
 }
 
+.rbd {
+  color: $primary-light;
+}
+
 .container-checkbox {
   input[type=checkbox] {
     display: none;
@@ -109,6 +113,9 @@ h4 {
   }
 }
 
+.btn-light {
+  background: $bg-form
+}
 
 .lb {
   .title {
@@ -116,9 +123,51 @@ h4 {
     font-weight: bold;
     color: $primary-light;
   }
-  .subtitle{
+
+  .subtitle {
     font-size: 20px;
     font-weight: bold;
     color: gray;
+  }
+}
+
+.default-link {
+
+}
+
+.default-label {
+  width: 100%;
+  color: $primary-light;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.hm-view-header-1 {
+
+}
+
+
+.hm-view-header-2 {
+
+}
+
+.hm-view-header-3 {
+
+}
+
+.hm-view-p_1, .hm-view-p_2 {
+
+}
+
+
+.hm-view-header-custom-1 {
+
+}
+
+.hm-view-footer-1, .hm-view-terms {
+  color: $primary-light;
+
+  a {
+    color: $orange;
   }
 }
