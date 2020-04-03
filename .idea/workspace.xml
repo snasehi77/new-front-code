@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585943896915</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: fix problem with the scss">
+      <created>1585950406904</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585950406904</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +206,8 @@
     <MESSAGE value="feat: implement new command and fix issues with the flow id" />
     <MESSAGE value="update library execution flow" />
     <MESSAGE value="feat: Implement the style for the first text" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement the style for the first text" />
+    <MESSAGE value="feat: fix problem with the scss" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix problem with the scss" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585932284153">
@@ -212,10 +220,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="459" y="222" key="#start/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932119489" />
-    <state x="-1351" y="152" key="CommitChangelistDialog2" timestamp="1585943896796">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="498" y="148" key="CommitChangelistDialog2" timestamp="1585950406780">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="-1351" y="152" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585943896796" />
+    <state x="498" y="148" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1585950406780" />
     <state x="569" y="96" key="CommitChangelistDialog2/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585933747406" />
     <state x="594" y="308" key="EnvironmentVariablesDialog" timestamp="1585689220366">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -245,10 +254,11 @@
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585690979787" />
     <state width="1454" height="272" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932974358" />
-    <state x="-1360" y="279" key="Vcs.Push.Dialog.v2" timestamp="1585943898475">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="490" y="272" key="Vcs.Push.Dialog.v2" timestamp="1585950408776">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="-1360" y="279" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585943898475" />
+    <state x="490" y="272" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1585950408776" />
     <state x="432" y="256" width="627" height="568" key="find.popup" timestamp="1585932836069">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
