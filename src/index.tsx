@@ -7,7 +7,7 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import {initialize} from "execution-flow";
 import {http} from "./Network";
-
+import "execution-input/dist/lib/css/executionInput.min.css"
 initialize(http);
 ReactDOM.render(<App/>, document.getElementById('root'));
 
