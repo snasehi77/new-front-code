@@ -142,36 +142,42 @@ h4 {
   font-size: 30px;
 }
 
-.hm-view-header-1 {
+.hm-view {
+  &-header {
+    font-weight: bold;
 
-}
+    &-1 {
+      font-weight: normal;
+      font-size: 32px;
+    }
 
+    &-2 {
+      font-size: 28px;
+    }
 
-.hm-view-header-2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-
-.hm-view-header-3 {
-
-}
-
-.hm-view-p_1, .hm-view-p_2 {
-  font-size: 14px;
-  text-align: center;
-  color: gray;
-  font-weight: lighter;
-}
-
-
-.hm-view-header-custom-1 {
-
-}
-
-.hm-view-footer-1, .hm-view-terms {
-  color: $primary-light;
-
-  a {
-    color: $orange;
+    &-3 {
+      font-size: 24px;
+    }
   }
+
+  &-footer-1, &-terms {
+    color: $primary-light;
+    font-size: 14px;
+
+    a {
+      color: $orange;
+    }
+  }
+
+  &-p_1, .hm-view-p_2 {
+    font-size: 14px;
+    text-align: center;
+    color: gray;
+    font-weight: lighter;
+  }
+
+  &-header-custom-1 {
+
+  }
+
 }

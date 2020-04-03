@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="feat: Implement version for the tag manager">
+    <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +92,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.deploy QA" />
       <item itemvalue="npm.deploy Staging" />
+      <item itemvalue="npm.deploy QA" />
       <item itemvalue="npm.start" />
     </list>
   </component>
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585933747961</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Implement the style for the first text">
+      <created>1585943896915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585943896915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +198,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat: implement new command and fix issues with the flow id" />
     <MESSAGE value="update library execution flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="update library execution flow" />
+    <MESSAGE value="feat: Implement the style for the first text" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement the style for the first text" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585932284153">
@@ -203,10 +212,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="459" y="222" key="#start/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932119489" />
-    <state x="569" y="96" key="CommitChangelistDialog2" timestamp="1585933747406">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="-1351" y="152" key="CommitChangelistDialog2" timestamp="1585943896796">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="-1351" y="152" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585754451355" />
+    <state x="-1351" y="152" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585943896796" />
     <state x="569" y="96" key="CommitChangelistDialog2/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585933747406" />
     <state x="594" y="308" key="EnvironmentVariablesDialog" timestamp="1585689220366">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -236,10 +245,10 @@
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585690979787" />
     <state width="1454" height="272" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932974358" />
-    <state x="-1360" y="279" key="Vcs.Push.Dialog.v2" timestamp="1585754452927">
+    <state x="-1360" y="279" key="Vcs.Push.Dialog.v2" timestamp="1585943898475">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="-1360" y="279" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585754452927" />
+    <state x="-1360" y="279" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585943898475" />
     <state x="432" y="256" width="627" height="568" key="find.popup" timestamp="1585932836069">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
