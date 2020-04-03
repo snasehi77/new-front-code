@@ -163,19 +163,24 @@ h4 {
 
 .hm-view {
   &-header {
-    font-weight: bold;
-    text-align: center;
+
 
     &-1 {
+
       font-weight: normal;
+      text-align: center;
       font-size: 32px;
     }
 
     &-2 {
+      font-weight: bold;
+      text-align: center;
       font-size: 28px;
     }
 
     &-3 {
+      font-weight: bold;
+      text-align: center;
       font-size: 24px;
     }
   }
