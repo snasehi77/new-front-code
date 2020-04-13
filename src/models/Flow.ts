@@ -1,3 +1,4 @@
-export default class Flow {
-	constructor() {}
+export default interface Flow {
+	name:string;
+	id:number;
 }
