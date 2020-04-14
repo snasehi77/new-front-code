@@ -8,19 +8,14 @@ h1, h2, h3, h5, h6, label {
 .why_this_matters {
   color: $orange;
   cursor: pointer;
+  font-size: 16px;
 }
 
 h4 {
   color: $orange;
 }
 
-.form-group {
-  .form-control {
-    border: none;
-    background: $bg-form;
-    color: $primary-light;
-  }
-}
+
 
 .rbd {
   color: $primary-light;
@@ -53,16 +48,6 @@ h4 {
   .radio-active {
     border: 2px solid green;
   }
-
-  .custom-check {
-    background: $bg-form;
-    color: $bg-form !important;
-  }
-
-  .custom-checked {
-    background: $orange;
-  }
-
 }
 
 .more_info {
@@ -161,14 +146,21 @@ h4 {
   }
 }
 
+
 .hm-view {
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+
   &-header {
     text-align: center;
     color: $primary;
+    line-height: 1.333;
     &-1 {
       @extend .hm-view-header;
-      font-weight: normal;
+      font-weight: 500;
       font-size: 32px;
+      margin-bottom: 1rem;
     }
 
     &-2 {
@@ -179,30 +171,162 @@ h4 {
 
     &-3 {
       @extend .hm-view-header;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 24px;
     }
+
+    &-custom-1 {
+      @extend .hm-view-header;
+      font-size: 24px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  // TODO: need more css classes to style this stuff safely
+  & > div {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    // the close button
+    & > button:first-of-type {
+      top: 15px !important;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    // back/forward control bar
+    & > div:last-child {
+      height: 88px !important;
+      position: absolute !important;
+      align-self: flex-end;
+      position: fixed !important;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05) !important;
+    }
+  }
+
+
+  &-footer-1 {
+    text-align: center;
   }
 
   &-footer-1, &-terms {
     color: $primary-light;
-    font-size: 14px;
+    font-size: 16px;
 
     a {
       color: $orange;
     }
   }
 
-  &-p_1, .hm-view-p_2 {
-    font-size: 14px;
+  &-p_1 {
+    font-size: 16px;
     text-align: center;
-    color: gray;
-    font-weight: lighter;
+    color: #8A9499;
   }
 
-  &-header-custom-1 {
-
+  .hm-view-p_2 {
+    color: #454A4D;
+    text-align: center;
+    margin-bottom: 1rem;
   }
+
+  
+
+  .form-group {
+    label {
+      margin-bottom: 5px;
+    }
+    input.form-control {
+      background-color: #fff;
+      border-bottom: 2px solid #c3c9cc;
+      margin-bottom: 2rem;
+      // margin-top: -5px;
+      padding: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.333;
+      caret-color: $orange;
+      border-radius: 0;
+      box-sizing: border-box;
+      &:focus {
+        outline-width: 0;
+        outline: none;
+        box-shadow: none;
+        border-bottom: 2px solid $primary;
+      }
+    }
+    .form-control {
+      border: none;
+      background: $bg-form;
+      color: $primary;
+      cursor: pointer;
+      
+      padding: 22px;
+      height: auto;      
+      margin-bottom: 16px;
+
+
+
+      &.hm-label-radio-button-single {
+        line-height: 1;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+      &.hm-label-radio-button-multiple {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.5;
+        text-align: left;
+        padding-right: 80px;
+        .hm-custom-check {
+          position: absolute;
+          right: 16px;
+          top: 16px;
+          svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }          
+        };
+        &.checkbox-active {
+          box-shadow: inset 0 0 0 2px $primary;
+          .hm-custom-check {
+            opacity: 1;
+          }
+        }
+        .hm-custom-check {
+          position: absolute;
+          opacity: 0;
+          transition: opacity 0.15s ease-in-out;
+        }
+      }
+    }
+  }
+
+  
+
+  .custom-check {
+    background: $bg-form;
+    color: $bg-form !important;
+  }
+
+  .custom-checked {
+    background: $orange;
+    border-radius: 100%;
+    height: 24px;
+    width: 24px;
+    path {
+      fill: #fff;
+    }
+  }
+
+  button.invisible {
+    display: none;
+  }
+
+
 
 }
 
