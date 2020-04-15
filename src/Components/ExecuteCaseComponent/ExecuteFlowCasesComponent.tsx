@@ -7,9 +7,9 @@ import Flow from "../../models/Flow";
 declare var window:any;
 const ExecuteFlowCasesComponent = () => {
     const {id} = useParams();
-    const onSubmitForm = (flow: Flow, formData: any) => {
+    const onSubmitForm = (flow: Flow, formData: any,stepName: string) => {
       console.log(flow.name)
-      window.dataLayer.push({'event' : 'formSubmitted', 'formName' : flow.name})
+      window.dataLayer.push({'event' : 'formSubmitted', 'formName' : stepName})
     }
 
     return (

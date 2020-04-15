@@ -4318,10 +4318,10 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.5.2.tgz#db9568990bb93e7777047a14753dd9efa17e2cb0"
-  integrity sha512-zm44FV+PjSODgGUEmgREMtoz96yKMhRMHmqrL3VkD0RLH1m7iPj6r9UUMc0n8bq2tnC4V9WiSrrp2jGcmhJpkQ==
+execution-flow@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.5.3.tgz#d480b39e8ae8651792d0c8486ebbbd262f5fb95b"
+  integrity sha512-86Ck4tBzQ/H0fl8lM192pvL6tPmJ3wexZhlZH7iZRhPSHDPgrqoBk94GCtgHy0pIt8P8CjBwR+YDkGd4B6zl/A==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/free-solid-svg-icons" "^5.12.1"
