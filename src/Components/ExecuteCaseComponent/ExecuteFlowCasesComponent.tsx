@@ -4,12 +4,17 @@ import "./ExecuteCaseComponent.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
 import {ExecutionFlow} from "execution-flow";
 import Flow from "../../models/Flow";
-declare var window:any;
+
+declare var window: any;
 const ExecuteFlowCasesComponent = () => {
     const {id} = useParams();
-    const onSubmitForm = (flow: Flow, formData: any) => {
-      console.log(flow.name)
-      window.dataLayer.push({'event' : 'formSubmitted', 'formName' : flow.name})
+    const onSubmitForm = (flow: Flow, formData: any, stepName: string) => {
+      const injuredField = formData.find((i: any) => i.name === 'multiple choice - one answer_4');
+      const paramsGTM: any = {'event': 'formSubmitted', 'Form Name': stepName};
+      if (injuredField) {
+        paramsGTM['Form Type'] = injuredField.value;
+      }
+      window.dataLayer.push(paramsGTM);
     }
 
     return (
