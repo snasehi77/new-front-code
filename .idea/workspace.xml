@@ -28,14 +28,14 @@
     <list default="true" id="5bc8fd64-1073-4ca7-9ea3-508222cab1c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteCaseComponent.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteFlowCasesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExecuteCaseComponent/ExecuteFlowCasesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="yourcase-front" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -114,10 +114,23 @@
       </envs>
       <method v="2" />
     </configuration>
+    <configuration name="start:dev2" type="js.build_tools.npm">
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs>
+        <env name="REACT_APP_FLOW_ID" value="112" />
+        <env name="REACT_APP_BASE_URL" value="https://hm-svc-engine-qa.alb-bkg.com" />
+      </envs>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="npm.deploy QA" />
       <item itemvalue="npm.deploy Staging" />
       <item itemvalue="npm.start" />
+      <item itemvalue="npm.start:dev2" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -164,7 +177,10 @@
       <workItem from="1585931861369" duration="174000" />
       <workItem from="1585932048968" duration="1776000" />
       <workItem from="1586909674157" duration="160000" />
-      <workItem from="1586910063508" duration="121000" />
+      <workItem from="1586910063508" duration="169000" />
+      <workItem from="1586913259467" duration="12000" />
+      <workItem from="1587001275545" duration="3230000" />
+      <workItem from="1587058075389" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implement new command and fix issues with the flow id">
       <created>1585754451501</created>
@@ -194,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585950406904</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update execution-flow library">
+      <created>1586910218278</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586910218278</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,52 +280,62 @@
     <MESSAGE value="update library execution flow" />
     <MESSAGE value="feat: Implement the style for the first text" />
     <MESSAGE value="feat: fix problem with the scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix problem with the scss" />
+    <MESSAGE value="update execution-flow library" />
+    <option name="LAST_COMMIT_MESSAGE" value="update execution-flow library" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585932284153">
+    <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587001413013">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1573" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585754643079" />
     <state x="304" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585753892775" />
-    <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932284153" />
+    <state x="347" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1587001413013" />
     <state x="459" y="222" key="#start" timestamp="1585932119489">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="459" y="222" key="#start/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585932119489" />
-    <state x="498" y="148" key="CommitChangelistDialog2" timestamp="1585950406780">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="685" y="227" key="#start:dev2" timestamp="1587001444087">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="685" y="227" key="#start:dev2/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1587001444087" />
+    <state x="569" y="96" key="CommitChangelistDialog2" timestamp="1586910217861">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1351" y="152" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1585943896796" />
     <state x="498" y="148" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1585950406780" />
-    <state x="569" y="96" key="CommitChangelistDialog2/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585933747406" />
+    <state x="569" y="96" key="CommitChangelistDialog2/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1586910217861" />
     <state x="594" y="308" key="EnvironmentVariablesDialog" timestamp="1585689220366">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="594" y="308" key="EnvironmentVariablesDialog/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585689220366" />
-    <state x="526" y="295" key="FileChooserDialogImpl" timestamp="1585933017163">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="526" y="284" key="FileChooserDialogImpl" timestamp="1587004126143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="526" y="295" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1585933017163" />
-    <state width="1901" height="295" key="GridCell.Tab.0.bottom" timestamp="1586909833487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="526" y="284" key="FileChooserDialogImpl/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587004126143" />
+    <state x="526" y="295" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1586913269805" />
+    <state width="1901" height="295" key="GridCell.Tab.0.bottom" timestamp="1587004508056">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585690979787" />
+    <state width="1901" height="295" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587004508056" />
     <state width="1901" height="295" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1586909833487" />
-    <state width="1901" height="295" key="GridCell.Tab.0.center" timestamp="1586909833487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1901" height="295" key="GridCell.Tab.0.center" timestamp="1587004508056">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585690979787" />
+    <state width="1901" height="295" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587004508056" />
     <state width="1901" height="295" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1586909833487" />
-    <state width="1901" height="295" key="GridCell.Tab.0.left" timestamp="1586909833487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1901" height="295" key="GridCell.Tab.0.left" timestamp="1587004508056">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585690979786" />
+    <state width="1901" height="295" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587004508056" />
     <state width="1901" height="295" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1586909833487" />
-    <state width="1901" height="295" key="GridCell.Tab.0.right" timestamp="1586909833487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1901" height="295" key="GridCell.Tab.0.right" timestamp="1587004508056">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1585690979787" />
+    <state width="1901" height="295" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587004508056" />
     <state width="1901" height="295" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1586909833487" />
     <state x="490" y="272" key="Vcs.Push.Dialog.v2" timestamp="1585950408776">
       <screen x="0" y="23" width="1680" height="1027" />

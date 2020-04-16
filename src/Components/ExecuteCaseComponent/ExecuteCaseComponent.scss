@@ -16,7 +16,6 @@ h4 {
 }
 
 
-
 .rbd {
   color: $primary-light;
 }
@@ -152,10 +151,29 @@ h4 {
   min-height: 100vh;
   position: relative;
 
+  div{
+    .btn-link:first-child {
+      height: 60px;
+      width: 60px;
+      svg {
+        display: none;
+      }
+      background-image: url("https://imageog.flaticon.com/icons/png/512/124/124021.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF");
+      background-repeat: no-repeat;
+      background-size: contain
+    }
+    .container-fluid, form{
+      .btn-link{
+        background-image: none !important;
+      }
+    }
+  }
+
   &-header {
     text-align: center;
     color: $primary;
     line-height: 1.333;
+
     &-1 {
       @extend .hm-view-header;
       font-weight: 500;
@@ -231,12 +249,12 @@ h4 {
     margin-bottom: 1rem;
   }
 
-  
 
   .form-group {
     label {
       margin-bottom: 5px;
     }
+
     input.form-control {
       background-color: #fff;
       border-bottom: 2px solid #c3c9cc;
@@ -248,6 +266,7 @@ h4 {
       caret-color: $orange;
       border-radius: 0;
       box-sizing: border-box;
+
       &:focus {
         outline-width: 0;
         outline: none;
@@ -255,16 +274,16 @@ h4 {
         border-bottom: 2px solid $primary;
       }
     }
+
     .form-control {
       border: none;
       background: $bg-form;
       color: $primary;
       cursor: pointer;
-      
-      padding: 22px;
-      height: auto;      
-      margin-bottom: 16px;
 
+      padding: 22px;
+      height: auto;
+      margin-bottom: 16px;
 
 
       &.hm-label-radio-button-single {
@@ -273,29 +292,36 @@ h4 {
         font-weight: 500;
         text-align: center;
       }
+
       &.hm-label-radio-button-multiple {
         font-size: 16px;
         font-weight: normal;
         line-height: 1.5;
         text-align: left;
         padding-right: 80px;
+
         .hm-custom-check {
           position: absolute;
           right: 16px;
           top: 16px;
+
           svg {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-          }          
-        };
+          }
+        }
+      ;
+
         &.checkbox-active {
           box-shadow: inset 0 0 0 2px $primary;
+
           .hm-custom-check {
             opacity: 1;
           }
         }
+
         .hm-custom-check {
           position: absolute;
           opacity: 0;
@@ -305,7 +331,6 @@ h4 {
     }
   }
 
-  
 
   .custom-check {
     background: $bg-form;
@@ -317,6 +342,7 @@ h4 {
     border-radius: 100%;
     height: 24px;
     width: 24px;
+
     path {
       fill: #fff;
     }
@@ -325,7 +351,6 @@ h4 {
   button.invisible {
     display: none;
   }
-
 
 
 }
