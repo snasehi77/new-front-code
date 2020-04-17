@@ -151,24 +151,6 @@ h4 {
   min-height: 100vh;
   position: relative;
 
-  div{
-    .btn-link:first-child {
-      height: 60px;
-      width: 60px;
-      svg {
-        display: none;
-      }
-      background-image: url("https://imageog.flaticon.com/icons/png/512/124/124021.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF");
-      background-repeat: no-repeat;
-      background-size: contain
-    }
-    .container-fluid, form{
-      .btn-link{
-        background-image: none !important;
-      }
-    }
-  }
-
   &-header {
     text-align: center;
     color: $primary;

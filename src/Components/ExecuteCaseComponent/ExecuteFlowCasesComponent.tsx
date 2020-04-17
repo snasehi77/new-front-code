@@ -23,8 +23,7 @@ const ExecuteFlowCasesComponent = () => {
         <div className="hm-view">
           {id && <ExecutionFlow onSubmitForm={onSubmitForm}
                                 flowId={parseInt(id)}
-
-                                className="col-xl-4 col-lg-8 col-md-10 col-12 m-auto"/>}
+                                className="col-xl-6 col-lg-8 col-md-10 col-12 m-auto"/>}
         </div>
       </div>
     )
