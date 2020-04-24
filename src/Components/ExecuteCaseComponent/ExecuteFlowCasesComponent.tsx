@@ -1,6 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import "./ExecuteCaseComponent.scss";
+// import "./ExecuteCaseComponent.scss";
+import "./ExecuteCaseComponentExtended.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
 import {ExecutionFlow} from "execution-flow";
 import Flow from "../../models/Flow";
@@ -20,10 +21,10 @@ const ExecuteFlowCasesComponent = () => {
     return (
       <div className="vh-100">
         <NavbarComponent/>
-        <div className="hm-view">
+        <div id="yourcase-hm-view">
           {id && <ExecutionFlow onSubmitForm={onSubmitForm}
                                 flowId={parseInt(id)}
-                                className="col-xl-6 col-lg-8 col-md-10 col-12 m-auto"/>}
+                                className="yourcase-hm-view-inner-wrapper m-auto"/>}
         </div>
       </div>
     )

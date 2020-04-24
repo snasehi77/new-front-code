@@ -1,0 +1,541 @@
+// NOTE: this file is intended to completely replace ExecuteCaseComponent.scss
+
+@import "../../Styles/variables";
+
+$bg-form-button: #F6EEE1;
+
+$body-font-global: 'Graphik', sans-serif;
+$header-font-normal: $body-font-global;
+$header-font-medium: 'Graphik medium', sans-serif;
+
+// everything inside the .hm-view-main-wrapper div is upstream markup from the execution-flow component
+.hm-view-main-wrapper {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  .hm-view-header {
+    text-align: center;
+    color: $primary;
+    line-height: 1.333;
+    font-family: $header-font-medium;
+
+    &-1 {
+      @extend .hm-view-header;
+      font-size: 28px;
+      margin-bottom: 0.5rem;
+    }
+
+    &-2 {
+      @extend .hm-view-header;
+      // font-weight: bold;
+      font-size: 28px;
+    }
+
+    &-3 {
+      @extend .hm-view-header;
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    &-custom-1 {
+      @extend .hm-view-header;
+      font-size: 24px;
+      margin-bottom: 2rem;
+      font-family: $header-font-normal;
+    }
+  }
+
+
+  .hm-button-close {
+    top: 15px !important;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+
+
+  .hm-view-p-1 {
+    font-size: 16px;
+    text-align: center;
+    color: #8A9499;
+  }
+
+  .hm-view-p-2 {
+    font-size: 16px;
+    color: #454A4D;
+    color: #8A9499;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .why_this_matters {
+    color: $orange;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+
+  
+
+
+
+  .form-group {
+    label {
+      margin-bottom: 5px;
+    }
+
+    .custom-check,
+    .custom-checked {
+      position: absolute;
+      display: block;
+      right: auto;
+      left: auto;
+      top: auto;
+      bottom: auto;
+      background: $orange;
+      border-radius: 100%;
+      height: 24px;
+      width: 24px;
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .custom-check {
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+    }
+
+    .custom-checked {
+      opacity: 1;
+
+      path {
+        fill: #fff;
+      }
+    }
+  
+    button.invisible {
+      display: none;
+    }
+
+    &.container-radio {
+      input[type=radio] {
+        display: none;
+      }
+
+      .custom-checked {
+        display: none;
+      }
+
+
+    }
+
+    &.container-checkbox {
+      input[type=checkbox] {
+        display: none;
+      } 
+
+      .custom-checked {
+        background: $orange;
+      }
+
+      .checkbox-active {
+        box-shadow: inset 0 0 0 2px $primary;
+
+        // .hm-custom-check {
+        //   opacity: 1;
+        // }
+      }
+    }
+
+    .form-control {
+      border: none;
+      background: $bg-form-button;
+      color: $primary;
+      cursor: pointer;
+
+      padding: 22px;
+      height: auto;
+      margin-bottom: 16px;
+      
+
+      // single-line radio button form
+      &.hm-label-radio-button-single {
+        line-height: 1;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+
+        font-family: $header-font-medium;
+
+        &:active {
+          background-color: $primary-light;
+          color: #fff;
+        }
+      }
+
+
+      // multiline checkbox form
+      &.hm-label-radio-button-multiple {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.5;
+        text-align: left;
+        padding-right: 80px;
+
+        .hm-custom-check {
+          right: 16px;
+          top: 16px;
+        }
+      }
+    }
+
+    // user input form element wrapper (e.g. contact info)
+    // FIXME: this needs a better class if possible
+    input.form-control {
+      background-color: #fff;
+      border-bottom: 2px solid #c3c9cc;
+      margin-bottom: 2rem;
+      // margin-top: -5px;
+      padding: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.333;
+      caret-color: $orange;
+      border-radius: 0;
+      box-sizing: border-box;
+      cursor: text;
+
+      &:focus {
+        outline-width: 0;
+        outline: none;
+        box-shadow: none;
+        border-bottom: 2px solid $primary;
+      }
+    }
+  }
+
+
+  .hm-view-footer {
+    height: 88px;
+    position: absolute;
+    align-self: flex-end;
+    position: fixed;
+
+    // prevemts the .hm-view-footer-info-drawer from being overdrawn by a shadow
+    & > div:first-child {
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .hm-view-footer-controls {
+      height: 88px;
+      
+      z-index: 1;
+      position: relative;
+
+      .btn {
+        padding: 18px 78px;
+        font-family: $header-font-medium;
+      }
+      .hm-view-button-back {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        color: #8A9499;
+      }
+  
+      .hm-view-button-next {
+        background-color: #ED5454;
+      }
+    }
+  
+    .hm-view-footer-info-drawer {
+      z-index: 2;
+      position: absolute;
+      bottom: 100%;
+      height: 88px;
+      // box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+      z-index: 2;
+
+      .info-drawer-content {
+        & > div:first-child {
+          padding-top: 50px;
+        }
+        h5 {
+          font-family: $header-font-medium;
+          font-size: 24px;
+        }
+        p {
+          color: #454A4D;
+          line-height: 1.5;
+        }
+        .info-drawer-content-item {
+          .btn {
+            margin-bottom: 16px;
+            padding: 5px 16px;
+            font-size: 16px;
+            font-family: $header-font-medium;
+            background-color: $primary-light;
+          }          
+        }
+      }
+    }
+
+    &.hm-show-description {
+      .hm-view-footer-info-drawer {
+        padding-top: 40px;
+        height: auto;
+      }
+
+      // turn the 'get more information' button into an X button
+      button#description_popover {
+        z-index: 1;
+        padding: 0;
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        background-image: url('../../Assets/icons/icn_close.svg');
+        // TODO: gotta be a safer way to position this
+        top: 24px;
+        left: 40px;
+      }
+    }
+
+    &.hm-collapse-description {
+      .hm-view-footer-info-drawer {
+        height: 88px;
+      }
+    }
+
+    #description_popover {
+      height: 100%;
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    .more_info {
+      color: $primary-light !important;
+      b {
+        text-decoration: none;
+        color: $primary-light !important;
+        font-weight: normal;
+        font-size: 16px;
+        font-family: $body-font-global;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+
+  .hm-view-footer-1 {
+    text-align: center;
+  }
+
+  .hm-view-footer-1,
+  .hm-view-terms {
+    color: $primary-light;
+    font-size: 16px;
+
+    a {
+      color: $orange;
+    }
+  }
+
+
+}
+
+.modal-content {
+  h5 {
+    font-size: 24px;
+    line-height: 1.333;
+  }
+  p {
+    line-height: 1.5;
+    color: #444a4c;
+  }
+}
+
+
+
+
+
+
+#yourcase-hm-view {
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  font-family: $body-font-global;
+
+  .yourcase-hm-view-inner-wrapper {
+    max-width: 480px;
+    padding: 0 32px;
+  }
+
+
+
+
+  // FIXME: shouldn't have to hack around this column markup
+  .form-group {
+    .form-control {
+      .row {
+        position: relative;
+      }
+
+      // the container for the text content
+      .col-10 {
+        flex: none;
+        max-width: none;
+        text-align: center;
+        display: block !important;
+        position: relative;
+      }
+
+      // the container for the checkmark
+      // TODO: either get rid of this container or add a class to it
+      .col-2 {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        flex: none;
+        max-width: none;
+        padding: 0;
+      }
+    }
+  }
+
+
+  // FIXME: all YourCase-specific style overrides belong here
+
+
+  // userland hacks for specific YourCase HM content
+  // these are necessary to create flow-specic style rules that are not possible through the HM gui
+  #YourCase_Question_Formats_Tell_us_what_happened {
+    .hm-view-p-2 {
+      margin-bottom: 0;
+    }
+    .form-group {
+      margin: 0;
+      padding: 64px 0 40px;
+  
+      // why is there an empty label that takes up vertical space? hide it for now
+      & > label:first-child {
+        display: none;
+      }
+  
+      & > label:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    .hm-view-footer-1 {
+      .hm-ml-2 {
+        margin-left: 5px;
+      }
+    }
+  }
+  
+  
+  #YourCase_Question_Formats_When_did_you_begin_using_talcum_powder_on_or_around_your_genitals {
+    .why_this_matters {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      margin: 0;
+      padding: 48px 0;
+
+      // why is there an empty label that takes up vertical space? hide it for now
+      & > label:first-child {
+        display: none;
+      }
+    }
+  }
+
+  #YourCase_Question_Formats_Good_News {
+    .hm-view-header-1,
+    .hm-view-header-custom-1,
+    .hm-view-p-2 {
+      text-align: left;
+    }
+
+    .hm-view-header-1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .hm-view-header-custom-1 {
+      margin-bottom: 48px;
+    }
+
+    .hm-view-p-2 {
+      color: #454A4D;
+    }
+
+    .container-radio {
+      margin-top: 48px;
+      // why is there an empty label that takes up vertical space? hide it for now
+      & > label:first-child {
+        display: none;
+      }
+
+      label {
+        font-size: 16px;
+        &[for="radioCall Now"] {
+          color: #fff;
+          background-color: #ED5454;
+        }
+
+        &[for="radioSchedule Call"] {
+          background-color: #fff;
+          box-shadow: inset 0 0 0 1px #8A9499;
+        }
+      }
+    }
+    .custom-check,
+    .custom-checked {
+      display: none;
+    }
+  }
+
+  #YourCase_Question_Formats_Contact_Information_not_victim {
+    .hm-view-header-1 {
+      font-size: 32px;
+    }
+
+    .hm-view-p-2 {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+  }
+
+  #YourCase_Question_Formats_Contact_Information_victim {
+    .hm-view-header-1 {
+      font-size: 32px;
+      text-align: left;
+    }
+
+    .hm-view-p-1 {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    label {
+      &[for="radioSchedule Call"] {
+        color: #fff;
+        background-color: #ED5454;
+        font-size: 16px;
+      }
+    }
+  }
+}
