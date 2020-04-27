@@ -4412,10 +4412,10 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.7.2.tgz#97cfeb539497a5296825b7d96568487a655c96c0"
-  integrity sha512-ZTbv9MXOClJ5ADVlXOJEhK180G5JtUf43uE++wQoWsbRNLmKFdlGBbJaURYSyIsUJFXmINUO9c9OZgCluSggOw==
+execution-flow@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.7.3.tgz#9b4ed83e8406d610f77a48a93dcc2617bdb4605a"
+  integrity sha512-89EfmCXIL3xTssHNQiXKyFhbRINBlJ05oHY/c5UgqyUFnsaSHpnKlRvMVtbsRzbixzCpS4nT5WbLdX6ZtjbDdg==
   dependencies:
     "@emotion/core" "^10.0.28"
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
@@ -4423,19 +4423,10 @@ execution-flow@^1.7.2:
     "@fortawesome/react-fontawesome" "^0.1.8"
     "@types/history" "^4.7.5"
     "@types/reactstrap" "^8.4.2"
-    execution-input "^2.9.2"
+    execution-input "^2.9.3"
     history "^4.10.1"
     react-dates "^21.8.0"
     reactstrap "^8.4.1"
-
-execution-input@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/execution-input/-/execution-input-2.9.2.tgz#f82142ed127746d31bde1c43ca44c9b7ca650c2e"
-  integrity sha512-0wMVyi4qXzFEbddI/e6T1kCwPIaotiqBCXzFKipERdjoDUzEi+VaE3G4SDcyag4b8Z+HJNQRsrjk8nEcL5Ojsg==
-  dependencies:
-    "@emotion/core" "^10.0.28"
-    "@types/react-dates" "^17.1.7"
-    react-select "^3.0.8"
 
 execution-input@^2.9.3:
   version "2.9.3"
