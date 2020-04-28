@@ -11,8 +11,15 @@ $header-font-medium: 'Graphik medium', sans-serif;
 // everything inside the .hm-view-main-wrapper div is upstream markup from the execution-flow component
 .hm-view-main-wrapper {
   min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 70px;
+  padding-bottom: 80px;
+
+  @media (min-width: 480px) and (min-height: 600px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+
 
   .hm-view-header {
     text-align: center;
@@ -22,27 +29,46 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
     &-1 {
       @extend .hm-view-header;
-      font-size: 28px;
+      font-size: 24px;
       margin-bottom: 0.5rem;
     }
 
     &-2 {
       @extend .hm-view-header;
       // font-weight: bold;
-      font-size: 28px;
+      font-size: 20px;
     }
 
     &-3 {
       @extend .hm-view-header;
       font-weight: 500;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     &-custom-1 {
       @extend .hm-view-header;
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 2rem;
       font-family: $header-font-normal;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .hm-view-header {
+      &-1 {
+        font-size: 28px;
+        margin-bottom: 0.5rem;
+      }
+      &-2 {
+        font-size: 28px;
+      }
+      &-3 {
+        font-size: 24px;
+      }
+      &-custom-1 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -56,17 +82,24 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
 
   .hm-view-p-1 {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     color: #8A9499;
+    @media (min-width: 480px) {
+      font-size: 16px;
+    }
   }
 
   .hm-view-p-2 {
-    font-size: 16px;
+    font-size: 14px;
     color: #454A4D;
     color: #8A9499;
     text-align: center;
     margin-bottom: 1.2rem;
+
+    @media (min-width: 480px) {
+      font-size: 16px;
+    }
   }
 
   .why_this_matters {
@@ -82,7 +115,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
   .form-group {
     label {
-      margin-bottom: 5px;
+      margin-bottom: 0px;
     }
 
     .custom-check,
@@ -166,7 +199,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
       // single-line radio button form
       &.hm-label-radio-button-single {
         line-height: 1;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         text-align: center;
 
@@ -176,20 +209,36 @@ $header-font-medium: 'Graphik medium', sans-serif;
           background-color: $primary-light;
           color: #fff;
         }
+
+        @media (min-width: 480px) {
+          font-size: 20px;
+        }
       }
 
 
       // multiline checkbox form
       &.hm-label-radio-button-multiple {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         line-height: 1.5;
         text-align: left;
-        padding-right: 80px;
+        padding: 16px;
+        padding-right: 40px;
+        
 
         .hm-custom-check {
-          right: 16px;
-          top: 16px;
+          right: 10px;
+          top: 10px;
+        }
+
+        @media (min-width: 480px) {
+          font-size: 16px;
+          padding-right: 80px;
+          padding: 22px;
+          .hm-custom-check {
+            right: 16px;
+            top: 16px;
+          }
         }
       }
     }
@@ -199,7 +248,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
     input.form-control {
       background-color: #fff;
       border-bottom: 2px solid #c3c9cc;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       // margin-top: -5px;
       padding: 0 0 10px;
       font-size: 24px;
@@ -215,12 +264,30 @@ $header-font-medium: 'Graphik medium', sans-serif;
         box-shadow: none;
         border-bottom: 2px solid $primary;
       }
+
+      @media (min-width: 480px) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    
+    &.hm-field-small-text {
+      .hm-field-label {
+        margin-bottom: 0px;
+      }
+
+      @media (min-width: 480px) {
+        .hm-field-label {
+          margin-bottom: 5px;
+        }
+
+      }
     }
   }
 
 
   .hm-view-footer {
-    height: 88px;
+    height: 70px;
     position: absolute;
     align-self: flex-end;
     position: fixed;
@@ -231,13 +298,15 @@ $header-font-medium: 'Graphik medium', sans-serif;
     }
 
     .hm-view-footer-controls {
-      height: 88px;
+      height: 70px;
       
       z-index: 1;
       position: relative;
+      padding-right: 20px;
+      padding-left: 20px;
 
       .btn {
-        padding: 18px 78px;
+        padding: 10px 50px;
         font-family: $header-font-medium;
       }
       .hm-view-button-back {
@@ -256,11 +325,15 @@ $header-font-medium: 'Graphik medium', sans-serif;
       z-index: 2;
       position: absolute;
       bottom: 100%;
-      height: 88px;
-      // box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
-      z-index: 2;
+      background-color: #fff;
+      padding-left: 20px;
+      padding-right: 20px;
 
+      height: 88px;
+      transition: height 0.3s ease-in-out;
+      
       .info-drawer-content {
+        // the text header section
         & > div:first-child {
           padding-top: 50px;
         }
@@ -284,10 +357,21 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
     }
 
+
     &.hm-show-description {
       .hm-view-footer-info-drawer {
         padding-top: 40px;
-        height: auto;
+        // height: auto;
+        // max-height: 9999px;
+        height: 300px;
+
+        @media (min-height: 640px) {
+          height: 500px;
+        }
+
+        @media (min-height: 800px) {
+          height: 500px;
+        }
       }
 
       // turn the 'get more information' button into an X button
@@ -300,17 +384,18 @@ $header-font-medium: 'Graphik medium', sans-serif;
         background-image: url('../../Assets/icons/icn_close.svg');
         // TODO: gotta be a safer way to position this
         top: 24px;
-        left: 40px;
+        left: 16px;
+
+        @media (min-width: 480px) {
+          left: 40px;
+        }
       }
     }
 
-    &.hm-collapse-description {
-      .hm-view-footer-info-drawer {
-        height: 88px;
-      }
-    }
+
 
     #description_popover {
+      padding: 0;
       height: 100%;
       &:hover {
         color: inherit;
@@ -324,16 +409,39 @@ $header-font-medium: 'Graphik medium', sans-serif;
         text-decoration: none;
         color: $primary-light !important;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 14px;
         font-family: $body-font-global;
       }
       &:after {
         display: none;
       }
     }
+
+    @media (min-width: 480px) {
+      height: 88px;
+      .hm-view-footer-controls {
+        height: 88px;
+        padding-right: 32px;
+        padding-left: 32px;
+        .btn {
+          padding: 18px 78px;
+        }
+      }
+      .hm-view-footer-info-drawer {
+        // height: 88px;
+        min-height: 88px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .more_info {
+        b {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
-
+  // "can't find what you're looking for?"
   .hm-view-footer-1 {
     text-align: center;
   }
@@ -341,10 +449,17 @@ $header-font-medium: 'Graphik medium', sans-serif;
   .hm-view-footer-1,
   .hm-view-terms {
     color: $primary-light;
-    font-size: 16px;
+    font-size: 14px;
 
     a {
       color: $orange;
+      b {
+        margin-left: 5px;
+      }
+    }
+
+    @media (min-width: 480px) {
+      font-size: 16px;
     }
   }
 
@@ -367,6 +482,10 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
 
 
+
+
+
+
 #yourcase-hm-view {
   box-sizing: border-box;
   min-height: 100vh;
@@ -375,7 +494,11 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
   .yourcase-hm-view-inner-wrapper {
     max-width: 480px;
-    padding: 0 32px;
+    padding: 0 20px;
+
+    @media (min-width: 480px) {
+      padding: 0 32px;
+    }
   }
 
 
@@ -426,7 +549,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
     }
     .form-group {
       margin: 0;
-      padding: 64px 0 40px;
+      padding: 30px 0;
   
       // why is there an empty label that takes up vertical space? hide it for now
       & > label:first-child {
@@ -436,6 +559,10 @@ $header-font-medium: 'Graphik medium', sans-serif;
       & > label:last-child {
         margin-bottom: 0;
       }
+
+      @media (min-width: 480px) {
+        padding: 64px 0 40px;
+      }
     }
   
     .hm-view-footer-1 {
@@ -444,6 +571,8 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
     }
   }
+
+
   
   
   #YourCase_Question_Formats_When_did_you_begin_using_talcum_powder_on_or_around_your_genitals {
@@ -453,11 +582,15 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
     .form-group {
       margin: 0;
-      padding: 48px 0;
+      padding: 30px 0;
 
       // why is there an empty label that takes up vertical space? hide it for now
       & > label:first-child {
         display: none;
+      }
+
+      @media (min-width: 480px) {
+        padding: 64px 0 40px;
       }
     }
   }
@@ -470,12 +603,12 @@ $header-font-medium: 'Graphik medium', sans-serif;
     }
 
     .hm-view-header-1 {
-      font-size: 32px;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 0.5em;
     }
 
     .hm-view-header-custom-1 {
-      margin-bottom: 48px;
+      margin-bottom: 1.5em;
     }
 
     .hm-view-p-2 {
@@ -483,7 +616,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
     }
 
     .container-radio {
-      margin-top: 48px;
+      margin-top: 30px;
       // why is there an empty label that takes up vertical space? hide it for now
       & > label:first-child {
         display: none;
@@ -506,28 +639,54 @@ $header-font-medium: 'Graphik medium', sans-serif;
     .custom-checked {
       display: none;
     }
+
+    @media (min-width: 480px) {
+      .hm-view-header-1 {
+        font-size: 32px;
+      }
+
+      .hm-view-header-custom-1 {
+        margin-bottom: 2em;
+      }
+
+      .container-radio {
+        margin-top: 48px;
+      }
+    }
   }
 
   #YourCase_Question_Formats_Contact_Information_not_victim {
     .hm-view-header-1 {
-      font-size: 32px;
+      font-size: 28px;
+      text-align: left;
     }
 
     .hm-view-p-2 {
       text-align: left;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 480px) {
+      .hm-view-header-1 {
+        font-size: 32px;
+      }
+
+      .hm-view-p-2 {
+        margin-bottom: 60px;
+      }
+
     }
   }
 
   #YourCase_Question_Formats_Contact_Information_victim {
     .hm-view-header-1 {
-      font-size: 32px;
+      font-size: 28px;
       text-align: left;
     }
 
     .hm-view-p-1 {
       text-align: left;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
 
     label {
@@ -537,5 +696,16 @@ $header-font-medium: 'Graphik medium', sans-serif;
         font-size: 16px;
       }
     }
+
+    @media (min-width: 480px) {
+      .hm-view-header-1 {
+        font-size: 32px;
+      }
+
+      .hm-view-p-1 {
+        margin-bottom: 60px;
+      }
+    }
+
   }
 }
