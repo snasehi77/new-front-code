@@ -26,11 +26,12 @@ $header-font-medium: 'Graphik medium', sans-serif;
     color: $primary;
     line-height: 1.333;
     font-family: $header-font-medium;
+    margin-bottom: 0.5em;
 
     &-1 {
       @extend .hm-view-header;
       font-size: 24px;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.5em;
     }
 
     &-2 {
@@ -48,16 +49,15 @@ $header-font-medium: 'Graphik medium', sans-serif;
     &-custom-1 {
       @extend .hm-view-header;
       font-size: 20px;
-      margin-bottom: 2rem;
       font-family: $header-font-normal;
     }
   }
 
   @media (min-width: 480px) {
     .hm-view-header {
+      margin-bottom: 1em;
       &-1 {
         font-size: 28px;
-        margin-bottom: 0.5rem;
       }
       &-2 {
         font-size: 28px;
@@ -67,7 +67,6 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
       &-custom-1 {
         font-size: 24px;
-        margin-bottom: 2rem;
       }
     }
   }
@@ -185,13 +184,80 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
     }
 
+    &.hm-field-date {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 120px;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+
+      &:before {
+        top: 0;
+        background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+      }
+
+      &:after {
+        bottom: 0;
+        background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+      }
+
+      .hm-field-label {
+        display: none;
+      }
+      .css-DateInput-input {
+        flex: none;
+        max-width: none;
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 20px;
+        .date-input-item {
+          border: none;
+          b {
+            color: #0D3F37;
+          }
+        }
+        .hm-view-date-selector-active {        
+          border-top: 1px solid rgba(138, 148, 153, 0.5);
+          border-bottom: 1px solid rgba(138, 148, 153, 0.5);
+          background: transparent;
+          b {
+            color: #0D3F37;
+          }
+        }
+      }
+      
+
+    }
+
+
+    .hm-field-label {
+      font-size: 13px;
+    }
+
+    @media (min-width: 480px) {
+      .hm-field-label {
+        font-size: 16px;
+      }
+    }
+
+
     .form-control {
       border: none;
       background: $bg-form-button;
       color: $primary;
       cursor: pointer;
 
-      padding: 22px;
+      padding: 18px;
       height: auto;
       margin-bottom: 16px;
       
@@ -242,6 +308,11 @@ $header-font-medium: 'Graphik medium', sans-serif;
         }
       }
     }
+    @media (min-width: 480px) {
+      .form-control {
+        padding: 22px;
+      }
+    }
 
     // user input form element wrapper (e.g. contact info)
     // FIXME: this needs a better class if possible
@@ -251,7 +322,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
       margin-bottom: 1rem;
       // margin-top: -5px;
       padding: 0 0 10px;
-      font-size: 24px;
+      font-size: 18px;
       line-height: 1.333;
       caret-color: $orange;
       border-radius: 0;
@@ -266,6 +337,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
 
       @media (min-width: 480px) {
+        font-size: 24px;
         margin-bottom: 2rem;
       }
     }
@@ -284,6 +356,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
     }
   }
+
 
 
   .hm-view-footer {
@@ -532,182 +605,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
     }
   }
-
-
-  // FIXME: all YourCase-specific style overrides belong here
-
-
-  // userland hacks for specific YourCase HM content
-  // these are necessary to create flow-specic style rules that are not possible through the HM gui
-  #YourCase_Question_Formats_Tell_us_what_happened {
-    .hm-view-p-2 {
-      margin-bottom: 0;
-    }
-    .form-group {
-      margin: 0;
-      padding: 30px 0;
-  
-      // why is there an empty label that takes up vertical space? hide it for now
-      & > label:first-child {
-        display: none;
-      }
-  
-      & > label:last-child {
-        margin-bottom: 0;
-      }
-
-      @media (min-width: 480px) {
-        padding: 64px 0 40px;
-      }
-    }
-  
-    .hm-view-footer-1 {
-      .hm-ml-2 {
-        margin-left: 5px;
-      }
-    }
-  }
-
-
-  
-  
-  #YourCase_Question_Formats_When_did_you_begin_using_talcum_powder_on_or_around_your_genitals {
-    .why_this_matters {
-      margin-bottom: 0;
-    }
-
-    .form-group {
-      margin: 0;
-      padding: 30px 0;
-
-      // why is there an empty label that takes up vertical space? hide it for now
-      & > label:first-child {
-        display: none;
-      }
-
-      @media (min-width: 480px) {
-        padding: 64px 0 40px;
-      }
-    }
-  }
-
-  #YourCase_Question_Formats_Good_News {
-    .hm-view-header-1,
-    .hm-view-header-custom-1,
-    .hm-view-p-2 {
-      text-align: left;
-    }
-
-    .hm-view-header-1 {
-      font-size: 28px;
-      margin-bottom: 0.5em;
-    }
-
-    .hm-view-header-custom-1 {
-      margin-bottom: 1.5em;
-    }
-
-    .hm-view-p-2 {
-      color: #454A4D;
-    }
-
-    .container-radio {
-      margin-top: 30px;
-      // why is there an empty label that takes up vertical space? hide it for now
-      & > label:first-child {
-        display: none;
-      }
-
-      label {
-        font-size: 16px;
-        &[for="radioCall Now"] {
-          color: #fff;
-          background-color: #ED5454;
-        }
-
-        &[for="radioSchedule Call"] {
-          background-color: #fff;
-          box-shadow: inset 0 0 0 1px #8A9499;
-        }
-      }
-    }
-    .custom-check,
-    .custom-checked {
-      display: none;
-    }
-
-    @media (min-width: 480px) {
-      .hm-view-header-1 {
-        font-size: 32px;
-      }
-
-      .hm-view-header-custom-1 {
-        margin-bottom: 2em;
-      }
-
-      .container-radio {
-        margin-top: 48px;
-      }
-    }
-  }
-
-  #YourCase_Question_Formats_Contact_Information_not_victim {
-    .hm-view-header-1 {
-      font-size: 28px;
-      text-align: left;
-    }
-
-    .hm-view-p-2 {
-      text-align: left;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 480px) {
-      .hm-view-header-1 {
-        font-size: 32px;
-      }
-
-      .hm-view-p-2 {
-        margin-bottom: 60px;
-      }
-
-    }
-  }
-
-  #YourCase_Question_Formats_Contact_Information_victim {
-    .hm-view-header-1 {
-      font-size: 28px;
-      text-align: left;
-    }
-
-    .hm-view-p-1 {
-      text-align: left;
-      margin-bottom: 30px;
-    }
-
-    label {
-      &[for="radioSchedule Call"] {
-        color: #fff;
-        background-color: #ED5454;
-        font-size: 16px;
-      }
-    }
-
-    @media (min-width: 480px) {
-      .hm-view-header-1 {
-        font-size: 32px;
-      }
-
-      .hm-view-p-1 {
-        margin-bottom: 60px;
-      }
-    }
-
-  }
 }
-
-
-
 
 
 // the production flow has some brand new classes
@@ -718,7 +616,12 @@ $header-font-medium: 'Graphik medium', sans-serif;
     color: $primary;
     line-height: 1.333;
     font-family: $header-font-medium;
-    font-size: 24px;
+    font-size: 21px;
+    margin-bottom: 0.5em;
+
+    @media (min-width: 480px) {
+      font-size: 24px;
+    }
   }
 
   .container-radio {
@@ -735,4 +638,11 @@ $header-font-medium: 'Graphik medium', sans-serif;
     }
   }
 
+}
+
+
+
+// hide the controls footer for the first step of the flow
+#Hero_FlowDMV_IncidentTypeHero_footer {
+  display: none;
 }
