@@ -643,7 +643,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
 
 // hide the controls footer for the first step of the flow
-#Hero_FlowDMV_IncidentTypeHero_footer {
+#hero_flowdmv_incidenttypehero_footer {
   display: none;
 }
 
@@ -651,7 +651,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
 // FIXME: these styles depend on this one specific id
 // which is derived from a specific step name in a specific flow
 // if these styles are going to be reused, there NEEDS to be a class on the .form-group
-#Hero_FlowDMV_ScheduleDate {
+#hero_flowdmv_scheduledate {
   .form-group {
     & > div {
       padding-left: 0;
