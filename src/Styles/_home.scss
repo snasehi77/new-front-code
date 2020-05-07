@@ -4,6 +4,9 @@
   background-color: $beige-custom;
 }
 
+* {
+  text-rendering: optimizeLegibility;
+}
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -100,14 +103,10 @@
 
 .main-title {
   font-family: 'Graphik semibold', serif;
-  font-size: 56px;
   line-height: 1.15;
   color: $primary;
-
   font-style: normal;
-  font-weight: 600;
   font-size: 28px;
-
   margin-bottom: 20px;
 }
 
