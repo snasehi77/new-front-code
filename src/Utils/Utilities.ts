@@ -208,20 +208,17 @@ export const steps = [
   {
     num: "1",
     title: "Tell us what happened.",
-    p1: "Answer a few simple questions",
-    p2: "about your case."
+    p1: "Answer a few simple questions about your case."
   },
   {
     num: "2",
     title: "We make an introduction.",
-    p1: "Based on your answers, ",
-    p2: " we find an attorney for you."
+    p1: "Based on your answers, we find an attorney for you.",
   },
   {
     num: "3",
     title: "They get in touch.",
-    p1:
-      "Within minutes, you’ll be introduced to an attorney interested in representing you."
+    p1: "Within minutes, you’ll be introduced to an attorney interested in representing you."
   }
 ];
 
