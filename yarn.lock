@@ -4412,10 +4412,10 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execution-flow@^1.7.7:
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.7.7.tgz#f6bcf073f85b1345c7c86a639db6858176668e96"
-  integrity sha512-lnSSGXc8yZhe6GF33de7ZrKVigeS09rIXNElnDUd0q9aj440ck7J3p8ytT1k4tiweJkN3TPN7DLjzWbGYwCniA==
+execution-flow@^1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/execution-flow/-/execution-flow-1.7.9.tgz#a829cbd61a72245b3b30ed2f6b3a4a7e9597028b"
+  integrity sha512-l5yFPutfOA7IJg3hnseXZP9y280QS24gaDZ0aO38I/isHhSU68J6fpsRoS9xpdb7tA+YIj6tiZ2TXmJFh62uuw==
   dependencies:
     "@emotion/core" "^10.0.28"
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
