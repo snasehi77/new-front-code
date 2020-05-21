@@ -16,7 +16,7 @@
     "@types/reactstrap": "^8.0.6",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
-    "execution-flow": "^1.8.5",
+    "execution-flow": "^1.9.0",
     "execution-input": "^2.9.5",
     "font-awesome": "^4.7.0",
     "moment": "^2.24.0",
