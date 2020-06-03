@@ -9,7 +9,7 @@ const NavbarComponent = () => {
     const toggleNavbar = () => setCollapsed(!collapsed);
 
     return <div className="container-fluid position-absolute p-0">
-        <Navbar light>
+        <Navbar className="navbar" light>
             <NavbarBrand href="/" className="mr-auto">
                 {/*<LogoComponent className="your-case-logo my-auto ml-4 pt-md-3 ml-md-4"/>*/}
                 <img  className="your-case-logo my-auto" src={logo} alt="logo"/>

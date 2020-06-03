@@ -45,12 +45,13 @@
   // make sure to keep this above the hero image
   z-index: 1;
   padding: 0px;
+  height: 56px;
 }
 
 @media (min-width: 375px) {
   .your-case-logo {
-    width: 210px;
-    height: 64px;
+    width: 326px;
+    height: 56px;
   }
 }
 

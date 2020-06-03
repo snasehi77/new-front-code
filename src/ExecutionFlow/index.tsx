@@ -17,8 +17,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
   faCheckCircle,
-  faTimes
 } from "@fortawesome/free-solid-svg-icons";
+import icon_close from "../Assets/icons/icn_close.svg";
 import BreadcrumbComponent, {
   Breadcrumb
 } from "./Shared/BreadcrumbComponent/BreadcrumbComponent";
@@ -366,7 +366,7 @@ const ExecutionFlow: React.FC<Props> = ({
         onClick={() => setModalClose(true)}
         type="button"
       >
-        <FontAwesomeIcon icon={faTimes} />
+        <img src={icon_close} />
       </Button>
 
       {debug && (
@@ -551,7 +551,7 @@ const ExecutionFlow: React.FC<Props> = ({
             color="link"
             type="button"
           >
-            <FontAwesomeIcon icon={faTimes} />
+            <img src={icon_close} />
           </Button>
           <div className="hm-p-3">
             <h5 className="text-primary hm-mb-2">

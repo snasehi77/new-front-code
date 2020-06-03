@@ -101,7 +101,7 @@ const FooterControlsComponent = ({
         {!hiddenBack && <button disabled={disabledBack}
                                 onClick={onBack}
                                 className={"btn btn-light btn-cyan hm-view-button-back hm-px-5" + (hiddenNext ? "" : "hm-mr-2")}>
-          Go Back
+          Back
         </button>}
         {!hiddenNext && <button disabled={disabledNext}
                                 onClick={onNext}
