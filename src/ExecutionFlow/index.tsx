@@ -42,6 +42,9 @@ interface Props {
     stepName: string,
     fields: any[]
   ) => void;
+  onChangeStep?: (
+    breadcrumb: any
+  ) => void
 }
 
 const ExecutionFlow: React.FC<Props> = ({
@@ -51,7 +54,8 @@ const ExecutionFlow: React.FC<Props> = ({
   debug,
   stepId,
   breadcrumb,
-  onSubmitForm
+  onSubmitForm,
+  onChangeStep,
 }) => {
   const [currentFlow, setCurrentFlow] = useState<any>({});
   const [flow, setFlow] = useState<any>({});
@@ -81,14 +85,18 @@ const ExecutionFlow: React.FC<Props> = ({
       if (exist) {
         return;
       }
-      setBreadcrumbData(e => [
-        ...e,
+      let newData = [
+        ...breadcrumbData,
         {
           id: currentFlow.id,
           label: currentFlow.name,
           data: currentFlow
         }
-      ]);
+      ]
+      setBreadcrumbData(newData)
+      if (onChangeStep) {
+        onChangeStep(newData)
+      }
     }
   }, [currentFlow]);
 
@@ -143,7 +151,6 @@ const ExecutionFlow: React.FC<Props> = ({
     setLoadingFLow(false);
   }
 
-  console.log(flow);
   useEffect(() => {
     if (fields.length) {
       fields.forEach((a: any) => {
@@ -259,12 +266,18 @@ const ExecutionFlow: React.FC<Props> = ({
   }
 
   function navigateToFlow(b: Breadcrumb, index: number) {
+    var newData
     if (index !== breadcrumbData.length - 1) {
       backFlow(breadcrumbData[index + 1].data);
-      setBreadcrumbData(breadcrumbData.slice(0, index + 1));
+      newData = breadcrumbData.slice(0, index + 1)
+      setBreadcrumbData(newData);
     } else {
       backFlow(b);
-      setBreadcrumbData(breadcrumbData.slice(0, index));
+      newData = breadcrumbData.slice(0, index)
+      setBreadcrumbData(newData);
+    }
+    if (onChangeStep) {
+      onChangeStep(newData)
     }
   }
 
