@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 // import "./ExecuteCaseComponent.scss";
 import "./ExecuteCaseComponentExtended.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
-import {ExecutionFlow} from "execution-flow";
+import {ExecutionFlow} from "../../ExecutionFlow";
 import Flow from "../../models/Flow";
 
 declare var window: any;

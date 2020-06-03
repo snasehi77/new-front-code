@@ -3,7 +3,7 @@ import Routes from './Routes'
 import {HashRouter as Router, Route, Switch} from "react-router-dom";
 import {http, login} from "./Network";
 //import ComingSoonComponent from "./components/ComingSoonComponent/ComingSoonComponent";
-import {initialize} from "execution-flow/dist";
+import {initialize} from "./ExecutionFlow";
 
 
 const App = () => {
