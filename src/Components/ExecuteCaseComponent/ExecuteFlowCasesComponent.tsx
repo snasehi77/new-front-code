@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {useParams} from 'react-router-dom';
-// import "./ExecuteCaseComponent.scss";
 import "./ExecuteCaseComponentExtended.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
 import {ExecutionFlow} from "../../ExecutionFlow";
