@@ -18,6 +18,7 @@ export interface DateRange {
 
 
 export interface PropsField {
+  first?: boolean;
   id?: string;
   label?: string | React.ReactNode,
   required?: boolean,

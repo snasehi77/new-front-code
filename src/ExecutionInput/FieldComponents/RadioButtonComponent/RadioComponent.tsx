@@ -7,7 +7,7 @@ export default (props: PropsField) => {
   const {label, required, styles, className, onChange, value, options, radioIconAction, radioAction, customChecked} = props;
 
   return (
-    <div className={"form-group " + " hm-field-radio-button " + className}>
+    <div className={"form-group " + className}>
       <label>{label}</label>
       {options ? (
         options.map((o: Options) => {

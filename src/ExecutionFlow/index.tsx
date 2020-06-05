@@ -241,6 +241,7 @@ const ExecutionFlow: React.FC<Props> = ({
     event.preventDefault();
     const mapField: any = toMap(fields, "id");
     let resultFields: Array<any> = [];
+
     Object.keys(values).forEach(f => {
       if (mapField[f]) {
         resultFields.push({
@@ -258,6 +259,8 @@ const ExecutionFlow: React.FC<Props> = ({
         });
       }
     });
+
+
 
     if (onSubmitForm) {
       onSubmitForm(flow, resultFields, currentFlow.name, resultFields);
@@ -319,6 +322,9 @@ const ExecutionFlow: React.FC<Props> = ({
   ) => {
     switch (type) {
       case FieldTypes.RADIO_BUTTON:
+        if (breadcrumbData.length == 1) {
+          return "container-grid" // TODO: hard code for now
+        }
         return singleValue ? "container-radio" : "container-checkbox";
 
       case FieldTypes.LINK:
@@ -468,6 +474,7 @@ const ExecutionFlow: React.FC<Props> = ({
                           <FontAwesomeIcon className="size-13" icon={faCheck} />
                         }
                         placeholder={f.prompt}
+                        first={breadcrumbData.length < 2} // TODO: hard code for now
                         singleValue={f.single_value}
                         options={getOptions(f.options).map((a: any) => {
                           a.label = (

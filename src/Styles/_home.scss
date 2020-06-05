@@ -119,8 +119,10 @@
   max-width: 1140px;
 }
 @media (min-width: 480px) {
-  padding-right: 32px;
-  padding-left: 32px;
+  .yc-container {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -714,6 +716,14 @@
   padding-left: 16px;
   padding-right: 16px;
   text-align: center;
+}
+
+.final-case-margin {
+  margin-top: 32px;
+
+  @media (min-width: 568px) {
+    margin-top: 40px;
+  }
 }
 
 a.link-orange {

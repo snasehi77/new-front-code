@@ -12,6 +12,7 @@ import SmallTextComponent from "./FieldComponents/TextComponents/SmallTextCompon
 import LargeTextComponent from "./FieldComponents/TextComponents/LargeTextComponent";
 import NumberComponent from "./FieldComponents/TextComponents/NumberComponent";
 import RadioComponent from "./FieldComponents/RadioButtonComponent/RadioComponent";
+import GridComponent from "./FieldComponents/RadioButtonComponent/GridComponent";
 import CheckboxComponent from "./FieldComponents/RadioButtonComponent/CheckboxComponent";
 import DateFieldComponent from "./FieldComponents/DateComponents/DateFieldComponent";
 import DateRangeFieldComponent from "./FieldComponents/DateComponents/DateRangeFieldComponent";
@@ -25,7 +26,7 @@ import LinkComponent from "./FieldComponents/OtherComponents/LinkComponent";
 import SelectComponent from "./FieldComponents/OtherComponents/SelectComponent";
 
 const ExecutionInput = (props: PropsField) => {
-  const {type, singleValue} = props;
+  const {type, singleValue, first} = props;
 
   switch (type) {
     //-------------------------------------------------
@@ -39,7 +40,9 @@ const ExecutionInput = (props: PropsField) => {
       return <NumberComponent {...props} />
     //-------------------------------------------------
     case FieldTypes.RADIO_BUTTON:
-      if (singleValue) {
+      if (first) {
+        return <GridComponent {...props} /> //TODO: hard code for now
+      } else if (singleValue) {
         return <RadioComponent {...props} />
       } else {
         return <CheckboxComponent {...props} />
