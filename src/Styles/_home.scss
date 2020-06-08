@@ -36,9 +36,9 @@
 //-----------Front Style ------
 
 .your-case-logo {
-  width: 170px;
-  height: 54px;
-  object-fit: contain;
+  margin-left: 24px;
+  width: 120px;
+  height: 56px;
 }
 
 .navbar {
@@ -52,6 +52,10 @@
   height: 8px;
   background-color: rgba(98, 148, 140, 0.5);
   border-radius: 0px;
+
+  @media (min-width: 1024px) {
+    height: 0px;
+  }
 }
 
 .step-track-color {
@@ -97,18 +101,6 @@
 .step-track-width-100 {
   width: 100%;
 }
-
-
-
-@media (min-width: 375px) {
-  .your-case-logo {
-    width: 326px;
-    height: 56px;
-  }
-}
-
-
-
 
 .yc-container {
   width: 100%;
