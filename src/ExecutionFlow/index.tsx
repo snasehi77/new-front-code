@@ -28,6 +28,7 @@ import { Button } from "reactstrap";
 import { initialize } from "./ExecutionConfig";
 import { Field, FieldTypes } from "./Models";
 import ExecutionInput from "../ExecutionInput";
+import LeaveModal from "./Components/LeaveModal"
 
 interface Props {
   flowId: number;
@@ -585,39 +586,7 @@ const ExecutionFlow: React.FC<Props> = ({
           </div>
         </ModalComponent>
 
-        <ModalComponent
-          noFooter
-          size="md"
-          centered
-          isOpen={modalClose}
-          toggle={() => setModalClose(false)}
-        >
-          <div className="hm-p-5 hm-text-center">
-            <h5>
-              <b>Are you sure you want to leave?</b>
-            </h5>
-            <h6 className="text-primary hm-mb-5">
-              {" "}
-              All information will be lost and can not be restored
-            </h6>
-            <Button
-              onClick={() => setModalClose(false)}
-              className="hm-w-75 hm-mb-3"
-              color="danger"
-              type="button"
-            >
-              Continue
-            </Button>
-            <Button
-              onClick={() => history.push("/")}
-              className="hm-w-75"
-              color="light"
-              type="button"
-            >
-              Yes, leave questionnarie
-            </Button>
-          </div>
-        </ModalComponent>
+        <LeaveModal modalClose={modalClose} setModalClose={(value) => setModalClose(value)} />
       </div>
       {!!fields.length && breadcrumbData.length > 1 && (
         <FooterControlsComponent

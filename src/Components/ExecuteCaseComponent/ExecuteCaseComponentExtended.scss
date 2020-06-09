@@ -674,9 +674,22 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
 }
 
+.modal-backdrop {
+  background-color: #0d3f37;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
 .modal-content {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 8px !important; 
+  max-width: 424px;
+
   h5 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.333;
   }
   p {
