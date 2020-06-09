@@ -2,7 +2,7 @@ import * as React from "react";
 
 import {PropsField} from "../../interfaces";
 import icon_motor_vehicle_accident from "../../../Assets/icons/YC_Icon_Auto_Accidents_Green.png";
-import icon_personal_injury from "../../../Assets/icons/YC_Icon_Auto_Accidents_Green.png"; //TODO: fix
+import icon_personal_injury from "../../../Assets/icons/YC_Icon_Personal_Injury.png";
 import icon_workplace_injury from "../../../Assets/icons/YC_Icon_Workplace_Injuries_Green.png";
 import icon_employment_issue from "../../../Assets/icons/YC_Icon_Sexual_Harassment_Green.png";
 import icon_sexual_abuse from "../../../Assets/icons/YC_Icon_Workplace_Discrimination_Green.svg";
@@ -33,7 +33,7 @@ export default (props: PropsField) => {
     <div className={"form-group " + className}>
       <div>
         <label>{label}</label>
-          <div className="content-cases-grid justify-content-center">
+          <div className="content-cases-grid">
             {(options || []).map(c => {
               let label: string = c.value.toString() || ""
               return (
