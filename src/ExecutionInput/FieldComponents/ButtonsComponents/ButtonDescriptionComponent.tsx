@@ -7,48 +7,42 @@ export default ({
                                                 label,
                                                 options,
                                                 onChange,
-                                                styles,
                                                 required,
+                                                customChecked,
                                                 radioAction,
                                                 radioIconAction,
 
                                               }: PropsField) => {
   return (
-    <div className={"form-group hm-view-radio-form-group " + className}>
+    <div className={"form-group hm-mt-2 hm-view-radio-form-group " + className}>
       <label>{label}</label>
       {options ? options.map((o: Options, i) => {
-        return <label key={i} htmlFor={"button" + o.id}
-                      style={styles}
-                      className={"btn btn-light btn-block hm-view-radio-button hm-w-100 hm-h-auto" + ((value === o.value) ? " button-active " : "")}>
-
-          <div className="row">
-            <div  className={(o.note ? "col-7" : "col-10") + " rbd hm-d-flex hm-align-items-center"}>
-              <div>
-                <input className="hm-invisible hm-position-absolute"
-                       required={required} type="radio"
-                       id={"button" + o.id}
-                       name="uniqueValueButton"
-                       checked={value === o.value}
-                       onClick={() => radioAction ? radioAction(o) : null}
-                       onChange={() => onChange ? onChange({value: o.value, data: o.data}) : null}/>
+        return (
+          <div 
+            key={i}
+            onClick={() => onChange ? onChange({value: o.value, data: o.data}) : null}
+            className={"btn hm-h-auto hm-w-100 hm-button-description"}>
+            <div className="row">
+              <div  className={"rbd hm-d-flex hm-align-items-center col-11"}>
+                <div>
+                  <h5 className="hm-view-button-description-header hm-mt-1 hm-mb-1 hm-text-left">{o.label ? o.label : o.value}</h5>
+                  <p className="hm-view-button-description-text hm-text-left">{o.data ? o.data.description : ""}</p>
+                </div>
               </div>
-              <div>
-                <h5 className="hm-view-radio-header hm-mb-1 hm-text-left">{o.label ? o.label : o.value}</h5>
-                <p className="hm-view-radio-text">{o.data ? o.data.description : ""}</p>
-              </div>
-            </div>
 
-            {o.note && <div  className="col-3 hm-d-flex hm-align-items-center">
-              {o.note}
-            </div>}
-
-            <div className="col-2 hm-d-flex hm-align-items-center hm-just-end">
-              <a onClick={() => radioIconAction ? radioIconAction(o) : null}>
-                {o.icon}
-              </a>
+              <span className="hm-d-flex hm-mt-1">
+                <span
+                  className={`${
+                    value === o.value
+                    ? "custom-checked hm-custom-checked"
+                    : "custom-check hm-custom-check"}`}
+                  >
+                  {customChecked}
+                </span>
+              </span>
             </div>
           </div>
-        </label>
+        )
       }) : <div>please add options</div>}
     </div>
   )

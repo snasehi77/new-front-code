@@ -1,6 +1,7 @@
 import * as React from "react";
 import { FormEvent, Fragment, useEffect, useState } from "react";
 import * as Service from "./Services";
+import { isEmpty } from "lodash";
 import { getValuesChoiceList } from "./Services";
 import {
   classNames,
@@ -465,7 +466,7 @@ const ExecutionFlow: React.FC<Props> = ({
                               className="hm-w-100"
                               color="link"
                             >
-                              <h5 className="why_this_matters hm-text-center hm-mt-0">
+                              <h5 className="why_this_matters hm-mt-0">
                                 Why this matters?
                               </h5>
                             </Button>
@@ -593,7 +594,7 @@ const ExecutionFlow: React.FC<Props> = ({
           id={idForm().toLowerCase() + "_footer"}
           onBack={() => navigateToFlow(currentFlow, breadcrumbData.length - 1)}
           disabledBack={loadingFlow}
-          disabledNext={loadingFlow}
+          disabledNext={loadingFlow || isEmpty(values)}
           info={
             !!fields.length
               ? {
@@ -608,7 +609,6 @@ const ExecutionFlow: React.FC<Props> = ({
               (f: any) =>
                 f.format === "BUTTON" ||
                 (f.format === "RADIO_BUTTON" && f.single_value) ||
-                f.format === "RADIO_BUTTON_DESCRIPTION" ||
                 f.field_type === "BOOLEAN"
             ).length
           }

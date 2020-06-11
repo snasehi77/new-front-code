@@ -30,7 +30,6 @@ const FooterControlsComponent = ({
                                    info,
                                    id
                                  }: props) => {
-
   const [choiceList, setChoiceList] = useState<Array<any>>([]);
   const [metaData, setMetaData] = useState<any>({});
   const [openDescription, setOpenDescription] = useState(false);
@@ -100,7 +99,7 @@ const FooterControlsComponent = ({
       (hiddenBack && hiddenNext ? " hm-h-0 " : openDescription ? " hm-h-20 " : items ? " hm-h-60 " : " hm-h-100 ")}>
         {!hiddenBack && <button disabled={disabledBack}
                                 onClick={onBack}
-                                className={"btn btn-light btn-cyan hm-view-button-back hm-px-5" + (hiddenNext ? "" : "hm-mr-2")}>
+                                className={"btn btn-light btn-cyan hm-view-button-back hm-px-5" + (hiddenNext ? "" : " hm-mr-2")}>
           Back
         </button>}
         {!hiddenNext && <button disabled={disabledNext}
