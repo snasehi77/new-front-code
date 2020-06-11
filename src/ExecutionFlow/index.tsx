@@ -29,7 +29,8 @@ import { Button } from "reactstrap";
 import { initialize } from "./ExecutionConfig";
 import { Field, FieldTypes } from "./Models";
 import ExecutionInput from "../ExecutionInput";
-import LeaveModal from "./Components/LeaveModal"
+import DescriptionModal from "./Components/DescriptionModal";
+import LeaveModal from "./Components/LeaveModal";
 
 interface Props {
   flowId: number;
@@ -67,7 +68,7 @@ const ExecutionFlow: React.FC<Props> = ({
   const [defaultValues, setValuesDefault] = useState<any>(null);
   const [breadcrumbData, setBreadcrumbData] = useState<Array<Breadcrumb>>([]);
   const [description, setDescription] = useState("");
-  const [modalDescription, setModalDescription] = useState(false);
+  const [modalDescription, setModalDescription] = useState<boolean>(false);
   const [modalClose, setModalClose] = useState(false);
   useEffect(() => {
     executeFLow(flowId);
@@ -459,17 +460,14 @@ const ExecutionFlow: React.FC<Props> = ({
                         descriptionData={
                           currentFlow.views &&
                           currentFlow.views[0].show_meta_data && (
-                            <Button
+                            <div
                               onClick={() => setModalDescription(true)}
-                              id={"label_modal_description"}
-                              type="button"
                               className="hm-w-100"
-                              color="link"
                             >
-                              <h5 className="why_this_matters hm-mt-0">
+                              <h5 className="why_this_matters hm-text-left hm-mt-1">
                                 Why this matters?
                               </h5>
-                            </Button>
+                            </div>
                           )
                         }
                         customChecked={
@@ -561,31 +559,13 @@ const ExecutionFlow: React.FC<Props> = ({
           </div>
         </ModalComponent>
 
-        <ModalComponent
-          centered
-          isOpen={modalDescription}
-          toggle={() => setModalDescription(false)}
-          noFooter
-        >
-          <Button
-            className="text-black-50"
-            onClick={() => setModalDescription(false)}
-            color="link"
-            type="button"
-          >
-            <img src={icon_close} />
-          </Button>
-          <div className="hm-p-3">
-            <h5 className="text-primary hm-mb-2">
-              Why are we asking you this question?
-            </h5>
-            <p>
-              {currentFlow.views && currentFlow.views[0].meta_data
-                ? currentFlow.views[0].meta_data
-                : "No description"}
-            </p>
-          </div>
-        </ModalComponent>
+        <DescriptionModal 
+          metaData={currentFlow.views && currentFlow.views[0].meta_data
+            ? currentFlow.views[0].meta_data
+            : "No description"} 
+          modalDescription={modalDescription} 
+          setModalDescription={(value) => setModalDescription(value)}
+        />
 
         <LeaveModal modalClose={modalClose} setModalClose={(value) => setModalClose(value)} />
       </div>
