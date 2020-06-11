@@ -414,7 +414,15 @@ $header-font-medium: 'Graphik medium', sans-serif;
       color: #0D3F37;
       height: 40px;
       padding: 0px;
+      padding-left: 8px;
       cursor: pointer;
+
+      &:active {
+        background-color: $primary-light;
+        font-weight: bold;
+        border-radius: 4px;
+        color: #fff;
+      }
     }
 
     .hm-search-bar {
