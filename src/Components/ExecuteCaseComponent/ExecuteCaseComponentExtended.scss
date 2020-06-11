@@ -174,10 +174,20 @@ $header-font-medium: 'Graphik medium', sans-serif;
         transition: background-color 0.6s ease, box-shadow 0.6s ease;
         position: relative;
         padding-bottom: 100%;
+        cursor: pointer;
     
         &:hover {
-          background-color: #FFF7E9;
-          box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+          background-color: #e6ded2;
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          box-sizing: border-box;
+        }
+
+        &:active {
+          background-color: $primary-light;
+
+          h6 {
+            color: white;
+          }
         }
       
         h6 {
@@ -443,6 +453,12 @@ $header-font-medium: 'Graphik medium', sans-serif;
         text-align: center;
 
         font-family: $header-font-medium;
+
+        &:hover {
+          background-color: #e6ded2;
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          box-sizing: border-box;
+        }
 
         &:active {
           background-color: $primary-light;
@@ -825,6 +841,24 @@ $header-font-medium: 'Graphik medium', sans-serif;
   margin-right: auto;
   margin-bottom: 1rem;
 
+  &:hover {
+    background-color: #e6ded2;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+  }
+
+  &:active {
+    background-color: $primary-light;
+
+    h5 {
+      color: white;
+    }
+
+    p {
+      color: white
+    }
+  }
+
   .hm-custom-checked {
     right: 15px !important;
   }
@@ -832,6 +866,11 @@ $header-font-medium: 'Graphik medium', sans-serif;
   .hm-custom-check {
     right: 15px !important;
   }
+}
+
+.hm-button-description-selected {
+  border: 2px solid #095d4d;
+  box-sizing: border-box;
 }
 
 .hm-view-button-description-header {
@@ -1036,10 +1075,5 @@ $header-font-medium: 'Graphik medium', sans-serif;
     .btn-light {
       background-color: #F6EEE1;
     }
-  }
-
-  .hm-label-radio-button-single  {
-    color: #fff;
-    background-color: #ED5454;
   }
 }

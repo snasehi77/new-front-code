@@ -21,7 +21,7 @@ export default ({
           <div 
             key={i}
             onClick={() => onChange ? onChange({value: o.value, data: o.data}) : null}
-            className={"btn hm-h-auto hm-w-100 hm-button-description"}>
+            className={"btn hm-h-auto hm-w-100 hm-button-description" + (o.value === value ? " hm-button-description-selected" : "")}>
             <div className="row">
               <div  className={"rbd hm-d-flex hm-align-items-center col-11"}>
                 <div>

@@ -5,8 +5,8 @@ import icon_motor_vehicle_accident from "../../../Assets/icons/YC_Icon_Auto_Acci
 import icon_personal_injury from "../../../Assets/icons/YC_Icon_Personal_Injury.png";
 import icon_workplace_injury from "../../../Assets/icons/YC_Icon_Workplace_Injuries_Green.png";
 import icon_employment_issue from "../../../Assets/icons/YC_Icon_Sexual_Harassment_Green.png";
-import icon_sexual_abuse from "../../../Assets/icons/YC_Icon_Workplace_Discrimination_Green.svg";
-import icon_elder_abuse from "../../../Assets/icons/YC_Icon_Elder_Care_Green.svg";
+import icon_sexual_abuse from "../../../Assets/icons/YC_Icon_Workplace_Discrimination_Green.png";
+import icon_elder_abuse from "../../../Assets/icons/YC_Icon_Elder_Care_Green.png";
 
 export default (props: PropsField) => {
 
