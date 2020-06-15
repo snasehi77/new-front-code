@@ -36,7 +36,7 @@ export default (props: PropsField) => {
                 if (onChange) {
                   onChange({
                     value: item.id,
-                    label: item.label
+                    label: item.value
                   })
                 }
               }} 
