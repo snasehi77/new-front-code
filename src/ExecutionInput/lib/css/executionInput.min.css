@@ -716,39 +716,6 @@ hm-h-5{
   width: 95%;
 }
 
-.hm-modal-title {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 600;
-  color: #0d3f37;
-}
-
-.hm-modal-subtitle {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: normal;
-  color: #454a4d;
-}
-
-.hm-modal-cancel-button {
-  height: 40px;
-  background-color: #ed5454;
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.hm-modal-button {
-  height: 40px;
-  background-color: white;
-  color: #8a9499;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  border: none;
-}
-
 .hm-view-footer{
   position: sticky;
   bottom: 0;

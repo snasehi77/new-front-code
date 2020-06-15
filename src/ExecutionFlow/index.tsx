@@ -31,6 +31,7 @@ import { Field, FieldTypes } from "./Models";
 import ExecutionInput from "../ExecutionInput";
 import DescriptionModal from "./Components/DescriptionModal";
 import LeaveModal from "./Components/LeaveModal";
+import SuccessModal from "./Components/SuccessModal";
 
 interface Props {
   flowId: number;
@@ -354,33 +355,7 @@ const ExecutionFlow: React.FC<Props> = ({
       .join("_");
   };
 
-  return endFlowSuccessfully ? (
-    <div
-      id={idForm()}
-      className="hm-h-100 hm-d-flex hm-w-100 hm-just-center hm-align-items-center"
-    >
-      <div className="hm-view-end-flow hm-px-5 hm-text-center">
-        <span className="hm-successfully-icon hm-result-successfully">
-          <FontAwesomeIcon
-            icon={faCheckCircle}
-            size="3x"
-            className="text-success"
-          />
-        </span>
-        <p className="hm-successfully-text hm-my-2">
-          Thanks for your submission.
-        </p>
-        <button
-          onClick={() => {
-            history.push("/");
-          }}
-          className="btn btn-danger hm-m-0 hm-back-button-successfully"
-        >
-          Back To Homepage
-        </button>
-      </div>
-    </div>
-  ) : (
+  return (
     <div className="hm-view-main-wrapper hm-position-relative hm-h-100 hm-overflow-y-auto">
       <Button
         className="hm-button-close"
@@ -563,11 +538,19 @@ const ExecutionFlow: React.FC<Props> = ({
           metaData={currentFlow.views && currentFlow.views[0].meta_data
             ? currentFlow.views[0].meta_data
             : "No description"} 
-          modalDescription={modalDescription} 
-          setModalDescription={(value) => setModalDescription(value)}
+          modalVisible={modalDescription} 
+          setModalVisible={setModalDescription}
         />
 
-        <LeaveModal modalClose={modalClose} setModalClose={(value) => setModalClose(value)} />
+        <SuccessModal
+          modalVisible={endFlowSuccessfully}
+          setModalVisible={setEndFlowSuccessfully}
+        />
+
+        <LeaveModal 
+          modalVisible={modalClose} 
+          setModalVisible={setModalClose} 
+        />
       </div>
       {!!fields.length && breadcrumbData.length > 1 && (
         <FooterControlsComponent

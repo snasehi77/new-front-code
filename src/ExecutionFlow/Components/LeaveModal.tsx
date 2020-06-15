@@ -4,21 +4,21 @@ import history from "../Utils/History";
 import { Button } from "reactstrap";
 
 interface Props {
-  modalClose: boolean,
-  setModalClose: (close: boolean) => void
+  modalVisible: boolean,
+  setModalVisible: (close: boolean) => void
 }
 
 const LeaveModal: React.FC<Props> = ({
-  modalClose,
-  setModalClose,
+  modalVisible,
+  setModalVisible,
 }) => {
   return (
     <ModalComponent
       noFooter
       size="md"
       centered
-      isOpen={modalClose}
-      toggle={() => setModalClose(false)}
+      isOpen={modalVisible}
+      toggle={() => setModalVisible(false)}
     >
       <div className="hm-text-center">
         <div className="hm-modal-title hm-mt-2">
@@ -29,8 +29,8 @@ const LeaveModal: React.FC<Props> = ({
           All information will be lost and can not be restored
         </h6>
         <Button
-          onClick={() => setModalClose(false)}
-          className="hm-modal-cancel-button hm-w-95 hm-mb-2 hm-pl-2 hm-pr-2"
+          onClick={() => setModalVisible(false)}
+          className="hm-modal-normal-button hm-w-95 hm-mb-2 hm-pl-2 hm-pr-2"
           color="danger"
           type="button"
         >
@@ -38,7 +38,7 @@ const LeaveModal: React.FC<Props> = ({
         </Button>
         <Button
           onClick={() => history.push("/")}
-          className="hm-modal-button hm-w-95 hm-mb-1"
+          className="hm-modal-secondary-button hm-w-95 hm-mb-1"
           color="light"
           type="button"
         >

@@ -4,27 +4,27 @@ import { Button } from "reactstrap";
 import icon_close from "../../Assets/icons/icn_close.svg";
 
 interface Props {
-  modalDescription: boolean,
-  setModalDescription: (value: boolean) => void,
+  modalVisible: boolean,
+  setModalVisible: (value: boolean) => void,
   metaData: string
 }
 
 const DescriptionModal: React.FC<Props> = ({
-  modalDescription,
-  setModalDescription,
+  modalVisible,
+  setModalVisible,
   metaData
 }) => {
   return (
     <ModalComponent
       centered
-      isOpen={modalDescription}
-      toggle={() => setModalDescription(false)}
+      isOpen={modalVisible}
+      toggle={() => setModalVisible(false)}
       noFooter
       >
       <div className="hm-close">
         <Button
           className="hm-p-0 hm-m-0"
-          onClick={() => setModalDescription(false)}
+          onClick={() => setModalVisible(false)}
           color="link"
           type="button"
         >

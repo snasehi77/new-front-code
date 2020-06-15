@@ -696,8 +696,18 @@
 }
 
 
+.hm-add-to-calendar {
+  cursor: pointer;
+  width: 235px;
+  height: 40px;
+  border: 1px solid #CFDDE6;
+  box-sizing: border-box;
+  border-radius: 4px;
 
-
+  &:active {
+    background-color: #CFDDE6;
+  }
+}
 
 .final-case-paragraph {
   font-family: 'Graphik regular', serif;

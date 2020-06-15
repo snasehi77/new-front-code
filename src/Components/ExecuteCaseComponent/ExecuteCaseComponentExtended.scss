@@ -95,6 +95,32 @@ $header-font-medium: 'Graphik medium', sans-serif;
     }
   }
 
+  .hm-success {
+    align-items: center !important;
+
+    h5 {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    img {
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 36px;
+      width: 96px;
+      height: 96px;
+    }
+
+  }
+
   .hm-view-p-2 {
     font-size: 14px;
     color: #454A4D;
@@ -743,14 +769,46 @@ $header-font-medium: 'Graphik medium', sans-serif;
   }
 }
 
+.hm-modal-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #0d3f37;
+}
 
+.hm-modal-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #454a4d;
+}
 
+.hm-modal-normal-button {
+  height: 40px;
+  background-color: #ed5454;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
 
+  @media (min-width: 768px) {
+    height: 48px;
+  }
+}
 
+.hm-modal-secondary-button {
+  height: 40px;
+  background-color: white;
+  color: #8a9499;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  border: none;
 
-
-
-
+  @media (min-width: 768px) {
+    height: 48px;
+  }
+}
 
 #yourcase-hm-view {
   box-sizing: border-box;
