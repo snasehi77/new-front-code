@@ -9,7 +9,7 @@ export default (props: PropsField) => {
   return (
     <div className={"form-group " + className}>
       <label>{label}</label>
-      <div className="content-radio-grid">
+      <div className={options && options.length > 1 ? "content-radio-grid" : ""}>
         {options ? (
           options.map((o: Options) => {
             return (

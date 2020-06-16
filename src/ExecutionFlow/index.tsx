@@ -150,6 +150,10 @@ const ExecutionFlow: React.FC<Props> = ({
 
       if (flowName === "speak_now_or_later") {
         onShowGoodNews(true)
+      } else if (flowName === "speak_now_contact_information_victim") { //TODO: more check
+        setEndFlowSuccessfully(true);
+
+        resetValues()
       }
     } else {
       if (
@@ -324,17 +328,14 @@ const ExecutionFlow: React.FC<Props> = ({
   ) => {
     switch (type) {
       case FieldTypes.LINK:
-        if (classNames[format]) {
+        if (classNames[format] === classNames.TERMS_CONDITIONS) {
           return (
             <div className={classNames[format]}>
               {label}
               <a href={url ? url : "#"} target="_blank">
-                <b className="hm-ml-2">
-                  {classNames[format] === classNames.TERMS_CONDITIONS
-                    ? "Read More"
-                    : classNames[format] === classNames.CONTACT_FOOTER
-                    ? "Contact Us."
-                    : ""}{" "}
+                <b className="hm-read-more">{"Important term and conditions,"}</b>
+                <b className="hm-read-more-highlight hm-ml-2">
+                  {"read more"}
                 </b>
               </a>
             </div>
@@ -584,7 +585,7 @@ const ExecutionFlow: React.FC<Props> = ({
               (f: any) =>
                 f.format === "BUTTON" ||
                 (f.format === "RADIO_BUTTON" && f.single_value) ||
-                f.field_type === "BOOLEAN"
+                f.field_type === "BOOLEAN" 
             ).length
           }
           onNext={() => eventClick("onSubmit")}

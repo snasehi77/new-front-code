@@ -4,7 +4,6 @@ import "./ExecuteCaseComponentExtended.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
 import {ExecutionFlow} from "../../ExecutionFlow";
 import Flow from "../../models/Flow";
-import GoodNewsScreen from "../../ExecutionFlow/Components/GoodNewsScreen";
 import reactResponsive from 'react-responsive'
 
 const MediaQuery = reactResponsive

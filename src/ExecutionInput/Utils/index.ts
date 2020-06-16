@@ -114,7 +114,7 @@ export function checkValue(type: string, value: string) {
     case 'SSN':
       return cleanValue(value).length > 10 ? 'is-invalid' : value && cleanValue(value).length < 11 ? 'is-valid' : '';
 
-    case  'PHONE':
+    case 'PHONE':
       return cleanValue(value).length > 10 ? 'is-invalid' : value && cleanValue(value).length < 11 ? 'is-valid' : '';
 
     case 'EMAIL':
