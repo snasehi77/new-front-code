@@ -4,6 +4,20 @@ import "./ExecuteCaseComponentExtended.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
 import {ExecutionFlow} from "../../ExecutionFlow";
 import Flow from "../../models/Flow";
+import reactResponsive from 'react-responsive'
+
+const MediaQuery = reactResponsive
+
+const Media = {
+    small: {
+        minWidth: 0,
+        maxWidth: "1024px"
+    },
+    large: {
+        minWidth: "1024px",
+        maxWidth: "100000px"
+    }
+}
 
 const Steps = [ //TODO:
   {
@@ -39,6 +53,7 @@ const Steps = [ //TODO:
 declare var window: any;
 const ExecuteFlowCasesComponent = () => {
     const [progress, setProgress] = useState<number>(0);
+    const [goodNewsVisible, setGoodNewsVisible] = useState<boolean>(false)
     const {id} = useParams();
     const onSubmitForm = (flow: Flow, formData: any, stepName: string) => {
       const injuredField = formData.find((i: any) => i.name === 'multiple choice - one answer_4');
@@ -51,16 +66,25 @@ const ExecuteFlowCasesComponent = () => {
 
     return (
       <div className="vh-100">
-        <NavbarComponent 
-          showProgress 
-          progress={progress}
-          light={false}
-        />
+        <MediaQuery {...Media.small}>
+          <NavbarComponent 
+            showProgress 
+            progress={progress}
+            light={goodNewsVisible ? true : false}
+          />
+        </MediaQuery>
+        <MediaQuery {...Media.large}>
+          <NavbarComponent 
+            showProgress 
+            progress={progress}
+            light={true}
+          />
+        </MediaQuery>
         <div className="hm-d-flex">
           <div className="hm-sidebar">
             {Steps.map((item) => {
               return (
-                <div className="hm-d-flex hm-just-center hm-align-items-center">
+                <div key={item.title} className="hm-d-flex hm-just-center hm-align-items-center">
                   <div className={"hm-bar" + (item.progress === progress ? " hm-bar-selected" : "")} />
                   <div className={"hm-bar-text" + (item.progress === progress ? " hm-bar-text-selected" : "")}>
                     {item.title}
@@ -71,13 +95,15 @@ const ExecuteFlowCasesComponent = () => {
           </div>
           <div className="hm-flow">
             <div id="yourcase-hm-view">
-              {id && <ExecutionFlow onSubmitForm={onSubmitForm}
-                                    flowId={parseInt(id)}
-                                    onChangeStep={(data) => setProgress(Math.min(data.length * 10, 100))}
-                                    className="yourcase-hm-view-inner-wrapper m-auto"/>}
+              {id && <ExecutionFlow 
+                      onSubmitForm={onSubmitForm}
+                      flowId={parseInt(id)}
+                      goodNewsVisible={goodNewsVisible}
+                      onShowGoodNews={(value) => setGoodNewsVisible(value)}
+                      onChangeStep={(data) => setProgress(Math.min(data.length * 10, 100))}
+                      className="yourcase-hm-view-inner-wrapper m-auto"/>}
             </div>
           </div>
-
         </div>
       </div>
     )

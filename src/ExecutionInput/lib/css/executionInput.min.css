@@ -61,6 +61,14 @@
   color: gray;
 }
 
+.hm-font-normal {
+  font-weight: normal;
+}
+
+.hm-font-bold {
+  font-weight: 600;
+}
+
 .hm-custom-check {
   position: absolute;
   height: 20px;
