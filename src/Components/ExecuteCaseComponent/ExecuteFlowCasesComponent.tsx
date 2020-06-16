@@ -83,9 +83,9 @@ const ExecuteFlowCasesComponent = () => {
         </MediaQuery>
         <div className="hm-d-flex">
           <div className="hm-sidebar">
-            {Steps.map((item, index) => {
+            {Steps.map((item) => {
               return (
-                <div key={index} className="hm-d-flex hm-just-center hm-align-items-center">
+                <div key={item.title} className="hm-d-flex hm-just-center hm-align-items-center">
                   <div className={"hm-bar" + (item.progress === progress ? " hm-bar-selected" : "")} />
                   <div className={"hm-bar-text" + (item.progress === progress ? " hm-bar-text-selected" : "")}>
                     {item.title}
