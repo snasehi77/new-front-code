@@ -152,7 +152,7 @@ const ExecutionFlow: React.FC<Props> = ({
 
       if (flowName === "speak_now_or_later") {
         onShowGoodNews(true)
-      } else if (flowName === "speak_now_contact_information_victim") { //TODO: more check
+      } else if (flowName === "thank_you_we_will_call") { //TODO: more check
         setEndFlowSuccessfully(true);
 
         resetValues()
