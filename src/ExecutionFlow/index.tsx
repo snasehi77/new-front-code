@@ -32,7 +32,8 @@ import ExecutionInput from "../ExecutionInput";
 import DescriptionModal from "./Components/DescriptionModal";
 import LeaveModal from "./Components/LeaveModal";
 import SuccessModal from "./Components/SuccessModal";
-import GoodNewsScreen from "./Components/GoodNewsScreen"
+import TermsModal from "./Components/TermsModal";
+import GoodNewsScreen from "./Components/GoodNewsScreen";
 
 
 interface Props {
@@ -77,6 +78,7 @@ const ExecutionFlow: React.FC<Props> = ({
   const [description, setDescription] = useState("");
   const [modalDescription, setModalDescription] = useState<boolean>(false);
   const [modalClose, setModalClose] = useState(false);
+  const [terms, setTerms] = useState(false)
   useEffect(() => {
     executeFLow(flowId);
   }, [flowId]);
@@ -332,12 +334,12 @@ const ExecutionFlow: React.FC<Props> = ({
           return (
             <div className={classNames[format]}>
               {label}
-              <a href={url ? url : "#"} target="_blank">
-                <b className="hm-read-more">{"Important term and conditions,"}</b>
-                <b className="hm-read-more-highlight hm-ml-2">
+              <div>
+                <b className="hm-read-more">{"Important term and conditions, "}</b>
+                <b onClick={() => setTerms(true)} className="hm-read-more-highlight">
                   {"read more"}
                 </b>
-              </a>
+              </div>
             </div>
           );
         } else {
@@ -608,6 +610,11 @@ const ExecutionFlow: React.FC<Props> = ({
           </button>
         </div>
       </ModalComponent>
+
+      <TermsModal
+        modalVisible={terms}
+        setModalVisible={setTerms}
+      />
       
       <DescriptionModal 
         metaData={currentFlow.views && currentFlow.views[0].meta_data
