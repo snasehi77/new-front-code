@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FormEvent, Fragment, useEffect, useState } from "react";
 import * as Service from "./Services";
-import { isEmpty } from "lodash";
+import { isEmpty, get, last } from "lodash";
 import { getValuesChoiceList } from "./Services";
 import {
   classNames,
@@ -32,6 +32,8 @@ import ExecutionInput from "../ExecutionInput";
 import DescriptionModal from "./Components/DescriptionModal";
 import LeaveModal from "./Components/LeaveModal";
 import SuccessModal from "./Components/SuccessModal";
+import GoodNewsScreen from "./Components/GoodNewsScreen"
+
 
 interface Props {
   flowId: number;
@@ -48,10 +50,14 @@ interface Props {
   ) => void;
   onChangeStep?: (
     breadcrumb: any
-  ) => void
+  ) => void;
+  goodNewsVisible: boolean;
+  onShowGoodNews: (value: boolean) => void;
 }
 
 const ExecutionFlow: React.FC<Props> = ({
+  goodNewsVisible,
+  onShowGoodNews,
   flowId,
   className,
   params,
@@ -63,7 +69,7 @@ const ExecutionFlow: React.FC<Props> = ({
 }) => {
   const [currentFlow, setCurrentFlow] = useState<any>({});
   const [flow, setFlow] = useState<any>({});
-  const [loadingFlow, setLoadingFLow] = useState(true);
+  const [loadingFlow, setLoadingFlow] = useState(true);
   const [fields, setFields] = useState<Field[]>([]);
   const [values, setValues] = useState<any>({});
   const [defaultValues, setValuesDefault] = useState<any>(null);
@@ -129,6 +135,7 @@ const ExecutionFlow: React.FC<Props> = ({
   async function setResFlow(res: any) {
     if (res.success) {
       const array: Field[] = res.item.views[0].fields;
+      const flowName = res.item.name
       const newArray = await Promise.all(
         array.map(async (a: Field) => {
           const optRes = a.choice_list_id
@@ -140,6 +147,10 @@ const ExecutionFlow: React.FC<Props> = ({
       );
       res.item.views[0].fields = newArray;
       setCurrentFlow(res.item);
+
+      if (flowName === "speak_now_or_later") {
+        onShowGoodNews(true)
+      }
     } else {
       if (
         res &&
@@ -152,7 +163,7 @@ const ExecutionFlow: React.FC<Props> = ({
 
       resetValues();
     }
-    setLoadingFLow(false);
+    setLoadingFlow(false);
   }
 
   useEffect(() => {
@@ -168,7 +179,7 @@ const ExecutionFlow: React.FC<Props> = ({
   function resetValues() {
     setValues({});
     setCurrentFlow({});
-    setLoadingFLow(false);
+    setLoadingFlow(false);
     setDescription("");
   }
 
@@ -207,7 +218,7 @@ const ExecutionFlow: React.FC<Props> = ({
   }
 
   async function setExecuteFlowStep(fieldsData: any, id: number) {
-    setLoadingFLow(true);
+    setLoadingFlow(true);
     const path = breadcrumbData.map(a => a.data.step_id).join(",");
     const res = await Service.executeFLowStep(
       {
@@ -222,7 +233,7 @@ const ExecutionFlow: React.FC<Props> = ({
   }
 
   async function backFlow(flow: any) {
-    setLoadingFLow(true);
+    setLoadingFlow(true);
     const res = await Service.getExecuteFLowStep(
       flow.flow_execution_id,
       flow.prev_step_execution_id
@@ -241,12 +252,11 @@ const ExecutionFlow: React.FC<Props> = ({
     }
   }
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  const getData = (newValues: any) => {
     const mapField: any = toMap(fields, "id");
     let resultFields: Array<any> = [];
 
-    Object.keys(values).forEach(f => {
+    Object.keys(newValues).forEach(f => {
       if (mapField[f]) {
         resultFields.push({
           id: parseInt(f),
@@ -256,7 +266,7 @@ const ExecutionFlow: React.FC<Props> = ({
             mapField[f].field_type === "CHOICE_LIST"
               ? mapField[f].format
               : mapField[f].field_type,
-            values[f],
+            newValues[f],
             mapField[f].single_value
           ),
           tag: getTag(mapField[f].choice_list_id, mapField[f].options)
@@ -264,7 +274,25 @@ const ExecutionFlow: React.FC<Props> = ({
       }
     });
 
+    return resultFields
+  }
 
+  async function onNext(v: any) {
+    const id = get(last(fields), "id", "")
+    if (id) {
+      const newValues = { [id]: v }
+      let resultFields: Array<any> = getData(newValues)
+  
+      if (onSubmitForm) {
+        onSubmitForm(flow, resultFields, currentFlow.name, resultFields);
+      }
+      setExecuteFlowStep(resultFields, currentFlow.id);
+    }
+  }
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    let resultFields: Array<any> = getData(values);
 
     if (onSubmitForm) {
       onSubmitForm(flow, resultFields, currentFlow.name, resultFields);
@@ -355,6 +383,53 @@ const ExecutionFlow: React.FC<Props> = ({
       .join("_");
   };
 
+  const debugComponent = debug && !loadingFlow && !endFlowSuccessfully && !endFlow && (
+      <div className="col-lg-5">
+        <div className="hm-w-100 hm-h-100">
+          <h6 className="mb-4">History</h6>
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Field</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {toArrayFlowData.map((b, i) => (
+                <tr key={i}>
+                  <td>{b}</td>
+                  <td>{FlowData[b]}</td>
+                </tr>
+              ))}
+              {!toArrayFlowData.length && (
+                <tr>
+                  <td colSpan={2} className="text-center">
+                    {" "}
+                    No data.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+  )
+
+  if (goodNewsVisible) {
+    return (
+      <GoodNewsScreen
+        setVisible={(value) => onShowGoodNews(value)}
+        header={get(fields, "[0].label", "")}
+        title={get(fields, "[1].label", "")}
+        subtitle={get(fields, "[2].label", "")}
+        options={getOptions(get(last(fields), "options", []))}
+        onNext={values => onNext(values)}
+        modalClose={modalClose}
+        setModalClose={setModalClose}
+      />
+    )
+  }
+
   return (
     <div className="hm-view-main-wrapper hm-position-relative hm-h-100 hm-overflow-y-auto">
       <Button
@@ -386,6 +461,7 @@ const ExecutionFlow: React.FC<Props> = ({
           />
         )}
       </div>
+      
       <div
         className={
           "hm-m-0 " +
@@ -449,7 +525,7 @@ const ExecutionFlow: React.FC<Props> = ({
                           <FontAwesomeIcon className="size-13" icon={faCheck} />
                         }
                         placeholder={f.prompt}
-                        first={breadcrumbData.length < 2} // TODO: hard code for now
+                        first={breadcrumbData.length == 1} // TODO: hard code for now
                         singleValue={f.single_value}
                         options={getOptions(f.options).map((a: any) => {
                           a.label = (
@@ -484,74 +560,10 @@ const ExecutionFlow: React.FC<Props> = ({
               <button className="invisible" id="onSubmit" />
             </form>
           </div>
-          {debug && !loadingFlow && !endFlowSuccessfully && !endFlow && (
-            <div className="col-lg-5">
-              <div className="hm-w-100 hm-h-100">
-                <h6 className="mb-4">History</h6>
-                <table className="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col">Field</th>
-                      <th scope="col">Value</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {toArrayFlowData.map((b, i) => (
-                      <tr key={i}>
-                        <td>{b}</td>
-                        <td>{FlowData[b]}</td>
-                      </tr>
-                    ))}
-                    {!toArrayFlowData.length && (
-                      <tr>
-                        <td colSpan={2} className="text-center">
-                          {" "}
-                          No data.
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
+          {debugComponent}
         </div>
-
-        <ModalComponent isOpen={endFlow} toggle={() => null} size="md" noFooter>
-          <div className="hm-view-end-flow hm-px-5 hm-text-center">
-            <p>
-              Unfortunately, based on the information provided you do not meet
-              the prescreen requirements of the lawyers in our network.
-            </p>
-            <button
-              onClick={() => {
-                history.push("/");
-              }}
-              className="btn btn-danger hm-m-0"
-            >
-              Back To Homepage
-            </button>
-          </div>
-        </ModalComponent>
-
-        <DescriptionModal 
-          metaData={currentFlow.views && currentFlow.views[0].meta_data
-            ? currentFlow.views[0].meta_data
-            : "No description"} 
-          modalVisible={modalDescription} 
-          setModalVisible={setModalDescription}
-        />
-
-        <SuccessModal
-          modalVisible={endFlowSuccessfully}
-          setModalVisible={setEndFlowSuccessfully}
-        />
-
-        <LeaveModal 
-          modalVisible={modalClose} 
-          setModalVisible={setModalClose} 
-        />
       </div>
+
       {!!fields.length && breadcrumbData.length > 1 && (
         <FooterControlsComponent
           id={idForm().toLowerCase() + "_footer"}
@@ -578,6 +590,42 @@ const ExecutionFlow: React.FC<Props> = ({
           onNext={() => eventClick("onSubmit")}
         />
       )}
+
+      <ModalComponent isOpen={endFlow} toggle={() => null} size="md" noFooter>
+        <div className="hm-view-end-flow hm-px-5 hm-text-center">
+          <p>
+            Unfortunately, based on the information provided you do not meet
+            the prescreen requirements of the lawyers in our network.
+          </p>
+          <button
+            onClick={() => {
+              history.push("/");
+            }}
+            className="btn btn-danger hm-m-0"
+          >
+            Back To Homepage
+          </button>
+        </div>
+      </ModalComponent>
+      
+      <DescriptionModal 
+        metaData={currentFlow.views && currentFlow.views[0].meta_data
+          ? currentFlow.views[0].meta_data
+          : "No description"} 
+        modalVisible={modalDescription} 
+        setModalVisible={setModalDescription}
+      />
+
+      <SuccessModal
+        modalVisible={endFlowSuccessfully}
+        setModalVisible={setEndFlowSuccessfully}
+      />
+
+      <LeaveModal 
+        modalVisible={modalClose} 
+        setModalVisible={setModalClose} 
+      />
+
     </div>
   );
 };

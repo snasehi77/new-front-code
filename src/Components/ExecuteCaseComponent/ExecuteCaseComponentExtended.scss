@@ -769,6 +769,135 @@ $header-font-medium: 'Graphik medium', sans-serif;
   }
 }
 
+.hm-good-news {
+  box-sizing: border-box;
+  height: 100vh;
+  position: relative;
+  font-family: $body-font-global;
+  background-color: #0d3f37;
+  padding: 32px 24px 24px;
+
+  @media (min-width: 568px) {
+    padding: 32px 80px 24px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 32px 120px 24px;
+  }
+}
+
+.hm-good-news-img-wrapper {
+  padding: 32px 0px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 375px) {
+    padding: 64px 0px;
+  }
+
+  @media (min-width: 568px) {
+    padding: 46px 34px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 106px 26px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 32px 40px;
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 483px;
+
+    width: calc(100% - 48px);
+
+    @media (min-width: 568px) {
+      width: calc(100% - 68px);
+    }
+
+    @media (min-width: 768px) {
+      width: calc(100% - 52px);
+    }
+
+    @media (min-width: 1024px) {
+      width: calc(100% - 80px);
+    }
+  }
+}
+
+.hm-good-news-header {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: white;
+}
+
+.hm-good-news-subtitle {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  font-style: normal;
+  color: #f6eee1;
+}
+
+.hm-good-news-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.hm-good-news-button-primary {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6eee1;
+  color: #0d3f37;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  border-radius: 4px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    height: 48px;
+  }
+
+  &:hover {
+    background: #e6ded2;
+    color: #0d3f37;
+  }
+}
+
+.hm-good-news-button-secondary {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #62948C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  border-radius: 4px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    height: 48px;
+  }
+
+  &:hover {
+    background: transparent;
+    color: white;
+  }
+}
+
 .hm-modal-title {
   font-size: 20px;
   line-height: 26px;
