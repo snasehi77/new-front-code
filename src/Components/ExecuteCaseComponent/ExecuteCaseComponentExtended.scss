@@ -899,6 +899,7 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
 .hm-good-news-button-primary {
   cursor: pointer;
+  border-width: 0px !important;
   display: flex;
   justify-content: center;
   align-items: center;
