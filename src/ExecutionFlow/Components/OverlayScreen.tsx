@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button } from "reactstrap";
+import { first } from "lodash";
 import icon_handshake from "../../Assets/icons/handshake.png";
 import icon_close from "../../Assets/icons/icn_close_light.svg";
 import LeaveModal from "./LeaveModal";
@@ -13,25 +14,26 @@ interface Options {
 
 interface Props {
   setVisible: (value: boolean) => void,
-  header: string,
-  title: string,
-  subtitle: string,
-  options: Array<Options>,
+  labels: Array<string>,
+  options?: Array<Options>,
+  link?: string | undefined,
+  linkLabel?: string | undefined,
   onNext: (e: any) => void,
   modalClose: boolean,
   setModalClose: (value: any) => void
 }
 
-const GoodNewsScreen: React.FC<Props> = ({
+const OverlayScreen: React.FC<Props> = ({
   setVisible,
-  header,
-  title,
-  subtitle,
+  labels,
   options,
+  link,
+  linkLabel,
   onNext,
   modalClose,
   setModalClose
 }) => {
+  const [ header, ...others ] = labels
   return (
     <div className="hm-view-main-wrapper hm-position-relative hm-h-100 hm-overflow-y-auto hm-good-news">
       <Button
@@ -55,15 +57,30 @@ const GoodNewsScreen: React.FC<Props> = ({
         <div className="hm-good-news-header hm-mt-2">
           {header}
         </div>
-        <div className="hm-good-news-subtitle hm-mt-1">
-          {title}
-        </div>
-        <div className="hm-good-news-subtitle">
-          {subtitle}
+        <div className="hm-mt-1">
+          {others.map((item) => (
+            <div key={item} className="hm-good-news-subtitle">
+              {item}
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="hm-good-news-buttons">
+      {!!link && <div className="hm-good-news-buttons">
+        <button
+          type="submit"
+          onClick={(e) => {
+            setVisible(false)
+            onNext(e)
+            window.open(link)
+          }}
+          className="hm-good-news-button-primary hm-w-100"
+        >
+        {linkLabel}
+        </button>
+      </div>}
+
+      {options && options.length > 0 && <div className="hm-good-news-buttons">
         {options.map((o, index) => {
           if (options.length > 1 && index === options.length - 1) {
             return (
@@ -94,9 +111,9 @@ const GoodNewsScreen: React.FC<Props> = ({
             </button>
           )
         })}
-      </div>
+      </div>}
     </div>
   )
 }
 
-export default GoodNewsScreen
+export default OverlayScreen

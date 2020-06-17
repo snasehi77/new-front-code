@@ -33,7 +33,7 @@ import DescriptionModal from "./Components/DescriptionModal";
 import LeaveModal from "./Components/LeaveModal";
 import SuccessModal from "./Components/SuccessModal";
 import TermsModal from "./Components/TermsModal";
-import GoodNewsScreen from "./Components/GoodNewsScreen";
+import OverlayScreen from "./Components/OverlayScreen";
 
 
 interface Props {
@@ -156,6 +156,8 @@ const ExecutionFlow: React.FC<Props> = ({
       setCurrentFlow(res.item);
 
       if (flowName === "speak_now_or_later") {
+        onShowGoodNews(true)
+      } else if (flowName === "state_bar") {
         onShowGoodNews(true)
       } else if (flowName === "thank_you_we_will_call") { //TODO: more check
         setEndFlowSuccessfully(true);
@@ -435,18 +437,35 @@ const ExecutionFlow: React.FC<Props> = ({
   )
 
   if (goodNewsVisible) {
-    return (
-      <GoodNewsScreen
-        setVisible={(value) => onShowGoodNews(value)}
-        header={get(fields, "[0].label", "")}
-        title={get(fields, "[1].label", "")}
-        subtitle={get(fields, "[2].label", "")}
-        options={getOptions(get(last(fields), "options", []))}
-        onNext={values => onNext(values)}
-        modalClose={modalClose}
-        setModalClose={setModalClose}
-      />
-    )
+    const lastField = last(fields)
+    const isLink = lastField?.field_type === FieldTypes.LINK
+    const labels = fields.filter((f) => f.field_type === FieldTypes.LABEL).map((item) => item.label)
+    if (isLink) {
+      return (
+        <OverlayScreen
+          setVisible={(value) => onShowGoodNews(value)}
+          labels={labels}
+          link={get(lastField, "prompt")}
+          linkLabel={get(lastField, "label")}
+          onNext={() => {
+            history.push("/")
+          }}
+          modalClose={modalClose}
+          setModalClose={setModalClose}
+        />
+      )
+    } else {
+      return (
+        <OverlayScreen
+          setVisible={(value) => onShowGoodNews(value)}
+          labels={labels}
+          options={getOptions(get(lastField, "options", []))}
+          onNext={values => onNext(values)}
+          modalClose={modalClose}
+          setModalClose={setModalClose}
+        />
+      )
+    }
   }
 
   return (
