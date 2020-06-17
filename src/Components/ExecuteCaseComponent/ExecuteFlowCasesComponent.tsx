@@ -19,35 +19,23 @@ const Media = {
     }
 }
 
-const Steps = [ //TODO:
+const Steps = [
   {
     title: "Step 1",
-    progress: 10,
+    progress: 5,
   },
   {
     title: "Step 2",
-    progress: 20,
+    progress: 10,
   },
   {
     title: "Step 3",
-    progress: 30,
+    progress: 15,
   },
   {
     title: "Step 4",
-    progress: 40,
+    progress: 20,
   },
-  {
-    title: "Step 5",
-    progress: 50,
-  },
-  {
-    title: "Step 6",
-    progress: 60,
-  },
-  {
-    title: "Step 6",
-    progress: 70,
-  }
 ]
 
 declare var window: any;
@@ -84,7 +72,7 @@ const ExecuteFlowCasesComponent = () => {
           <div className="hm-sidebar">
             {Steps.map((item) => {
               return (
-                <div key={item.title} className="hm-d-flex hm-just-center hm-align-items-center">
+                <div key={item.progress} className="hm-d-flex hm-just-center hm-align-items-center">
                   <div className={"hm-bar" + (item.progress === progress ? " hm-bar-selected" : "")} />
                   <div className={"hm-bar-text" + (item.progress === progress ? " hm-bar-text-selected" : "")}>
                     {item.title}
@@ -100,7 +88,7 @@ const ExecuteFlowCasesComponent = () => {
                       flowId={parseInt(id)}
                       goodNewsVisible={goodNewsVisible}
                       onShowGoodNews={(value) => setGoodNewsVisible(value)}
-                      onChangeStep={(data) => setProgress(Math.min(data.length * 10, 100))}
+                      onChangeStep={(progress) => setProgress(progress)}
                       className="yourcase-hm-view-inner-wrapper m-auto"/>}
             </div>
           </div>

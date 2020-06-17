@@ -50,11 +50,13 @@ interface Props {
     fields: any[]
   ) => void;
   onChangeStep?: (
-    breadcrumb: any
+    progress: any
   ) => void;
   goodNewsVisible: boolean;
   onShowGoodNews: (value: boolean) => void;
 }
+
+const DEFAULT_FLOW_STEPS = 20
 
 const ExecutionFlow: React.FC<Props> = ({
   goodNewsVisible,
@@ -75,6 +77,7 @@ const ExecutionFlow: React.FC<Props> = ({
   const [values, setValues] = useState<any>({});
   const [defaultValues, setValuesDefault] = useState<any>(null);
   const [breadcrumbData, setBreadcrumbData] = useState<Array<Breadcrumb>>([]);
+  const [stepsAfter, setStepsAfter] = useState<number>(DEFAULT_FLOW_STEPS);
   const [description, setDescription] = useState("");
   const [modalDescription, setModalDescription] = useState<boolean>(false);
   const [modalClose, setModalClose] = useState(false);
@@ -107,7 +110,9 @@ const ExecutionFlow: React.FC<Props> = ({
       ]
       setBreadcrumbData(newData)
       if (onChangeStep) {
-        onChangeStep(newData)
+        const progress = Math.floor(newData.length * 100 / (stepsAfter + newData.length))
+        const step = Math.round(progress / 5) * 5
+        onChangeStep(step)
       }
     }
   }, [currentFlow]);
@@ -234,8 +239,17 @@ const ExecutionFlow: React.FC<Props> = ({
       currentFlow.flow_execution_id,
       id
     );
+    const data = await Service.getFlowStepsAfterStep(
+      flowId,
+      currentFlow.step_id
+    )
+
     resetValues();
     setResFlow(res);
+    const steps = get(data, 'item.steps_after')
+    if (steps) {
+      setStepsAfter(steps)
+    }
   }
 
   async function backFlow(flow: any) {
@@ -318,7 +332,9 @@ const ExecutionFlow: React.FC<Props> = ({
       setBreadcrumbData(newData);
     }
     if (onChangeStep) {
-      onChangeStep(newData)
+      const progress = Math.floor(newData.length * 100 / (stepsAfter + newData.length))
+      const step = Math.round(progress / 5) * 5
+      onChangeStep(step)
     }
   }
 
