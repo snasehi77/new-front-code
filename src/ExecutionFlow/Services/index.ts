@@ -8,6 +8,10 @@ export function LaunchFlowIdWithStepId(id: number, stepId: number, params: any) 
   return post(`exec/launch/${id}/step/${stepId}`, params);
 }
 
+export function getFlowStepsAfterStep(flowId: number, previousStepId: number) {
+  return get(`flow/${flowId}/step/${previousStepId}/StepsAfter`)
+}
+
 export function getFlow(id: number) {
   return get(`flow/${id}`);
 }

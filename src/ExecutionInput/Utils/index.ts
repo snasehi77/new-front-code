@@ -18,6 +18,10 @@ export function ToArray(map: any) {
   return temp;
 }
 
+export function isMobileOrPad() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
 export function goToElement(ar: boolean) {
   const element = document.getElementById("scroll_detail");
   if (element) {

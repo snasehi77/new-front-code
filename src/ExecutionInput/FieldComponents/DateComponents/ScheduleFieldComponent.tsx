@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useEffect, useState} from "react";
 import {PropsField, TimeFormat} from "../../interfaces";
-import {compareDates, getDaysOfWeek, getHoursSchedule, getSchedule, goToElement} from "../../Utils";
+import {compareDates, getDaysOfWeek, getHoursSchedule, getSchedule, goToElement, isMobileOrPad} from "../../Utils";
 
 
 export default ({
@@ -66,15 +66,15 @@ export default ({
   return (
     <div className="form-group hm-p-0">
       {" "}
-      <div className="col-lg-8 col-md-10 col-12 hm-m-auto">
-        <label>Date</label>
-        <div className="hm-w-100 hm-text-center">
+      <div className="hm-m-auto">
+        <label className="hm-schedule-title">Date</label>
+        <div className="hm-w-100 hm-schedule-buttons-container">
           {days.map((a, i) => (
             <label
               key={i}
               className={(compareDates(scheduleValue, a.value) ?
-                " btn-primary  hm-button-custom-2-active " : " btn-light btn hm-button-custom-2 ") +
-              " btn hm-min-w-30 hm-mb-1 " + ` ${(i > 0 ? " hm-ml-1" : "")}`}
+                " hm-schedule-highlight-button" : " hm-schedule-normal-button") +
+              " hm-d-flex hm-just-center hm-align-items-center"}
               htmlFor={i + "sh"}>
               <input required={required} id={i + "sh"} className="hm-invisible hm-position-absolute"
                      onChange={() => setScheduleValue(a.value)}
@@ -88,15 +88,15 @@ export default ({
       </div>
       {" "}
       {scheduleValue &&
-      <div className="col-lg-8 col-md-10 col-12 hm-ml-auto hm-mr-auto hm-mt-5">
-        <label>Time of day</label>
-        <div className="hm-w-100 hm-text-center">
+      <div className="hm-m-auto">
+        <label className="hm-schedule-title">Time of day</label>
+        <div className="hm-w-100 hm-schedule-buttons-container">
           {timeDay.map((a, i) => (
             <label
               key={i}
               className={(scheduleTimeOfDayValue === a ?
-                " btn-primary btn hm-button-custom-2-active " : " btn-light btn hm-button-custom-2") +
-                " btn hm-min-w-30 " + ` ${(i > 0 ? "separate-items-schedule-hours" : "m-0")}`}
+                " hm-schedule-highlight-button" : " hm-schedule-normal-button") +
+                " hm-d-flex hm-just-center hm-align-items-center"}
               htmlFor={i + "shTimeOfDay"}>
               <input required={required} id={i + "shTimeOfDay"} className="hm-invisible hm-position-absolute"
                      onChange={() => setScheduleTimeOfDayValue(a)}
@@ -108,21 +108,20 @@ export default ({
         </div>
       </div>}
       {" "}
-      {scheduleTimeOfDayValue && <div className="col-lg-8 col-md-10 col-12 hm-m-auto  hm-mt-5 ">
-        <label>Pick a Timeframe</label>
-        <div className="hm-d-flex hm-just-center">
-          <div className="hm-d-flex hm-just-center hm-align-items-center hm-content-item-time-frame">
+      {scheduleTimeOfDayValue && <div className="hm-m-auto">
+        <label className="hm-schedule-title">Pick a Timeframe</label>
+        <div className="hm-w-100 hm-d-flex hm-just-center">
+          {!isMobileOrPad() && <div className="hm-d-flex hm-just-center hm-align-items-center hm-content-item-time-frame">
             <span className="btn btn-link" onClick={() => goToElement(false)}>
               <span className="fa fa-chevron-left text-primary"/>
             </span>
-          </div>
+          </div>}
           <div id={"scroll_detail"} className="css-carousel-times">
-
             {times.map((a, i) => (
               <div key={i}>
                 <label className={(scheduleTimeValue.minutes === a.minutes && scheduleTimeValue.hour === a.hour ?
-                         " btn-primary hm-view-button-custom-3-active " : " btn-light hm-view-button-custom-3 ") +
-                         " btn btn-sm " + `${(i > 0 ? " hm-ml-1 " : "")}`}
+                         " hm-schedule-highlight-button-small" : " hm-schedule-normal-button-small") +
+                         " hm-d-flex hm-just-center hm-align-items-center" +`${(i > 0 ? " hm-ml-1 " : "")}`}
                        htmlFor={i + "shTime"}>
                   <input required={required} id={i + "shTime"} className="hm-invisible hm-position-absolute"
                          onChange={() => setScheduleTimeValue(a)}
@@ -136,12 +135,12 @@ export default ({
               </div>
             ))}
           </div>
-          <div className="hm-d-flex hm-just-center hm-align-items-center hm-content-item-time-frame">
+          {!isMobileOrPad() && <div className="hm-d-flex hm-just-center hm-align-items-center hm-content-item-time-frame">
             <span className="btn btn-link"
                   onClick={() => goToElement(true)}>
               <span className="fa fa-chevron-right text-primary"/>
             </span>
-          </div>
+          </div>}
         </div>
       </div>}
     </div>

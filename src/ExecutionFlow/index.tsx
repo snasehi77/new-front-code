@@ -33,7 +33,7 @@ import DescriptionModal from "./Components/DescriptionModal";
 import LeaveModal from "./Components/LeaveModal";
 import SuccessModal from "./Components/SuccessModal";
 import TermsModal from "./Components/TermsModal";
-import GoodNewsScreen from "./Components/GoodNewsScreen";
+import OverlayScreen from "./Components/OverlayScreen";
 
 
 interface Props {
@@ -50,11 +50,13 @@ interface Props {
     fields: any[]
   ) => void;
   onChangeStep?: (
-    breadcrumb: any
+    progress: any
   ) => void;
   goodNewsVisible: boolean;
   onShowGoodNews: (value: boolean) => void;
 }
+
+const DEFAULT_FLOW_STEPS = 20
 
 const ExecutionFlow: React.FC<Props> = ({
   goodNewsVisible,
@@ -75,6 +77,7 @@ const ExecutionFlow: React.FC<Props> = ({
   const [values, setValues] = useState<any>({});
   const [defaultValues, setValuesDefault] = useState<any>(null);
   const [breadcrumbData, setBreadcrumbData] = useState<Array<Breadcrumb>>([]);
+  const [stepsAfter, setStepsAfter] = useState<number>(DEFAULT_FLOW_STEPS);
   const [description, setDescription] = useState("");
   const [modalDescription, setModalDescription] = useState<boolean>(false);
   const [modalClose, setModalClose] = useState(false);
@@ -107,7 +110,9 @@ const ExecutionFlow: React.FC<Props> = ({
       ]
       setBreadcrumbData(newData)
       if (onChangeStep) {
-        onChangeStep(newData)
+        const progress = Math.floor(newData.length * 100 / (stepsAfter + newData.length))
+        const step = Math.round(progress / 5) * 5
+        onChangeStep(step)
       }
     }
   }, [currentFlow]);
@@ -151,6 +156,8 @@ const ExecutionFlow: React.FC<Props> = ({
       setCurrentFlow(res.item);
 
       if (flowName === "speak_now_or_later") {
+        onShowGoodNews(true)
+      } else if (flowName === "state_bar") {
         onShowGoodNews(true)
       } else if (flowName === "thank_you_we_will_call") { //TODO: more check
         setEndFlowSuccessfully(true);
@@ -234,8 +241,17 @@ const ExecutionFlow: React.FC<Props> = ({
       currentFlow.flow_execution_id,
       id
     );
+    const data = await Service.getFlowStepsAfterStep(
+      flowId,
+      currentFlow.step_id
+    )
+
     resetValues();
     setResFlow(res);
+    const steps = get(data, 'item.steps_after')
+    if (steps) {
+      setStepsAfter(steps)
+    }
   }
 
   async function backFlow(flow: any) {
@@ -318,7 +334,9 @@ const ExecutionFlow: React.FC<Props> = ({
       setBreadcrumbData(newData);
     }
     if (onChangeStep) {
-      onChangeStep(newData)
+      const progress = Math.floor(newData.length * 100 / (stepsAfter + newData.length))
+      const step = Math.round(progress / 5) * 5
+      onChangeStep(step)
     }
   }
 
@@ -419,18 +437,35 @@ const ExecutionFlow: React.FC<Props> = ({
   )
 
   if (goodNewsVisible) {
-    return (
-      <GoodNewsScreen
-        setVisible={(value) => onShowGoodNews(value)}
-        header={get(fields, "[0].label", "")}
-        title={get(fields, "[1].label", "")}
-        subtitle={get(fields, "[2].label", "")}
-        options={getOptions(get(last(fields), "options", []))}
-        onNext={values => onNext(values)}
-        modalClose={modalClose}
-        setModalClose={setModalClose}
-      />
-    )
+    const lastField = last(fields)
+    const isLink = lastField?.field_type === FieldTypes.LINK
+    const labels = fields.filter((f) => f.field_type === FieldTypes.LABEL).map((item) => item.label)
+    if (isLink) {
+      return (
+        <OverlayScreen
+          setVisible={(value) => onShowGoodNews(value)}
+          labels={labels}
+          link={get(lastField, "prompt")}
+          linkLabel={get(lastField, "label")}
+          onNext={() => {
+            history.push("/")
+          }}
+          modalClose={modalClose}
+          setModalClose={setModalClose}
+        />
+      )
+    } else {
+      return (
+        <OverlayScreen
+          setVisible={(value) => onShowGoodNews(value)}
+          labels={labels}
+          options={getOptions(get(lastField, "options", []))}
+          onNext={values => onNext(values)}
+          modalClose={modalClose}
+          setModalClose={setModalClose}
+        />
+      )
+    }
   }
 
   return (
