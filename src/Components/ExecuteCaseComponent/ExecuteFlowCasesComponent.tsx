@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {useParams} from 'react-router-dom';
+import {range, floor} from "lodash";
 import "./ExecuteCaseComponentExtended.scss";
 import NavbarComponent from "../Shared/NavbarComponent";
 import {ExecutionFlow} from "../../ExecutionFlow";
@@ -19,29 +20,12 @@ const Media = {
     }
 }
 
-const Steps = [
-  {
-    title: "Step 1",
-    progress: 5,
-  },
-  {
-    title: "Step 2",
-    progress: 10,
-  },
-  {
-    title: "Step 3",
-    progress: 15,
-  },
-  {
-    title: "Step 4",
-    progress: 20,
-  },
-]
-
 declare var window: any;
 const ExecuteFlowCasesComponent = () => {
-    const [progress, setProgress] = useState<number>(0);
-    const [goodNewsVisible, setGoodNewsVisible] = useState<boolean>(false)
+    const [goodNewsVisible, setGoodNewsVisible] = useState<boolean>(false);
+    const [totalSteps, setTotalSteps] = useState<number>(0);
+    const [currentStep, setCurrentStep] = useState<number>(0)
+
     const {id} = useParams();
     const onSubmitForm = (flow: Flow, formData: any, stepName: string) => {
       const injuredField = formData.find((i: any) => i.name === 'multiple choice - one answer_4');
@@ -51,6 +35,18 @@ const ExecuteFlowCasesComponent = () => {
       }
       window.dataLayer.push(paramsGTM);
     }
+
+    const getAllSteps = () => {
+
+      if (!totalSteps) return [];
+
+      return range(0, totalSteps).map(n => ({
+        step: n,
+        title: `Step ${n + 1}`
+      }));
+    }
+
+    const progress = (currentStep === 0 || totalSteps === 0) ? 0 : floor(currentStep * 100 / totalSteps)
 
     return (
       <div className="vh-100">
@@ -70,16 +66,18 @@ const ExecuteFlowCasesComponent = () => {
         </MediaQuery>
         <div className="hm-d-flex">
           <div className="hm-sidebar">
-            {Steps.map((item) => {
-              return (
-                <div key={item.progress} className="hm-d-flex hm-just-center hm-align-items-center">
-                  <div className={"hm-bar" + (item.progress === progress ? " hm-bar-selected" : "")} />
-                  <div className={"hm-bar-text" + (item.progress === progress ? " hm-bar-text-selected" : "")}>
-                    {item.title}
+            <div>
+              {getAllSteps().map((item) => {
+                return (
+                  <div key={item.step} className="hm-d-flex hm-just-center hm-align-items-center">
+                    <div className={"hm-bar" + (item.step === currentStep ? " hm-bar-selected" : "")} />
+                    <div className={"hm-bar-text" + (item.step === currentStep ? " hm-bar-text-selected" : "")}>
+                      {item.title}
+                    </div>
                   </div>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
           </div>
           <div className="hm-flow">
             <div id="yourcase-hm-view">
@@ -88,7 +86,10 @@ const ExecuteFlowCasesComponent = () => {
                       flowId={parseInt(id)}
                       goodNewsVisible={goodNewsVisible}
                       onShowGoodNews={(value) => setGoodNewsVisible(value)}
-                      onChangeStep={(progress) => setProgress(progress)}
+                      onChangeStep={(current, total) => {
+                        setCurrentStep(current)
+                        setTotalSteps(total)
+                      }}
                       className="yourcase-hm-view-inner-wrapper m-auto"/>}
             </div>
           </div>

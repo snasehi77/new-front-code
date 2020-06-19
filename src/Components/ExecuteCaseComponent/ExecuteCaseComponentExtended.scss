@@ -669,9 +669,14 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
   .hm-view-footer {
     height: 70px;
+    width: 100%;
     position: absolute;
     align-self: flex-end;
     position: fixed;
+
+    @media (min-width: 1024px) {
+      width: calc(100% - 220px);
+    }
 
     // prevemts the .hm-view-footer-info-drawer from being overdrawn by a shadow
     & > div:first-child {
@@ -1125,7 +1130,8 @@ $header-font-medium: 'Graphik medium', sans-serif;
 
 .hm-sidebar {
   width: 0px;
-  padding-top: 294px;
+  padding-top: 100px;
+  padding-bottom: 44px;
   overflow: hidden;
   background-color: #0D3F37;
 

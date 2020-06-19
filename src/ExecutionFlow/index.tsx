@@ -49,14 +49,14 @@ interface Props {
     stepName: string,
     fields: any[]
   ) => void;
-  onChangeStep?: (
-    progress: any
+  onChangeStep: (
+    current: number,
+    total: number
   ) => void;
   goodNewsVisible: boolean;
   onShowGoodNews: (value: boolean) => void;
 }
 
-const DEFAULT_FLOW_STEPS = 20
 
 const ExecutionFlow: React.FC<Props> = ({
   goodNewsVisible,
@@ -77,7 +77,7 @@ const ExecutionFlow: React.FC<Props> = ({
   const [values, setValues] = useState<any>({});
   const [defaultValues, setValuesDefault] = useState<any>(null);
   const [breadcrumbData, setBreadcrumbData] = useState<Array<Breadcrumb>>([]);
-  const [stepsAfter, setStepsAfter] = useState<number>(DEFAULT_FLOW_STEPS);
+  const [stepsAfter, setStepsAfter] = useState<number>(0);
   const [description, setDescription] = useState("");
   const [modalDescription, setModalDescription] = useState<boolean>(false);
   const [modalClose, setModalClose] = useState(false);
@@ -109,11 +109,7 @@ const ExecutionFlow: React.FC<Props> = ({
         }
       ]
       setBreadcrumbData(newData)
-      if (onChangeStep) {
-        const progress = Math.floor(newData.length * 100 / (stepsAfter + newData.length))
-        const step = Math.round(progress / 5) * 5
-        onChangeStep(step)
-      }
+      changeStep(newData)
     }
   }, [currentFlow]);
 
@@ -130,8 +126,24 @@ const ExecutionFlow: React.FC<Props> = ({
       : await Service.LaunchFlowId(id, params ? params : {});
     if (res && res.item) {
       setFlow({ name: res.item.flow_name });
+      executeStepsAfter(flowId, res.item.step_id, true)
     }
     setResFlow(res);
+  }
+
+  async function executeStepsAfter(flowId: number, stepId: number, firstLaunch: boolean = false) {
+    const data = await Service.getFlowStepsAfterStep(
+      flowId,
+      stepId
+    )
+    const steps = get(data, 'item.steps_after')
+    if (steps) {
+      setStepsAfter(steps)
+      
+      if (firstLaunch) {
+        onChangeStep(0, steps)
+      }
+    }
   }
 
   const [endFlow, setEndFlow] = useState<boolean>(false);
@@ -241,17 +253,11 @@ const ExecutionFlow: React.FC<Props> = ({
       currentFlow.flow_execution_id,
       id
     );
-    const data = await Service.getFlowStepsAfterStep(
-      flowId,
-      currentFlow.step_id
-    )
+    
+    executeStepsAfter(flowId, currentFlow.step_id)
 
     resetValues();
     setResFlow(res);
-    const steps = get(data, 'item.steps_after')
-    if (steps) {
-      setStepsAfter(steps)
-    }
   }
 
   async function backFlow(flow: any) {
@@ -322,6 +328,11 @@ const ExecutionFlow: React.FC<Props> = ({
     setExecuteFlowStep(resultFields, currentFlow.id);
   }
 
+  function changeStep(data: any) {
+    const current = data.length - 1
+    onChangeStep(current, current + stepsAfter)
+  }
+
   function navigateToFlow(b: Breadcrumb, index: number) {
     var newData
     if (index !== breadcrumbData.length - 1) {
@@ -333,11 +344,7 @@ const ExecutionFlow: React.FC<Props> = ({
       newData = breadcrumbData.slice(0, index)
       setBreadcrumbData(newData);
     }
-    if (onChangeStep) {
-      const progress = Math.floor(newData.length * 100 / (stepsAfter + newData.length))
-      const step = Math.round(progress / 5) * 5
-      onChangeStep(step)
-    }
+    changeStep(newData)
   }
 
   const getLabel = (
