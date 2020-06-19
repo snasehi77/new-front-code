@@ -376,6 +376,24 @@ $header-font-medium: 'Graphik medium', sans-serif;
       }
     }
 
+    &.hm-field-years {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      position: relative;
+
+      .content-radio-grid {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+      }
+
+      .form-control {
+        margin-bottom: 0px;
+      }
+    }
+
     &.hm-field-date {
       margin-top: 2em;
       margin-bottom: 2em;
@@ -427,8 +445,6 @@ $header-font-medium: 'Graphik medium', sans-serif;
           }
         }
       }
-      
-
     }
 
     .borderless {
@@ -443,13 +459,13 @@ $header-font-medium: 'Graphik medium', sans-serif;
       padding: 0px;
       padding-left: 8px;
       cursor: pointer;
+    }
 
-      &:active {
-        background-color: $primary-light;
-        font-weight: bold;
-        border-radius: 4px;
-        color: #fff;
-      }
+    .hm-field-selected {
+      background-color: $primary-light;
+      font-weight: bold;
+      border-radius: 4px;
+      color: #fff;
     }
 
     .hm-search-bar {

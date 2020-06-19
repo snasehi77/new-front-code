@@ -24,9 +24,11 @@ import LabelComponent from "./FieldComponents/OtherComponents/LabelComponent";
 import TimeComponent from "./FieldComponents/TextComponents/TimeComponent";
 import LinkComponent from "./FieldComponents/OtherComponents/LinkComponent";
 import SelectComponent from "./FieldComponents/OtherComponents/SelectComponent";
+import StatesComponent from "./FieldComponents/OtherComponents/StatesComponent";
+import YearsComponent from "./FieldComponents/DateComponents/YearsComponent";
 
 const ExecutionInput = (props: PropsField) => {
-  const {type, singleValue, first} = props;
+  const {type, singleValue, first, options} = props;
 
   switch (type) {
     //-------------------------------------------------
@@ -55,9 +57,14 @@ const ExecutionInput = (props: PropsField) => {
       return <TimeComponent {...props} />
     // -------------------------------------------------
     case FieldTypes.SELECT:
+      const labels = (options || []).map((i) => i.data.label)
+      if (labels.includes("California")) { //TODO: hard code for now
+        return <StatesComponent {...props} />
+      }
       return <SelectComponent {...props} />
     // -------------------------------------------------
     case FieldTypes.DATE:
+      //return <YearsComponent {...props} /> //TODO: hard code for now
       return <DateFieldComponent {...props} />;
     // -------------------------------------------------
     case FieldTypes.DATE_RANGE:

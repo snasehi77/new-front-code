@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FormEvent, Fragment, useEffect, useState } from "react";
 import * as Service from "./Services";
-import { isEmpty, get, last } from "lodash";
+import { isEmpty, filter, get, last } from "lodash";
 import { getValuesChoiceList } from "./Services";
 import {
   classNames,
@@ -607,7 +607,7 @@ const ExecutionFlow: React.FC<Props> = ({
           id={idForm().toLowerCase() + "_footer"}
           onBack={() => navigateToFlow(currentFlow, breadcrumbData.length - 1)}
           disabledBack={loadingFlow}
-          disabledNext={loadingFlow || isEmpty(values)}
+          disabledNext={loadingFlow || isEmpty(filter(values, (v) => v !== undefined))}
           info={
             !!fields.length
               ? {
