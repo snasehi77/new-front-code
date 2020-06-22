@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FormEvent, Fragment, useEffect, useState } from "react";
 import * as Service from "./Services";
-import { isEmpty, filter, get, last } from "lodash";
+import { isEmpty, filter, get, last, split, includes } from "lodash";
 import { getValuesChoiceList } from "./Services";
 import {
   classNames,
@@ -38,6 +38,7 @@ import OverlayScreen from "./Components/OverlayScreen";
 
 interface Props {
   flowId: number;
+  offsetStep: number;
   stepId?: number;
   params?: any;
   className?: string;
@@ -57,11 +58,11 @@ interface Props {
   onShowGoodNews: (value: boolean) => void;
 }
 
-
 const ExecutionFlow: React.FC<Props> = ({
   goodNewsVisible,
   onShowGoodNews,
   flowId,
+  offsetStep,
   className,
   params,
   debug,
@@ -81,10 +82,41 @@ const ExecutionFlow: React.FC<Props> = ({
   const [description, setDescription] = useState("");
   const [modalDescription, setModalDescription] = useState<boolean>(false);
   const [modalClose, setModalClose] = useState(false);
-  const [terms, setTerms] = useState(false)
+  const [terms, setTerms] = useState(false);
+  const [path, setPath] = useState(window.location.href);
+
+  const listenToPopstate = (event: any) => {
+    const path = window.location.href;
+    setPath(path);
+  };
+
+  useEffect(() => {
+    window.addEventListener("popstate", listenToPopstate);
+    return () => {
+      window.removeEventListener("popstate", listenToPopstate);
+    };
+  }, []);
+
+  useEffect(() => {
+    const navToId = last(split(path, "?form_id="))
+    const formIds = breadcrumbData.map((item) => item.id)
+    const length = formIds.length
+
+    if (length >= 2 && navToId == formIds[length - 2]) {
+      navigateToFlow(currentFlow, length - 1)
+    } 
+  }, [path])
+
   useEffect(() => {
     executeFLow(flowId);
   }, [flowId]);
+
+  useEffect(() => {
+    if (offsetStep > 0) {
+      history.go(-offsetStep+1)
+      navigateToFlow(currentFlow, breadcrumbData.length - offsetStep)
+    }
+  }, [offsetStep])
 
   useEffect(() => {
     if (currentFlow.views) {
@@ -151,7 +183,13 @@ const ExecutionFlow: React.FC<Props> = ({
     false
   );
 
-  async function setResFlow(res: any) {
+  function pushState(url: string, state: any, browserBack: boolean = false) {
+    if (!browserBack) {
+      history.push(url, state)
+    }
+  }
+
+  async function setResFlow(res: any, browserBack: boolean = false) {
     if (res.success) {
       const array: Field[] = res.item.views[0].fields;
       const flowName = res.item.name
@@ -167,14 +205,13 @@ const ExecutionFlow: React.FC<Props> = ({
       res.item.views[0].fields = newArray;
       setCurrentFlow(res.item);
 
-      if (flowName === "speak_now_or_later") {
-        onShowGoodNews(true)
-      } else if (flowName === "state_bar") {
-        onShowGoodNews(true)
+      pushState(`/execute_flow/${flowId}/?form_id=${res.item.id}`, { formId: res.item.id }, browserBack);
+
+      if (flowName === "speak_now_or_later" || flowName === "state_bar") {
+        onShowGoodNews(true);
       } else if (flowName === "thank_you_we_will_call") { //TODO: more check
         setEndFlowSuccessfully(true);
-
-        resetValues()
+        resetValues();
       }
     } else {
       if (
@@ -185,7 +222,6 @@ const ExecutionFlow: React.FC<Props> = ({
       } else {
         setEndFlow(true);
       }
-
       resetValues();
     }
     setLoadingFlow(false);
@@ -260,7 +296,7 @@ const ExecutionFlow: React.FC<Props> = ({
     setResFlow(res);
   }
 
-  async function backFlow(flow: any) {
+  async function backFlow(flow: any, browserBack: boolean = false) {
     setLoadingFlow(true);
     const res = await Service.getExecuteFLowStep(
       flow.flow_execution_id,
@@ -268,7 +304,7 @@ const ExecutionFlow: React.FC<Props> = ({
     );
     if (res && res.success) {
       resetValues();
-      setResFlow(res);
+      setResFlow(res, browserBack);
       const valuesForm: any = Object.values(res.item.form_data).reduce(
         (obj: any, i: any) => {
           obj[i.id] = i.value;
@@ -340,7 +376,7 @@ const ExecutionFlow: React.FC<Props> = ({
       newData = breadcrumbData.slice(0, index + 1)
       setBreadcrumbData(newData);
     } else {
-      backFlow(b);
+      backFlow(b, true);
       newData = breadcrumbData.slice(0, index)
       setBreadcrumbData(newData);
     }

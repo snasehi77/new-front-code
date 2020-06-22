@@ -24,7 +24,8 @@ declare var window: any;
 const ExecuteFlowCasesComponent = () => {
     const [goodNewsVisible, setGoodNewsVisible] = useState<boolean>(false);
     const [totalSteps, setTotalSteps] = useState<number>(0);
-    const [currentStep, setCurrentStep] = useState<number>(0)
+    const [currentStep, setCurrentStep] = useState<number>(0);
+    const [offsetStep, setOffsetStep] = useState<number>(0);
 
     const {id} = useParams();
     const onSubmitForm = (flow: Flow, formData: any, stepName: string) => {
@@ -37,13 +38,17 @@ const ExecuteFlowCasesComponent = () => {
     }
 
     const getAllSteps = () => {
-
       if (!totalSteps) return [];
 
       return range(0, totalSteps).map(n => ({
         step: n,
         title: `Step ${n + 1}`
       }));
+    }
+
+    const onClickPreviousStep = (previousStep: number) => {
+      setGoodNewsVisible(false)
+      setOffsetStep(previousStep)
     }
 
     const progress = (currentStep === 0 || totalSteps === 0) ? 0 : floor(currentStep * 100 / totalSteps)
@@ -71,7 +76,12 @@ const ExecuteFlowCasesComponent = () => {
                 return (
                   <div key={item.step} className="hm-d-flex hm-just-center hm-align-items-center">
                     <div className={"hm-bar" + (item.step === currentStep ? " hm-bar-selected" : "")} />
-                    <div className={"hm-bar-text" + (item.step === currentStep ? " hm-bar-text-selected" : "")}>
+                    <div
+                      onClick={() => onClickPreviousStep(currentStep - item.step + 1)}
+                      className={"hm-bar-text" + 
+                      (item.step === currentStep ? " hm-bar-text-selected" : "") + 
+                      (item.step < currentStep ? " pointer" : "")
+                      }>
                       {item.title}
                     </div>
                   </div>
@@ -81,7 +91,8 @@ const ExecuteFlowCasesComponent = () => {
           </div>
           <div className="hm-flow">
             <div id="yourcase-hm-view">
-              {id && <ExecutionFlow 
+              {id && <ExecutionFlow
+                      offsetStep={offsetStep}
                       onSubmitForm={onSubmitForm}
                       flowId={parseInt(id)}
                       goodNewsVisible={goodNewsVisible}
@@ -89,6 +100,7 @@ const ExecuteFlowCasesComponent = () => {
                       onChangeStep={(current, total) => {
                         setCurrentStep(current)
                         setTotalSteps(total)
+                        setOffsetStep(0)
                       }}
                       className="yourcase-hm-view-inner-wrapper m-auto"/>}
             </div>
