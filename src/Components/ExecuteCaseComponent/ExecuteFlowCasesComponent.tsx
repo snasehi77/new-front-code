@@ -57,9 +57,9 @@ const ExecuteFlowCasesComponent = () => {
       <div className="vh-100">
         <MediaQuery {...Media.small}>
           <NavbarComponent 
-            showProgress 
+            showProgress={!goodNewsVisible} 
             progress={progress}
-            light={goodNewsVisible ? true : false}
+            light={false}
           />
         </MediaQuery>
         <MediaQuery {...Media.large}>
@@ -89,7 +89,7 @@ const ExecuteFlowCasesComponent = () => {
               })}
             </div>
           </div>
-          <div className="hm-flow">
+          <div className={"hm-flow" + (goodNewsVisible ? " hm-good-news-bg" : "")}>
             <div id="yourcase-hm-view">
               {id && <ExecutionFlow
                       offsetStep={offsetStep}

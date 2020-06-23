@@ -900,7 +900,6 @@ $header-font-medium: 'Graphik medium', sans-serif;
   height: 100vh;
   position: relative;
   font-family: $body-font-global;
-  background-color: #0d3f37;
   padding: 32px 24px 24px;
 
   @media (min-width: 568px) {
@@ -910,6 +909,10 @@ $header-font-medium: 'Graphik medium', sans-serif;
   @media (min-width: 768px) {
     padding: 32px 120px 24px;
   }
+}
+
+.hm-good-news-bg {
+  background-color: #0d3f37;
 }
 
 .hm-good-news-img-wrapper {

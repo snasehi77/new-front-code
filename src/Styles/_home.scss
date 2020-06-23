@@ -35,6 +35,10 @@
 
 //-----------Front Style ------
 
+html, body, #root, .App {
+  height: 100%;
+}
+
 .your-case-logo {
   margin-left: 24px;
   width: 120px;
