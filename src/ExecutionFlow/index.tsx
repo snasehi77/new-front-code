@@ -84,9 +84,12 @@ const ExecutionFlow: React.FC<Props> = ({
   const [modalClose, setModalClose] = useState(false);
   const [terms, setTerms] = useState(false);
   const [path, setPath] = useState(window.location.href);
+  const [backOrForward, setBackOrForward] = useState<boolean>(false);
+  const [firstLoad, setFirstLoad] = useState<boolean>(true);
 
   const listenToPopstate = (event: any) => {
     const path = window.location.href;
+    setBackOrForward(true);
     setPath(path);
   };
 
@@ -113,7 +116,7 @@ const ExecutionFlow: React.FC<Props> = ({
 
   useEffect(() => {
     if (offsetStep > 0) {
-      history.go(-offsetStep+1)
+      window.history.go(-offsetStep+1)
       navigateToFlow(currentFlow, breadcrumbData.length - offsetStep)
     }
   }, [offsetStep])
@@ -163,7 +166,7 @@ const ExecutionFlow: React.FC<Props> = ({
     setResFlow(res);
   }
 
-  async function executeStepsAfter(flowId: number, stepId: number, firstLaunch: boolean = false) {
+  async function executeStepsAfter(flowId: number, stepId: number, allSteps: boolean = false) {
     const data = await Service.getFlowStepsAfterStep(
       flowId,
       stepId
@@ -172,7 +175,7 @@ const ExecutionFlow: React.FC<Props> = ({
     if (steps) {
       setStepsAfter(steps)
       
-      if (firstLaunch) {
+      if (allSteps) {
         onChangeStep(0, steps)
       }
     }
@@ -183,13 +186,19 @@ const ExecutionFlow: React.FC<Props> = ({
     false
   );
 
-  function pushState(url: string, state: any, browserBack: boolean = false) {
-    if (!browserBack) {
-      history.push(url, state)
+  function pushState(formId: number) {
+    if (!backOrForward) {
+      if (firstLoad) {
+        window.history.replaceState(null, "", `/#/execute_flow/${flowId}?form_id=${formId}`)
+        setFirstLoad(false)
+      } else {
+        window.history.pushState(null, "", `/#/execute_flow/${flowId}?form_id=${formId}`)
+      }
     }
+    setBackOrForward(false)
   }
 
-  async function setResFlow(res: any, browserBack: boolean = false) {
+  async function setResFlow(res: any) {
     if (res.success) {
       const array: Field[] = res.item.views[0].fields;
       const flowName = res.item.name
@@ -205,7 +214,7 @@ const ExecutionFlow: React.FC<Props> = ({
       res.item.views[0].fields = newArray;
       setCurrentFlow(res.item);
 
-      pushState(`/execute_flow/${flowId}/?form_id=${res.item.id}`, { formId: res.item.id }, browserBack);
+      pushState(res.item.id)
 
       if (flowName === "speak_now_or_later" || flowName === "state_bar") {
         onShowGoodNews(true);
@@ -296,7 +305,7 @@ const ExecutionFlow: React.FC<Props> = ({
     setResFlow(res);
   }
 
-  async function backFlow(flow: any, browserBack: boolean = false) {
+  async function backFlow(flow: any) {
     setLoadingFlow(true);
     const res = await Service.getExecuteFLowStep(
       flow.flow_execution_id,
@@ -304,7 +313,7 @@ const ExecutionFlow: React.FC<Props> = ({
     );
     if (res && res.success) {
       resetValues();
-      setResFlow(res, browserBack);
+      setResFlow(res);
       const valuesForm: any = Object.values(res.item.form_data).reduce(
         (obj: any, i: any) => {
           obj[i.id] = i.value;
@@ -369,14 +378,15 @@ const ExecutionFlow: React.FC<Props> = ({
     onChangeStep(current, current + stepsAfter)
   }
 
-  function navigateToFlow(b: Breadcrumb, index: number) {
+  function navigateToFlow(b: Breadcrumb, index: number, backOrForward: boolean = true) {
+    setBackOrForward(backOrForward)
     var newData
     if (index !== breadcrumbData.length - 1) {
       backFlow(breadcrumbData[index + 1].data);
       newData = breadcrumbData.slice(0, index + 1)
       setBreadcrumbData(newData);
     } else {
-      backFlow(b, true);
+      backFlow(b);
       newData = breadcrumbData.slice(0, index)
       setBreadcrumbData(newData);
     }
