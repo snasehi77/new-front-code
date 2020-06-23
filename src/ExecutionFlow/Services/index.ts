@@ -9,7 +9,7 @@ export function LaunchFlowIdWithStepId(id: number, stepId: number, params: any) 
 }
 
 export function getFlowStepsAfterStep(flowId: number, previousStepId: number) {
-  return get(`flow/${flowId}/step/${previousStepId}/StepsAfter`)
+  return get(`flow/${flowId}/step/${previousStepId}/steps_after`)
 }
 
 export function getFlow(id: number) {
