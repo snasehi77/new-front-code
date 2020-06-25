@@ -3,7 +3,6 @@ import ModalComponent from "../Shared/ModalComponent/ModalComponent";
 import { Button } from "reactstrap";
 import history from "../Utils/History";
 import icon_success from "../../Assets/icons/icn_success.svg";
-import add_to_calendar from "../../Assets/icons/add_to_calendar.svg";
 
 interface Props {
   modalVisible: boolean,
@@ -33,13 +32,6 @@ const SuccessModal: React.FC<Props> = ({
           <a className="text-primary-light hm-font-normal">{"You’ll receive a call from "}</a>
           <a className="text-primary-light hm-font-bold hm-mb-5 text-center">{"xxx-xxx-xxxx."}</a>
         </p>
-
-        <div className="hm-mt-5 hm-mb-5 hm-d-flex hm-just-center hm-align-items-center">
-            <div className="hm-add-to-calendar hm-d-flex hm-just-center hm-align-items-center">
-              <img src={add_to_calendar} alt="addToCalendar" />
-              <p className="text-primary hm-ml-1 hm-mb-0">Add to calendar</p>
-            </div>
-        </div>
 
         <Button
           onClick={() => history.push("/")}
