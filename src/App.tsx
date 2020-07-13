@@ -4,24 +4,24 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { http, login } from "./Network";
 //import ComingSoonComponent from "./components/ComingSoonComponent/ComingSoonComponent";
 import { initialize } from "./ExecutionFlow";
+import { useCookies } from 'react-cookie';
 
 
 const App = () => {
 
   const simplePw = '2020Tugboat!';
-  const [authenticated, setAuthenticated] = useState(false);
+  const [cookies, setCookies] = useCookies(['authenticated']);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const domain = document.location.host;
   const isDev = domain.startsWith('localhost') || domain === 'dev.yourcase.com';
 
-
   const onPwSubmit = ((e: any) => {
     e.preventDefault();
 
     if (password === simplePw) {
-      setAuthenticated(true);
+      setCookies('authenticated', '1');
     } else {
       setError('Invalid password');
     }
@@ -68,7 +68,7 @@ const App = () => {
     initialize(http);
   }, []);
 
-  const ui = !isDev || authenticated ? router() : pwForm();
+  const ui = !isDev || cookies.authenticated === '1' ? router() : pwForm();
   return ui;
 };
 
