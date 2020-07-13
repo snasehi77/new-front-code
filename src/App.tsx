@@ -13,8 +13,9 @@ const App = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const s3Bucket = process.env['REACT_APP_S3_BUCKET'];
-  const isDev = s3Bucket && s3Bucket.startsWith('s3://dev.')
+  const domain = document.location.host;
+  const isDev = domain.startsWith('localhost') || domain === 'dev.youcase.com';
+
 
   const onPwSubmit = ((e: any) => {
     e.preventDefault();
