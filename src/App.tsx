@@ -14,7 +14,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   const domain = document.location.host;
-  const isDev = domain.startsWith('localhost') || domain === 'dev.youcase.com';
+  const isDev = domain.startsWith('localhost') || domain === 'dev.yourcase.com';
 
 
   const onPwSubmit = ((e: any) => {
