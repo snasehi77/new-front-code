@@ -10,28 +10,28 @@ interface props {
 }
 
 const FooterControlsComponent = ({
-                                   hiddenNext,
-                                   hiddenBack,
-                                   disabledBack,
-                                   disabledNext,
-                                   onBack,
-                                   onNext
-                                 }: props) => {
+  hiddenNext,
+  hiddenBack,
+  disabledBack,
+  disabledNext,
+  onBack,
+  onNext
+}: props) => {
 
   return (
     <>
-      <div style={{height: '200px'}}>{}</div>
+      <div style={{ height: '200px' }}>{}</div>
 
       <div className="footer-controls d-flex justify-content-center align-items-center">
         <div>
           {!hiddenBack && <button disabled={disabledBack}
-                                  onClick={onBack}
-                                  className="btn btn-light btn-cyan  pl-5 pr-5 mr-3">
+            onClick={onBack}
+            className="btn btn-light btn-cyan  pl-5 pr-5 mr-3">
             Back
           </button>}
           {!hiddenNext && <button disabled={disabledNext}
-                                  onClick={onNext}
-                                  className="btn btn-danger btn-cyan p2 pl-5 pr-5">
+            onClick={onNext}
+            className="btn btn-danger btn-cyan p2 pl-5 pr-5">
             Next
           </button>}
         </div>

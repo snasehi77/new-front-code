@@ -1,7 +1,7 @@
 import * as  React from "react";
-import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSpinner} from "@fortawesome/free-solid-svg-icons";
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   children: React.ReactNode;
@@ -20,19 +20,19 @@ interface Props {
 }
 
 const ModalComponent = ({
-                          children,
-                          noFooter,
-                          isOpen,
-                          centered,
-                          toggle,
-                          onSuccess,
-                          disabled,
-                          isLoading,
-                          header,
-                          footer,
-                          size = "md",
-                          title,
-                        }: Props) => {
+  children,
+  noFooter,
+  isOpen,
+  centered,
+  toggle,
+  onSuccess,
+  disabled,
+  isLoading,
+  header,
+  footer,
+  size = "md",
+  title,
+}: Props) => {
   return (
     <Modal centered={centered} zIndex={2000} toggle={toggle} size={size} isOpen={isOpen}>
       {header || title ? <ModalHeader>{header || title}</ModalHeader> : null}
@@ -42,20 +42,20 @@ const ModalComponent = ({
           {footer ? (
             footer
           ) : (
-            <>
-              <Button disabled={isLoading} color="secondary" onClick={toggle}>
-                Cancel
+              <>
+                <Button disabled={isLoading} color="secondary" onClick={toggle}>
+                  Cancel
               </Button>
-              <Button
-                disabled={disabled || isLoading}
-                color="primary"
-                onClick={onSuccess || toggle}
-              >
-                Save{" "}
-                {isLoading ? <FontAwesomeIcon icon={faSpinner} spin/> : null}
-              </Button>
-            </>
-          )}
+                <Button
+                  disabled={disabled || isLoading}
+                  color="primary"
+                  onClick={onSuccess || toggle}
+                >
+                  Save{" "}
+                  {isLoading ? <FontAwesomeIcon icon={faSpinner} spin /> : null}
+                </Button>
+              </>
+            )}
         </ModalFooter>
       ) : null}
     </Modal>

@@ -107,7 +107,7 @@ const ExecutionFlow: React.FC<Props> = ({
 
     if (length >= 2 && navToId == formIds[length - 2]) {
       navigateToFlow(currentFlow, length - 1)
-    } 
+    }
   }, [path])
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const ExecutionFlow: React.FC<Props> = ({
 
   useEffect(() => {
     if (offsetStep > 0) {
-      window.history.go(-offsetStep+1)
+      window.history.go(-offsetStep + 1)
       navigateToFlow(currentFlow, breadcrumbData.length - offsetStep)
     }
   }, [offsetStep])
@@ -152,7 +152,7 @@ const ExecutionFlow: React.FC<Props> = ({
     if (defaultValues && fields.length) {
       setValues(setDefaultValues(defaultValues, fields));
     }
-    return () => {};
+    return () => { };
   }, [defaultValues, fields]);
 
   async function executeFLow(id: number) {
@@ -174,7 +174,7 @@ const ExecutionFlow: React.FC<Props> = ({
     const steps = get(data, 'item.steps_after')
     if (steps) {
       setStepsAfter(steps)
-      
+
       if (allSteps) {
         onChangeStep(0, steps)
       }
@@ -266,8 +266,8 @@ const ExecutionFlow: React.FC<Props> = ({
             ? values[id].value
             : {}
           : values[id]
-          ? values[id]
-          : {};
+            ? values[id]
+            : {};
       case "RADIO_BUTTON_DESCRIPTION":
         return values[id] ? values[id].value : null;
       case "SELECT":
@@ -298,7 +298,7 @@ const ExecutionFlow: React.FC<Props> = ({
       currentFlow.flow_execution_id,
       id
     );
-    
+
     executeStepsAfter(flowId, currentFlow.step_id)
 
     resetValues();
@@ -355,7 +355,7 @@ const ExecutionFlow: React.FC<Props> = ({
     if (id) {
       const newValues = { [id]: v }
       let resultFields: Array<any> = getData(newValues)
-  
+
       if (onSubmitForm) {
         onSubmitForm(flow, resultFields, currentFlow.name, resultFields);
       }
@@ -458,35 +458,35 @@ const ExecutionFlow: React.FC<Props> = ({
   };
 
   const debugComponent = debug && !loadingFlow && !endFlowSuccessfully && !endFlow && (
-      <div className="col-lg-5">
-        <div className="hm-w-100 hm-h-100">
-          <h6 className="mb-4">History</h6>
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Field</th>
-                <th scope="col">Value</th>
+    <div className="col-lg-5">
+      <div className="hm-w-100 hm-h-100">
+        <h6 className="mb-4">History</h6>
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Field</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {toArrayFlowData.map((b, i) => (
+              <tr key={i}>
+                <td>{b}</td>
+                <td>{FlowData[b]}</td>
               </tr>
-            </thead>
-            <tbody>
-              {toArrayFlowData.map((b, i) => (
-                <tr key={i}>
-                  <td>{b}</td>
-                  <td>{FlowData[b]}</td>
-                </tr>
-              ))}
-              {!toArrayFlowData.length && (
-                <tr>
-                  <td colSpan={2} className="text-center">
-                    {" "}
+            ))}
+            {!toArrayFlowData.length && (
+              <tr>
+                <td colSpan={2} className="text-center">
+                  {" "}
                     No data.
                   </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
+    </div>
   )
 
   if (goodNewsVisible) {
@@ -552,7 +552,7 @@ const ExecutionFlow: React.FC<Props> = ({
           />
         )}
       </div>
-      
+
       <div
         className={
           "hm-m-0 " +
@@ -664,9 +664,9 @@ const ExecutionFlow: React.FC<Props> = ({
           info={
             !!fields.length
               ? {
-                  choiceLists: fields.map(a => a.options),
-                  metaData: fields.map((a: any) => a.meta_data)
-                }
+                choiceLists: fields.map(a => a.options),
+                metaData: fields.map((a: any) => a.meta_data)
+              }
               : { choiceLists: [], metaData: [] }
           }
           hiddenBack={!currentFlow.prev_step_execution_id}
@@ -675,7 +675,7 @@ const ExecutionFlow: React.FC<Props> = ({
               (f: any) =>
                 f.format === "BUTTON" ||
                 (f.format === "RADIO_BUTTON" && f.single_value) ||
-                f.field_type === "BOOLEAN" 
+                f.field_type === "BOOLEAN"
             ).length
           }
           onNext={() => eventClick("onSubmit")}
@@ -703,12 +703,12 @@ const ExecutionFlow: React.FC<Props> = ({
         modalVisible={terms}
         setModalVisible={setTerms}
       />
-      
-      <DescriptionModal 
+
+      <DescriptionModal
         metaData={currentFlow.views && currentFlow.views[0].meta_data
           ? currentFlow.views[0].meta_data
-          : "No description"} 
-        modalVisible={modalDescription} 
+          : "No description"}
+        modalVisible={modalDescription}
         setModalVisible={setModalDescription}
       />
 
@@ -717,9 +717,9 @@ const ExecutionFlow: React.FC<Props> = ({
         setModalVisible={setEndFlowSuccessfully}
       />
 
-      <LeaveModal 
-        modalVisible={modalClose} 
-        setModalVisible={setModalClose} 
+      <LeaveModal
+        modalVisible={modalClose}
+        setModalVisible={setModalClose}
       />
 
     </div>

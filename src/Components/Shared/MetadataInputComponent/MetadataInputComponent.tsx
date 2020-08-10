@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {Input} from "reactstrap";
+import React, { useEffect, useState } from 'react';
+import { Input } from "reactstrap";
 import './MetadataInputComponent.scss';
-import {checkMail, ToArray, formatPhoneNumber, formatSSN} from "../../../Utils/Utilities";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
-import {DateRangePicker, SingleDatePicker} from "react-dates";
+import { checkMail, ToArray, formatPhoneNumber, formatSSN } from "../../../Utils/Utilities";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { DateRangePicker, SingleDatePicker } from "react-dates";
 import moment from "moment";
 import Select from "react-select";
 import useDidMountEffect from "../../../Hooks/useDidMountEffect";
@@ -59,18 +59,18 @@ interface props {
 }
 
 const MetadataInputComponent = ({
-                                  id,
-                                  type,
-                                  name,
-                                  label,
-                                  defaultValue,
-                                  childType,
-                                  className,
-                                  placeholder,
-                                  singleValue,
-                                  listOptions,
-                                  onChange,
-                                }: props) => {
+  id,
+  type,
+  name,
+  label,
+  defaultValue,
+  childType,
+  className,
+  placeholder,
+  singleValue,
+  listOptions,
+  onChange,
+}: props) => {
 
   const [date, setDate] = useState<any>(new Date());
   const [value, setValue] = useState<any>("");
@@ -78,7 +78,7 @@ const MetadataInputComponent = ({
   const [inputFocused, setInputFocused] = useState(null);
   const [multiSelect, setMultiSelect] = useState<any>({});
   const [choiceList, setChoiceList] = useState<any>(null);
-  const [dateRange, setDateRange] = useState({from: new Date(), to: new Date()});
+  const [dateRange, setDateRange] = useState({ from: new Date(), to: new Date() });
   const [years, setYears] = useState<any>([]);
   const [page, setPage] = useState(0);
   const [yesNo, setYesNo] = useState();
@@ -126,12 +126,12 @@ const MetadataInputComponent = ({
           break;
         case FieldTypes.DATE_RANGE:
           const range = defaultValue.split(" , ");
-          setDateRange({from: range[0], to: range[1]});
+          setDateRange({ from: range[0], to: range[1] });
           break;
         case FieldTypes.SELECT:
           if (singleValue) {
             const temp = listOptions.filter((l: any) => l.value === defaultValue)[0];
-            setChoiceList({label: temp.label, value: temp.id});
+            setChoiceList({ label: temp.label, value: temp.id });
           } else {
             // PENDING MULTIPLE SELECTIONS
             let temp = listOptions.filter((a: any) => {
@@ -139,7 +139,7 @@ const MetadataInputComponent = ({
             });
 
             temp = temp.map((a: any) => {
-              return {label: a.label, value: a.id}
+              return { label: a.label, value: a.id }
             });
 
             setChoiceList(temp);
@@ -200,7 +200,7 @@ const MetadataInputComponent = ({
       case 'SSN':
         return value.length > 11 ? 'is-invalid' : value && value.length < 12 ? 'is-valid' : '';
 
-      case  'PHONE':
+      case 'PHONE':
         return value.length > 14 ? 'is-invalid' : value && value.length < 15 ? 'is-valid' : '';
 
       case 'EMAIL':
@@ -270,10 +270,10 @@ const MetadataInputComponent = ({
           {listOptions.map((b: any, i: any) => {
             return (
               <button onClick={() => setValue(b)} key={i}
-                      className="btn btn-info mb-2 form-control btn-choice-list">
-									<span className="btn-float-icon">
-										<FontAwesomeIcon icon={faChevronRight}/>
-									</span>
+                className="btn btn-info mb-2 form-control btn-choice-list">
+                <span className="btn-float-icon">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </span>
                 {b.label}
               </button>
             )
@@ -287,17 +287,17 @@ const MetadataInputComponent = ({
           {listOptions.map((b: any, i: any) => {
             return <div key={i}>
               <label htmlFor={id + b.id} className="form-control container-radio mb-2"
-                     style={(value && (value.label === b.label)) ?  {borderColor: 'green'}:{}}>
+                style={(value && (value.label === b.label)) ? { borderColor: 'green' } : {}}>
                 {singleValue ?
                   <input required={!value} checked={value.label === b.label} type="radio" id={id + b.id}
-                         name="unique" className="mr-2" onClick={() => {
-                    setValue(b);
-                    OnSubmit();
-                  }} onChange={() => null}/> :
+                    name="unique" className="mr-2" onClick={() => {
+                      setValue(b);
+                      OnSubmit();
+                    }} onChange={() => null} /> :
                   <input type="checkbox" id={id + b.id} required={!ToArray(multiSelect).length}
-                         checked={multiSelect[b.id] || false}
-                         className="mr-2"
-                         onChange={() => setMultiSelect({...multiSelect, [b.id]: multiSelect[b.id] ? false : b})}/>}
+                    checked={multiSelect[b.id] || false}
+                    className="mr-2"
+                    onChange={() => setMultiSelect({ ...multiSelect, [b.id]: multiSelect[b.id] ? false : b })} />}
                 <small> <b>{b.label}</b> </small>
                 {singleValue && <span className="checkmark" />}
               </label>
@@ -316,7 +316,7 @@ const MetadataInputComponent = ({
           value={choiceList}
           isMulti={!singleValue}
           options={listOptions.map((v: any) => {
-            return {label: v.label, value: v.id}
+            return { label: v.label, value: v.id }
           })}
           onChange={(e: any) => setChoiceList(e)}
         />
@@ -332,7 +332,7 @@ const MetadataInputComponent = ({
             focused={focused} // PropTypes.bool
             block
             small
-            onFocusChange={({focused}) => setFocused(!!focused)} // PropTypes.func.isRequired
+            onFocusChange={({ focused }) => setFocused(!!focused)} // PropTypes.func.isRequired
             id={id.toString()} // PropTypes.string.isRequired,
           />
         </div>
@@ -349,8 +349,8 @@ const MetadataInputComponent = ({
             endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
             block
             small
-            onDatesChange={({startDate, endDate}: any) => {
-              setDateRange({from: new Date(startDate), to: new Date(endDate)});
+            onDatesChange={({ startDate, endDate }: any) => {
+              setDateRange({ from: new Date(startDate), to: new Date(endDate) });
             }} // PropTypes.func.isRequired,
             focusedInput={inputFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
             onFocusChange={(focusedInput: any) => setInputFocused(focusedInput)} // PropTypes.func.isRequired,
@@ -361,11 +361,11 @@ const MetadataInputComponent = ({
     case FieldTypes.TIME:
       return (
         <Input type="time"
-               id={id}
-               className={className}
-               required={true}
-               value={value || ''}
-               onChange={e => setValue(e.target.value)}/>
+          id={id}
+          className={className}
+          required={true}
+          value={value || ''}
+          onChange={e => setValue(e.target.value)} />
       );
 
     case FieldTypes.TOGGLE_BUTTON:
@@ -375,20 +375,20 @@ const MetadataInputComponent = ({
             return (
               <div key={y} className="col-lg-3 col-md-4 col-5 mb-2 text-center">
                 <input value={value} onChange={() => setValue(y)} required={true} id={y.toString()} type="radio"
-                       name="toggle-button" className="display-opacity toggle-button"/>
+                  name="toggle-button" className="display-opacity toggle-button" />
                 <label htmlFor={y.toString()} className="btn btn-light toggle-label">{y}</label>
               </div>
             )
           })}
           <a className=" toggle-control c-back">
             <FontAwesomeIcon onClick={() => setPage(page > 0 ? page - 1 : page)}
-                             className={(page <= 0 ? "opacity-control" : "") + " primary pointer-event"}
-                             icon={faChevronLeft}/>
+              className={(page <= 0 ? "opacity-control" : "") + " primary pointer-event"}
+              icon={faChevronLeft} />
           </a>
           <a aria-disabled={true} className="toggle-control c-next">
             <FontAwesomeIcon onClick={() => setPage(page < (allYears.length / pageSize - 1) ? page + 1 : page)}
-                             className={(page >= (allYears.length / pageSize - 1) ? "opacity-control" : "") + " primary pointer-event"}
-                             icon={faChevronRight}/>
+              className={(page >= (allYears.length / pageSize - 1) ? "opacity-control" : "") + " primary pointer-event"}
+              icon={faChevronRight} />
           </a>
         </div>
       );
@@ -408,19 +408,19 @@ const MetadataInputComponent = ({
         <div className="m-0 p-0">
           <label className={className + " form-control mb-2"} htmlFor={id + "1"}>
             <input type="radio" required={true} id={id + "1"}
-                   className="mr-1" name="unique" checked={value === "Yes"} onClick={() => {
-              setYesNo(true);
-              OnSubmit()
-            }} onChange={() => null}/>
+              className="mr-1" name="unique" checked={value === "Yes"} onClick={() => {
+                setYesNo(true);
+                OnSubmit()
+              }} onChange={() => null} />
             <small><b>Yes</b></small>
           </label>
 
           <label className={className + " form-control mb-2"} htmlFor={id + "2"}>
             <input type="radio" required={true} id={id + "2"}
-                   className="mr-1" name="unique" checked={value === "No"} onClick={() => {
-              setYesNo(false);
-              OnSubmit();
-            }} onChange={() => null}/>
+              className="mr-1" name="unique" checked={value === "No"} onClick={() => {
+                setYesNo(false);
+                OnSubmit();
+              }} onChange={() => null} />
             <small><b> No</b></small>
           </label>
         </div>
